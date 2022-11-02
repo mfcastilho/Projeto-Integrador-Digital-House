@@ -1,1 +1,1 @@
-<h1 align="center">Projeto-Integrador-Digital-House</h1>
+<h1 align="center">Projeto Integrador - Digital House</h1>
