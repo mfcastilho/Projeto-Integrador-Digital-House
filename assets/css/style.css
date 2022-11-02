@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.content{
+  width: 100%;
+  margin: 0 auto;
+}
+
+header{
+  background-color: #251B37;
+  height: 17vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10%;
+}
+
+
+header input{
+  width: 50%;
+  height: 5.5vh;
+
+  border-radius: 2rem;
+  border: none;
+
+  padding-left:1rem;
+
+  background-image: url("../img/lupa.svg");
+  background-repeat: no-repeat;
+  /* background-position: 98.7%;  */
+  background-position: right 5px bottom 2px;
+
+}
+
+header input:focus{
+  outline: none;
+}
+
+.logo-box img{
+  width: 5.7rem;
+}
+
+
+.navegation-box ul,.navegation-box li{
+  display: inline-block;
+}
+
+.navegation-box img{
+  width: 2rem;
+  margin-left: 4rem;
+}
+
