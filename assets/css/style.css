@@ -122,10 +122,85 @@ header input:focus{
   text-decoration: none;
 
   font-size: 2.2rem;
-  
-  
+
 }
 
 
 
 
+footer{
+
+  height: 26rem;
+
+  background-color: #372948;
+
+  color: #FFFFFF;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 4rem;
+}
+
+
+
+footer .container h3{
+  font-size: 2.2rem;
+  font-weight: 700;
+
+  margin-bottom: 2.1rem;
+}
+
+
+
+footer .pages-menu-box{
+  width: 17%;
+  height: 9.3rem;
+}
+
+footer .pages-menu-box ul li{ 
+  font-size: 1.7rem;
+  margin-left: 2.8rem;
+}
+
+footer .pages-menu-box ul li a{
+  text-decoration: none;
+  color: #FFF;
+}
+
+footer .social-networks-box{
+  height: 9.3rem;
+  text-align: center;
+}
+
+footer .social-networks-box a{
+
+}
+
+footer .social-networks-box a img{
+  width: 3.5rem;
+}
+
+
+footer .payment-box{
+  height: 9.3rem;
+  text-align: center;
+}
+
+footer .security-seal-box{
+  height: 9.3rem;
+  text-align: center;
+}
+
+footer .security-seal-box img{
+  width: 9rem;
+  border-radius: .2rem;
+}
+
+footer h4{
+  font-size: 1.2rem;
+
+  margin-top: 5rem;
+}
