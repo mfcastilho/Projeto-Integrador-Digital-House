@@ -394,4 +394,19 @@ footer h4{
   header input::placeholder{
     color: #FFFFFF;
   }
+  footer .social-networks-box h3{
+    text-align: start;
+  }
+
+  footer .social-networks-box a img{
+    width: 2.5rem;
+  }
+
+  footer .container-footer  h3{
+    font-size: 1.6rem;
+  }
+
+  footer .payment-box a img{
+    width: 3.6rem;
+  }
 }
