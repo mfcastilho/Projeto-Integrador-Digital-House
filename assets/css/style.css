@@ -35,8 +35,8 @@ body{
   padding: 0 10rem;
   /* gap: 2rem; */
 
-  /* position: sticky; */
   
+  /* position: fixed; */
 
   height: 13.2rem;
 }
@@ -47,7 +47,12 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: fixed;
+
+  width: 100%;
 }
+
+
 
 header .logo-box img{
   width: 15.2rem;
@@ -56,9 +61,12 @@ header .logo-box img{
 }
 
 
+/*Definindo o quanto de espaço do
+header que o formulário vai usar*/
 header form{
   width: 50%;
 }
+
 
 header input{
   width: 100%;
@@ -80,10 +88,10 @@ header input{
 
 }
 
+
 header input:focus{
   outline: none;
 }
-
 
 header .user-icons-nav ul,.user-icons-nav li{
   display: inline-block;
@@ -95,10 +103,14 @@ header .user-icons-nav img{
 }
 
 
-/*Menu Mobile*/
+
+
+/*Menu Mobile - none*/
 header .menu-mobile-icons-container{
   display: none;
 }
+
+
 
 
 /*Barra de Navegação*/
@@ -129,13 +141,26 @@ header .bar-nav ul li a{
 }
 
 
-/*----- Provisório  -somente para teste -----*/
+/*----- conteúdo rovisório da main -somente para teste -----*/
 main{
-  width: 1280px;
-  height: 200px;
+  width: 100%;
+  max-width: 1280px;
+  height: 800px;
 }
 /*--------------------------------------------*/
 
+
+
+
+
+
+
+
+
+
+
+
+/*-------rodapé--------*/
 .container-footer{
   width: 100%;
   max-width: 1280px;
@@ -170,7 +195,7 @@ footer{
 }
 
 
-footer .container h3{
+footer .container-footer h3{
   font-size: 2.2rem;
   font-weight: 700;
 
@@ -224,12 +249,18 @@ footer h4{
 }
 
 
-@media (max-width:992px){
+
+
+/*------Medias Queries------*/
+
+@media (max-width:991px){
 
   .container{
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    padding: 0 2rem;
   }
 
 
@@ -258,24 +289,25 @@ footer h4{
   header .logo-box img{
     width: 16.2rem;
     height: 11.2rem;
-    margin: 0; 
+    margin-right: 0; 
   }
 
   header .user-icons-mobile ul li:nth-child(2){
     margin-left: 2rem;
   }
 
+  header .user-icons-mobile ul li::marker{
+    color: #372948;
+  }
+
   header form{
-    width: 70%;
+    width: 84%;
   }
 
   header input{
     height: 4.2rem;
-    margin-bottom: ;
+    margin-bottom: 1.8rem;
   }
-
-
-
 
   header .bar-nav{
     display: none;
@@ -284,13 +316,82 @@ footer h4{
   header .user-icons-nav ul{
     display: none;
   }
+
+  
+
+  .container-footer{
+    padding: 0 2rem;
+  }
+
+
+  footer .container-footer h3{
+    font-size: 2rem;
+    font-weight: 700;
+  
+    margin-bottom: 2rem;
+  }
+
+  footer h4{
+    font-size: 1rem;
+  
+    margin-top: 4rem;
+  }
+
   
 }
 
-@media (max-width:768px){
+@media (max-width:767px){
+  footer{
+    height: 46.7rem;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+
+  .container-footer{
+   width: 100%;
+   height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start; 
+  }
+
+
+  footer .container-footer h3{
+    margin-bottom: 1rem;
+  }
+
+  footer h4{
+    /* padding-top: 10rem; */
+    margin-bottom: 2.4rem;
+    margin-top: 0;
+  }
 }
 
-@media (max-width:414px){
 
+@media (max-width:592px){
+  footer h4{
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0 3rem;
+  }
+}
+
+/* @media (max-width:414px){
+  footer h4{
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0 3rem;
+  }
+} */
+
+
+
+@media (max-width:270px){
+  header input::placeholder{
+    color: #FFFFFF;
+  }
 }
