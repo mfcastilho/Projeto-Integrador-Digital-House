@@ -46,6 +46,7 @@ header{
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 header .logo-box img{
@@ -84,39 +85,41 @@ header input:focus{
 }
 
 
-.user-icons-nav ul,.user-icons-nav li{
+header .user-icons-nav ul,.user-icons-nav li{
   display: inline-block;
 }
 
-.user-icons-nav img{
+header .user-icons-nav img{
   width: 3.2rem;
   margin-left: 4rem;
 }
 
-.menu-burguer-box{
+
+/*Menu Mobile*/
+header .menu-mobile-icons-container{
   display: none;
 }
 
 
-/*classe da barra de Navegação*/
-.bar-nav{
+/*Barra de Navegação*/
+header .bar-nav{
   background-color: #F6E4E4;
   height: 5.1rem;
   line-height:5.1rem;
 }
 
-.bar-nav ul{
+header .bar-nav ul{
   display: flex;
   justify-content: center;
   gap: 10rem;
   
 }
 
-.bar-nav ul li{
+header .bar-nav ul li{
   list-style: none;
 }
 
-.bar-nav ul li a{
+header .bar-nav ul li a{
   color: #251B37;
 
   text-decoration: none;
@@ -126,10 +129,32 @@ header input:focus{
 }
 
 
+/*----- Provisório  -somente para teste -----*/
+main{
+  width: 1280px;
+  height: 200px;
+}
+/*--------------------------------------------*/
 
+.container-footer{
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  /* height: 17vh; */
 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 0 10rem;
+  /* gap: 2rem; */
+
+  /* position: sticky; */
+  
+
+  height: 13.2rem;
+}
 footer{
-
   height: 26rem;
 
   background-color: #372948;
@@ -145,15 +170,12 @@ footer{
 }
 
 
-
 footer .container h3{
   font-size: 2.2rem;
   font-weight: 700;
 
   margin-bottom: 2.1rem;
 }
-
-
 
 footer .pages-menu-box{
   
@@ -173,10 +195,6 @@ footer .pages-menu-box ul li a{
 footer .social-networks-box{
   height: 9.3rem;
   text-align: center;
-}
-
-footer .social-networks-box a{
-
 }
 
 footer .social-networks-box a img{
@@ -203,4 +221,76 @@ footer h4{
   font-size: 1.2rem;
 
   margin-top: 5rem;
+}
+
+
+@media (max-width:992px){
+
+  .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  header{
+    display: flex;
+    flex-direction: column;
+    height: 23.8rem; 
+  }
+
+  header .menu-mobile-icons-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .menu-mobile-icons-container .menu-burguer-box img{
+    
+  }
+
+  header .menu-mobile-icons-container ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  header .logo-box img{
+    width: 16.2rem;
+    height: 11.2rem;
+    margin: 0; 
+  }
+
+  header .user-icons-mobile ul li:nth-child(2){
+    margin-left: 2rem;
+  }
+
+  header form{
+    width: 70%;
+  }
+
+  header input{
+    height: 4.2rem;
+    margin-bottom: ;
+  }
+
+
+
+
+  header .bar-nav{
+    display: none;
+  }
+
+  header .user-icons-nav ul{
+    display: none;
+  }
+  
+}
+
+@media (max-width:768px){
+
+}
+
+@media (max-width:414px){
+
 }
