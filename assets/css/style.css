@@ -392,7 +392,7 @@ footer h4{
 
 @media (max-width:270px){
   header input::placeholder{
-    color: #FFFFFF;
+    color: #FFF;
   }
   footer .social-networks-box h3{
     text-align: start;
