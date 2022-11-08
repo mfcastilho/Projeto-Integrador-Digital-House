@@ -44,6 +44,8 @@ header{
   position: fixed;
 
   width: 100%;
+
+  z-index: 1;
 }
 
 
@@ -139,12 +141,25 @@ header .bar-nav ul li a{
 main{
   width: 100%;
   max-width: 1280px;
-  height: 800px;
+  min-width: 17.1rem;
+  margin: 0 auto;
+ 
+  padding: 0 2rem;
+
+  display: flex;
+  flex-direction: column;
+  
 }
 /*--------------------------------------------*/
 
+main .banner .glider {
+ 
+}
 
-
+.glider img{
+  width: 100%;
+  margin-top: 21rem;
+}
 
 
 
@@ -173,6 +188,7 @@ main{
 footer{
   height: 26rem;
 
+  margin: 0 auto;
   background-color: #372948;
 
   color: #FFFFFF;
@@ -305,6 +321,24 @@ footer h4{
   }
 
   
+  main{
+    margin: 0 0;
+  }
+
+  .glider img{
+    width: 100%;
+    margin-top: 26rem;
+  }
+
+  .glider-prev{
+    display: none;
+  }
+
+  .glider-next{
+    display: none;
+  }
+
+
 
   .container-footer{
     padding: 0 2rem;
