@@ -162,7 +162,10 @@ main .banner .glider {
 }
 
 
-
+.featured-products-container{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 #teste{
   height: 80rem;
