@@ -323,6 +323,8 @@ footer h4{
   
   main{
     margin: 0 0;
+
+    padding: 0 .2rem;
   }
 
   .glider img{
