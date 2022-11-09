@@ -218,15 +218,16 @@ main .featureds .featured-products-container .product-card .product-description{
 }
 
 main .featureds .featured-products-container .product-card .product-description h5{
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.936rem;
+  text-align: center;
 }
 
 main .featureds .featured-products-container .product-card .product-description p{
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 1.936rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 #teste{
