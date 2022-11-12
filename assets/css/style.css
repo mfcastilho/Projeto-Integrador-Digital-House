@@ -334,33 +334,31 @@ footer h4{
 
   display: inline-block;
   
-
   background-color: #FFF;
 
   border-radius: 50%;
 
-  position: relative;
+  width: 6rem;
+  height: 6rem;
 
-  /* left: 2rem;
-  bottom: 5.6rem; */
   position: fixed;
 
-  left: 124.8rem;
-  bottom: 1.6rem;
+  right: 2.8rem;
+  bottom: 3.8rem;
+
+  
 }
 
 
 .whatsapp-button a{
-  /* position: fixed;
-
-  left: 102rem;
-  bottom: 5.6rem; */
+  width: 6rem;
+  height: 6rem;
 }
 
 
 .whatsapp-button img{
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 
