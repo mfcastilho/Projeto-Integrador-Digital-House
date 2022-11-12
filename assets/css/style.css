@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap');
 
 
 :root{
@@ -44,6 +44,8 @@ header{
   position: fixed;
 
   width: 100%;
+
+  z-index: 1;
 }
 
 
@@ -135,18 +137,104 @@ header .bar-nav ul li a{
 }
 
 
-/*----- conteúdo rovisório da main -somente para teste -----*/
+/*----- main  -----*/
 main{
   width: 100%;
   max-width: 1280px;
-  height: 800px;
+  min-width: 17.1rem;
+  margin: 0 auto;
+ 
+  padding: 0 2rem;
+
+  display: flex;
+  flex-direction: column;
+  
 }
-/*--------------------------------------------*/
 
 
+main .banner .glider {
+ 
+}
+
+.glider img{
+  width: 100%;
+  margin-top: 21rem;
+}
+
+main .featureds{
+
+}
+
+main .featureds h2{
+  font-size: 2.6rem;
+  line-height: 3.364rem;
+  margin-bottom: 1.6rem;
+}
+
+main .featureds hr{
+  color: #e2dfdf;
+  border-bottom: 1px solid #e2dfdf;
+}
+main .featureds .featured-products-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8rem;
+
+  margin: 2.4rem 0 5.6rem 0;
+}
+
+main .featureds .featured-products-container a{
+  text-decoration: none;
+}
+
+main .featureds .featured-products-container .product-card{
+  width: 21rem;
+  height: 32.4rem;
+
+  display: flex;
+  flex-direction: column; 
+}
 
 
+main .featureds .featured-products-container .product-card img{
+  width: 100%;
+  /* height: 100%; */
+  height: 25.7rem;
+}
 
+main .featureds .featured-products-container .product-card .product-description{
+  background-color: #5B4583;
+  color: #FFF;
+  height: 6.7rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Inter', sans-serif;
+
+  border: none;
+  
+}
+
+main .featureds .featured-products-container .product-card .product-description h5{
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.936rem;
+  text-align: center;
+}
+
+main .featureds .featured-products-container .product-card .product-description p{
+  font-size: 1.3rem;
+  line-height: 1.936rem;
+  font-weight: 400;
+}
+
+#teste{
+  height: 80rem;
+}
 
 
 
@@ -170,9 +258,11 @@ main{
 
   height: 13.2rem;
 }
+
 footer{
   height: 26rem;
 
+  margin: 0 auto;
   background-color: #372948;
 
   color: #FFFFFF;
@@ -240,6 +330,37 @@ footer h4{
 }
 
 
+.whatsapp-button{
+
+  display: inline-block;
+  
+  background-color: #FFF;
+
+  border-radius: 50%;
+
+  width: 6rem;
+  height: 6rem;
+
+  position: fixed;
+
+  right: 2.8rem;
+  bottom: 3.8rem;
+
+  
+}
+
+
+.whatsapp-button a{
+  width: 6rem;
+  height: 6rem;
+}
+
+
+.whatsapp-button img{
+  width: 6rem;
+  height: 6rem;
+}
+
 
 
 /*------Medias Queries------*/
@@ -305,6 +426,26 @@ footer h4{
   }
 
   
+  main{
+    margin: 0 0;
+
+    padding: 0 .2rem;
+  }
+
+  .glider img{
+    width: 100%;
+    margin-top: 26rem;
+  }
+
+  .glider-prev{
+    display: none;
+  }
+
+  .glider-next{
+    display: none;
+  }
+
+
 
   .container-footer{
     padding: 0 2rem;
@@ -327,7 +468,9 @@ footer h4{
   
 }
 
+
 @media (max-width:767px){
+
   footer{
     height: 46.7rem;
 
@@ -360,13 +503,13 @@ footer h4{
 
 
 @media (max-width:592px){
+
   footer h4{
     font-size: 1.1rem;
     text-align: center;
     padding: 0 3rem;
   }
 }
-
 
 
 @media (max-width:270px){
@@ -376,6 +519,8 @@ footer h4{
   }
   header input::placeholder{
     color: transparent;
+    /* visibility: hidden; */
+   
   }
 
   footer{
