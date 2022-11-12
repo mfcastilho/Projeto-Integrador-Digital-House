@@ -137,7 +137,7 @@ header .bar-nav ul li a{
 }
 
 
-/*----- conteúdo rovisório da main -somente para teste -----*/
+/*----- main  -----*/
 main{
   width: 100%;
   max-width: 1280px;
@@ -150,7 +150,7 @@ main{
   flex-direction: column;
   
 }
-/*--------------------------------------------*/
+
 
 main .banner .glider {
  
@@ -172,7 +172,8 @@ main .featureds h2{
 }
 
 main .featureds hr{
-  color: #A09D9D;
+  color: #e2dfdf;
+  border-bottom: 1px solid #e2dfdf;
 }
 main .featureds .featured-products-container{
   display: flex;
@@ -183,22 +184,23 @@ main .featureds .featured-products-container{
   margin: 2.4rem 0 5.6rem 0;
 }
 
+main .featureds .featured-products-container a{
+  text-decoration: none;
+}
+
 main .featureds .featured-products-container .product-card{
   width: 21rem;
   height: 32.4rem;
 
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
 }
 
-main .featureds .featured-products-container .product-card a{
-  margin: 0;
-  padding: 0;
-}
+
 main .featureds .featured-products-container .product-card img{
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  height: 25.7rem;
 }
 
 main .featureds .featured-products-container .product-card .product-description{
@@ -214,7 +216,7 @@ main .featureds .featured-products-container .product-card .product-description{
   font-family: 'Inter', sans-serif;
 
   border: none;
-
+  
 }
 
 main .featureds .featured-products-container .product-card .product-description h5{
@@ -235,6 +237,11 @@ main .featureds .featured-products-container .product-card .product-description 
 }
 
 
+
+
+
+
+
 /*-------rodapé--------*/
 .container-footer{
   width: 100%;
@@ -251,6 +258,7 @@ main .featureds .featured-products-container .product-card .product-description 
 
   height: 13.2rem;
 }
+
 footer{
   height: 26rem;
 
@@ -321,6 +329,39 @@ footer h4{
   margin-top: 5rem;
 }
 
+
+.whatsapp-button{
+
+  display: inline-block;
+  
+
+  background-color: #FFF;
+
+  border-radius: 50%;
+
+  position: relative;
+
+  /* left: 2rem;
+  bottom: 5.6rem; */
+  position: fixed;
+
+  left: 124.8rem;
+  bottom: 1.6rem;
+}
+
+
+.whatsapp-button a{
+  /* position: fixed;
+
+  left: 102rem;
+  bottom: 5.6rem; */
+}
+
+
+.whatsapp-button img{
+  width: 7rem;
+  height: 7rem;
+}
 
 
 
@@ -429,7 +470,9 @@ footer h4{
   
 }
 
+
 @media (max-width:767px){
+
   footer{
     height: 46.7rem;
 
@@ -462,13 +505,13 @@ footer h4{
 
 
 @media (max-width:592px){
+
   footer h4{
     font-size: 1.1rem;
     text-align: center;
     padding: 0 3rem;
   }
 }
-
 
 
 @media (max-width:270px){
@@ -478,6 +521,8 @@ footer h4{
   }
   header input::placeholder{
     color: transparent;
+    /* visibility: hidden; */
+   
   }
 
   footer{
