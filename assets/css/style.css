@@ -239,7 +239,36 @@ footer h4{
   margin-top: 5rem;
 }
 
+.whatsapp-button{
 
+  display: inline-block;
+  
+  background-color: #FFF;
+
+  border-radius: 50%;
+
+  width: 6rem;
+  height: 6rem;
+
+  position: fixed;
+
+  right: 2.8rem;
+  bottom: 3.8rem;
+
+  
+}
+
+
+.whatsapp-button a{
+  width: 6rem;
+  height: 6rem;
+}
+
+
+.whatsapp-button img{
+  width: 6rem;
+  height: 6rem;
+}
 
 
 /*------Medias Queries------*/
