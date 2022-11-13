@@ -111,7 +111,21 @@ header .menu-mobile-icons-container{
 
 /*Barra de Navegação*/
 header .bar-nav{
+
+
+
+  /* background-color: #fff1f1; */
+
+
+  /*====Cor Original da barra de navegação===*/
   background-color: #F6E4E4;
+
+
+
+
+  /* background-color: #f0f0f0; */
+  /* background-color: #f3eafd; */
+
   height: 5.1rem;
   line-height:5.1rem;
 }
