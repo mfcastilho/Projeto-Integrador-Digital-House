@@ -48,7 +48,7 @@ body{
 
   padding: 5rem 0;
  
- gap: 3rem;
+  gap: 3rem;
 
  border-radius: .2rem;
 }
@@ -56,7 +56,8 @@ body{
 
 .register-button{
   text-decoration: none;
-  width: 20rem;
+  max-width: 20rem;
+  width: 80%;
   height: 4.83rem;
 
   background-color: #FFFFFF;
@@ -71,7 +72,6 @@ body{
   gap: .3rem;
 
   transition: .2s;
-
 }
 
 
@@ -82,7 +82,7 @@ body{
 
 
 .register-button p{
-  font-size: 2rem;
+  font-size:2rem;
   
   font-weight: 700;
   color: #000000;
@@ -115,7 +115,8 @@ body{
 .form-section input{
   height: 3rem;
 
-  background-color: #e5e6e9;
+  /* background-color: #e5e6e9; */
+   background-color: #d8d9db;
   border: none;
 
   padding-left: .6rem;
@@ -170,6 +171,11 @@ input:-webkit-autofill {
   align-items: flex-end;
 }
 
+.assistant-form-box .input-box input{
+  width: 100%;
+}
+
+
 
 .form-section form button{
 
@@ -203,9 +209,7 @@ input:-webkit-autofill {
 }
 
 
-.assistant-form-box .input-box input{
- 
-}
+
 
 
 .hugging-form{
@@ -214,3 +218,6 @@ input:-webkit-autofill {
 }
 
 
+@media (max-width:1100px){
+
+}
