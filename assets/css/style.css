@@ -137,10 +137,24 @@ header .bar-nav ul li a{
 }
 
 
-/*----- main  layout-default-----*/
+/*----- main  -----*/
+main{
+  width: 100%;
+  max-width: 1280px;
+  min-width: 17.1rem;
+  margin: 0 auto;
+ 
+  padding: 0 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
 #teste{
   height: 80rem;
 }
+
 
 
 /*-------rodapé--------*/
