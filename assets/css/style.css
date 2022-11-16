@@ -44,8 +44,6 @@ header{
   position: fixed;
 
   width: 100%;
-  z-index: 1;
-
 }
 
 
@@ -137,15 +135,11 @@ header .bar-nav ul li a{
 }
 
 
-/*----- conteúdo provisório da main -somente para teste -----*/
+/*----- conteúdo rovisório da main -somente para teste -----*/
 main{
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  
+  height: 800px;
 }
 /*--------------------------------------------*/
 
