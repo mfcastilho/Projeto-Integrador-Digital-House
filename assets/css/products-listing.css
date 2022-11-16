@@ -35,6 +35,10 @@ body{
   flex-direction: column;
 }
 
+input{
+  accent-color: #715a9b;
+}
+
 main .main-container h2{
   font-size: 2.6rem;
   line-height: 3.364rem;
@@ -120,11 +124,37 @@ main .products-listing-container .product-card .product-description p{
 }
 
 .filters{
-  width: 70%;
+  width: 100%;
 }
 
-.filters-box{
+.filters h3{
+  font-size: 2.6rem;
+  font-weight: 400;
 
+
+
+  margin-left: .2rem;
+}
+
+.filters h3:nth-child(1){
+  margin-bottom: 1rem;
+}
+
+.filters-box h3, .genre-label{
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  
+
+}
+
+.filters-box h3{
+  margin-left: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.filters-box .filters-box-divs{
+  margin-bottom: 1rem;
 }
 
 .box-size-checkboxs{
@@ -137,10 +167,10 @@ main .products-listing-container .product-card .product-description p{
 }
 
 #second-size-label{
-  margin-right: .3rem;
+  margin-right: .48rem;
 }
-.top .size-label{
-  
+.size-label{
+  font-size: 1.1rem;
 }
 
 .box-genre-checkboxs{
@@ -156,23 +186,37 @@ main .products-listing-container .product-card .product-description p{
   display: flex;
 }
 
+.box-genre-checkboxs .top input{
+  margin-right: .2rem;
+}
+
+.box-genre-checkboxs .bottom input{
+  margin-right: .3rem;
+}
+
+
+
 .box-colors-filter{
   display: flex;
   flex-direction: column;
+  
 }
 
 .colors{
   display: flex;
   justify-content: space-between;
-
   flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
 }
 
 .color-square{
   width: 3rem;
-  height: 3rem;
+  height: 3rem;      
   border: 1px solid black;
   border-radius: .4rem;
+
+  cursor: pointer;
 }
 
 .white{
@@ -189,4 +233,36 @@ main .products-listing-container .product-card .product-description p{
 
 .green{
   background-color: #0CAB2F;
+}
+
+.pink{
+  background-color: #D35BC7;
+}
+
+.brown{
+  background-color: #362E2E;
+}
+
+.orange{
+  background-color: #E4740C;
+}
+
+.gray{
+  background-color: #7A7D89;
+}
+
+.yellow{
+  background-color: #D5D90F;
+}
+
+.purple{
+  background-color: #420D55;
+}
+
+.black{
+  background-color: #000;
+}
+
+.ice{
+  background-color: #FFECEF;
 }
