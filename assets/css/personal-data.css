@@ -28,7 +28,7 @@ body{
 
   position: relative;
 
-  margin-top: 20.3rem;
+
   margin-bottom: 1.4rem;
   padding: 2rem 10rem;
   
@@ -45,6 +45,7 @@ body{
     height: inherit; /* valores do pai */
     padding: 5rem 0;
     gap: 3rem; /* espaço entre os filhos */
+    margin-top: 20.3rem;
 
 }
 
@@ -88,4 +89,10 @@ body{
 .hugging-form {
     width: 50%;
     display: inline-block;
+}
+
+.register-button-section a {
+  text-decoration: none;
+  align-items: center;
+
 }
