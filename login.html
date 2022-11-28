@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Urbano t-shirts</title>
-  
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/user-panel-personal-data.css">
+  <link rel="stylesheet" href="./assets/css/login.css">
 
   <link rel="icon" href="./assets/img/favicon-logo-urbano.png">
 
-  <script src="assets/js/header-behavior.js" defer></script>
-  <script src="./assets/js/input-mask-functions.js" defer></script>
-</head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 
+  
+  <script src="assets/js/header-behavior.js" defer></script>
+</head>
 <body id="body-div">
+
 
   <header>
 
@@ -41,11 +40,8 @@
 
       </div>
 
-
-      
-
       <div class="logo-box" data-logo-box>
-        <a href="index.html"><img id="logo" data-logo src="./assets/img/logo-urbano-tshirt-trasparent.png" alt="website logo"></a>
+        <a href="index.html"><img id="logo" data-logo src="./assets/img/logo-urbano-tshirt-trasparent.png" alt=""></a>
       </div>
       
       <form action="" id="form-id" data-form-id>
@@ -73,98 +69,44 @@
     </nav>
 
   </header>
-
+   
   <main>
 
     <div class="main-container">
 
-      <section class="register-button-section">
+      <section class="login-section">
 
-        
+        <div class="top-part-login-box">
+          <img src="./assets/img/puppet-login-icon.svg" alt="">
+          <p>Login</p>
+        </div>
 
-        <a href="" class="register-button">
-          <img src="./assets/img/puppet-icon.svg" alt="">
-          <p>Dados pessoais</p>
-        </a>
+        <div class="bottom-part">
+          <form action="/login">
 
-        <a href="" class="register-button">
-          <img src="./assets/img/house-icon.svg" alt="">
-          <p>Endereços</p>
-        </a>
-
-        <a href="" class="register-button">
-          <img src="./assets/img/bullet-list-icon.svg" alt="">
-          <p>Pedidos</p>
-        </a>
-
-        <a href="" class="register-button">
-          <img src="./assets/img/power-off-icon.svg" alt="">
-          <p>Sair</p>
-        </a>
-
-      </section>
-
-
-      <section class="form-section">
-
-        <form action="/dados-pessoais" method="POST">
-
-          <div class="hugging-form">
-
-            <div class="input-box large-input">
-              <label for="name">Nome completo</label>
-              <input type="text" name="name" id="name" required>
+            <div class="input-box">
+              <label for="email-id">E-mail</label>
+              <input type="email" name="email-id" id="email-id">
             </div>
-          
-            <div class="assistant-form-box">
-    
+
+            <div class="hugging-elements">
+
               <div class="input-box">
-                <label for="cpf">CPF</label>
-                <input type="text" name="cpf" id="cpf" required> 
+                <label for="password-id">Senha</label>
+                <input type="password" name="password-id" id="password-id">
               </div>
-    
-              <div class="input-box">
-                <label for="birthday">Data de nascimento</label>
-                <input type="datetime-local" name="birthday" id="birthday" required>
-              </div>
+              <button type="submit">Login</button>
+
+            </div>
             
-            </div>
-    
-            <div class="input-box large-input">
-              <label for="email">E-mail</label>
-              <input type="email" name="email" id="email" required>
-            </div>
-    
-            <div class="input-box large-input">
-              <label for="tel">Celular</label>
-              <input type="tel" name="tel" id="tel" maxlength="15" required>
-            </div>
-    
-            <div class="assistant-form-box">
-    
-              <div class="input-box">
-                <label for="new-password">Senha</label>
-                <input type="password" name="new-password" id="new-password" required>
-              </div>
-    
-              <div class="input-box">
-                <label for="type-again">Confirmar senha</label>
-                <input type="password" name="type-again" id="type-again" required>
-              </div>
-
-            </div>
-
-          </div>
-            
-          <button type="submit">Salvar</button>
-
-        </form>
+          </form>
+        </div>
 
       </section>
 
     </div>
-
-  </main>  
+ 
+  </main>
 
   <footer>
     
@@ -215,10 +157,3 @@
   
 </body>
 </html>
-
-
-
-
-
-
-

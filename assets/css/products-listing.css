@@ -61,6 +61,11 @@ main .main-container .top-part select{
   font-size: 1.4rem;
 }
 
+main .main-container .top-part select option:hover{
+  background-color: #5B4583;
+ 
+}
+
 
 
 main .main-container hr{
