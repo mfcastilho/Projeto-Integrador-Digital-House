@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Urbano t-shirts</title>
-
-
-  <link rel="stylesheet" href="./assets/css/style.css">
+  
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 
-  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/user-panel-personal-data.css">
+
+  <link rel="icon" href="./assets/img/favicon-logo-urbano.png">
+
   <script src="assets/js/header-behavior.js" defer></script>
 </head>
-<body id="body-div">
 
+<body id="body-div">
 
   <header>
 
@@ -37,8 +40,11 @@
 
       </div>
 
+
+      
+
       <div class="logo-box" data-logo-box>
-        <a href="layout-default.html"><img id="logo" data-logo src="./assets/img/logo-urbano-tshirt-trasparent.png" alt=""></a>
+        <a href="index.html"><img id="logo" data-logo src="./assets/img/logo-urbano-tshirt-trasparent.png" alt="website logo"></a>
       </div>
       
       <form action="" id="form-id" data-form-id>
@@ -66,14 +72,98 @@
     </nav>
 
   </header>
-   
+
   <main>
 
-    <div id="teste">
+    <div class="main-container">
+
+      <section class="register-button-section">
+
+        
+
+        <a href="" class="register-button">
+          <img src="./assets/img/puppet-icon.svg" alt="">
+          <p>Dados pessoais</p>
+        </a>
+
+        <a href="" class="register-button">
+          <img src="./assets/img/house-icon.svg" alt="">
+          <p>Endereços</p>
+        </a>
+
+        <a href="" class="register-button">
+          <img src="./assets/img/bullet-list-icon.svg" alt="">
+          <p>Pedidos</p>
+        </a>
+
+        <a href="" class="register-button">
+          <img src="./assets/img/power-off-icon.svg" alt="">
+          <p>Sair</p>
+        </a>
+
+      </section>
+
+
+      <section class="form-section">
+
+        <form action="/dados-pessoais" method="POST">
+
+          <div class="hugging-form">
+
+            <div class="input-box large-input">
+              <label for="name">Nome completo</label>
+              <input type="text" name="name" id="name">
+            </div>
+          
+            <div class="assistant-form-box">
+    
+              <div class="input-box">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf"> 
+              </div>
+    
+              <div class="input-box">
+                <label for="birthday">Data de nascimento</label>
+                <input type="datetime-local" name="birthday" id="birthday">
+              </div>
+            
+            </div>
+    
+            <div class="input-box large-input">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email">
+            </div>
+    
+            <div class="input-box large-input">
+              <label for="cel">Celular</label>
+              <input type="tel" name="tel" id="tel">
+            </div>
+    
+            <div class="assistant-form-box">
+    
+              <div class="input-box">
+                <label for="new-password">Nova senha</label>
+                <input type="password" name="new-password" id="new-password">
+              </div>
+    
+              <div class="input-box">
+                <label for="type-again">Digite novamente</label>
+                <input type="password" name="type-again" id="type-again">
+              </div>
+
+            </div>
+
+          </div>
+            
+          <button type="submit">Salvar</button>
+
+        </form>
+
+      </section>
 
     </div>
-     
-  </main>
+
+  </main>  
 
   <footer>
     
@@ -124,3 +214,10 @@
   
 </body>
 </html>
+
+
+
+
+
+
+
