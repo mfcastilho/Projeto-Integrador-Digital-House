@@ -49,6 +49,12 @@ body{
 
 }
 
+.register-button-section a {
+  text-decoration: none;
+  align-items: center;
+
+}
+
 .register-button {
   max-width: 20rem;
   width: 80%;
@@ -61,6 +67,7 @@ body{
   background-color: white;
   gap: 5px;
   border-radius: 5px;
+  transition: background-color 450ms;
 }
 
 .register-button p{
@@ -69,15 +76,39 @@ body{
     color: black;
 }
 
+.register-button:hover {
+  background-color: #F6E4E4;
+}
 
+
+form div input {
+  transition: background-color 450ms;
+
+}
+
+form div input:hover{
+  background-color: #F6E4E4;
+}
 
 .form-section {
     width: 70%;
+    margin-top: 20rem;
+    
 }
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
 
 .input-box {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 1px;
 }
 
 .assistant-form-box {
@@ -85,15 +116,34 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 5px;
 }
 
 .hugging-form {
-    width: 50%;
-    display: inline-block;
+    width: 80%;
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+  
 }
 
-.register-button-section a {
-  text-decoration: none;
-  align-items: center;
+form button {
+  background-color: #4C3863;
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 17px;
+  margin-top: auto; /* PQ O TOP COLOCOU PARA BAIXO? */
+}
 
+form div label {
+  font-size: 2rem;
+}
+
+form div input {
+  background-color: #D9D9D9;
+  border: none;
+  height: 3rem;
 }
