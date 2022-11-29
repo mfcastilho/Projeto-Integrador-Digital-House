@@ -113,7 +113,8 @@ main .featureds .featured-products-container .product-card .product-description 
 
 
 main .featureds .featured-products-container a:nth-child(1) img:hover{
-  transition: all .5s;
+  transition: all 3s;
+  transition-delay: 2s;
   content: url("https://cdn.awsli.com.br/300x300/0/622/produto/177488305/f847a1231d.jpg");
 }
 

@@ -24,6 +24,12 @@
   border: 1px solid green;
 }
 
+.styling-elements{
+  background-color: #372948;
+  color: #FFF;
+  padding: .6rem;
+}
+
 .middle-part .titles-bar{
   display: flex;
 }
@@ -44,6 +50,7 @@
   display: flex;
   align-items: center;
 }
+
 
 .product-content{
   width: 30%;
