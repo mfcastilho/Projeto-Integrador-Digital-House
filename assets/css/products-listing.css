@@ -278,3 +278,122 @@ main .products-listing-container .product-card .product-description p{
 .ice{
   background-color: #FFECEF;
 }
+
+
+.products-listing-container a:nth-child(1) img:hover{
+  
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/177488305/f847a1231d.jpg");
+}
+
+.products-listing-container a:nth-child(2) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/150374988/1d0b44a7f5.jpg");
+}
+
+.products-listing-container a:nth-child(3) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/137893301/1bebbd0e94.jpg");
+}
+
+.products-listing-container a:nth-child(4) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/90833059/0833282de2.jpg");
+}
+
+.products-listing-container a:nth-child(5) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/126377724/e0957e4e0b.jpg");
+}
+.products-listing-container a:nth-child(6) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/134975275/42f0761b76.jpg");
+}
+
+.products-listing-container a:nth-child(7) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/113621817/fac0040839.jpg");
+}
+
+.products-listing-container a:nth-child(8) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/72457418/8accc4302d.jpg");
+}
+
+.products-listing-container a:nth-child(9) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/92118689/8461498fe8.jpg");
+}
+
+.products-listing-container a:nth-child(10) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/93082459/457a279bd0.jpg");
+}
+
+.products-listing-container a:nth-child(11) img:hover{
+  content: url(" https://cdn.awsli.com.br/300x300/0/622/produto/143489861/343b01128f.jpg");
+}
+
+.products-listing-container a:nth-child(12) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/134996091/a8cbaed1cd.jpg");
+}
+
+.products-listing-container a:nth-child(13) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/143654695/7b1a79cc74.jpg");
+}
+
+
+.products-listing-container a:nth-child(14) img:hover{ 
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/89204494/a75fbcb5ac.jpg");
+}
+
+.products-listing-container a:nth-child(15) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/133001035/4deb9085a6.jpg");
+}
+
+.products-listing-container a:nth-child(16) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/140168950/36e8c134a3.jpg");
+}
+.products-listing-container a:nth-child(17) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/175326571/5a2ca99333.jpg");
+}
+
+.products-listing-container a:nth-child(18) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/140776234/c1e47cf9bd.jpg");
+}
+.products-listing-container a:nth-child(19) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/134018933/1ef6ecfe3e.jpg");
+}
+
+.products-listing-container a:nth-child(20) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/135510747/a8f65ea447.jpg");
+}
+.products-listing-container a:nth-child(21) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/91933273/74ba4c53a8.jpg");
+}
+
+.products-listing-container a:nth-child(22) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/91729481/5edb85a8bb.jpg");
+}
+.products-listing-container a:nth-child(23) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/109242661/3269f15a99.jpg");
+}
+.products-listing-container a:nth-child(24) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/123531265/b9ada3d29c.jpg");
+}
+.products-listing-container a:nth-child(25) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/178846273/5f687ec771.jpg");
+}
+.products-listing-container a:nth-child(26) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/179053197/2f57ff9ea7.jpg");
+}
+.products-listing-container a:nth-child(27) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/171900717/798f7684f9.jpg");
+}
+.products-listing-container a:nth-child(28) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/179052615/218f26f651.jpg");
+}
+.products-listing-container a:nth-child(29) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/163994363/d70ec1677d.jpg");
+}
+.products-listing-container a:nth-child(30) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/140644289/712f34e48f.jpg");
+}
+.products-listing-container a:nth-child(31) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/135068365/f876a315a2.jpg");
+}
+.products-listing-container a:nth-child(32) img:hover{
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/140168896/2c1fb090fc.jpg");
+}
+
+
