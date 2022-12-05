@@ -4,7 +4,7 @@ const cpf = document.getElementById("cpf"); // Seletor do campo de cpf
 const tel = document.getElementById('tel'); // Seletor do campo de telefone
 
 
-cpf.addEventListener('keypress');
+// cpf.addEventListener('keypress');
 
 // Dispara quando digitado no campo
 tel.addEventListener('keypress', (e) => mascaraTelefone(e.target.value));

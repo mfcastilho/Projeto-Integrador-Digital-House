@@ -140,6 +140,7 @@ header .bar-nav ul li a{
 /*----- main  -----*/
 main{
   width: 100%;
+  height: 100%;
   max-width: 1280px;
   min-width: 17.1rem;
   margin: 0 auto;
@@ -261,7 +262,7 @@ footer h4{
 
   right: 2.8rem;
   bottom: 3.8rem;
-
+  /* box-shadow: 1px 1px 2px #888; */
   
 }
 
@@ -269,12 +270,14 @@ footer h4{
 .whatsapp-button a{
   width: 6rem;
   height: 6rem;
+  
 }
 
 
 .whatsapp-button img{
   width: 6rem;
   height: 6rem;
+  
 }
 
 
@@ -344,12 +347,16 @@ footer h4{
   main{
     margin: 0 0;
 
-    padding: 0 .2rem;
+    padding: 2rem;
+  }
+
+  .banner{
+    margin-top: 2.9rem;
   }
 
   .glider img{
     width: 100%;
-    margin-top: 26rem;
+    
   }
 
   .glider-prev{
@@ -427,21 +434,31 @@ footer h4{
 }
 
 
+@media (max-width:440px){
+  
+  header input::placeholder{
+    color: transparent;
+    /* visibility: hidden;*/  
+  }
+}
+
+
+
+
 @media (max-width:270px){
 
   header{
     min-width: 159px;
   }
-  header input::placeholder{
-    color: transparent;
-    /* visibility: hidden; */
-   
-  }
+  
 
   footer{
     width: 100%;
     min-width: 159px;
     height: 66rem;
+
+  
+    
   }
   footer .social-networks-box h3{
     text-align: start;
