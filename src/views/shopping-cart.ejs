@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 
 <head>
@@ -10,71 +10,26 @@
 
   
 
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/shopping-cart.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/shopping-cart.css">
+
+
+  <link rel="icon" href="/img/favicon-logo-urbano.png">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   
-  <script src="assets/js/header-behavior.js" defer></script>
+  <script src="/js/header-behavior.js" defer></script>
 </head>
 
 
 <body id="body-div">
 
+  <!-- ===== HEADER ===== -->
+  <%- include("./components/header.ejs") %>
 
-  <header>
-
-  
-    <div class="container" data-container>
-
-      <div class="menu-mobile-icons-container">
-
-        <div class="menu-burguer-box">
-          <img src="./assets/img/menu-burguer.svg" alt="menu icon">
-        </div>
-
-        <nav class="user-icons-mobile">
-          <ul>
-            <li><a href=""><img src="./assets/img/carrinho.svg" alt=""></a></li>
-            <li><a href=""><img id="login-img" src="./assets/img/login.svg" alt=""></a></li>
-          </ul>
-        </nav>
-
-      </div>
-
-      <div class="logo-box" data-logo-box>
-        <a href="layout-default.html"><img id="logo" data-logo src="./assets/img/logo-urbano-tshirt-trasparent.png" alt=""></a>
-      </div>
-      
-      <form action="" id="form-id" data-form-id>
-        <input type="text" placeholder="O que você procura?">
-      </form>
-      
-      <nav class="user-icons-nav">
-        <ul>
-          <li><a href=""><img src="./assets/img/carrinho.svg" alt=""></a></li>
-          <li><a href=""><img id="login-img" src="./assets/img/login.svg" alt=""></a></li>
-        </ul>
-      </nav>
-      
-    </div>
-
-    
-
-    <nav class="bar-nav" data-bar-nav>
-      <ul>
-        <li><a href="#">Masculino</a></li>
-        <li><a href="#">Feminino</a></li>
-        <li><a href="#">Filmes</a></li>
-        <li><a href="#">Animes</a></li>
-      </ul>
-    </nav>
-
-  </header>
-   
   <main>
 
     <div class="main-container">
@@ -101,7 +56,7 @@
         <div class="cart-content">
 
           <div class="product-content">
-            <a href=""><img src="./assets/img/t-shirt-image.svg" alt=""></a>
+            <a href=""><img src="/img/t-shirt-image.svg" alt=""></a>
             <div class="infos-product-box">
               <a href=""><h3>Nome da Camisa</h3></a>
               <p>Informações sobre o produto</p>
@@ -127,7 +82,7 @@
 
             <p>R$75.99</p>
             <div class="image-box">
-              <img src="./assets/img/delete-image.svg" alt="">
+              <img src="/img/delete-image.svg" alt="">
             </div>
             
           </div>
@@ -138,7 +93,7 @@
 
       <div class="bottom-part">
         <div class="left-part styling-bottom-elements">
-          <h4 class="total-title">Total:</h4>
+          <h4 class="total-title">Total: &NoBreak;</h4>
           <h4 class="total-price">R$75.99</h4>
         </div>
         <div class="right-part styling-button">
@@ -171,7 +126,7 @@
             <td class="">
               <div class="image">
                 <a href="">
-                  <img src="./assets/img/t-shirt-image.svg" alt="">
+                  <img src="/img/t-shirt-image.svg" alt="">
                 </a>
               </div>
             </td>
@@ -197,51 +152,11 @@
      
   </main>
 
-  <footer>
-    
-    <div class="container-footer">
-      
-      <div class="pages-menu-box">
-        <h3>Menu de páginas</h3>
-        <ul>
-          <li><a href="">Fale conosco</a></li>
-          <li><a href="">Sobre a loja</a></li>
-        </ul>
-      </div>
+ <!-- ===== FOOTER ===== -->
+ <%- include("./components/footer.ejs") %>
 
-      <div class="social-networks-box">
-        <h3>Redes Sociais</h3>
-        <a href="#"><img src="./assets/img/instagram-icon.svg" alt="instagram icon"></a>
-        <a href="#"><img src="./assets/img/facebook-icon.svg" alt="facebook icon"></a>
-        <a href="#"><img src="./assets/img/twitter-icon.svg" alt="twitter icon"></a>
-        <a href="#"><img src="./assets/img/whatsapp-icon.svg" alt="whatsapp icon"></a>  
-      </div>
-
-      <div class="payment-box">
-        <h3>Formas de Pagamento</h3>
-        <a href="#"><img src="./assets/img/visa-credit-card.svg" alt="" ></a>
-        <a href="#"><img src="./assets/img/boleto-icon.svg" alt=""></a>
-        <a href="#"><img src="./assets/img/elo-card-icon.svg" alt=""></a>
-        <a href="#"><img src="./assets/img/master-card-icon.svg" alt=""></a>
-      </div>
-
-      <div class="security-seal-box">
-        <h3>Site Seguro</h3>
-        <a href="#"><img src="./assets/img/safe-browsing-icon.svg" alt=""></a>
-      </div>
-
-      
-    </div>
-
-    <h4>
-      URBANO T-SHIRTS COMERCIO DE VESTUARIO E ILUSTRACOES LTDA. - CNPJ: 33.444.555/0001-00 © Todos os direitos reservados. 2022
-    </h4>
-
-  </footer>
-
-  <div class="whatsapp-button">
-    <a href="https://api.whatsapp.com/send?phone=5511888888888" target="_blank"><img src="./assets/img/whatsapp-icon-circle.png" alt="whatsapp icon"></a>
-  </div>
+ <!-- ===== WHATSAPP BUTTON ===== -->
+ <%- include("./components/whatsapp-button.ejs") %>
 
   
 </body>

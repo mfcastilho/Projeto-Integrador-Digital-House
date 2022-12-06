@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -27,75 +27,8 @@
 
 <body id="body-div">
 
-<!-- 
-  <div class="menu-mobile">
-
-    <div class="menu-burguer-box">
-      <img src="./assets/img/menu-burguer.svg" alt="menu icon">
-    </div>
-
-    <nav class="user-icons-mobile">
-      <ul>
-        <li><a href=""><img src="./assets/img/carrinho.svg" alt=""></a></li>
-        <li><a href="login.html"><img id="login-img" src="./assets/img/login.svg" alt=""></a></li>
-      </ul>
-    </nav>
-
-  </div> -->
-
-  <header>
-
-    
-  
-    <div class="container" data-container>
-
-      <div class="menu-mobile-icons-container">
-
-        <div class="menu-burguer-box">
-          <img src="/img/menu-burguer.svg" alt="menu icon">
-        </div>
-
-        <nav class="user-icons-mobile">
-          <ul>
-            <li><a href=""><img src="/img/carrinho.svg" alt=""></a></li>
-            <li><a href="login.html"><img id="login-img" src="/img/login.svg" alt=""></a></li>
-          </ul>
-        </nav>
-
-      </div>
-
-
-      
-
-      <div class="logo-box" data-logo-box>
-        <a href="index.html"><img id="logo" data-logo src="/img/logo-urbano-tshirt-trasparent.png" alt=""></a>
-      </div>
-      
-      <form action="" id="form-id" data-form-id>
-        <input type="text" placeholder="O que você procura?">
-      </form>
-      
-      <nav class="user-icons-nav">
-        <ul>
-          <li><a href=""><img src="/img/carrinho.svg" alt=""></a></li>
-          <li><a href="login.html"><img id="login-img" src="/img/login.svg" alt=""></a></li>
-        </ul>
-      </nav>
-      
-    </div>
-
-    
-
-    <nav class="bar-nav" data-bar-nav>
-      <ul>
-        <li><a href="products-listing.html">Masculino</a></li>
-        <li><a href="products-listing.html">Feminino</a></li>
-        <li><a href="products-listing.html">Filmes</a></li>
-        <li><a href="products-listing.html">Animes</a></li>
-      </ul>
-    </nav>
-
-  </header>
+  <!-- ===== HEADER ===== -->
+  <%- include("./components/header.ejs") %>
 
   <main >
 
@@ -461,52 +394,11 @@
 
   </main>
 
-  <footer>
-    
-    <div class="container-footer">
-      
-      <div class="pages-menu-box">
-        <h3>Menu de páginas</h3>
-        <ul>
-          <li><a href="">Fale conosco</a></li>
-          <li><a href="">Sobre a loja</a></li>
-        </ul>
-      </div>
+  <!-- ===== FOOTER ===== -->
+  <%- include("./components/footer.ejs") %>
 
-      <div class="social-networks-box">
-        <h3>Redes Sociais</h3>
-        <a href="#"><img src="/img/instagram-icon.svg" alt="instagram icon"></a>
-        <a href="#"><img src="/img/facebook-icon.svg" alt="facebook icon"></a>
-        <a href="#"><img src="/img/twitter-icon.svg" alt="twitter icon"></a>
-        <a href="#"><img src="/img/whatsapp-icon.svg" alt="whatsapp icon"></a>  
-      </div>
-
-      <div class="payment-box">
-        <h3>Formas de Pagamento</h3>
-        <a href="#"><img src="/img/visa-credit-card.svg" alt="" ></a>
-        <a href="#"><img src="/img/boleto-icon.svg" alt=""></a>
-        <a href="#"><img src="/img/elo-card-icon.svg" alt=""></a>
-        <a href="#"><img src="/img/master-card-icon.svg" alt=""></a>
-      </div>
-
-      <div class="security-seal-box">
-        <h3>Site Seguro</h3>
-        <a href="#"><img src="/img/safe-browsing-icon.svg" alt=""></a>
-      </div>
-
-      
-    </div>
-
-    <h4>
-      URBANO T-SHIRTS COMERCIO DE VESTUARIO E ILUSTRACOES LTDA. - CNPJ: 33.444.555/0001-00 © Todos os direitos reservados. 2022
-    </h4>
-
-    
-  </footer>
-
-  <div class="whatsapp-button">
-    <a href="https://api.whatsapp.com/send?phone=5511888888888" target="_blank"><img src="/img/whatsapp-icon-circle.png" alt="whatsapp icon"></a>
-  </div>
+  <!-- ===== WHATSAPP BUTTON ===== -->
+  <%- include("./components/whatsapp-button.ejs") %>
 
   
 </body>
