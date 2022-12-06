@@ -4,7 +4,7 @@ const router = express.Router()
 const ShoppingCartController = require("../controller/ShoppingCartController.js");
 
 
-router.get("/shopping-cart", ShoppingCartController.showShoppingCart);
+router.get("/carrinho", ShoppingCartController.showShoppingCart);
 
 
 

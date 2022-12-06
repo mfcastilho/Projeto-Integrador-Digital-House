@@ -3,11 +3,13 @@ const app = express();
 
 const port = 5050;
 const path = require("path");
+
 const homeRouter = require("./router/homeRouter.js");
 const shoppingCartRouter = require("./router/shoppingCartRouter.js");
 const productsListingRouter = require("./router/productsListingRouter.js");
 const userPanelPersonalDataRouter = require("./router/userPanelPersonalDataRouter.js");
 const loginRouter = require("./router/loginRouter.js");
+const registerRouter = require("./router/registerRouter.js");
 
 
 //mostrando para p express que iremos usar uma
@@ -32,7 +34,7 @@ app.use(shoppingCartRouter);
 app.use(productsListingRouter);
 app.use(userPanelPersonalDataRouter);
 app.use(loginRouter);
-
+app.use(registerRouter);
 
 
 

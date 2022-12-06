@@ -163,8 +163,10 @@ input:-webkit-autofill {
 
 
 .buttons-box{
-  margin: 4rem 0 0 5rem;
+  margin: 12rem 0 0 5rem;
 
+  display: flex;
+  justify-content: flex-end;
   
 
 }
