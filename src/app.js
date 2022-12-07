@@ -12,7 +12,7 @@ const loginRouter = require("./router/loginRouter.js");
 const registerRouter = require("./router/registerRouter.js");
 
 
-//mostrando para p express que iremos usar uma
+//mostrando para o express que iremos usar uma
 //template engine e especificando que iremos usar ejs
 app.set("view engine", "ejs");
 
