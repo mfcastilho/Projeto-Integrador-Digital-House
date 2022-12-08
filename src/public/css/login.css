@@ -162,4 +162,13 @@ input:-webkit-autofill {
   background-color: #372948;  
 }
 
+.dont-have-account{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  font-size: 1.6rem;
+}
+
 

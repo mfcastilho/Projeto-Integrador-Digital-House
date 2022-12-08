@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap');
+
+
+:root{
+  font-size: 10px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
+.main-container{
+  margin: 23rem 0 2rem 0;
+}
+
+.top-part{
+  display: flex;
+}
+
+.left-part{
+  display: flex;
+}
+
+
+.image-card-box{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.image-card-box .image-card img{
+  width: 30%;
+}
+
+
+.left-part img{
+  width: 100%;
+}

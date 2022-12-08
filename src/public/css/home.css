@@ -53,6 +53,7 @@ main .featureds hr{
 main .featureds .featured-products-container{
   display: flex;
   justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
   gap: 8rem;
 
@@ -112,7 +113,7 @@ main .featureds .featured-products-container .product-card .product-description 
 
 
 
-main .featureds .featured-products-container a:nth-child(1) img:hover{
+/* main .featureds .featured-products-container a:nth-child(1) img:hover{
   transition: all 3s;
   transition-delay: 2s;
   content: url("https://cdn.awsli.com.br/300x300/0/622/produto/177488305/f847a1231d.jpg");
@@ -154,7 +155,7 @@ main .featureds .featured-products-container a:nth-child(10) img:hover{
 }
 
 main .featureds .featured-products-container a:nth-child(11) img:hover{
-  content: url(" https://cdn.awsli.com.br/300x300/0/622/produto/143489861/343b01128f.jpg");
+  content: url("https://cdn.awsli.com.br/300x300/0/622/produto/143489861/343b01128f.jpg");
 }
 
 main .featureds .featured-products-container a:nth-child(12) img:hover{
@@ -229,4 +230,4 @@ main .featureds .featured-products-container a:nth-child(32) img:hover{
   content: url("https://cdn.awsli.com.br/300x300/0/622/produto/140168896/2c1fb090fc.jpg");
 }
 
-
+ */

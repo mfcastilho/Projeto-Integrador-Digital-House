@@ -10,6 +10,8 @@ const productsListingRouter = require("./router/productsListingRouter.js");
 const userPanelPersonalDataRouter = require("./router/userPanelPersonalDataRouter.js");
 const loginRouter = require("./router/loginRouter.js");
 const registerRouter = require("./router/registerRouter.js");
+const innerProductRouter = require("./router/innerProductRouter.js");
+const { use } = require("./router/homeRouter.js");
 
 
 //mostrando para o express que iremos usar uma
@@ -35,6 +37,7 @@ app.use(productsListingRouter);
 app.use(userPanelPersonalDataRouter);
 app.use(loginRouter);
 app.use(registerRouter);
+app.use(innerProductRouter);
 
 
 

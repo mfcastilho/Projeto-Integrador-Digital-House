@@ -124,16 +124,23 @@
   
           <div class="products-listing-container">
     
-            <a href="">
-              <div class="product-card">
-                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/177488305/5858bc71eb.jpg" alt="">
-                <div class="product-description">
-                  <h5>Camiseta Cabra Vaders</h5>
-                  <p>A partir de R$ 78,90</p>
+            <% products.forEach(product =>{ %>
+
+
+              <a href="/produtos/<%=product.id %>">
+                <div class="product-card">
+                  <img src="<%= product.imageSecundary %> " alt="">
+                  <div class="product-description">
+                    <h5><%= product.name %> </h5>
+                    <p>A partir de R$ <%= product.price %> </p>
+                  </div>
                 </div>
-              </div>
-            </a>
-    
+              </a>
+
+
+            <% }); %> 
+            
+<!--     
             <a href="">
               <div class="product-card">
                 <img src="https://cdn.awsli.com.br/300x300/0/622/produto/150374988/af73c6f55d.jpg" alt="">
@@ -445,7 +452,7 @@
                   <p>A partir de R$ 86,00</p>
                 </div>
               </div>
-            </a>
+            </a> -->
     
           </div>
     
