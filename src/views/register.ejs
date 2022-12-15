@@ -14,6 +14,7 @@
 
   
   <script src="/js/header-behavior.js" defer></script>
+  <script src="/js/validationRegisterForm.js" defer></script>
 </head>
 <body id="body-div">
 
@@ -25,7 +26,7 @@
 
     <div class="main-container">
 
-      <form action="">
+      <form action="/login">
         
         <section class="register-data-section">
 
@@ -38,12 +39,14 @@
 
             <div class="input-box">
               <label for="email-id">E-mail</label>
-              <input type="email" name="email-id" id="email-id">
+              <input type="email" name="email" id="email-id">
+              <span class="input-erro-msg"></span>
             </div>
 
             <div class="input-box">
               <label for="confirm-email-id">Confirmar E-mail</label>
-              <input type="email" name="confirm-email-id" id="confirm-email-id">
+              <input type="email" name="confirm-email" id="confirm-email-id">
+              <span class="input-erro-msg"></span>
             </div>
             
           </div>
@@ -52,12 +55,14 @@
 
             <div class="input-box">
               <label for="password-id">Senha</label>
-              <input type="password" name="password-id" id="password-id">
+              <input type="password" name="password" id="password-id">
+              <span class="input-erro-msg"></span>
             </div>
 
             <div class="input-box">
               <label for="confirm-password-id">Confirmar senha</label>
-              <input type="password" name="ocnfirm-password-id" id="confirm-password-id">
+              <input type="password" name="ocnfirm-password" id="confirm-password-id">
+              <span class="input-erro-msg"></span>
             </div>
 
           </div>
@@ -73,14 +78,16 @@
           <div class="wrapper-radio-button-box">
 
             <div class="radio-button-box">           
-              <input type="radio" name="person-id" id="fisical-person-id" value="pessoa fisica" checked>
+              <input type="radio" name="person" id="fisical-person-id" value="pessoa fisica" checked>
               <label for="fisical-person-id">Pessoa física</label>
             </div>
+            <span class="input-erro-msg"></span>
 
             <div class="radio-button-box">              
-              <input type="radio" name="person-id" id="legal-persson-id" value="pessoa juridica">
+              <input type="radio" name="person" id="legal-persson-id" value="pessoa juridica">
               <label for="legal-persson-id">Pessoa jurídica</label>
             </div>
+            <span class="input-erro-msg"></span>
             
           </div>
         </section>
@@ -98,32 +105,38 @@
 
               <div class="input-box">
                 <label for="name-id">Nome completo</label>
-                <input type="text" name="name-id" id="name-id">
+                <input type="text" name="name" id="name-id">
+                <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="cpf-id">CPF</label>
-                <input type="text" name="cpf-id" id="cpf-id">
+                <input type="text" name="cpf" id="cpf-id">
+                <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="cel-id">Celular</label>
-                <input type="tel" name="cel-id" id="cel-id">
+                <input type="tel" name="cel" id="cel-id">
+                <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="tel-id">Telefone fixo</label>
-                <input type="tel" name="tel-id" id="tel-id">
+                <input type="tel" name="tel" id="tel-id">
+                <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="genre-id">Sexo</label>
-                <input type="text" name="genre-id" id="genre-id">
+                <input type="text" name="genre" id="genre-id">
+                <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="birthday-id">Birthday</label>
-                <input type="date" name="birthday-id" id="birthday-id">
+                <input type="date" name="birthday" id="birthday-id">
+                <span class="input-erro-msg"></span>
               </div>
 
             </div>
@@ -143,41 +156,49 @@
               <div class="input-box">
                 <label for="cep-id">Cep</label>
                 <input type="text" name="cep-id" id="cep-id">
+                <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="public-place-id">Logradouro</label>
                 <input type="text" name="public-place-id" id="public-place-id">
+                <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="number-id">Número</label>
                 <input type="number" name="number-id" id="number-id">
+                <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="complement-id">Complemento</label>
                 <input type="text" name="complement-id" id="complement-id">
+                <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="district-id">Bairro</label>
                 <input type="text" name="district-id" id="district-id">
+                <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="reference-id">Referência</label>
                 <input type="text" name="reference-id" id="reference-id">
+                <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="birthday-id">Cidade</label>
                 <input type="text" name="birthday-id" id="birthday-id">
+                <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="state-id">Estado</label>
                 <input type="text" name="state-id" id="state-id">
+                <span class="input-erro-msg"></span>
               </div>
 
             </div>
@@ -189,7 +210,7 @@
 
         <div class="buttons-box">
           <button type="">Cancelar</button>
-          <button type="submit">Criar conta</button>
+          <button id="create-account-button" data-create-account-button type="submit">Criar conta</button>
         </div>
 
         <div class="have-account">

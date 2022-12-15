@@ -219,3 +219,13 @@ input:-webkit-autofill {
 
   margin-top: 2rem;
 }
+
+
+.input-box label{
+  display: inline-block;
+}
+
+.input-erro-msg{
+  color: red;
+  margin-left: .5rem;
+}
