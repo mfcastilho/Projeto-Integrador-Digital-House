@@ -19,7 +19,7 @@
   <script src="/js/header-behavior.js" defer></script>
   <!-- <script src="/js/main.js" defer></script> -->
   <script src="/js/glider.min.js" defer></script>
-  <!-- <script src="/js/showShirtPrint.js" defer></script> -->
+  <script src="/js/showShirtPrint.js" defer></script>
 
 </head>
 
@@ -73,7 +73,8 @@
 
         <a href="/produto/<%= product.id %> ">
           <div class="product-card">
-            <img src="<%= product.imageSecundary %> " alt="">
+            <img class="tshirt-image" src="<%= product.imageSecundary %> " alt="">
+            <img class="tshirt-print" src="<%= product.tShirtPrint %> " alt="">
             <div class="product-description">
               <h5><%= product.name %> </h5>
               <p>A partir de R$ <%= product.price%></p>

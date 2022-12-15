@@ -73,11 +73,18 @@ main .featureds .featured-products-container .product-card{
 }
 
 
-main .featureds .featured-products-container .product-card img{
+main .featureds .featured-products-container .product-card .tshirt-image{
   width: 100%;
-  /* height: 100%; */
-  /* height: 25.7rem; */
 }
+
+main .featureds .featured-products-container .product-card .tshirt-print{
+  width: 100%;
+  display: none;
+}
+
+
+
+
 
 main .featureds .featured-products-container .product-card .product-description{
   background-color: #5B4583;
