@@ -15,6 +15,7 @@
   
   <script src="/js/header-behavior.js" defer></script>
   <script src="/js/validationRegisterForm.js" defer></script>
+  <script src="/js/lookingZipeCodeInfos.js" defer></script>
 </head>
 <body id="body-div">
 
@@ -154,32 +155,32 @@
 
 
               <div class="input-box">
-                <label for="cep-id">Cep</label>
-                <input type="text" name="cep-id" id="cep-id">
+                <label for="zip-code-id">Cep</label>
+                <input type="text" name="zip-code" id="zip-code-id">
                 <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="public-place-id">Logradouro</label>
-                <input type="text" name="public-place-id" id="public-place-id">
+                <input type="text" name="public-place" id="public-place-id">
                 <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="number-id">Número</label>
-                <input type="number" name="number-id" id="number-id">
+                <input type="number" name="number" id="number-id">
                 <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="complement-id">Complemento</label>
-                <input type="text" name="complement-id" id="complement-id">
+                <input type="text" name="complement" id="complement-id">
                 <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="district-id">Bairro</label>
-                <input type="text" name="district-id" id="district-id">
+                <input type="text" name="district" id="district-id">
                 <span class="input-erro-msg"></span>
               </div>
 
@@ -190,14 +191,42 @@
               </div>
   
               <div class="input-box">
-                <label for="birthday-id">Cidade</label>
-                <input type="text" name="birthday-id" id="birthday-id">
+                <label for="city-id">Cidade</label>
+                <input type="text" name="city" id="city-id">
                 <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="state-id">Estado</label>
-                <input type="text" name="state-id" id="state-id">
+                <select name="state-id" id="state-id">
+                  <option value="Acre">AC</option>
+                  <option value="Alagoas">AL</option>
+                  <option value="Amapá">AP</option>
+                  <option value="Amazonas">AM</option>
+                  <option value="Bahia">BA</option>
+                  <option value="Ceará">CE</option>
+                  <option value="Distrito Federal">DF</option>
+                  <option value="Espírito Santo">ES</option>
+                  <option value="Goiás">GO</option>
+                  <option value="Maranhão">MA</option>
+                  <option value="Mato Grosso">MT</option>
+                  <option value="Mato Grosso do Sul">MS</option>
+                  <option value="Minas Gerais">MG</option>
+                  <option value="Pará">PA</option>
+                  <option value="Paraíba">PB</option>
+                  <option value="Paraná">PR</option>
+                  <option value="Pernambuco">PE</option>
+                  <option value="Piauí">PI</option>
+                  <option value="Rio de Janeiro" >RJ</option>
+                  <option value="Rio Grande do Norte">RN</option>
+                  <option value="Rio Grande do Sul">RS</option>
+                  <option value="Rondônia">RO</option>
+                  <option value="Roraima">RR</option>
+                  <option value="Santa Catarina">SC</option>
+                  <option value="São Paulo">SP</option>
+                  <option value="Sergipe">SE</option>
+                  <option value="Tocantins">TO</option>
+                </select>
                 <span class="input-erro-msg"></span>
               </div>
 

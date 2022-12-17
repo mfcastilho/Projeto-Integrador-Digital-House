@@ -77,7 +77,7 @@
             <img class="tshirt-print" src="<%= product.tShirtPrint %> " alt="">
             <div class="product-description">
               <h5><%= product.name %> </h5>
-              <p>A partir de R$ <%= product.price%></p>
+              <p>A partir de R$ <%= product.price.toFixed(2)%></p>
             </div>
           </div>
         </a>

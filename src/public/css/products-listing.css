@@ -280,6 +280,17 @@ main .products-listing-container .product-card .product-description p{
 }
 
 
+
+.tshirt-image{
+  width: 100%;
+}
+
+.tshirt-print{
+  width: 100%;
+  display: none;
+} 
+
+
 /* .products-listing-container a:nth-child(1) img:hover{
   
   content: url("https://cdn.awsli.com.br/300x300/0/622/produto/177488305/f847a1231d.jpg");

@@ -19,6 +19,7 @@
 
   <script src="/js/header-behavior.js" defer></script>
   <script src="/js/main.js" defer></script>
+  <script src="/js/showShirtPrint.js" defer></script>
 
 </head>
 
@@ -35,6 +36,7 @@
 
       
       <div class="top-part">
+
         <h2>Camisetas</h2>
         <select name="choice-order-filter" id="choice-order-filter">
           <option data-content value="alphabetical-order">Ordem alfabética</option>
@@ -42,6 +44,7 @@
           <option data-content value="lowest-price">Menor preço</option>
           <option data-content value="biggest-price">Maior preço</option>
         </select>
+
       </div>
       
   
@@ -50,6 +53,7 @@
       <div class="sections-container">
 
         <section class="filters">
+
           <h3>Filtros</h3>
           <div class="filters-box">
   
@@ -80,8 +84,6 @@
                 <label for="xgg-size-label" class="size-label">XGG</label>
               </div>
               
-              
-              
             </div>
 
             <div class="box-genre-checkboxs filters-box-divs">
@@ -99,25 +101,28 @@
             </div>
 
             <div class="box-colors-filter filters-box-divs">
+
               <h3>Cores</h3>
               <div class="colors">
-                <div class="white color-square"></div>
-                <div class="blue color-square"></div>
-                <div class="red color-square"></div>
-                <div class="green color-square"></div>
-                <div class="pink color-square"></div>
-                <div class="brown color-square"></div>
-                <div class="orange color-square"></div>
-                <div class="gray color-square"></div>
-                <div class="yellow color-square"></div>
-                <div class="purple color-square"></div>
-                <div class="black color-square"></div>
-                <div class="ice color-square"></div>
-              </div>              
+                <div class="white color-square" title="branco"></div>
+                <div class="blue color-square" title="azul"></div>
+                <div class="red color-square" title="vermelho"></div>
+                <div class="green color-square" title="verde"></div>
+                <div class="pink color-square" title="rosa"></div>
+                <div class="brown color-square" title="marrom"></div>
+                <div class="orange color-square" title="laranja"></div>
+                <div class="gray color-square" title="cinza"></div>
+                <div class="yellow color-square" title="amarelo"></div>
+                <div class="purple color-square" title="roxo"></div>
+                <div class="black color-square" title="preto"></div>
+                <div class="ice color-square" title="cor de gelo"></div>
+              </div>
+                            
             </div>
   
   
           </div>
+
         </section>
   
         <section class="products-listing">
@@ -129,10 +134,11 @@
 
               <a href="/produto/<%=product.id %>">
                 <div class="product-card">
-                  <img src="<%= product.imageSecundary %> " alt="">
+                  <img class="tshirt-image" src="<%= product.imageSecundary %> " alt="">
+                  <img class="tshirt-print" src="<%= product.tShirtPrint %> " alt="">
                   <div class="product-description">
                     <h5><%= product.name %> </h5>
-                    <p>A partir de R$ <%= product.price %> </p>
+                    <p>A partir de R$ <%= product.price.toFixed(2)%> </p>
                   </div>
                 </div>
               </a>
@@ -459,8 +465,6 @@
         </section>
 
       </div>
-
-      
 
     </div>
     
