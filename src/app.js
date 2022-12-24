@@ -23,6 +23,8 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve("src", "views"));
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true}));
+
 
 
 //transformando a pasta public em estática(global)

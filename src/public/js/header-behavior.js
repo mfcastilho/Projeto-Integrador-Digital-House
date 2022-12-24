@@ -39,21 +39,21 @@ function scrollDetected(){
 
   
   window.addEventListener("scroll", (event) => {
-    console.log(event);
+    // console.log(event);
 
     //getting the width of the viewport
     let viewportWidth = window.innerWidth;
-    console.log(viewportWidth);
+    // console.log(viewportWidth);
 
     //getting the scroll position
     let scroll  = this.scrollY;
-    console.log("Posição:"+scroll);
+    // console.log("Posição:"+scroll);
 
     //if the scroll position is not in the top, 
     //the navagation bar disappears
     if(scroll>0){
       navBar.style.display = "none";
-      console.log("maior que 0");
+      // console.log("maior que 0");
     }
   
     //If the scroll position is at the top, 

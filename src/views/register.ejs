@@ -27,7 +27,7 @@
 
     <div class="main-container">
 
-      <form action="/login">
+      <form action="/usuario/cadastro" method="POST" id="register-form">
         
         <section class="register-data-section">
 
@@ -46,7 +46,7 @@
 
             <div class="input-box">
               <label for="confirm-email-id">Confirmar E-mail</label>
-              <input type="email" name="confirm-email" id="confirm-email-id">
+              <input type="email" name="confirmEmail" id="confirm-email-id">
               <span class="input-erro-msg"></span>
             </div>
             
@@ -62,7 +62,7 @@
 
             <div class="input-box">
               <label for="confirm-password-id">Confirmar senha</label>
-              <input type="password" name="ocnfirm-password" id="confirm-password-id">
+              <input type="password" name="confirmPassword" id="confirm-password-id">
               <span class="input-erro-msg"></span>
             </div>
 
@@ -140,6 +140,16 @@
                 <span class="input-erro-msg"></span>
               </div>
 
+              <!--==== UPLOAD FOTO DO PERFIL(MULTER)====-->
+
+              <div class="input-box">
+                <label for="profile-picture-id">url da foto de perfil</label>
+                <input type="text" name="profilePicture" id="profile-picture-id">
+                <span class="input-erro-msg"></span>
+              </div>
+
+              <!--==== UPLOAD FOTO DO PERFIL(MULTER)====-->
+
             </div>
 
           </section>
@@ -147,7 +157,7 @@
           <section class="address-section">
 
             <div class="section-title-box">
-              <img src="./assets/img/register-data-icon.svg" alt="">
+              <img src="/img/register-data-icon.svg" alt="">
               <h3>Endereço</h3>
             </div>
            
@@ -156,13 +166,13 @@
 
               <div class="input-box">
                 <label for="zip-code-id">Cep</label>
-                <input type="text" name="zip-code" id="zip-code-id">
+                <input type="text" name="zipCode" id="zip-code-id">
                 <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="public-place-id">Logradouro</label>
-                <input type="text" name="public-place" id="public-place-id">
+                <input type="text" name="publicPlace" id="public-place-id">
                 <span class="input-erro-msg"></span>
               </div>
 
@@ -186,7 +196,7 @@
 
               <div class="input-box">
                 <label for="reference-id">Referência</label>
-                <input type="text" name="reference-id" id="reference-id">
+                <input type="text" name="reference" id="reference-id">
                 <span class="input-erro-msg"></span>
               </div>
   
@@ -239,16 +249,14 @@
 
         <div class="buttons-box">
           <button type="">Cancelar</button>
-          <button id="create-account-button" data-create-account-button type="submit">Criar conta</button>
+          <button type="submit" id="create-account-button" data-create-account-button>Criar conta</button>
         </div>
-
-        <div class="have-account">
-          <a href="/login">Tem uma conta? Fazer Login</a>
-        </div>
-        
+     
       </form>
 
-      
+      <div class="have-account">
+        <a href="/login">Tem uma conta? Fazer Login</a>
+      </div>
 
     </div>
      
