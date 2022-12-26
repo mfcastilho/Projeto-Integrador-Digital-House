@@ -55,6 +55,7 @@ const RegisterController = {
       
 
     const indexUser = dataBase.users.findIndex(user=> user.id == id);
+    
     const updateUser = {
       id,
       email, 

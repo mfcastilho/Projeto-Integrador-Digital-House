@@ -142,11 +142,11 @@
 
               <!--==== UPLOAD FOTO DO PERFIL(MULTER)====-->
 
-              <div class="input-box">
+              <!-- <div class="input-box">
                 <label for="profile-picture-id">url da foto de perfil</label>
                 <input type="text" name="profilePicture" id="profile-picture-id">
                 <span class="input-erro-msg"></span>
-              </div>
+              </div> -->
 
               <!--==== UPLOAD FOTO DO PERFIL(MULTER)====-->
 
@@ -170,17 +170,21 @@
                 <span class="input-erro-msg"></span>
               </div>
   
-              <div class="input-box">
-                <label for="public-place-id">Logradouro</label>
-                <input type="text" name="publicPlace" id="public-place-id">
-                <span class="input-erro-msg"></span>
-              </div>
 
-              <div class="input-box">
-                <label for="number-id">Número</label>
-                <input type="number" name="number" id="number-id">
-                <span class="input-erro-msg"></span>
+              <div class="hugging-inputs-box">
+                <div class="input-box public-place">
+                  <label for="public-place-id">Logradouro</label>
+                  <input type="text" name="publicPlace" id="public-place-id">
+                  <span class="input-erro-msg"></span>
+                </div>
+  
+                <div class="input-box address-number">
+                  <label for="number-id">Número</label>
+                  <input type="number" name="number" id="number-id">
+                  <span class="input-erro-msg"></span>
+                </div>
               </div>
+              
   
               <div class="input-box">
                 <label for="complement-id">Complemento</label>
@@ -200,45 +204,48 @@
                 <span class="input-erro-msg"></span>
               </div>
   
-              <div class="input-box">
-                <label for="city-id">Cidade</label>
-                <input type="text" name="city" id="city-id">
-                <span class="input-erro-msg"></span>
+              <div class="hugging-inputs-box">
+                <div class="input-box city">
+                  <label for="city-id">Cidade</label>
+                  <input type="text" name="city" id="city-id">
+                  <span class="input-erro-msg"></span>
+                </div>
+  
+                <div class="input-box state">
+                  <label for="state-id">UF</label>
+                  <select name="state-id" id="state-id">
+                    <option value="Acre">AC</option>
+                    <option value="Alagoas">AL</option>
+                    <option value="Amapá">AP</option>
+                    <option value="Amazonas">AM</option>
+                    <option value="Bahia">BA</option>
+                    <option value="Ceará">CE</option>
+                    <option value="Distrito Federal">DF</option>
+                    <option value="Espírito Santo">ES</option>
+                    <option value="Goiás">GO</option>
+                    <option value="Maranhão">MA</option>
+                    <option value="Mato Grosso">MT</option>
+                    <option value="Mato Grosso do Sul">MS</option>
+                    <option value="Minas Gerais">MG</option>
+                    <option value="Pará">PA</option>
+                    <option value="Paraíba">PB</option>
+                    <option value="Paraná">PR</option>
+                    <option value="Pernambuco">PE</option>
+                    <option value="Piauí">PI</option>
+                    <option value="Rio de Janeiro" >RJ</option>
+                    <option value="Rio Grande do Norte">RN</option>
+                    <option value="Rio Grande do Sul">RS</option>
+                    <option value="Rondônia">RO</option>
+                    <option value="Roraima">RR</option>
+                    <option value="Santa Catarina">SC</option>
+                    <option value="São Paulo">SP</option>
+                    <option value="Sergipe">SE</option>
+                    <option value="Tocantins">TO</option>
+                  </select>
+                  <span class="input-erro-msg"></span>
+                </div>
               </div>
-
-              <div class="input-box">
-                <label for="state-id">Estado</label>
-                <select name="state-id" id="state-id">
-                  <option value="Acre">AC</option>
-                  <option value="Alagoas">AL</option>
-                  <option value="Amapá">AP</option>
-                  <option value="Amazonas">AM</option>
-                  <option value="Bahia">BA</option>
-                  <option value="Ceará">CE</option>
-                  <option value="Distrito Federal">DF</option>
-                  <option value="Espírito Santo">ES</option>
-                  <option value="Goiás">GO</option>
-                  <option value="Maranhão">MA</option>
-                  <option value="Mato Grosso">MT</option>
-                  <option value="Mato Grosso do Sul">MS</option>
-                  <option value="Minas Gerais">MG</option>
-                  <option value="Pará">PA</option>
-                  <option value="Paraíba">PB</option>
-                  <option value="Paraná">PR</option>
-                  <option value="Pernambuco">PE</option>
-                  <option value="Piauí">PI</option>
-                  <option value="Rio de Janeiro" >RJ</option>
-                  <option value="Rio Grande do Norte">RN</option>
-                  <option value="Rio Grande do Sul">RS</option>
-                  <option value="Rondônia">RO</option>
-                  <option value="Roraima">RR</option>
-                  <option value="Santa Catarina">SC</option>
-                  <option value="São Paulo">SP</option>
-                  <option value="Sergipe">SE</option>
-                  <option value="Tocantins">TO</option>
-                </select>
-                <span class="input-erro-msg"></span>
-              </div>
+              
 
             </div>
 

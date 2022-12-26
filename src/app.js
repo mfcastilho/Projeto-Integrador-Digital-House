@@ -7,10 +7,11 @@ const path = require("path");
 const homeRouter = require("./router/homeRouter.js");
 const shoppingCartRouter = require("./router/shoppingCartRouter.js");
 const productsListingRouter = require("./router/productsListingRouter.js");
-const userPanelPersonalDataRouter = require("./router/userPanelPersonalDataRouter.js");
+
 const loginRouter = require("./router/loginRouter.js");
 const registerRouter = require("./router/registerRouter.js");
 const innerProductRouter = require("./router/innerProductRouter.js");
+const userRouter = require("./router/userRouter.js")
 const { use } = require("./router/homeRouter.js");
 
 
@@ -36,10 +37,10 @@ app.use(express.static(path.resolve("src", "public")));
 app.use(homeRouter);
 app.use(shoppingCartRouter);
 app.use(productsListingRouter);
-app.use(userPanelPersonalDataRouter);
 app.use(loginRouter);
 app.use(registerRouter);
 app.use(innerProductRouter);
+app.use(userRouter);
 
 
 

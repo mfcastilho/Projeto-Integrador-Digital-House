@@ -15,8 +15,6 @@ body{
   font-family: 'PT Sans', sans-serif;
 }
 
-
-
 .main-container{
   
   width: 100%;
@@ -228,4 +226,34 @@ input:-webkit-autofill {
 .input-erro-msg{
   color: red;
   margin-left: .5rem;
+}
+
+.hugging-inputs-box{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 1rem 7.5rem 1rem 1rem;
+
+}
+
+.hugging-inputs-box input{
+
+}
+
+.hugging-inputs-box select{
+  height: 2.95rem;
+  border: 0.05rem solid #c2c0c0;
+} 
+
+.city, .public-place{
+  width: 81%;
+  margin: 0;
+}
+
+.state, .address-number{
+  width: 19%;
+  margin: 0;
 }

@@ -34,29 +34,30 @@
       </div>
 
       <div class="bottom-part">
-        <form action="/login">
+        <form action="/login" method="POST">
 
           <div class="input-box">
             <label for="email-id">E-mail</label>
-            <input type="email" name="email-id" id="email-id">
+            <input type="email" name="email" id="email-id">
           </div>
 
           <div class="hugging-elements">
 
             <div class="input-box">
               <label for="password-id">Senha</label>
-              <input type="password" name="password-id" id="password-id">
+              <input type="password" name="password" id="password-id">
             </div>
             <button type="submit">Login</button>
 
           </div>
 
-          <div class="dont-have-account">
-            <a href="/usuario/cadastro">Não tem uma conta? Clique aqui e cadastre-se</a>
-          </div>
+          
         </form>
       </div>
 
+      <div class="dont-have-account">
+        <a href="/usuario/cadastro">Não tem uma conta? Clique aqui e cadastre-se</a>
+      </div>
     </section>
 
   </div>
