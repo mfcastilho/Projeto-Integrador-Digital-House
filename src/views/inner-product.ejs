@@ -25,9 +25,9 @@
 
     <div class="main-container">
 
-      <div class="top-part">
+      <section class="top-part-section">
 
-        <div class="left-part">
+        <div class="images-product-container">
 
           <div class="image-card-box">
 
@@ -39,10 +39,6 @@
               <img src="<%= product.tShirtPrint  %> " alt="">
             </div>
 
-            <div class="image-card">
-              <img src="" alt="">
-            </div>
-
           </div>
 
           <div class="image-box">
@@ -51,15 +47,102 @@
 
         </div>
 
-        <div class="right-part">
+        <div class="infos-product-container">
 
+
+          <h3><%= product.name  %></h3>
+
+          <div class="hugging-elements">
+            <div class="title-box">           
+              <p>Modelo</p>
+            </div>
+            <div class="model-options-box">
+            
+              <div class="male-button">
+                Masculino
+              </div>
+              <div class="female-button">
+                Feminino
+              </div>
+            </div>
+
+          </div>
+          
+
+          <div class="hugging-elements">
+            <div class="title-box">
+              <p>Cor</p>
+            </div>
+            
+            <div class="colors-options-box">
+              <div class="color black"></div>
+              <div class="color white"></div>
+              <div class="color red"></div>
+              <div class="color blue"></div>
+              <div class="color yellow"></div>
+              <div class="color green"></div>
+              <div class="color pink"></div>
+              <div class="color orange"></div>
+            </div>
+
+          </div>
+          
+
+          <div class="hugging-elements">
+            <div class="title-box">
+              <p>Tamanho</p>
+            </div>
+            
+
+            <div class="sizes-options-box">
+              
+              <div class="size">p</div>
+              <div class="size">m</div>
+              <div class="size">g</div>
+              
+
+                         
+            </div>
+
+          </div>
+          
+
+          <div class="hugging-elements">
+
+            <div class="price-box title-box">
+              <p class="price-apresentation">A partir de</p>
+              <span class="dollar-sign">R$</span>
+              <span class="product-price"><%= product.price.toFixed(2)  %></span>
+            </div>
+
+            <div class="buy-button">
+              <div class="hugging-button-elements">
+                <img src="/img/cart.svg" alt="">
+                <span>Comprar</span> 
+              </div>
+            </div>
+          </div>
         </div>
 
-      </div>
+      </section>
 
-      <div class="bottom-part">
+      <section class="bottom-part-section">
 
-      </div>
+        <div class="hugging-measurements-infos">
+         
+          <img src="/img/measurements-male.svg" alt="">
+          
+          <img src="/img/measurements-female.svg" alt="">
+        </div>
+
+        <div class="hugging-others-infos">
+          <h3>Confira as medidas e outras informações.</h3>
+          <p><strong>Composição:</strong> 100% algodão</p>
+          <p><strong>Estampa:</strong> Digital</p>
+          <p>As medidas podem variar em aproximadamente 2 cm para mais ou para menos e a malha poderá encolher até 5% após a primeira lavagem. </p>
+        </div>
+        
+      </section>
     </div>
      
   </main>

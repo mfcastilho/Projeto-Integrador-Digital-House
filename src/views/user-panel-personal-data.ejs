@@ -58,50 +58,50 @@
 
         <section class="form-section">
 
-          <form id="personal-data-form" action="/usuario/<%= id%>/dados-pessoais/editar" method="GET" class="">
+          <form id="personal-data-form" action="/usuario/<%= user.id%>/dados-pessoais/editar" method="GET" class="">
 
             <div class="hugging-form off-mode-style">
 
               <div class="input-box large-input">
                 <label for="name">Nome completo</label>
-                <input type="text" name="name" id="name" required disabled>
+                <input type="text" name="name" id="name" required disabled value="<%= user.name %> ">
               </div>
             
               <div class="assistant-form-box">
       
                 <div class="input-box">
                   <label for="cpf">CPF</label>
-                  <input type="text" name="cpf" id="cpf" required disabled> 
+                  <input type="text" name="cpf" id="cpf" required disabled value="<%= user.cpf %> "> 
                 </div>
       
                 <div class="input-box">
                   <label for="birthday">Data de nascimento</label>
-                  <input type="datetime-local" name="birthday" id="birthday" required disabled>
+                  <input type="text" name="birthday" id="birthday" value="<%= birthday%> " required disabled>
                 </div>
               
               </div>
       
               <div class="input-box large-input">
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" required disabled>
+                <input type="email" name="email" id="email" value="<%= user.email %> " required disabled>
               </div>
       
               <div class="input-box large-input">
                 <label for="tel">Celular</label>
-                <input type="tel" name="tel" id="tel" maxlength="15" required disabled>
+                <input type="tel" name="tel" id="tel" maxlength="15" value="<%= user.cel %> "  required disabled>
               </div>
       
               <div class="assistant-form-box">
       
                 <div class="input-box">
                   <label for="new-password">Senha</label>
-                  <input type="password" name="new-password" id="new-password" required disabled>
+                  <input type="password" name="new-password" id="new-password" value="<%= user.password %>"  required disabled>
                 </div>
       
-                <div class="input-box">
+                <!-- <div class="input-box">
                   <label for="type-again">Confirmar senha</label>
                   <input type="password" name="type-again" id="type-again" required disabled>
-                </div>
+                </div> -->
 
               </div>
 

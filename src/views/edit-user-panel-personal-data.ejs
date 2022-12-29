@@ -33,7 +33,7 @@
 
           
 
-          <a href="" class="register-button">
+          <a href="/usuario/<%= user.id %>/dados-pessoais" class="register-button">
             <img src="/img/puppet-icon.svg" alt="">
             <p>Dados pessoais</p>
           </a>
@@ -59,44 +59,44 @@
         <section class="form-section">
 
          
-          <form id="personal-data-form" action="/usuario/<%= id%>/dados-pessoais" method="POST" class="">
+          <form id="personal-data-form" action="/usuario/<%= user.id%>/dados-pessoais" method="POST" class="">
 
             <div class="hugging-form">
 
               <div class="input-box large-input">
                 <label for="name">Nome completo</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" required value="<%= user.name %> ">
               </div>
             
               <div class="assistant-form-box">
       
                 <div class="input-box">
                   <label for="cpf">CPF</label>
-                  <input type="text" name="cpf" id="cpf" > 
+                  <input type="text" name="cpf" id="cpf" required value="<%= user.cpf %> "> 
                 </div>
       
                 <div class="input-box">
                   <label for="birthday">Data de nascimento</label>
-                  <input type="datetime-local" name="birthday" id="birthday">
+                  <input type="date" name="birthday" id="birthday" value="<%= user.birthday%>" required>
                 </div>
               
               </div>
       
               <div class="input-box large-input">
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" value="<%= user.email %> " required >
               </div>
       
               <div class="input-box large-input">
                 <label for="tel">Celular</label>
-                <input type="tel" name="tel" id="tel" maxlength="15">
+                <input type="tel" name="tel" id="tel" maxlength="15" value="<%= user.cel %> "  required >
               </div>
       
               <div class="assistant-form-box">
       
                 <div class="input-box">
-                  <label for="new-password">Senha</label>
-                  <input type="password" name="new-password" id="new-password">
+                  <label for="password">Senha</label>
+                  <input type="password" name="password" id="new-password" value="<%= user.password %>"  required >
                 </div>
       
                 <div class="input-box">

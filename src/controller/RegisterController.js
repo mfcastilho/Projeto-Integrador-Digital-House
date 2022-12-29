@@ -45,45 +45,6 @@ const RegisterController = {
     fs.writeFileSync(path.resolve("src", "data-base", "dataBase.json"), dbJSON);
     return res.redirect("/home");// 
     
-  },
-  updateUser: (req, res)=>{
-    console.log("Atualizando usuário");
-    console.log(req.body);
-    
-    const {email, password, person, name, cpf, cel, tel, genre, birthday, profilePicture, zipCode, publicPlace, number, complement, district, reference, city} = req.body;
-    const {id} = req.params;
-      
-
-    const indexUser = dataBase.users.findIndex(user=> user.id == id);
-    
-    const updateUser = {
-      id,
-      email, 
-      password, 
-      person,
-       name,
-       cpf,
-       cel,
-       tel,
-       genre,
-       birthday,
-       profilePicture,
-       zipCode,
-       publicPlace,
-       number,
-       complement,
-       district,
-       reference,
-       city
-    }
-
-
-    dataBase.users.splice(indexUser, 1, updateUser);
-
-    const dbJSON = JSON.stringify(dataBase);
-    fs.writeFileSync(path.resolve("src", "data-base", "dataBase.json"), dbJSON);
-
-    return res.redirect("/home");
   }
 }
 
