@@ -1,0 +1,19 @@
+{
+  "name": "projeto-integrador-digital-house",
+  "version": "1.0.0",
+  "description": "Integrating project of the Digital House full stack web development course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfcastilho/Projeto-Integrador-Digital-House.git"
+  },
+  "author": "Grupo 4 - fs-tn-18",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfcastilho/Projeto-Integrador-Digital-House/issues"
+  },
+  "homepage": "https://github.com/mfcastilho/Projeto-Integrador-Digital-House#readme"
+}
