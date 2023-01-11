@@ -19,7 +19,6 @@
 
   <script src="assets/js/header-behavior.js" defer></script>
   <script src="./assets/js/main.js" defer></script>
-  <script src="./assets/js/glider.min.js" defer></script>
 
 </head>
 
@@ -88,10 +87,10 @@
       <div class="top-part">
         <h2>Camisetas</h2>
         <select name="choice-order-filter" id="choice-order-filter">
-          <option value="alphabetical-order">Ordem alfabética</option>
-          <option value="best-sellers">Mais vendidos</option>
-          <option value="lowest-price">Menor preço</option>
-          <option value="biggest-price">Maior preço</option>
+          <option data-content value="alphabetical-order">Ordem alfabética</option>
+          <option data-content value="best-sellers">Mais vendidos</option>
+          <option data-content value="lowest-price">Menor preço</option>
+          <option data-content value="biggest-price">Maior preço</option>
         </select>
       </div>
       
@@ -104,25 +103,67 @@
           <h3>Filtros</h3>
           <div class="filters-box">
   
-            <div class="box-size-checkboxs">
-              <input type="checkbox" name="p-size-label" id="p-size-label">
-              <label for="p-size-label" class="size-label">P</label>
+            <div class="box-size-checkboxs filters-box-divs">
+
+              <h3>Tamanho</h3>
+
+              <div class="top">
+                <input type="checkbox" name="p-size-label" id="p-size-label" checked>
+                <label id="first-size-label" for="p-size-label" class="size-label">P</label>
+    
+                <input type="checkbox" name="m-size-label" id="m-size-label">
+                <label id="second-size-label" for="m-size-label" class="size-label">M</label>
+    
+                <input type="checkbox" name="g-size-label" id="g-size-label">
+                <label for="g-size-label" class="size-label">G</label>
   
-              <input type="checkbox" name="p-size-label" id="p-size-label">
-              <label for="p-size-label" class="size-label">M</label>
-  
-              <input type="checkbox" name="p-size-label" id="p-size-label">
-              <label for="p-size-label" class="size-label">G</label>
-  
-              <input type="checkbox" name="p-size-label" id="p-size-label">
-              <label for="p-size-label" class="size-label">GG</label>
-  
-              <input type="checkbox" name="p-size-label" id="p-size-label">
-              <label for="p-size-label" class="size-label">XG</label>
+              </div>
+
+              <div class="bottom">
+                <input type="checkbox" name="gg-size-label" id="gg-size-label">
+                <label for="gg-size-label" class="size-label">GG</label>
+    
+                <input type="checkbox" name="xg-size-label" id="xg-size-label">
+                <label for="xg-size-label" class="size-label">XG</label>
+                
+                <input type="checkbox" name="xgg-size-label" id="xgg-size-label">
+                <label for="xgg-size-label" class="size-label">XGG</label>
+              </div>
               
-              <input type="checkbox" name="p-size-label" id="p-size-label">
-              <label for="p-size-label" class="size-label">XGG</label>
               
+              
+            </div>
+
+            <div class="box-genre-checkboxs filters-box-divs">
+
+              <div class="top">
+                <input type="checkbox" name="masculine" id="masculine">
+                <label for="masculine" class="genre-label">Masculino</label>
+              </div>
+              
+              <div class="bottom">
+                <input type="checkbox" name="feminine" id="feminine" checked>
+                <label for="feminine" class="genre-label">Feminino</label>
+              </div>
+              
+            </div>
+
+            <div class="box-colors-filter filters-box-divs">
+              <h3>Cores</h3>
+              <div class="colors">
+                <div class="white color-square"></div>
+                <div class="blue color-square"></div>
+                <div class="red color-square"></div>
+                <div class="green color-square"></div>
+                <div class="pink color-square"></div>
+                <div class="brown color-square"></div>
+                <div class="orange color-square"></div>
+                <div class="gray color-square"></div>
+                <div class="yellow color-square"></div>
+                <div class="purple color-square"></div>
+                <div class="black color-square"></div>
+                <div class="ice color-square"></div>
+              </div>              
             </div>
   
   
@@ -225,9 +266,9 @@
     
             <a href="">
               <div class="product-card">
-                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/178845997/052facee63.jpg" alt="">
+                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/93082459/d03cc58581.jpg" alt="">
                 <div class="product-description">
-                  <h5>Camiseta Fullmetal</h5>
+                  <h5>Camiseta Mouse</h5>
                   <p>A partir de R$ 78,90</p>
                 </div>
               </div>
@@ -253,6 +294,8 @@
                 </div>
               </div>
             </a>
+    
+            
     
             <a href="">
               <div class="product-card">
@@ -346,9 +389,9 @@
     
             <a href="">
               <div class="product-card">
-                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/114541339/e4a2446274.jpg" alt="">
+                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/91729481/72ad02513d.jpg" alt="">
                 <div class="product-description">
-                  <h5>Camiseta Mini Groot</h5>
+                  <h5>Camiseta Samurai Vader</h5>
                   <p>A partir de R$ 78,90</p>
                 </div>
               </div>
@@ -396,9 +439,9 @@
     
             <a href="">
               <div class="product-card">
-                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/153982853/d5ec83709f.jpg" alt="">
+                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/171900717/1125f4c92d.jpg" alt="">
                 <div class="product-description">
-                  <h5>Camiseta Seleção Mutantes</h5>
+                  <h5>Camiseta Bolaños</h5>
                   <p>A partir de R$ 78,90</p>
                 </div>
               </div>
@@ -426,9 +469,9 @@
     
             <a href="">
               <div class="product-card">
-                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/155545539/3e37ed1b31.jpg" alt="">
+                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/140644289/3b2ea11c29.jpg" alt="">
                 <div class="product-description">
-                  <h5>Manga Longa Mighty Ducks</h5>
+                  <h5>Manga Ozzy Joker</h5>
                   <p>A partir de R$ 78,90</p>
                 </div>
               </div>
@@ -446,10 +489,10 @@
     
             <a href="">
               <div class="product-card">
-                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/141802195/a39082cb77.jpg" alt="">
+                <img src="https://cdn.awsli.com.br/300x300/0/622/produto/140168896/e921072183.jpg" alt="">
                 <div class="product-description">
-                  <h5>Camiseta Super Choque</h5>
-                  <p>A partir de R$ 78,90</p>
+                  <h5>Camiseta Grito do Pool</h5>
+                  <p>A partir de R$ 86,00</p>
                 </div>
               </div>
             </a>
@@ -457,7 +500,7 @@
           </div>
     
         </section>
-        
+
       </div>
 
       

@@ -19,7 +19,7 @@ body{
 .main-container{
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
+  
  
   display: flex;
   flex-direction: row;
@@ -28,10 +28,8 @@ body{
 
   position: relative;
 
-  margin-top: 20.3rem;
-  margin-bottom: 1.4rem;
-  padding: 2rem 10rem;
-  
+  margin: 20.3rem auto 1.4rem auto;
+  padding: 2rem 10rem; 
 }
 
 .register-button-section{
@@ -206,9 +204,6 @@ input:-webkit-autofill {
 
   background-color: #372948;  
 }
-
-
-
 
 
 .hugging-form{
