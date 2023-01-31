@@ -1,19 +1,29 @@
 {
   "name": "projeto-integrador-digital-house",
   "version": "1.0.0",
-  "description": "Integrating project of the Digital House full stack web development course",
-  "main": "index.js",
+  "description": "<h1 align=\"center\">Projeto Integrador - Digital House</h1>",
+  "main": "./src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon ./src/app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mfcastilho/Projeto-Integrador-Digital-House.git"
   },
-  "author": "Grupo 4 - fs-tn-18",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mfcastilho/Projeto-Integrador-Digital-House/issues"
   },
-  "homepage": "https://github.com/mfcastilho/Projeto-Integrador-Digital-House#readme"
+  "homepage": "https://github.com/mfcastilho/Projeto-Integrador-Digital-House#readme",
+  "devDependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "uuid": "^9.0.0"
+  }
 }
