@@ -76,97 +76,99 @@
 
                <form action="#">
                    
+                <div class="elements-container">
 
-                <div class="hugging-left-elements">
-                    <div class="wrapper-inputs">
-                        <label for="name">Nome</label>
-                        <input type="text" name="name" id="name">
+                    <div class="hugging-left-elements">
+                        <div class="wrapper-inputs">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+        
+                        <div class="wrapper-inputs">
+                          <label for="model">Modelo</label>
+                          <select name="model" id="model">
+                           <option value="feminino">Feminino</option>
+                           <option value="masculino">Masculino</option>  
+                          </select>
+                        </div>
+        
+                        <div class="wrapper-inputs">
+                            <label for="color">Cores</label>
+                            <select name="color" id="color">
+        
+                             <option value="vermelho">Vermelho</option>
+                             <option value="preto">Preto</option> 
+                             <option value="branco">Branco</option>
+                             <option value="amarelo">Amarelo</option> 
+                             <option value="verde">Verde</option>
+                             <option value="cinza">Cinza</option> 
+                             <option value="azul">Azul</option>
+                             
+                            </select>
+                          </div>
+        
+                          <div class="wrapper-inputs">
+                            <label for="size">Tamanho</label>
+                            <select name="size" id="size">
+                                
+                             <option value="P">P</option>
+                             <option value="M">M</option> 
+                             <option value="G">G</option>
+                             <option value="GG">GG</option> 
+                             <option value="XG">XG</option>
+                             <option value="XGG">XGG</option> 
+                          
+                             
+                            </select>
+                          </div>
+        
+                          <div class="wrapper-inputs">
+                              <label for="quantity">Quantidade</label>
+                              <input type="number" name="quantity" id="quantity">
+                          </div>
+    
+    
+    
                     </div>
     
-                    <div class="wrapper-inputs">
-                      <label for="model">Modelo</label>
-                      <select name="model" id="model">
-                       <option value="feminino">Feminino</option>
-                       <option value="masculino">Masculino</option>  
-                      </select>
-                    </div>
+                    <div class="hugging-right-elements">
     
-                    <div class="wrapper-inputs">
-                        <label for="color">Cores</label>
-                        <select name="color" id="color">
-    
-                         <option value="vermelho">Vermelho</option>
-                         <option value="preto">Preto</option> 
-                         <option value="branco">Branco</option>
-                         <option value="amarelo">Amarelo</option> 
-                         <option value="verde">Verde</option>
-                         <option value="cinza">Cinza</option> 
-                         <option value="azul">Azul</option>
-                         
-                        </select>
-                      </div>
-    
-                      <div class="wrapper-inputs">
-                        <label for="size">Tamanho</label>
-                        <select name="size" id="size">
-                            
-                         <option value="P">P</option>
-                         <option value="M">M</option> 
-                         <option value="G">G</option>
-                         <option value="GG">GG</option> 
-                         <option value="XG">XG</option>
-                         <option value="XGG">XGG</option> 
-                      
-                         
-                        </select>
-                      </div>
-    
-                      <div class="wrapper-inputs">
-                          <label for="quantity">Quantidade</label>
-                          <input type="number" name="quantity" id="quantity">
-                      </div>
-
-
-
-                </div>
-
-                <div class="hugging-right-elements">
-
-                    <div class="wrapper-inputs">
-                        <label for="image">Imagem</label>
-                        <input type="file" name="image" id="image">
-                    </div>
-                    
-                    <div class="wrapper-inputs">
-                        <label for="tshirt-print">Estampa</label>
-                        <input type="file" name="tshirt-print" id="tshirt-print">
-                    </div>
-
-                    <div class="wrapper-inputs">
-                        <label for="discount">Desconto</label>
-                        <input type="number" name="discount" id="discount" min="0" max="100" step=".01">
-                    </div>
-
-                    <div class="wrapper-inputs">
-                        <label for="price">Preço</label>
-                        <input type="number" name="price" id="price">
-                    </div>
-
-
-                    <div class="wrapper-inputs">
-                        <label for="category">Categoria</label>
-                        <select name="category" id="category">
-                            
-                         <option value="Filmes">Filmes</option>
-                         <option value="Animes">Animes</option> 
+                        <div class="wrapper-inputs">
+                            <label for="image">Imagem</label>
+                            <input type="file" name="image" id="image">
+                        </div>
                         
-                        </select>
-                      </div>
+                        <div class="wrapper-inputs">
+                            <label for="tshirt-print">Estampa</label>
+                            <input type="file" name="tshirt-print" id="tshirt-print">
+                        </div>
+    
+                        <div class="wrapper-inputs">
+                            <label for="discount">Desconto</label>
+                            <input type="number" name="discount" id="discount" min="0" max="100" step=".01">
+                        </div>
+    
+                        <div class="wrapper-inputs">
+                            <label for="price">Preço</label>
+                            <input type="number" name="price" id="price">
+                        </div>
+    
+    
+                        <div class="wrapper-inputs">
+                            <label for="category">Categoria</label>
+                            <select name="category" id="category">
+                                
+                             <option value="Filmes">Filmes</option>
+                             <option value="Animes">Animes</option> 
+                            
+                            </select>
+                          </div>
+    
+                    </div>
 
                 </div>
-                
-
-
+            
+                <button type="submit" class="btn-send">Enviar</button>
 
                </form>      
             </section>
