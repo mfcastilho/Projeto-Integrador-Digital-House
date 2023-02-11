@@ -1,0 +1,149 @@
+:root {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+.main-container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 23rem auto 2rem auto;
+    display: flex;
+    padding: 0 10rem;
+    flex-direction: column;
+}
+
+.top-part{
+    display: flex;
+    gap: 2rem;
+
+    margin-bottom: 1.6rem;
+}
+
+.top-part h4{
+    font-size: 2.4rem;
+    color: white;
+    
+    padding: 1rem;
+    
+    
+    background-color: #372948;
+}
+.midle-part{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.titles-bar{
+    display: flex;
+    padding: 1.6rem;
+
+    font-size: 1.6rem;
+
+    background-color: #372948;
+    color: white;
+    
+}
+
+.another-titles-box{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.price, .amount, .subtotal, .delete{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.product{
+    width: 30%;
+}
+
+.cart-content{
+    display: flex;
+    align-items: center;
+    padding: 1.6rem;
+
+    font-size: 1.6rem;
+}
+
+.infos-products-box p{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.product-content{
+    display: flex;
+    width: 30%;
+}
+
+.product-content img{
+    margin: 1rem;
+    width: 25%;
+}
+
+.infos-products-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.another-infos{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.another-infos p, .amount-itens, .image{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.another-infos img{
+    width: 10%;
+}
+
+.botton-part{
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.8rem;
+
+    color: white;
+    
+
+}
+
+.left-part{
+    display: flex;
+    
+
+}
+
+.left-part, .right-part{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    padding: 1.4rem;
+
+    background-color: #372948;
+}
