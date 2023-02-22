@@ -153,6 +153,8 @@ form div input:hover{
     justify-content: center;
     text-decoration: none;
     align-items: center;
+    gap: 0.5rem;
+    
   }
 
 /* form {
