@@ -137,7 +137,12 @@ form div input:hover{
     font-size: 2rem;
     padding: 1rem;
     margin-top: -9rem;
-    
+
 }
 
+.description {
+  display: flex;
+  gap: 1rem;
+
+} 
 
