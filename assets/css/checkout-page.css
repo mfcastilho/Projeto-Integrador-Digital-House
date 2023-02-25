@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+
+:root{
+  font-size: 10px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
+.main-container{
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 23rem auto 4rem auto;
+  padding: 0 10rem;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.top-part{
+  display: flex;
+  flex-direction: column;
+
+  border: 0.5px solid #d3d1d1 ;
+  border-radius: .3rem;
+
+  margin-bottom: 2rem;
+}
+
+
+.titles-bar{
+  display: flex;
+
+  padding: 6px 0 0 10px;
+
+  background-color: #EBEAEA;
+  color: #2B1262;
+
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.products-title,.quantity-title,.price-title{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.products-title-box{
+  width: 70%;
+}
+
+.products-title-box, .wrapper-titles{
+  margin-bottom: .7rem;
+}
+
+.wrapper-titles{
+  display: flex;
+  justify-content: center;
+
+  width: 30%;
+}
+
+.quantity-title-box, .price-title-box{
+  width: 50%;
+}
+
+.quantity-title, .price-title{
+  display: flex;
+  justify-content: center;
+}
+
+.products-info-box{
+  display: flex;
+  padding: 6px 0 6px 10px;
+
+  font-size: 1.4rem;
+}
+
+.product-color-box{
+  display: flex;
+}
+
+.color-attribute{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: rgb(12, 179, 12);
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.product-info{
+  width: 70%;
+}
+
+.wrapper-quantity-price-info{
+  display: flex;
+  justify-content: center;
+
+  width: 30%;
+}
+
+.quantity-info-box, .price-info-box{
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.subtotal-info-box{
+  display: flex;
+  justify-content: flex-end;
+
+  font-size: 1.2rem;
+
+  background-color: #EBEAEA;
+
+  padding-top: 6px;
+}
+
+.nothing-box{
+  width: 77%;
+
+  background-color: #EBEAEA;
+}
+
+.wrapper-subtotal-info, .wrapper-freight-info, .wrapper-total-info{
+  width: 23%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  background-color: #EBEAEA;
+
+  font-size: 1.2rem;
+}
+
+.wrapper-freight-box{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.wrapper-total-box{
+  display: flex;
+  justify-content: flex-end;
+ 
+  background-color: #EBEAEA;
+
+  padding-bottom: 6px;
+}
+
+.infos-part{
+  width: 70%; 
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: .6rem;
+}
+
+.title-subtotal, .title-freight, .title-total{
+ width: 40%;
+
+ text-align: end;
+
+ margin-right: .4rem;
+}
+
+.subtotal, .freight, .total{
+  width: 80%;
+}
+
+.space-part{
+  width: 20%;
+}
+
+.wrapper-total-info .total{
+  font-size: 1.8rem;
+  font-weight: 600;
+} 
+
+.bottom-part{
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal-data-part-box, .delivery-part-box, .payment-part-box{
+  border: 0.5px solid #d3d1d1 ;
+  border-radius: .3rem;
+
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  padding: 6px 10px 0 10px;
+
+  width: 30%;
+}
+
+.title-box{
+  display: flex;
+  align-items: center;
+
+  font-size: 2rem;
+  font-weight: 500;
+  color: #2B1262;
+
+  border-bottom: 0.5px solid #d3d1d1 ;
+
+  margin-bottom: 2rem;
+}
+
+.title-box p{
+  margin-left: 0.5rem;
+}
+
+.title-box img{
+  width: 20px;
+  
+}
+
+.personal-data-image, .address-image, .delivery-image{
+  height: 1.6rem;
+}
+
+.up-part-box div{
+  margin-bottom: .3rem;
+}
+
+.user-infos-box{
+  border: 0.5px solid #d3d1d1 ;
+  border-radius: .3rem;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  background-color: #D9D9D9;
+  font-size: 1.2rem;
+
+  padding: .5rem;
+
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.wrapper-radio-buttons{
+  border: 1px solid #A9A5A5;
+  border-left: none;
+  border-radius: .3rem;
+
+  
+  height: 3.8rem;
+
+  margin-bottom: 1.2rem;
+
+  display: flex;
+  align-items: center;
+}
+.wrapper-radio-buttons label{
+  font-size: 1.2rem;
+
+}
+
+.input-radio-button-box{
+  border: 1px solid transparent;
+  border-top-left-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+
+  width: 15%;
+
+  background-color: #A9A5A5;
+
+  
+
+  height: 3.8rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: .4rem;
+}
+
+.low-part-box{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-radio-button-box input[type='radio'] {
+  accent-color: #251B37;
+}
+
+.delivery-infos{
+  width: 75%;
+  
+  display: flex;
+  justify-content: space-around;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.delivery-days{
+  color: #2B1262;
+}
+
+.expand-payment-form{
+  margin-left: 1.5rem;
+  
+  font-size: 2rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.ticket_payment {
+  display: flex;
+}
+
+.payment-ticket{
+  width: 80%;
+}
+
+.payment-ticket img{
+  width: 4rem;
+  height: 2.6rem;
+}
+
+.credit-card-image-container{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+.payment_form{
+  display: none;
+}
+
+.ticket_payment-class{
+  
+}
+
+.wrapper-payment-form{
+  border: .05rem solid rgb(196, 191, 191);
+  border-radius: .3rem;
+
+  padding: 1rem;
+
+  margin-bottom: 1.5rem;
+
+ 
+}
+
+.credit-cart-estructure{
+  width: 28.2rem;
+  height: 15.6rem;
+
+  background-color: #DDDDDD;
+
+  border-radius: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.credit-card-chip-icon-estructure{
+  width: 4rem;
+  height: 3rem;
+
+  background-color: #CCCCCC;
+
+  border-radius: .5rem;
+
+  margin-left: 2rem;
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.credit-card-chip-icon-estructure-inside-part{
+  width: 3rem;
+  height: 2rem;
+
+  background-color: #DDDDDD;
+
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.credit-card-numbers-box{
+  width: 100%;
+  /* height: 4.4rem; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.4rem;
+}
+
+.credit-card-numbers-box p{
+  display: flex;
+  align-items: center;
+}
+
+.credit-card-bottom-box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  position: relative;
+
+  margin-top: 2rem;
+}
+
+.credit-card-holder-name-box{
+  font-size: 1.4rem;
+
+  text-transform: uppercase;
+}
+
+.credit-card-date-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.date-inform{
+  font-size: .5rem;
+
+  text-transform: uppercase;
+
+  margin: 0;
+
+  position: absolute;
+
+  bottom: 1.2rem;
+}
+
+.date-box{
+  display: flex;
+  align-items: center;
+  
+}
+
+.front-date-part, .back-date-part{
+ font-size: 1rem;
+
+}
+
+.center-date-part{
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.wrapper-right-left-parts{
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 1rem;
+}
+
+.wrapper-input-and-label{
+  display: flex;
+  flex-direction: column;
+}
+
+.number_card-class-input{
+  width: 65%;
+}
+
+.card_expiring_date-class-input{
+  width: 25%;
+}
+.security_code-class-input{
+  width: 40%;
+}
+
+.installments-class-input{
+  width: 40%;
+}
+
+.payment-value-box{
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.value-title{
+  font-size: 1.2rem;
+}
+
+.value{
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.card_holder_name-input-class{
+  margin-bottom: 1rem;
+}
+
+input[type=text]{
+  padding-left: .3rem;
+
+  height: 2.4rem;
+
+  border-radius: .3rem;
+  border: .1rem solid rgb(190, 188, 188);
+}
+
+.show-value-payment{
+  border: .05rem solid rgb(196, 191, 191);
+  border-radius: .3rem;
+
+  padding: 1rem;
+
+  margin-bottom: 1.5rem;
+
+  display: none;
+}
+
+.change-payment-form-box{
+  width: 100%;
+  display: none;
+
+  margin-bottom: 1.5rem;
+}
+
+.edit-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+
+  width: 80%;
+
+  border: 1px solid black;
+  border-radius: .3rem;
+
+  height: 2.6rem;
+
+  margin: 0 auto;
+
+  cursor: pointer;
+
+}
+
+.edit-button img{
+  width: 1rem;
+  height: 1.2rem;
+}
+
+.edit-button div{
+  font-size: 1.1rem;
+}
+
+
+.btn-box{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 2rem 0;
+}
+
+
+.btn-checkout{
+  font-size: 2.6rem;
+
+  background-color: #5B4583;
+  color: #FFF;
+
+  border: none;
+  border-radius: .3rem;
+
+  padding: 1rem 3rem;
+
+  transition: .4s;
+}
+
+.btn-checkout:hover{
+
+  cursor: pointer;
+
+  background-color: #49356e;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:980px){
+
+
+  .nothing-box{
+    width: 75%;
+  }
+
+  .wrapper-subtotal-info, .wrapper-freight-info, .wrapper-total-info{
+    width: 25%;
+  }
+
+ .wrapper-total-info .infos-part .total{
+   font-size: 1.6rem;
+ }
+
+ .bottom-part{
+   display: flex;
+   flex-direction: column;
+
+ }
+
+ .personal-data-part-box,.delivery-part-box, .payment-part-box{
+   width: 100%;
+   margin-bottom: 2rem;
+
+  
+ }
+  
+}
+
+@media (max-width:888px){
+
+  .main-container{
+    padding: 0 7rem;
+  }
+  .nothing-box{
+    width: 70%;
+  }
+
+  .wrapper-subtotal-info, .wrapper-freight-info, .wrapper-total-info{
+    width: 30%;
+  }
+  .wrapper-total-info .infos-part .total{
+    font-size: 1.4rem;
+  }
+  .wrapper-freight-box{
+    background-color: #EBEAEA;
+  }
+ 
+
+}
+
+@media (max-width:768px){
+
+  .main-container{
+    padding: 0 5rem;
+  }
+  .nothing-box{
+    width: 65%;
+  }
+
+  .wrapper-subtotal-info, .wrapper-freight-info, .wrapper-total-info{
+    width: 35%;
+  }
+
+  .price-title, .quantity-title, .products-title{
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:680px){
+  .nothing-box{
+    width: 60%;
+  }
+  .price-title, .quantity-title, .products-title{
+    font-size: 1.5rem;
+  }
+
+  .wrapper-subtotal-info, .wrapper-freight-info, .wrapper-total-info{
+    width: 40%;
+  }
+}
+
+@media (max-width:620px){
+
+  .top-part{
+    padding: 1rem;
+  }
+  .nothing-box{
+    width: 55%;
+  }
+  .wrapper-subtotal-info, .wrapper-freight-info, .wrapper-total-info{
+    width: 45%;
+  }
+
+  .price-title, .quantity-title, .products-title{
+    font-size: 1.2rem;
+  }
+
+  .price-info-box p{
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width:540px){
+  .main-container{
+    padding: 0 2rem;
+  }
+  .nothing-box{
+    width: 50%;
+  }
+  .wrapper-subtotal-info, .wrapper-freight-info, .wrapper-total-info{
+    width: 50%;
+  }
+
+  .price-title, .quantity-title, .products-title{
+    font-size: 1rem;
+  }
+
+  .price-info-box p{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:440px){
+  .main-container{
+    min-width: 320px;
+  }
+}
