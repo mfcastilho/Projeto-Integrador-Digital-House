@@ -51,28 +51,4 @@ changePaymentFormBox.addEventListener("click", ()=>{
 })
 
 
-// function verifyWhatPaymentFormIsChecked(){
-
-//   console.log("entrou na função")
-
-//   let paymentFormButtons = document.getElementsByName("payment_radio_button");
-//   let paymentFormValueChecked = "";
-
-//   for(let i = 0; i< paymentFormButtons.length; i++){
-//     if(paymentFormButtons[i].checked){
-//       paymentFormValueChecked = paymentFormValueChecked[i].value;
-//       console.log(paymentFormValueChecked)
-//     }
-//   }
-
-//   if(paymentFormValueChecked == "creditCard"){
-//     document.getElementById("payment_form").style.display = "block"
-//     console.log("Cartão")
-    
-//   }else if(paymentFormValueChecked == "ticket"){
-//     console.log("boleto")
-//     paymentForm.style.display = "none"; 
-//   }
-// }
-
-// verifyWhatPaymentFormIsChecked();
+/
