@@ -1,10 +1,6 @@
 const dataBase = require("../data-base/dataBase.json");
 
 
-
-
-
-
 const LoginController = {
   showLogin: (req, res)=>{
     console.log(req.route.path);
