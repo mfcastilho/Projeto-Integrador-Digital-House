@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+
+:root{
+  font-size: 10px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
+.main-container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 23rem auto 0 auto;
+
+    display: flex;
+}
+
+.top-parte{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title-bar-box{
+    display: flex;
+
+}
