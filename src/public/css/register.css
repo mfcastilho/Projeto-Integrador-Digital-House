@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap');
+
+
+:root{
+  font-size: 10px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
+.main-container{
+  
+  width: 100%;
+  max-width: 1280px;
+  
+  margin: 22.3rem auto 1.4rem auto;
+  padding: 0 10rem;
+}
+
+.main-container form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.register-data-section{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.section-title-box{
+  display: flex;
+  align-items: center;
+
+  background-color: #372948;
+
+  height: 4.8rem;
+}
+
+.section-title-box img{
+  width: 2.4rem;
+
+
+  margin-left: 5rem;
+}
+
+.section-title-box h3{
+  font-size: 2.6rem;
+  font-weight: 400;
+
+  color: #FFF;
+
+  margin-left: 1.2rem;
+}
+
+.wrapper-inputs-box{
+  display: flex;
+  justify-content: space-between;
+
+
+  margin: 1rem 4rem;
+}
+
+.input-box{
+  display: flex;
+  flex-direction: column;
+
+
+  margin: 1rem;
+
+  width: 50%;
+}
+
+.input-box label{
+  margin-left: .5rem;
+  font-size: 2rem;
+}
+
+.input-box input{
+
+  height: 3rem;
+
+  background-color: #d8d9db;
+  border: none;
+
+  padding-left: .6rem;
+
+  font-size: 1.6rem;
+}
+
+.input-box input:focus{
+  outline: none;
+}
+
+
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #e5e6e9 inset;
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+  -webkit-text-fill-color: black !important;
+  font-size: 1.6rem;
+}
+
+.wrapper-radio-button-box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 5rem;
+}
+
+.radio-button-box{
+  display: flex;
+
+  border: none;
+
+  font-size: 2rem;
+}
+
+.radio-button-box input{
+
+ width: 1.6rem;
+ 
+}
+
+.radio-button-box label{
+ 
+  margin-left: .5rem;
+}
+
+.wrapper-sections-box{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.wrapper-sections-box section{
+  width: 49%;
+}
+
+.input-box{
+  width: 80%;
+
+}
+
+.inputs-column-behavior{
+  margin-top: 3rem;
+  padding-left: 3rem;
+}
+
+
+.buttons-box{
+  margin: 12rem 0 0 0;
+
+  display: flex;
+  justify-content: center;
+  
+
+}
+.buttons-box button{
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  margin: 2rem;
+  padding: .2rem 2rem;
+
+  color: #FFF;
+  background-color: #584374;
+  
+  width: 50%;
+  height: 4rem;
+
+  border: none;
+  border-radius: .2rem; 
+
+  cursor: pointer;
+
+  transition: .6s all;
+}
+.buttons-box button:nth-child(1){
+  background-color: #c2c0c0;
+
+  color: rgb(104, 103, 103);
+
+  transition: all .3s linear;
+  
+}
+
+.buttons-box button:nth-child(1):hover{
+  background-color:#584374; 
+  color: #FFF;
+}
+
+.buttons-box button:hover{
+
+  background-color: #372948;  
+}
+
+.have-account{
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  font-size: 1.6rem;
+
+  margin-top: 2rem;
+}
+
+
+.input-box label{
+  display: inline-block;
+}
+
+.input-erro-msg{
+  color: red;
+  margin-left: .5rem;
+}
+
+.hugging-inputs-box{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 1rem 7.5rem 1rem 1rem;
+
+}
+
+.hugging-inputs-box input{
+
+}
+
+.hugging-inputs-box select{
+  height: 2.95rem;
+  border: 0.05rem solid #c2c0c0;
+} 
+
+.city, .public-place{
+  width: 81%;
+  margin: 0;
+}
+
+.state, .address-number{
+  width: 19%;
+  margin: 0;
+}

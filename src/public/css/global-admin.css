@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html{
+  font-family: 'Inter', sans-serif;
+}
+
+.page {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: white!important;;
+}
+
+aside.left {
+    width: 288px;
+    background-color: #372948;
+    color: white;
+}
+
+.content {
+    margin: 0 auto;
+    width: 80%;
+    font-family: 'Inter', sans-serif;
+}
+
+aside.left a.active {
+    background-color: white!important;
+    color: #372948!important;
+    font-weight: bold;
+}
+
+.logo-box{
+  text-align: center;
+}
+
+.logo{
+  width: 50%;
+}
+
+.product-title{
+  margin-left: 10%;
+}
+
+.product-table{
+  width: 90%;
+}
+.table-image{
+  text-align: center;
+}
+
+
+.btn-primary {
+    background-color: #372948!important;
+    color: white;
+    border: none!important;
+    
+}
+
+.button-register{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn-primary:hover {
+    background-color: #8D72E1!important;
+    border: none!important;
+}
+
+.buttons-table-box{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.open-btn,.edit-btn,.delete-btn-form{
+  margin: .6rem 0;
+}
+
+.open-btn{
+  background-color: #FFF!important;
+  color: #372948!important;
+  font-weight: 500!important;
+  border: none!important;
+
+  width: 70%;
+}
+
+.edit-btn{
+  background-color: #3C2C57!important;
+  color: #FFF!important;
+  font-weight: 500!important;
+  border: none!important;
+
+  width: 70%;
+}
+
+.delete-btn-form{
+  width: 70%;
+}
+
+.delete-btn{
+  font-weight: 500!important;
+  border: none!important;
+
+  width: 100%;
+}
+
+
+
+
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form_product {
+    border: 2px solid #6C4AB6;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.form_product h1 {
+    color: #6C4AB6;
+    font-weight: bold;
+}
+
+.form_product label {
+    font-weight: bold;
+}
+
+.form_product input[type="checkbox"]:checked {
+    background-color: #6C4AB6;
+}
