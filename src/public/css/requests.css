@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap');
+
+
+:root{
+  font-size: 10px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+.main-container{
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
+
+
+  margin-bottom: 1.4rem;
+  padding: 2rem 10rem;
+  
+ 
+}
+
+.register-button-section {
+    background-color: #4C3863;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    max-width: 23rem;
+    height: inherit; /* valores do pai */
+    padding: 5rem 0;
+    gap: 3rem; /* espaço entre os filhos */
+    margin-top: 20.3rem;
+
+}
+
+.register-button-section a {
+  text-decoration: none;
+  align-items: center;
+
+}
+
+.register-button {
+  max-width: 20rem;
+  width: 80%;
+  height: 4.8rem;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  background-color: white;
+  gap: 5px;
+  border-radius: 5px;
+  transition: background-color 450ms;
+}
+
+.register-button p{
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
+.register-button:hover {
+  background-color: #F6E4E4;
+}
+
+
+form div input {
+  transition: background-color 450ms;
+
+}
+
+form div input:hover{
+  background-color: #F6E4E4;
+}
+
+.form-section {
+    width: 70%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.addresses {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 0;
+
+    
+}
+
+.address-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 3rem;
+    gap: 2rem;
+
+}
+
+.info-request {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.name {
+    display: flex;
+    font-size: 2rem;
+
+}
+
+.box {
+    background-color: #D9D9D9;
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: -9rem;
+
+}
+
+.description {
+  display: flex;
+  gap: 1rem;
+
+} 
+

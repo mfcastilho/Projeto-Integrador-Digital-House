@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap');
+
+
+:root{
+  font-size: 10px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
+.main-container{
+  margin: 23rem 3rem 2rem 3rem;
+}
+
+.top-part-section{
+  display: flex;
+
+
+  /* border: 2px solid red; */
+  padding: 1rem;
+}
+
+.images-product-container{
+  display: flex;
+
+
+  width: 50%;
+  padding: 1rem;
+
+  /* border: 2px solid blue; */
+}
+
+
+.image-card-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+
+
+  /* border: 2px solid pink; */
+}
+
+.image-card-box .image-card{
+  
+}
+
+.image-card{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+
+  margin: 0.6rem;
+
+  border: 1px solid rgb(95, 93, 93);
+}
+
+.image-card img{
+  width: 100%;
+}
+
+.images-product-container img{
+  width: 88%;
+}
+
+
+.infos-product-container{
+  width: 50%;
+
+  padding: 1rem;
+
+  /* border: 2px solid orange; */
+}
+
+.infos-product-container h3{
+  font-size: 2.2rem;
+
+  margin: 0 0 3.6rem 2.2rem;
+  font-style: italic;
+}
+
+.hugging-elements{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  /* border: 2px solid rgb(169, 236, 169); */
+  
+ margin-bottom: 2.2rem;
+}
+
+.hugging-elements p{
+  font-size: 2rem;
+  text-align: right; 
+
+  font-weight: 500;
+}
+
+
+.hugging-elements .dollar-sign, .hugging-elements .product-price{
+  font-size: 1.6rem;
+}
+
+
+.hugging-elements .title-box{
+  width: 19%;
+
+  text-align: right;
+}
+
+
+.model-options-box{
+  display: flex;
+  gap: .6rem;
+}
+
+
+/*Estilizando botões masculo e feminino*/
+.male-button, .female-button{
+  width: 14rem;
+  height: 4rem;
+
+
+  border-radius: 0.5rem;
+  border: 1px solid black;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.male-button{
+  background-color: black;
+  color: #FFF;
+}
+
+.female-button:hover{
+  background-color: black;
+  color: #FFF;
+}
+.colors-options-box, .sizes-options-box{
+  display: flex;
+  justify-content: flex-start;
+  gap: .6rem;
+}
+
+
+.colors-options-box{
+  padding: 2rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+/*definindo a caixa do botão de cor do produto*/
+.color{
+  width: 2.6em;
+  height: 2.6rem;
+
+  border-radius: 0.5rem;
+  border: 1px solid black;
+}
+
+
+.black{
+  background-color: black;
+}
+.white{
+  background-color: white;
+}
+.red{
+  background-color: red;
+}
+.green{
+  background-color: green;
+}
+.blue{
+  background-color: blue;
+}
+.yellow{
+  background-color: yellow;
+}
+.orange{
+  background-color: orange;
+}
+.pink{
+  background-color: pink;
+}
+.gray{
+  background-color: gray;
+}
+
+/*estilizando a caixa do botão de tamanho do produto*/
+.size{
+  width: 3.5rem;
+  height: 3.5rem;
+
+  border-radius: 0.5rem;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.size:hover{
+  background-color: black;
+  color: #FFF;
+}
+
+.hugging-elements .price-box .price-apresentation{
+  font-size: 1.2rem;
+}
+
+.hugging-elements .price-box .product-price{
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.buy-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+  width: 22rem;
+  height: 6rem;
+
+  font-size: 3rem;
+  font-weight: 500;
+  
+  color: #FFF;
+
+  border-radius: 0.5rem;
+  border: none;
+
+  background-color: rgb(143, 142, 142);
+
+  cursor: pointer;
+
+  transition: 0.4s all;
+}
+
+.buy-button:hover{
+  background-color: rgb(123, 122, 122);
+}
+
+.hugging-button-elements{
+  display: flex;
+}
+
+.hugging-button-elements img{
+  width: 4rem;
+}
+
+.hugging-button-elements span{
+ 
+}
+
+
+
+.bottom-part-section{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.hugging-measurements-infos{
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.hugging-others-infos{
+  width: 50%;
+
+  margin-top: 2.7rem;
+
+  font-size: 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hugging-others-infos h3{
+  color: #42345c;
+  font-style: italic;
+
+  font-size: 1.7rem;
+}
+
+/**/

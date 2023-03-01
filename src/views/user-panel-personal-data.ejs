@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbano t-shirts</title>
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/user-panel-personal-data.css">
+
+    <link rel="icon" href="/img/favicon-logo-urbano.png">
+
+    <script src="/js/header-behavior.js" defer></script>
+    <script src="/js/input-mask-functions.js" defer></script>
+    <script src="/js/editionMode.js" defer></script>
+  </head>
+
+  <body id="body-div">
+
+    <!-- ===== HEADER ===== -->
+    <%- include("./components/header.ejs") %>
+
+    <main>
+
+      <div class="main-container">
+
+        <section class="register-button-section">
+
+          
+
+          <a href="" class="register-button">
+            <img src="/img/puppet-icon.svg" alt="">
+            <p>Dados pessoais</p>
+          </a>
+
+          <a href="" class="register-button">
+            <img src="/img/house-icon.svg" alt="">
+            <p>Endereços</p>
+          </a>
+
+          <a href="" class="register-button">
+            <img src="/img/bullet-list-icon.svg" alt="">
+            <p>Pedidos</p>
+          </a>
+
+          <a href="" class="register-button">
+            <img src="/img/power-off-icon.svg" alt="">
+            <p>Sair</p>
+          </a>
+
+        </section>
+
+
+        <section class="form-section">
+
+          <form id="personal-data-form" action="/usuario/<%= user.id%>/dados-pessoais/editar" method="GET" class="">
+
+            <div class="hugging-form off-mode-style">
+
+              <div class="input-box large-input">
+                <label for="name">Nome completo</label>
+                <input type="text" name="name" id="name" required disabled value="<%= user.name %> ">
+              </div>
+            
+              <div class="assistant-form-box">
+      
+                <div class="input-box">
+                  <label for="cpf">CPF</label>
+                  <input type="text" name="cpf" id="cpf" required disabled value="<%= user.cpf %> "> 
+                </div>
+      
+                <div class="input-box">
+                  <label for="birthday">Data de nascimento</label>
+                  <input type="text" name="birthday" id="birthday" value="<%= birthday%> " required disabled>
+                </div>
+              
+              </div>
+      
+              <div class="input-box large-input">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" value="<%= user.email %> " required disabled>
+              </div>
+      
+              <div class="input-box large-input">
+                <label for="tel">Celular</label>
+                <input type="tel" name="tel" id="tel" maxlength="15" value="<%= user.cel %> "  required disabled>
+              </div>
+      
+              <div class="assistant-form-box">
+      
+                <div class="input-box">
+                  <label for="new-password">Senha</label>
+                  <input type="password" name="new-password" id="new-password" value="<%= user.password %>"  required disabled>
+                </div>
+      
+                <!-- <div class="input-box">
+                  <label for="type-again">Confirmar senha</label>
+                  <input type="password" name="type-again" id="type-again" required disabled>
+                </div> -->
+
+              </div>
+
+            </div>
+              
+            <button type="submit">Editar</button>
+
+          </form>
+
+        </section>
+
+      </div>
+
+    </main>  
+
+    <!-- ===== FOOTER ===== -->
+    <%- include("./components/footer.ejs") %>
+
+    <!-- ===== WHATSAPP BUTTON ===== -->
+    <%- include("./components/whatsapp-button.ejs") %>
+    
+  </body>
+
+</html>
+
+
+
+
+
+
+
