@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urbano t-shirts</title>
+
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/register.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+
+  
+  <script src="/js/header-behavior.js" defer></script>
+  <script src="/js/validationRegisterForm.js" defer></script>
+  <script src="/js/lookingZipeCodeInfos.js" defer></script>
+</head>
+<body id="body-div">
+
+
+  <!-- ===== HEADER ===== -->
+  <%- include("./components/header.ejs") %>
+   
+  <main>
+
+    <div class="main-container">
+
+      <form action="/usuario/cadastro" method="POST" id="register-form">
+        
+        <section class="register-data-section">
+
+          <div class="section-title-box">
+            <img src="/img/register-data-icon.svg" alt="">
+            <h3>Dados do cadastro</h3>
+          </div>
+          
+          <div class="wrapper-inputs-box">
+
+            <div class="input-box">
+              <label for="email-id">E-mail</label>
+              <input type="email" name="email" id="email-id">
+              <span class="input-erro-msg"></span>
+            </div>
+
+            <div class="input-box">
+              <label for="confirm-email-id">Confirmar E-mail</label>
+              <input type="email" name="confirmEmail" id="confirm-email-id">
+              <span class="input-erro-msg"></span>
+            </div>
+            
+          </div>
+
+          <div class="wrapper-inputs-box">
+
+            <div class="input-box">
+              <label for="password-id">Senha</label>
+              <input type="password" name="password" id="password-id">
+              <span class="input-erro-msg"></span>
+            </div>
+
+            <div class="input-box">
+              <label for="confirm-password-id">Confirmar senha</label>
+              <input type="password" name="confirmPassword" id="confirm-password-id">
+              <span class="input-erro-msg"></span>
+            </div>
+
+          </div>
+
+        </section>
+  
+        <section class="register-type-section">
+          <div class="section-title-box">
+            <img src="/img/register-data-icon.svg" alt="">
+            <h3>Tipo de cadastro</h3>
+          </div>
+          
+          <div class="wrapper-radio-button-box">
+
+            <div class="radio-button-box">           
+              <input type="radio" name="person" id="fisical-person-id" value="pessoa fisica" checked>
+              <label for="fisical-person-id">Pessoa física</label>
+            </div>
+            <span class="input-erro-msg"></span>
+
+            <div class="radio-button-box">              
+              <input type="radio" name="person" id="legal-persson-id" value="pessoa juridica">
+              <label for="legal-persson-id">Pessoa jurídica</label>
+            </div>
+            <span class="input-erro-msg"></span>
+            
+          </div>
+        </section>
+  
+        <div class="wrapper-sections-box">
+
+          <section class="personal-data-section">
+
+            <div class="section-title-box">
+              <img src="/img/register-data-icon.svg" alt="">
+              <h3>Dados pessoais</h3>
+            </div>
+  
+            <div class="inputs-column-behavior">
+
+              <div class="input-box">
+                <label for="name-id">Nome completo</label>
+                <input type="text" name="name" id="name-id">
+                <span class="input-erro-msg"></span>
+              </div>
+  
+              <div class="input-box">
+                <label for="cpf-id">CPF</label>
+                <input type="text" name="cpf" id="cpf-id">
+                <span class="input-erro-msg"></span>
+              </div>
+
+              <div class="input-box">
+                <label for="cel-id">Celular</label>
+                <input type="tel" name="cel" id="cel-id">
+                <span class="input-erro-msg"></span>
+              </div>
+  
+              <div class="input-box">
+                <label for="tel-id">Telefone fixo</label>
+                <input type="tel" name="tel" id="tel-id">
+                <span class="input-erro-msg"></span>
+              </div>
+
+              <div class="input-box">
+                <label for="genre-id">Sexo</label>
+                <input type="text" name="genre" id="genre-id">
+                <span class="input-erro-msg"></span>
+              </div>
+  
+              <div class="input-box">
+                <label for="birthday-id">Birthday</label>
+                <input type="date" name="birthday" id="birthday-id">
+                <span class="input-erro-msg"></span>
+              </div>
+
+              <!--==== UPLOAD FOTO DO PERFIL(MULTER)====-->
+
+              <!-- <div class="input-box">
+                <label for="profile-picture-id">url da foto de perfil</label>
+                <input type="text" name="profilePicture" id="profile-picture-id">
+                <span class="input-erro-msg"></span>
+              </div> -->
+
+              <!--==== UPLOAD FOTO DO PERFIL(MULTER)====-->
+
+            </div>
+
+          </section>
+  
+          <section class="address-section">
+
+            <div class="section-title-box">
+              <img src="/img/register-data-icon.svg" alt="">
+              <h3>Endereço</h3>
+            </div>
+           
+            <div class="inputs-column-behavior">
+
+
+              <div class="input-box">
+                <label for="zip-code-id">Cep</label>
+                <input type="text" name="zipCode" id="zip-code-id">
+                <span class="input-erro-msg"></span>
+              </div>
+  
+
+              <div class="hugging-inputs-box">
+                <div class="input-box public-place">
+                  <label for="public-place-id">Logradouro</label>
+                  <input type="text" name="publicPlace" id="public-place-id">
+                  <span class="input-erro-msg"></span>
+                </div>
+  
+                <div class="input-box address-number">
+                  <label for="number-id">Número</label>
+                  <input type="number" name="number" id="number-id">
+                  <span class="input-erro-msg"></span>
+                </div>
+              </div>
+              
+  
+              <div class="input-box">
+                <label for="complement-id">Complemento</label>
+                <input type="text" name="complement" id="complement-id">
+                <span class="input-erro-msg"></span>
+              </div>
+
+              <div class="input-box">
+                <label for="district-id">Bairro</label>
+                <input type="text" name="district" id="district-id">
+                <span class="input-erro-msg"></span>
+              </div>
+
+              <div class="input-box">
+                <label for="reference-id">Referência</label>
+                <input type="text" name="reference" id="reference-id">
+                <span class="input-erro-msg"></span>
+              </div>
+  
+              <div class="hugging-inputs-box">
+                <div class="input-box city">
+                  <label for="city-id">Cidade</label>
+                  <input type="text" name="city" id="city-id">
+                  <span class="input-erro-msg"></span>
+                </div>
+  
+                <div class="input-box state">
+                  <label for="state-id">UF</label>
+                  <select name="state-id" id="state-id">
+                    <option value="Acre">AC</option>
+                    <option value="Alagoas">AL</option>
+                    <option value="Amapá">AP</option>
+                    <option value="Amazonas">AM</option>
+                    <option value="Bahia">BA</option>
+                    <option value="Ceará">CE</option>
+                    <option value="Distrito Federal">DF</option>
+                    <option value="Espírito Santo">ES</option>
+                    <option value="Goiás">GO</option>
+                    <option value="Maranhão">MA</option>
+                    <option value="Mato Grosso">MT</option>
+                    <option value="Mato Grosso do Sul">MS</option>
+                    <option value="Minas Gerais">MG</option>
+                    <option value="Pará">PA</option>
+                    <option value="Paraíba">PB</option>
+                    <option value="Paraná">PR</option>
+                    <option value="Pernambuco">PE</option>
+                    <option value="Piauí">PI</option>
+                    <option value="Rio de Janeiro" >RJ</option>
+                    <option value="Rio Grande do Norte">RN</option>
+                    <option value="Rio Grande do Sul">RS</option>
+                    <option value="Rondônia">RO</option>
+                    <option value="Roraima">RR</option>
+                    <option value="Santa Catarina">SC</option>
+                    <option value="São Paulo">SP</option>
+                    <option value="Sergipe">SE</option>
+                    <option value="Tocantins">TO</option>
+                  </select>
+                  <span class="input-erro-msg"></span>
+                </div>
+              </div>
+              
+
+            </div>
+
+  
+          </section>
+
+        </div>
+
+        <div class="buttons-box">
+          <button type="">Cancelar</button>
+          <button type="submit" id="create-account-button" data-create-account-button>Criar conta</button>
+        </div>
+     
+      </form>
+
+      <div class="have-account">
+        <a href="/login">Tem uma conta? Fazer Login</a>
+      </div>
+
+    </div>
+     
+  </main>
+
+ <!-- ===== FOOTER ===== -->
+ <%- include("./components/footer.ejs") %>
+
+ <!-- ===== WHATSAPP BUTTON ===== -->
+ <%- include("./components/whatsapp-button.ejs") %>
+
+  
+</body>
+</html>
