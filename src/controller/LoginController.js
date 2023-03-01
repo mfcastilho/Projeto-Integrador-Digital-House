@@ -1,5 +1,4 @@
 
-
 const LoginController = {
   showLogin: (req, res)=>{
     console.log(req.route.path);
