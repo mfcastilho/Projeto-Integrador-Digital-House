@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urbano t-shirts</title>
+
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/shopping-cart.css">
+
+
+  <link rel="icon" href="/img/favicon-logo-urbano.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  
+  <script src="/js/header-behavior.js" defer></script>
+</head>
+
+
+<body id="body-div">
+
+  <!-- ===== HEADER ===== -->
+  <%- include("./components/header.ejs") %>
+
+  <main>
+
+    <div class="main-container">
+
+      <div class="top-part">
+        <h4 class="title styling-elements">Carrinho</h4>
+        <p class="description styling-elements">Clique em finalizar compra para efetuar o seu pedido</p>
+      </div>
+
+      <div class="middle-part ">
+        
+        <div class="titles-bar styling-elements">
+
+          <h4 class="product">Produto</h4>
+          <div class="another-titles-box">
+            <h4 class="price">Preço Unitário</h4>
+            <h4 class="the-amount">Quantidade</h4>
+            <h4 class="subtotal">Subtotal</h4>
+            <h4 class="delete">Excluir</h4>
+          </div>
+          
+        </div>
+
+        <div class="cart-content">
+
+          <div class="product-content">
+            <a href=""><img src="/img/t-shirt-image.svg" alt=""></a>
+            <div class="infos-product-box">
+              <a href=""><h3>Nome da Camisa</h3></a>
+              <p>Informações sobre o produto</p>
+            </div>
+          </div>
+
+          <div class="another-infos">
+            <p>R$75.99</p>
+
+            <div class="the-amount-itens">
+              <p class="left-item">
+                <span class="material-symbols-outlined">
+                  remove
+                  </span>
+              </p>
+              <p class="center-item">1</p>
+              <p class="right-item">
+                <span class="material-symbols-outlined">
+                  add
+                  </span>
+              </p>
+            </div>
+
+            <p>R$75.99</p>
+            <div class="image-box">
+              <img src="/img/delete-image.svg" alt="">
+            </div>
+            
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="bottom-part">
+        <div class="left-part styling-bottom-elements">
+          <h4 class="total-title">Total: &NoBreak;</h4>
+          <h4 class="total-price">R$75.99</h4>
+        </div>
+        <div class="right-part styling-button">
+          <h4>Finalizar Compra</h4>
+        </div>
+      </div>
+
+      <!-- <table class="table">
+        <thead>
+          <tr>
+            <th colspan="2" width=""45%>
+              <h6>Produto</h6>
+            </th>
+            <th width="15%">
+              <h6>Preço Unitário</h6>
+            </th>
+            <th width="15%">
+              <h6>Quantidade</h6>
+            </th>
+            <th width="15%">
+              <h6>Subtotal</h6>
+            </th>
+            <th width="10%">
+              <h6>Excluir</h6>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="">
+              <div class="image">
+                <a href="">
+                  <img src="/img/t-shirt-image.svg" alt="">
+                </a>
+              </div>
+            </td>
+            <td>
+              <div class="product-info">
+                <a href="">Camiseta Rhapsody</a>
+                <div class="infos">
+                  <p class="
+                  inventory">Estoque:<strong>5 dias úteis</strong></p>
+                  <p class="color">Produto com uma cor:<span></span></p>
+                  <p class="size">Tamanho:<strong>M</strong></p>
+                </div>
+              </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table> -->
+    </div>
+     
+  </main>
+
+ <!-- ===== FOOTER ===== -->
+ <%- include("./components/footer.ejs") %>
+
+ <!-- ===== WHATSAPP BUTTON ===== -->
+ <%- include("./components/whatsapp-button.ejs") %>
+
+  
+</body>
+</html>
