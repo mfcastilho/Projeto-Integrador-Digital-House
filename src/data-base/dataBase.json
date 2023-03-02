@@ -3,7 +3,7 @@
     {
       "id": "7a4e85c5-cb2c-5241-7v48-be321b4611f5",
       "email": "julima@hotmail.com",
-      "password": "123",
+      "password": "123456",
       "person": "pessoa fisica",
       "name": "Juliana Lima",
       "cpf": "11111111111",
@@ -23,7 +23,7 @@
     {
       "id": "9c2f94b6-da1d-4352-8c59-af410a5722e6",
       "email": "maria@hotmail.com",
-      "password": "12345",
+      "password": "123456",
       "person": "pessoa fisica",
       "name": "Maria Julieta",
       "cpf": "11111771111",
@@ -43,7 +43,7 @@
     {
       "id": "5fdf8f43-af2c-44f0-b51c-ddf2afbf5429",
       "email": "amanda@mail.com",
-      "password": "123",
+      "password": "123456",
       "person": "pessoa fisica",
       "name": "Amanda Rinaldi Micheli",
       "cpf": "11133445566",
@@ -63,7 +63,7 @@
     {
       "id": "924d1556-b579-4bca-88fa-7675024511e9",
       "email": "wesleyfrederico@hotmail.com",
-      "password": "123",
+      "password": "123456",
       "person": "pessoa juridica",
       "name": "Wesley Frederico Loureiro da Rocha",
       "cpf": "23454445566",
@@ -82,8 +82,8 @@
     },
     {
       "id": "7eeaa4d2-19c8-4c4c-a3c4-1f226b1a33e5",
-      "email": "rafanunes@mail.com",
-      "password": "123",
+      "email": "rafanunes@email.com",
+      "password": "123456",
       "name": "Rafaela Nunes    ",
       "cpf": "22222222222    ",
       "tel": "21987656742 ",
@@ -101,7 +101,7 @@
     {
       "id": "df995ff9-88f4-4742-8f26-50132feedad7",
       "email": "luana@mail.com",
-      "password": "123",
+      "password": "123456",
       "person": "pessoa fisica",
       "name": "Luana Raposo",
       "cpf": "2244442222",
@@ -121,7 +121,7 @@
     {
       "id": "176cd129-381b-4411-b205-15d3050ea8a2",
       "email": "joao@hotmail.com",
-      "password": "123",
+      "password": "123456",
       "person": "pessoa fisica",
       "name": "João Miguel López",
       "cpf": "4444444444444",

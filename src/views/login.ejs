@@ -38,8 +38,14 @@
 
           <div class="input-box">
             <label for="email-id">E-mail</label>
-            <input type="email" name="email" id="email-id">
+            <input type="text" name="email" id="email-id" value="<%= locals.old ? old.email : ""%> ">
           </div>
+
+          <% if(locals.errors && errors.email){ %>
+              <div class="danger" style="color: red;">
+                <%= errors.email.msg  %> 
+              </div>
+          <% } %> 
 
           <div class="hugging-elements">
 
@@ -47,10 +53,16 @@
               <label for="password-id">Senha</label>
               <input type="password" name="password" id="password-id">
             </div>
+
+
             <button type="submit">Login</button>
 
           </div>
-
+          <% if(locals.errors && errors.password){%>
+            <div class="danger">
+              <%= errors.password.msg %> 
+            </div>
+          <%} %> 
           
         </form>
       </div>
