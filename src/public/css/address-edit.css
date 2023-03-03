@@ -111,6 +111,10 @@ form {
     gap: 1px;
 }
 
+.input-box input{
+  font-size: 1.6rem;
+}
+
 .assistant-form-box {
     display: flex;
     flex-direction: row;

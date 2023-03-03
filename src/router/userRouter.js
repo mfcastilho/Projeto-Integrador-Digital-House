@@ -11,7 +11,7 @@ router.get("/usuario/area-cliente/:id/dados-pessoais/editar", UserController.sho
 router.post("/usuario/area-cliente/:id/dados-pessoais", UserController.updateUserInfos);
 
 router.get("/usuario/area-cliente/:id/endereco", UserController.showUserAddressPage);
-router.get("/usuario/area-cliente/:id/endereco/editar", UserController.showEditUserAdress);
+router.get("/usuario/area-cliente/:id/endereco/editar", UserController.showEditUserAddress);
 router.post("/usuario/area-cliente/:id/endereco", UserController.updateUserAddressInfos);
 
 
