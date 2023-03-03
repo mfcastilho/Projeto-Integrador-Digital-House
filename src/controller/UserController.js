@@ -73,6 +73,24 @@ const UserController = {
     fs.writeFileSync(path.resolve("src", "data-base", "dataBase.json"), dbJSON);
 
     return res.redirect(`/usuario/area-cliente/${updateUser.id}/dados-pessoais`);
+  },
+  showUserAddressPage: (req, res)=>{
+    
+  },
+  showEditUserAdress: (req, res)=>{
+
+  },
+  updateUserAddressInfos: (req, res)=>{
+
+  },
+  showUserRequestesPage: (req, res)=>{
+    
+  },
+  showEditUserRequestes: (req, res)=>{
+    
+  },
+  updateUserRequestsIfos: (req, res)=>{
+
   }
 
 }
