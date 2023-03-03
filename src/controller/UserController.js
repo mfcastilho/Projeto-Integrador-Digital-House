@@ -2,14 +2,13 @@ const dataBase = require("../data-base/dataBase.json");
 const fs = require("fs");
 const path = require("path");
 
+const UserModel = require("../models/UserModel");
+
 
 const UserController = {
   showUserAreaPage: (req, res) =>{
-
     const dbUser = dataBase.users;
     const {id} = req.params;
-
-    
 
     const user = dbUser.find(user=>user.id == id);
     const birth = new Date(user.birthday);
@@ -25,8 +24,6 @@ const UserController = {
 
     const dbUser = dataBase.users;
     const {id} = req.params;
-
-    
 
     const user = dbUser.find(user=>user.id == id);
     // const birth = new Date(user.birthday);
@@ -75,7 +72,23 @@ const UserController = {
     return res.redirect(`/usuario/area-cliente/${updateUser.id}/dados-pessoais`);
   },
   showUserAddressPage: (req, res)=>{
+    //const dbUser = UserModel.findAll();
+    const {id} = req.params;
+    console.log(id);
+    const userFound = UserModel.findByPk(id);
+
+    console.log(userFound);
+    if(!userFound){
+      res
+        .status(404)
+        .json("Usuário não encontrado");
+    }
+
+    const userAddress = userFound.address;
     
+
+    return res.render("address-edit.ejs", {userAddress});
+
   },
   showEditUserAdress: (req, res)=>{
 

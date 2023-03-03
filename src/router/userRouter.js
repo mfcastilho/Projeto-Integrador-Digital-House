@@ -6,14 +6,13 @@ const UserController = require("../controller/UserController.js");
 
 
 
-router.get("/dados-pessoais", UserController.showUserAreaPage);
-router.get("/dados-pessoais/editar", UserController.showEditUserPersonalDataPage);
-router.post("/dados-pessoais", UserController.updateUserInfos);
+router.get("/usuario/area-cliente/:id/dados-pessoais", UserController.showUserAreaPage);
+router.get("/usuario/area-cliente/:id/dados-pessoais/editar", UserController.showEditUserPersonalDataPage);
+router.post("/usuario/area-cliente/:id/dados-pessoais", UserController.updateUserInfos);
 
-
-router.get("/endereco", UserController.showUserAddressPage);
-router.get("/endereco/editar", UserController.showEditUserAdress);
-router.post("/endereco", UserController.updateUserAddressInfos);
+router.get("/usuario/area-cliente/:id/endereco", UserController.showUserAddressPage);
+router.get("/usuario/area-cliente/:id/endereco/editar", UserController.showEditUserAdress);
+router.post("/usuario/area-cliente/:id/endereco", UserController.updateUserAddressInfos);
 
 
 
