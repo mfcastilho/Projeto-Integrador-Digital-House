@@ -12,29 +12,16 @@
       "genre": "feminino",
       "birthday": "1991-01-01",
       "profilePicture": "https://img.freepik.com/fotos-gratis/retrato-do-perfil-de-um-cara-caucasiano-comum-com-cerdas-olhando-para-a-esquerda-no-espaco-branco-em-branco-sem-emocoes-expressao-casual-em-pe-na-fila-esperando-por-alguem-pessoas-e-conceito-promocional_176420-52449.jpg?w=2000",
-      "address":[
-        {
-          "zipCode": "27700000"
-        },
-        {
-          "publicPlace": "rua a"
-        },
-        {
-          "number": "111"
-        },
-        {
-          "complement": "casa"
-        },
-        {
-          "district": "Centro"
-        },
-        {
-          "reference": "do lado do campinho"
-        },
-        {
-          "city": "Vassouras"
-        }
-      ]
+      "address": {
+        "zipCode": "27700000",
+        "publicPlace": "rua a",
+        "number": "111",
+        "complement": "casa",
+        "district": "Centro",
+        "reference": "do lado do campinho",
+        "city": "Vassouras",
+        "state": "RJ"
+      }
     },
     {
       "id": "9c2f94b6-da1d-4352-8c59-af410a5722e6",
@@ -48,31 +35,18 @@
       "genre": "feminino",
       "birthday": "1994-05-05",
       "profilePicture": "https://vocesa.abril.com.br/wp-content/uploads/2021/01/Dani-Almeida.jpg?quality=70&strip=info&w=650&resize=1200,800",
-      "address":[
-        {
-          "zipCode": "27700000"
-        },
-        {
-          "publicPlace": "rua c"
-        },
-        {
-          "number": "333"
-        },
-        {
-          "complement": "casa"
-        },
-        {
-          "district": "Centro"
-        },
-        {
-          "reference": "em frente a igrejinha"
-        },
-        {
-          "city": "Vassouras"
-        }
-      ]
+      "address": {
+        "zipCode": "27700000",
+        "publicPlace": "rua c",
+        "number": "333",
+        "complement": "casa",
+        "district": "Centro",
+        "reference": "em frente a igrejinha",
+        "city": "Vassouras",
+        "state": "RJ"
+      }
     },
-    {  
+    {
       "id": "5fdf8f43-af2c-44f0-b51c-ddf2afbf5429",
       "email": "amanda@mail.com",
       "password": "123456",
@@ -84,29 +58,16 @@
       "genre": "feminino",
       "birthday": "1991-11-30",
       "profilePicture": "https://img.freepik.com/fotos-gratis/mulher-jovem-e-elegante-magnifica-com-grandes-olhos-castanhos-e-um-sorriso-incrivel_291049-2575.jpg?w=740&t=st=1671899577~exp=1671900177~hmac=b91a965ce895bd5fea64357a943511680902aecc761970fe596684f638de74ba",
-      "address":[
-        {
-          "zipCode": "27700000"
-        },
-        {
-          "publicPlace": "rua w"
-        },
-        {
-          "number": "44"
-        },
-        {
-          "complement": "casa"
-        },
-        {
-          "district": "Centro"
-        },
-        {
-          "reference": "em frente a igrejinha"
-        },
-        {
-          "city": "Vassouras"
-        }
-      ]   
+      "address": {
+        "zipCode": "27700000",
+        "publicPlace": "rua w",
+        "number": "44",
+        "complement": "casa",
+        "district": "Centro",
+        "reference": "em frente a igrejinha",
+        "city": "Vassouras",
+        "state": "RJ"
+      }
     },
     {
       "id": "924d1556-b579-4bca-88fa-7675024511e9",
@@ -120,29 +81,16 @@
       "genre": "masculino",
       "birthday": "1983-08-01",
       "profilePicture": "https://img.freepik.com/fotos-gratis/homem-bonito-e-confiante-sorrindo-com-as-maos-cruzadas-no-peito_176420-18743.jpg",
-      "address":[
-        {
-          "zipCode": "22010000"
-        },
-        {
-          "publicPlace": "Avenida Atlântica"
-        },
-        {
-          "number": "44"
-        },
-        {
-          "complement": "casa"
-        },
-        {
-          "district": "Copacabana"
-        },
-        {
-          "reference": "em frente a praia"
-        },
-        {
-          "city": "Rio de Janeiro"
-        }
-      ] 
+      "address": {
+        "zipCode": "22010000",
+        "publicPlace": "Avenida Atlântica",
+        "number": "44",
+        "complement": "casa",
+        "district": "Copacabana",
+        "reference": "em frente a praia",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      }
     },
     {
       "id": "7eeaa4d2-19c8-4c4c-a3c4-1f226b1a33e5",
@@ -154,29 +102,16 @@
       "genre": "feminino",
       "birthday": "2000-05-25",
       "profilePicture": "https://img.freepik.com/fotos-gratis/foto-da-cintura-para-cima-de-uma-mulher-tenra-feminina-e-gentil-com-penteado-encaracolado-penteado-para-o-lado-direito-inclinando-a-cabeca-e-sorrindo-sedutor-tornando-o-olhar-romantico-para-a-camera-se-abracando-sobre-o-fundo-amarelo_1258-81987.jpg?w=2000",
-      "address":[
-        {
-          "zipCode": "01310100"
-        },
-        {
-          "publicPlace": "Avenida Paulista - de 612 a 1510 - lado par"
-        },
-        {
-          "number": "1200"
-        },
-        {
-          "complement": "prédio"
-        },
-        {
-          "district": "Bela Vista"
-        },
-        {
-          "reference": "do lado da Lotérica"
-        },
-        {
-          "city": "São Paulo"
-        }
-      ]
+      "address": {
+        "zipCode": "01310100",
+        "publicPlace": "Avenida Paulista - de 612 a 1510 - lado par",
+        "number": "1200",
+        "complement": "prédio",
+        "district": "Bela Vista",
+        "reference": "do lado da Lotérica",
+        "city": "São Paulo",
+        "state": "SP"
+      }
     },
     {
       "id": "df995ff9-88f4-4742-8f26-50132feedad7",
@@ -190,29 +125,16 @@
       "genre": "feminino",
       "birthday": "2000-11-11",
       "profilePicture": "https://img.freepik.com/fotos-gratis/foto-da-cintura-para-cima-de-uma-mulher-tenra-feminina-e-gentil-com-penteado-encaracolado-penteado-para-o-lado-direito-inclinando-a-cabeca-e-sorrindo-sedutor-tornando-o-olhar-romantico-para-a-camera-se-abracando-sobre-o-fundo-amarelo_1258-81987.jpg?w=2000",
-      "address":[
-        {
-          "zipCode": "01310100"
-        },
-        {
-          "publicPlace": "Avenida Paulista - de 612 a 1510 - lado par"
-        },
-        {
-          "number": "1000"
-        },
-        {
-          "complement": "prédio"
-        },
-        {
-          "district": "Bela Vista"
-        },
-        {
-          "reference": "do lado da agência do banco do Brasil"
-        },
-        {
-          "city": "São Paulo"
-        }
-      ] 
+      "address": {
+        "zipCode": "01310100",
+        "publicPlace": "Avenida Paulista - de 612 a 1510 - lado par",
+        "number": "1000",
+        "complement": "prédio",
+        "district": "Bela Vista",
+        "reference": "do lado da agência do banco do Brasil",
+        "city": "São Paulo",
+        "state": "SP"
+      }
     },
     {
       "id": "176cd129-381b-4411-b205-15d3050ea8a2",
@@ -226,29 +148,16 @@
       "genre": "masculino",
       "birthday": "1988-07-18",
       "profilePicture": "https://img.freepik.com/fotos-gratis/homem-bonito-posando-e-sorrindo_23-2149396133.jpg?w=2000",
-      "address":[
-        {
-          "zipCode": "22790702"
-        },
-        {
-          "publicPlace": "Avenida das Américas"
-        },
-        {
-          "number": "14296"
-        },
-        {
-          "complement": "prédio"
-        },
-        {
-          "district": "Recreio dos Bandeirantes"
-        },
-        {
-          "reference": "perto do supermercado Mundial"
-        },
-        {
-          "city": "Rio de Janeiro"
-        }
-      ]
+      "address": {
+        "zipCode": "22790702",
+        "publicPlace": "Avenida das Américas",
+        "number": "14296",
+        "complement": "prédio",
+        "district": "Recreio dos Bandeirantes",
+        "reference": "perto do supermercado Mundial",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      }
     }
   ],
   "products": [

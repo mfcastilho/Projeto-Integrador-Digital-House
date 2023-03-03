@@ -74,10 +74,8 @@ const UserController = {
   showUserAddressPage: (req, res)=>{
     //const dbUser = UserModel.findAll();
     const {id} = req.params;
-    console.log(id);
+    
     const userFound = UserModel.findByPk(id);
-
-    console.log(userFound);
     if(!userFound){
       res
         .status(404)
@@ -85,9 +83,9 @@ const UserController = {
     }
 
     const userAddress = userFound.address;
-    
-
-    return res.render("address-edit.ejs", {userAddress});
+    console.log(userAddress);
+  
+    return res.render("address-page.ejs", {address: userAddress});
 
   },
   showEditUserAdress: (req, res)=>{
