@@ -12,7 +12,7 @@ router.post("/usuario/area-cliente/:id/dados-pessoais", UserController.updateUse
 
 router.get("/usuario/area-cliente/:id/endereco", UserController.showUserAddressPage);//estrutura controller finalizada
 router.get("/usuario/area-cliente/:id/endereco/editar", UserController.showEditUserAddress);//estrutura controller finalizada
-router.post("/usuario/area-cliente/:id/endereco", UserController.updateUserAddressInfos);
+router.post("/usuario/area-cliente/:id/endereco", UserController.updateUserAddressInfos);//estrutura controller finalizada
 
 
 router.get("/usuario/area-cliente/:id/pedidos", UserController.showUserRequestesPage);
