@@ -32,13 +32,13 @@
 
       <section class="form-section">
 
-        <form action="/editar-endereco" method="post">
+        <form action="/usuario/area-cliente/<%= user.id  %>/endereco" method="POST">
 
           <div class="hugging-form">
 
             <div class="input-box">
-              <label for="address">Logradouro</label>   
-              <input type="text" name="address" id="address" value="<%= address.publicPlace %> ">
+              <label for="publicPlace">Logradouro</label>   
+              <input type="text" name="publicPlace" id="publicPlace" value="<%= address.publicPlace %> ">
             </div>
   
           
@@ -56,8 +56,8 @@
           
             <div class="assistant-form-box">
               <div class="input-box">
-                <label for="neighborhood">Bairro</label>   
-                <input type="text" name="neighborhood" id="neighborhood" value="<%= address.district %> ">
+                <label for="district">Bairro</label>   
+                <input type="text" name="district" id="district" value="<%= address.district %> ">
               </div>
               <div class="input-box">
                 <label for="city">Cidade</label>   
@@ -71,14 +71,14 @@
                 <input type="text" name="state" id="state" value="<%= address.state %> ">
               </div>
               <div class="input-box">
-                <label for="cep">CEP</label>   
-                <input type="text" name="cep" id="cep" value="<%= address.zipCode %> ">
+                <label for="zipCode">CEP</label>   
+                <input type="text" name="zipCode" id="zipCode" value="<%= address.zipCode %> ">
               </div>  
             </div>
 
             <div class="input-box">
-              <label for="address">Referência</label>   
-              <input type="text" name="address" id="address" value="<%= address.reference %> ">
+              <label for="reference">Referência</label>   
+              <input type="text" name="reference" id="reference" value="<%= address.reference %> ">
             </div>
 
           </div>

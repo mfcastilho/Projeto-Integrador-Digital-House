@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 //const {v4:makeId} = require("uuid");
 
-const pathDataBase = path.resolve("src", "data-base", "dataBase.json");
+const pathDataBase = path.resolve("src", "data-base", "dataBase2.json");
 
 const UserModel = {
   findAll: ()=>{
