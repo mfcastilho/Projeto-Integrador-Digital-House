@@ -51,4 +51,3 @@ changePaymentFormBox.addEventListener("click", ()=>{
 })
 
 
-/

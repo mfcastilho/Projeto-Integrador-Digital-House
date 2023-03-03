@@ -4,7 +4,7 @@ const path = require("path");
 
 
 const UserController = {
-  showUserPersonalDataPage: (req, res) =>{
+  showUserAreaPage: (req, res) =>{
 
     const dbUser = dataBase.users;
     const {id} = req.params;
@@ -34,7 +34,7 @@ const UserController = {
     console.log(user.birthday);
     return res.render("edit-user-panel-personal-data.ejs", {user});
   },
-  updateUser: (req, res)=>{
+  updateUserInfos: (req, res)=>{
     console.log("Atualizando usuário");
     console.log(req.body);
     
@@ -72,7 +72,7 @@ const UserController = {
     const dbJSON = JSON.stringify(dataBase);
     fs.writeFileSync(path.resolve("src", "data-base", "dataBase.json"), dbJSON);
 
-    return res.redirect(`/usuario/${updateUser.id}/dados-pessoais`);
+    return res.redirect(`/usuario/area-cliente/${updateUser.id}/dados-pessoais`);
   }
 
 }

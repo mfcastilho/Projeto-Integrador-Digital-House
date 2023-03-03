@@ -40,7 +40,7 @@ app.use(productsListingRouter);
 app.use(loginRouter);
 app.use(registerRouter);
 app.use(innerProductRouter);
-app.use(userRouter);
+app.use("/usuario/area-cliente/:id",userRouter);
 
 
 
