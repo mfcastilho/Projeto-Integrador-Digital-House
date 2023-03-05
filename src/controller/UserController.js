@@ -89,7 +89,7 @@ const UserController = {
   },
   showUserAddressPage: (req, res)=>{
     const {id} = req.params;
-    
+    console.log("id:"+id);
     const userFound = UserModel.findByPk(id);
     if(!userFound){
       res
@@ -97,6 +97,7 @@ const UserController = {
         .json("Usuário não encontrado");
     }
 
+    console.log(userFound)
     const userAddress = userFound.address;
     console.log(userAddress);
   

@@ -13,4 +13,6 @@ router.post("/login", validations, AuthController.logging);
 router.get("/usuario/cadastro", AuthController.showRegister); 
 router.post("/usuario/cadastro", AuthController.storeUser);
 
+router.post("/usuario/logout", AuthController.logout);
+
 module.exports = router;

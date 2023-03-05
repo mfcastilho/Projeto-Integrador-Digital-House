@@ -56,7 +56,7 @@ const AuthController = {
       return res.render("login.ejs", {errors:resultValidations.mapped(), old:req.body});
     }
 
-    let userFound = false;
+    //let userFound = false;
     let passwordIsCorrect = false;
 
 
@@ -72,7 +72,7 @@ const AuthController = {
         old:req.body
       });
     }else{
-      userFound = true;
+      //userFound = true;
       if(user.password == password){
         passwordIsCorrect = true;
       }
@@ -97,7 +97,11 @@ const AuthController = {
 
     res.redirect("/");
     
-  }
+    },
+    logout: (req, res)=>{
+      req.session.destroy();
+      res.redirect("/");
+    }
 }
 
 module.exports = AuthController;
