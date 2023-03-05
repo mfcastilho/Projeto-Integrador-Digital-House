@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+:root{
+  font-size: 10px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  
+}
+
+
+.content{
+  width: 70%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'Inter', sans-serif;
+  margin-top: 10rem;
+}
+
+.title{
+  margin-bottom: 3.6rem;
+
+  color: #251B37;
+
+  font-size: 4rem;
+  font-weight: 400;
+ 
+}
+
+.content form{
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  
+
+}
+
+.elements-container{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 4rem;
+
+  margin-bottom: 3rem;
+}
+
+.wrapper-inputs{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.hugging-left-elements{
+  width: 40%;
+}
+
+.hugging-right-elements{
+  width: 40%;
+}
+
+
+.wrapper-inputs label{
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  color: #251B37;
+}
+
+.wrapper-inputs input{
+  height: 2.6rem;
+  font-size: 1.8rem;
+}
+.wrapper-inputs select{
+  height: 2.6rem;
+}
+
+.wrapper-inputs input[type=file]{
+  height: 2.6rem;
+  font-size: 1.2rem;
+}
+
+.wrapper-inputs input, .wrapper-inputs select{
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+
+  background-color: #D9D9D9;
+  border: none;
+}
+
+.btn-send{
+  width: 84%;
+  height: 3rem;
+
+  border-radius: 1rem;
+  border: none;
+
+
+  font-size: 1.8rem;
+
+  margin: 0 auto;
+
+  color: #FFF;
+  background-color: #553a77;
+}
+
+.btn-send:hover{
+  background-color: #4c3766;
+}

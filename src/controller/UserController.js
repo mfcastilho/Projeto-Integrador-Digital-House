@@ -171,6 +171,96 @@ const UserController = {
   },
   updateUserRequestsInfos: (req, res)=>{
 
+    return res.redirect(`/usuario/area-cliente/${updateUser.id}/dados-pessoais`);
+  },
+  showUserAddressPage: (req, res)=>{
+    const {id} = req.params;
+    
+    const userFound = UserModel.findByPk(id);
+    if(!userFound){
+      res
+        .status(404)
+        .json("Usuário não encontrado");
+    }
+
+    const userAddress = userFound.address;
+    console.log(userAddress);
+  
+    return res.render("address-page.ejs", {address: userAddress, user:userFound});
+
+  },
+  showEditUserAddress: (req, res)=>{
+
+    const {id} = req.params;
+    
+    const userFound = UserModel.findByPk(id);
+    if(!userFound){
+      res
+        .status(404)
+        .json("Usuário não encontrado");
+    }
+
+    const userAddress = userFound.address;
+    console.log(userAddress);
+  
+    return res.render("address-page-edit.ejs", {address: userAddress, user:userFound});
+
+  },
+  updateUserAddressInfos: (req, res)=>{
+    
+    const {id} = req.params;
+    console.log(id)
+    const userFound = UserModel.findByPk(id);
+    
+    
+    console.log(req.body.publicPlace)
+
+        const userUpdate = {
+          id:userFound.id,
+          email:userFound.email,
+          password:userFound.password,
+          name:userFound.name,
+          cpf:userFound.cpf,
+          tel:userFound.tel,
+          genre:userFound.genre,
+          birthday:userFound.birthday,
+          profilePicture:userFound.profilePicture,
+          address:{
+            zipCode:req.body.zipCode,
+            publicPlace:req.body.publicPlace,
+            number:req.body.number,
+            complement:req.body.complement,
+            district:req.body.district,
+            reference:req.body.reference,
+            city:req.body.city,
+            state:req.body.state
+          }
+        }
+
+        const response = UserModel.update(id, userUpdate);
+
+        console.log(response)
+
+        if(!response){
+          res
+            .status(404)
+            .json("Erro!Usuário não foi atualizado no banco");
+        }
+
+        //res.send("AAAAAAAAA")
+        res.redirect(`/usuario/area-cliente/${id}/dados-pessoais`);
+    
+    //console.log(req.body);
+    
+  },
+  showUserRequestesPage: (req, res)=>{
+    
+  },
+  showEditUserRequestes: (req, res)=>{
+    
+  },
+  updateUserRequestsInfos: (req, res)=>{
+
   }
 
 }
