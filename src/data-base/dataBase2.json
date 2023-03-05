@@ -21,6 +21,12 @@
                 "reference": "do lado do campinho",
                 "city": "Vassouras",
                 "state": "RJ"
+            },
+            "requests": {
+                "id": "",
+                "user_id": "",
+                "product_variant_id": "",
+                "quantity":0 
             }
         },
         {
@@ -44,11 +50,17 @@
                 "reference": "em frente a igrejinha",
                 "city": "Vassouras",
                 "state": "RJ"
+            },
+            "requests": {
+                "id": "",
+                "user_id": "",
+                "product_variant_id": "",
+                "quantity":0 
             }
         },
         {
             "id": "5fdf8f43-af2c-44f0-b51c-ddf2afbf5429",
-            "email": "amanda@mail.com",
+            "email": "amanda@gmail.com",
             "password": "123456",
             "person": "pessoa fisica",
             "name": "Amanda Rinaldi Micheli",
@@ -67,6 +79,12 @@
                 "reference": "em frente a igrejinha",
                 "city": "Vassouras",
                 "state": "RJ"
+            },
+            "requests": {
+                "id": "",
+                "user_id": "",
+                "product_variant_id": "",
+                "quantity":0 
             }
         },
         {
@@ -90,11 +108,17 @@
                 "reference": "em frente a praia",
                 "city": "Rio de Janeiro",
                 "state": "RJ"
+            },
+            "requests": {
+                "id": "",
+                "user_id": "",
+                "product_variant_id": "",
+                "quantity":0 
             }
         },
         {
             "id": "7eeaa4d2-19c8-4c4c-a3c4-1f226b1a33e5",
-            "email": "rafanunes@email.com",
+            "email": "rafanunes@gmail.com",
             "password": "123456",
             "name": "Rafaela Nunes    ",
             "cpf": "22222222222    ",
@@ -103,15 +127,25 @@
             "birthday": "2000-05-25",
             "profilePicture": "https://img.freepik.com/fotos-gratis/foto-da-cintura-para-cima-de-uma-mulher-tenra-feminina-e-gentil-com-penteado-encaracolado-penteado-para-o-lado-direito-inclinando-a-cabeca-e-sorrindo-sedutor-tornando-o-olhar-romantico-para-a-camera-se-abracando-sobre-o-fundo-amarelo_1258-81987.jpg?w=2000",
             "address": {
-                "number": "1200 ",
-                "complement": "prédio ",
-                "city": "São Paulo ",
-                "state": "SP "
+                "zipCode": " 01310100",
+                "publicPlace": " Avenida Paulista",
+                "number": "1200   ",
+                "complement": "prédio   ",
+                "district": " Centro",
+                "reference": " Em frente ao Masp",
+                "city": "São Paulo   ",
+                "state": "SP   "
+            },
+            "requests": {
+                "id": "",
+                "user_id": "",
+                "product_variant_id": "",
+                "quantity":0 
             }
         },
         {
             "id": "df995ff9-88f4-4742-8f26-50132feedad7",
-            "email": "luana@mail.com",
+            "email": "luana@outlook.com",
             "password": "123456",
             "person": "pessoa fisica",
             "name": "Luana Raposo",
@@ -130,6 +164,12 @@
                 "reference": "do lado da agência do banco do Brasil",
                 "city": "São Paulo",
                 "state": "SP"
+            },
+            "requests": {
+                "id": "",
+                "user_id": "",
+                "product_variant_id": "",
+                "quantity":0 
             }
         },
         {
@@ -153,6 +193,12 @@
                 "reference": "perto do supermercado Mundial",
                 "city": "Rio de Janeiro",
                 "state": "RJ"
+            },
+            "requests": {
+                "id": "",
+                "user_id": "",
+                "product_variant_id": "",
+                "quantity":0 
             }
         }
     ],

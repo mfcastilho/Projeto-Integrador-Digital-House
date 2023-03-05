@@ -151,6 +151,11 @@ main{
   flex-direction: column;
 }
 
+.off-mode-style{
+  opacity: 0.45;
+}
+
+
 
 #teste{
   height: 80rem;
