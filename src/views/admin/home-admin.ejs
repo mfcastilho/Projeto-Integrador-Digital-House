@@ -83,6 +83,7 @@
               <th scope="col">Nome</th>
               <th scope="col">Preço</th>
               <th scope="col">Tamanho</th>
+			  <th scope="col">Cor</th>
               <th scope="col">Estoque</th>
               <th scope="col">Ações</th>
 						</tr>
@@ -92,12 +93,13 @@
 						
 						<% products.forEach( product => { %>
 							<tr>
-								<th class="product-id" scope="row">1 </th>
+								<th class="product-id" scope="row"><%= product.id %> </th>
 								<td class="table-image"><img class="thumb product-image" src="<%= product.image %>" alt="" width="100px" height="100px"></td>
 								<td class="product-name"><%= product.name %></td>
-								<td class="product-price"><%= product.price %></td>
-								<td class="product-size">M</td>
-								<td class="product-stock-quantity">35</td>
+								<td class="product-price">R$ <%= product.price %></td>
+								<td class="product-size"><%= product.size %></td>
+								<td class="product-color"><%= product.color %></td>
+								<td class="product-stock-quantity"><%= product.quantity %></td>
 								<td class="buttons-table-box">
 									<a href="#" type="button" class="btn btn-primary open-btn">Abrir</a>
 									<a href="#" type="button" class="btn btn-secondary edit-btn">Editar</a>
