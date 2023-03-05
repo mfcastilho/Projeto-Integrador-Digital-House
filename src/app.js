@@ -27,8 +27,8 @@ app.set("views", path.resolve("src", "views"));
 
 app.use(session({
   secret:"mysecretpassword",
-  resave: false,
-  saveUninitialized: false
+  resave: true,
+  saveUninitialized: true
 }))
 
 app.use(express.json());

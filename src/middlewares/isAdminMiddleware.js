@@ -1,9 +1,12 @@
-const insAdminMiddleware = (req, res, next)=>{
+const isAdminMiddleware = (req, res, next)=>{
 
-    if(!req.session.userLogged || !req,session.userLogged.isAdmin){
-        res.redirect("/");
+    const { userLogged } = req.session
+    
+    if(!userLogged || !userLogged.isAdmin){
+        return res.redirect("/");
     }
 
-    next();
+    return next();
 }
 
+module.exports = isAdminMiddleware;
