@@ -247,10 +247,10 @@ const UserController = {
             .json("Erro!Usuário não foi atualizado no banco");
         }
 
-        //res.send("AAAAAAAAA")
+        
         res.redirect(`/usuario/area-cliente/${id}/dados-pessoais`);
     
-    //console.log(req.body);
+   
     
   },
   showUserRequestesPage: (req, res)=>{

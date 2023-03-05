@@ -15,7 +15,7 @@ const UserModel = {
     const users = database2.users;
     const userFound = users.find(user => user.email == userEmail);
 
-    if(!userFound){
+    if(userFound == undefined){
       return false;
     }
 
@@ -42,8 +42,9 @@ const UserModel = {
 
     const users = database2.users;
     const userIndex = users.findIndex(user => user.id== userId);
+    console.log(userIndex)
 
-    if(!userIndex){
+    if(userIndex == undefined){
 
       return false;
     }

@@ -4,29 +4,21 @@
             "id": "7a4e85c5-cb2c-5241-7v48-be321b4611f5",
             "email": "julima@hotmail.com",
             "password": "123456",
-            "person": "pessoa fisica",
             "name": "Juliana Lima",
             "cpf": "11111111111",
-            "cel": "21922222222",
             "tel": "21922222222",
             "genre": "feminino",
             "birthday": "1991-01-01",
             "profilePicture": "https://img.freepik.com/fotos-gratis/retrato-do-perfil-de-um-cara-caucasiano-comum-com-cerdas-olhando-para-a-esquerda-no-espaco-branco-em-branco-sem-emocoes-expressao-casual-em-pe-na-fila-esperando-por-alguem-pessoas-e-conceito-promocional_176420-52449.jpg?w=2000",
             "address": {
-                "zipCode": "27700000",
-                "publicPlace": "rua a",
-                "number": "111",
-                "complement": "casa",
-                "district": "Centro",
-                "reference": "do lado do campinho",
-                "city": "Vassouras",
-                "state": "RJ"
-            },
-            "requests": {
-                "id": "",
-                "user_id": "",
-                "product_variant_id": "",
-                "quantity":0 
+                "zipCode": "27700000  ",
+                "publicPlace": "rua c",
+                "number": "111  ",
+                "complement": "apartamento 305 ",
+                "district": "Centro  ",
+                "reference": "do lado do campinho  ",
+                "city": "Vassouras  ",
+                "state": "RJ  "
             }
         },
         {
@@ -55,7 +47,7 @@
                 "id": "",
                 "user_id": "",
                 "product_variant_id": "",
-                "quantity":0 
+                "quantity": 0
             }
         },
         {
@@ -84,7 +76,7 @@
                 "id": "",
                 "user_id": "",
                 "product_variant_id": "",
-                "quantity":0 
+                "quantity": 0
             }
         },
         {
@@ -113,7 +105,7 @@
                 "id": "",
                 "user_id": "",
                 "product_variant_id": "",
-                "quantity":0 
+                "quantity": 0
             }
         },
         {
@@ -140,7 +132,7 @@
                 "id": "",
                 "user_id": "",
                 "product_variant_id": "",
-                "quantity":0 
+                "quantity": 0
             }
         },
         {
@@ -169,7 +161,7 @@
                 "id": "",
                 "user_id": "",
                 "product_variant_id": "",
-                "quantity":0 
+                "quantity": 0
             }
         },
         {
@@ -198,7 +190,7 @@
                 "id": "",
                 "user_id": "",
                 "product_variant_id": "",
-                "quantity":0 
+                "quantity": 0
             }
         }
     ],
