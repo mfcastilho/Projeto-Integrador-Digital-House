@@ -51,8 +51,24 @@
       <nav class="user-icons-nav">
         <ul>
           <li><a href="/carrinho"><img src="/img/carrinho.svg" alt=""></a></li>
-          <li><a href="/login"><img id="login-img" src="/img/login.svg" alt=""></a></li>
+          
+          <% if(locals.userLogged && userLogged){ %>
+            <li><a href="/usuario/area-cliente/<%= userLogged.id %>/dados-pessoais"><img id="login-img" src="/img/login.svg" alt=""></a></li>
+            <li style="color: #FFF;">
+              <p>Olá,</p>
+              <div class="hugging" style="display:flex; align-items: flex-end;">
+                <p style="width: 200%;"><%= userLogged.name %></p>
+                <form action="">
+                  <button type="submit" style="font-size: 1rem;margin-left: 6px;cursor: pointer;">Sair</button>
+                </form>
+              </div>
+              
+            </li>
+          <% } else{ %>
+            <li><a href="/login"><img id="login-img" src="/img/login.svg" alt=""></a></li>
+          <% } %>
         </ul>
+        
       </nav>
       
     </div>

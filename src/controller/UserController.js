@@ -48,13 +48,8 @@ const UserController = {
            birthday, 
           } = req.body;
 
-    
-      
-
     const indexUser = dbUsers.findIndex(user=> user.id == id);
     const user = UserModel.findByPk(id);
-
-    console.log(tel);
 
     if(!user){
       return res 
@@ -82,8 +77,6 @@ const UserController = {
        city:user.city
     }
 
-    console.log()
-
     const response = UserModel.update(id, updateUser);
 
     if(!response){
@@ -108,10 +101,8 @@ const UserController = {
     console.log(userAddress);
   
     return res.render("address-page.ejs", {address: userAddress, user:userFound});
-
   },
   showEditUserAddress: (req, res)=>{
-
     const {id} = req.params;
     
     const userFound = UserModel.findByPk(id);
@@ -125,7 +116,6 @@ const UserController = {
     console.log(userAddress);
   
     return res.render("address-page-edit.ejs", {address: userAddress, user:userFound});
-
   },
   updateUserAddressInfos: (req, res)=>{
     const {id} = req.params;
@@ -155,8 +145,6 @@ const UserController = {
     }
 
     const response = UserModel.update(id, userUpdate);
-
-    console.log(response)
 
     if(!response){
       res
