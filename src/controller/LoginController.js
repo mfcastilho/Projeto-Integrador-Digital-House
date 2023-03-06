@@ -37,7 +37,7 @@ const LoginController = {
     }
 
     if(userFound && passwordIsCorrect){
-      return res.redirect(`/usuario/${user.id}/dados-pessoais`);
+      return res.redirect(`/usuario/area-cliente/${user.id}/dados-pessoais`);
     }
 
 

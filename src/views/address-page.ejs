@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/address-edit.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+
+  <title>Urbano t-shirts</title>
+
+
+  <script src="/js/header-behavior.js" defer></script>
+</head>
+<body id="body-div">
+
+
+
+ <!-- ===== HEADER ===== -->
+ <%- include("./components/header.ejs") %>
+
+  <main>
+
+    <div class="main-container">
+
+       <!-- =====  MENU LATERAL COM BUTÕES DE EDIÇÃO ===== -->
+    <%- include("./components/user-edit-buttons.ejs") %>
+
+
+      <section class="form-section">
+
+        <form action="/usuario/area-cliente/<%= user.id %>/endereco/editar" method="GET">
+
+          <div class="hugging-form off-mode-style">
+
+            <div class="input-box">
+              <label for="address">Logradouro</label>   
+              <input type="text" name="address" id="address" required disabled value="<%= address.publicPlace %> ">
+            </div>
+  
+          
+            <div class="assistant-form-box">
+              <div class="input-box">
+                <label for="number">Número</label>   
+                <input type="text" name="number" id="number" required disabled value="<%= address.number %> " >
+              </div>
+              <div class="input-box">
+                <label for="complement">Complemento</label>   
+                <input type="text" name="complement" id="complement" required disabled value="<%= address.complement %> ">
+              </div>
+            </div>
+  
+          
+            <div class="assistant-form-box">
+              <div class="input-box">
+                <label for="neighborhood">Bairro</label>   
+                <input type="text" name="neighborhood" id="neighborhood" required disabled value="<%= address.district %> ">
+              </div>
+              <div class="input-box">
+                <label for="city">Cidade</label>   
+                <input type="text" name="city" id="city" required disabled value="<%= address.city %> ">
+              </div>
+            </div>
+
+            <div class="assistant-form-box">
+              <div class="input-box">
+                <label for="state">Estado</label>   
+                <input type="text" name="state" id="state" required disabled value="<%= address.state %> ">
+              </div>
+              <div class="input-box">
+                <label for="cep">CEP</label>   
+                <input type="text" name="cep" id="cep" required disabled value="<%= address.zipCode %> ">
+              </div>  
+            </div>
+
+            <div class="input-box">
+              <label for="address">Referência</label>   
+              <input type="text" name="address" id="address" required disabled value="<%= address.reference %> ">
+            </div>
+
+          </div>
+
+          <button type="submit">Editar</button>
+
+        </form>
+
+      </section>
+
+    </div>
+
+  </main>
+
+   <!-- ===== FOOTER ===== -->
+   <%- include("./components/footer.ejs") %>
+
+   <!-- ===== WHATSAPP BUTTON ===== -->
+   <%- include("./components/whatsapp-button.ejs") %>
+
+  
+</body>
+</html>
