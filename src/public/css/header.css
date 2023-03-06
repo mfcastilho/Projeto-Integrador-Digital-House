@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap');
+
+
+:root{
+    font-size: 10px;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  header{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #372948;
+    height: 13.2rem;
+    padding: 0 17.1rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+  }
+
+  .header-container{
+    width: 100%;
+    max-width: 1280px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-container li{
+    list-style: none;
+  }
+
+
+  header .logo-box img{
+    width: 15.2rem;
+    height: 10.2rem;
+    margin-right: 2rem;
+  }
+
+  header .header-container form{
+    width: 53.5%;
+  }
+
+  header .header-container form input{
+    width: 100%;
+    min-width: 50px;
+    height: 4rem;
+
+    border-radius: 2rem;
+    border: none;
+
+    padding-left:1.6rem;
+
+    font-size: 1.6rem;
+
+    background-image: url("../img/lupa.svg");
+    background-size: 2.2rem;
+    background-repeat: no-repeat;
+    background-position: 98.7%; 
+  }
+
+  .user-header-icons{
+    display: flex; 
+  }
+
+  .user-header-icons img{
+    width: 3.2rem;
+    margin-left: 4.3rem;
+  }
+
+
+  /*NAV BAR*/
+
+  .nav-bar{
+    padding-top: 13.2rem;
+    
+  }
+
+  .nav-bar ul{
+    background-color: #F6E4E4;
+    height: 5.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  .nav-bar ul li{
+    list-style: none;
+  }
+
+  .nav-bar ul li a{
+    color: #251B37;
+    text-decoration: none;
+    font-size: 2.2rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  main{
+    height: 80rem;
+  }
