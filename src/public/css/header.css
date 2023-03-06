@@ -47,6 +47,7 @@
 
   header .header-container form{
     width: 53.5%;
+    position: relative;
   }
 
   header .header-container form input{
@@ -61,10 +62,22 @@
 
     font-size: 1.6rem;
 
-    background-image: url("../img/lupa.svg");
+    /*background-image: url("../img/lupa.svg");*/
     background-size: 2.2rem;
     background-repeat: no-repeat;
     background-position: 98.7%; 
+  }
+
+  .lupa{
+    border: none;
+    position: absolute;
+    right: 1rem;
+    top: .8rem;
+    cursor: pointer;
+    background-color: #FFF;
+  }
+  .lupa::before{
+    content: url("../img/lupa.svg");  
   }
 
   header .header-container form input:focus{
@@ -236,7 +249,7 @@
 
   .header-mobile-bottom-part form{
     width: 70%;
-
+    position: relative;
     margin-bottom: 3rem;
   }
 
@@ -252,7 +265,7 @@
 
     font-size: 1.6rem;
 
-    background-image: url("../img/lupa.svg");
+    /*background-image: url("../img/lupa.svg");*/
     background-size: 2.2rem;
     background-repeat: no-repeat;
     background-position: 98.7%; 

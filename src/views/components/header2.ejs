@@ -30,6 +30,7 @@
         </div>
         <form action="">
             <input type="text" placeholder="Buscar...">
+            <button class="lupa"></button>
         </form>
     </div>
 </div>
@@ -41,13 +42,14 @@
         </div>
         <form action="">
             <input type="text" placeholder="O que você procura?">
+            <button class="lupa"></button>
         </form>
 
         <div class="user-header-icons">
             <li><a href="/carrinho"><img src="/img/carrinho.svg" alt=""></a></li>
 
             <% if(locals.userLogged && userLogged){ %>
-                <li><a href=""><img src="/img/login.svg" alt=""></a></li>
+                <li><a href="/usuario/area-cliente/<%= userLogged.id %>/dados-pessoais"><img src="/img/login.svg" alt=""></a></li>
                 <li style="color: #FFF;">
                     <p>Olá,</p>
                     <div class="hugging" style="display:flex; align-items: flex-end;">
@@ -62,13 +64,15 @@
                 <li><a href="/login"><img id="login-img" src="/img/login.svg" alt=""></a></li>
             <% } %>
 
-            <div class="seta"></div>
-            <ul class="submenu">
-                <li class="user-name">Olá, cliente</li>
-                <li class="quit-button"><form action=""><button type="submit">Sair</button></form></li>
-                <hr>
-                <li class="user-account-button"><a href="">Minha conta</a></li>
-            </ul>
+            <div class="submenu-box">
+                <div class="seta"></div>
+                <ul class="submenu">
+                    <li class="user-name">Olá, cliente</li>
+                    <li class="quit-button"><form action=""><button type="submit">Sair</button></form></li>
+                    <hr>
+                    <li class="user-account-button"><a href="">Minha conta</a></li>
+                </ul>
+            </div>
             
         </div>
     </ul>
