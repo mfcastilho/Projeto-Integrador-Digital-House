@@ -181,21 +181,23 @@
 
   
 
-  .submenu .user-account-button{
+  .submenu li{
     list-style: none;
     font-size: 1.5rem;
+    font-weight: 500;
     cursor: pointer;
-    
+    margin-left: 1rem;
+    color: #372948;
   }
   
-  .submenu .user-account-button a:hover{
+  .submenu li a:hover{
     border-bottom: .5px solid black;
   }
 
-  .submenu .user-name{
+  /* .submenu .user-name{
     font-size: 1.1rem;
     margin-bottom: .5rem;
-  }
+  } */
 
   .submenu .quit-button button{
     border: none;
