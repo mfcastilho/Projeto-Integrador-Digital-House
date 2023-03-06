@@ -1,4 +1,4 @@
-const database = require("../data-base/dataBase2.json");
+const database = require("./dataBase2.json");
 const fs = require("fs");
 const path = require("path");
 //const {v4:makeId} = require("uuid");

@@ -1,4 +1,4 @@
-const ProductModel = require("../models/ProductModel");
+const ProductModel = require("../data-base/ProductModel");
 
 
 const AdminController = {

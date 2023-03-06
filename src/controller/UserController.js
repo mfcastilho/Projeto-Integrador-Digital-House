@@ -2,7 +2,7 @@ const dataBase = require("../data-base/dataBase.json");
 const fs = require("fs");
 const path = require("path");
 
-const UserModel = require("../models/UserModel");
+const UserModel = require("../data-base/UserModel");
 
 
 const UserController = {
