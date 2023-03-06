@@ -66,6 +66,12 @@
     background-position: 98.7%; 
   }
 
+  header .header-container form input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+  }
+
   .user-header-icons{
     display: flex; 
   }
@@ -105,6 +111,7 @@
   /*HEADER MOBILE*/
   .header-mobile{
     width: 100%;
+    min-width: 220px;
     display: none;
   }
 
@@ -145,13 +152,6 @@
     
   }
 
-  .logo-header-mobile-box{
-
-  }
-
-  .logo-header-mobile-box a{
-
-  }
 
   .logo-header-mobile-box a img{
     width: 16.2rem;
@@ -183,6 +183,11 @@
     background-position: 98.7%; 
   }
 
+  .header-mobile-bottom-part form input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+  }
 
   main{
     height: 80rem;
@@ -201,4 +206,55 @@
     .header-mobile{
         display: block;
     }
+  }
+
+  @media (max-width:530px){
+    .header-mobile-top-part{
+        padding: 1rem 8rem;
+    }
+  }
+
+  @media (max-width:460px){
+    .header-mobile-top-part{
+        padding: 1rem 6rem;
+    }
+  }
+
+  @media (max-width:360px){
+    .header-mobile-top-part{
+        padding: 1rem 5rem;
+    }
+
+    .header-mobile-bottom-part form input::placeholder{
+        color: transparent;
+    }
+  }
+
+  @media (max-width:320px){
+    .header-mobile-top-part{
+        padding: 1rem 4rem;
+    }
+
+    .user-header-mobile-icons-box{
+        gap: 2rem;
+      }
+  }
+
+
+  @media (max-width:300px){
+    .header-mobile-top-part{
+        padding: 1rem 3rem;
+    }
+
+    .user-header-mobile-icons-box{
+        gap: 1rem;
+      }
+
+  }
+
+  @media (max-width:280px){
+    .header-mobile-top-part{
+        padding: 1rem 2rem;
+    }
+
   }
