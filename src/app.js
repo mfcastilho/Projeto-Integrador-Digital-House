@@ -15,6 +15,7 @@ const homeRouter = require("./router/homeRouter.js");
 const shoppingCartRouter = require("./router/shoppingCartRouter.js");
 const authRouter = require("./router/authRouter");
 const userRouter = require("./router/userRouter.js")
+const adminRouter = require("./router/adminRouter");
 
 
 //mostrando para o express que iremos usar uma
@@ -26,8 +27,8 @@ app.set("views", path.resolve("src", "views"));
 
 app.use(session({
   secret:"mysecretpassword",
-  resave: false,
-  saveUninitialized: false
+  resave: true,
+  saveUninitialized: true
 }))
 
 app.use(express.json());
@@ -45,6 +46,7 @@ app.use(homeRouter);
 app.use(shoppingCartRouter);
 app.use(authRouter);
 app.use(userRouter);
+app.use(adminRouter);
 
 
 

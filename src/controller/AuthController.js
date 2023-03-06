@@ -89,13 +89,15 @@ const AuthController = {
       });
     }
 
-    // if(userFound && passwordIsCorrect){
-    //   return res.redirect(`/usuario/area-cliente/${user.id}/dados-pessoais`);
-    // }
-
     req.session.userLogged = user;
 
-    res.redirect("/");
+    console.log(req.session.userLogged)
+
+    if(user.isAdmin){
+      return res.redirect("/admin/home")
+    }
+
+    return res.redirect("/");
     
     },
     logout: (req, res)=>{
