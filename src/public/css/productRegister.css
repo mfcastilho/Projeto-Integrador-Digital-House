@@ -11,8 +11,6 @@
   box-sizing: border-box;
 }
 
-
-
 .content{
   width: 70%;
   margin: 0 auto;
@@ -32,7 +30,6 @@
 
   font-size: 4rem;
   font-weight: 400;
- 
 }
 
 .content form{

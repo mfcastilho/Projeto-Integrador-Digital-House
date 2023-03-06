@@ -15,7 +15,6 @@ body{
   font-family: 'PT Sans', sans-serif;
 }
 
-
 .container{
   width: 100%;
   max-width: 1280px;
@@ -36,7 +35,7 @@ body{
 
 .glider img{
   width: 100%;
-  margin-top: 21rem;
+  margin-top: 4rem;
 }
 
 
