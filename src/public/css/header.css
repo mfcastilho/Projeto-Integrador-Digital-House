@@ -80,7 +80,6 @@
 
   .nav-bar{
     padding-top: 13.2rem;
-    
   }
 
   .nav-bar ul{
@@ -103,21 +102,103 @@
   }
 
 
+  /*HEADER MOBILE*/
+  .header-mobile{
+    width: 100%;
+    display: none;
+  }
+
+  .header-mobile-top-part{
+    width: 100%;
+    position: fixed;
+
+    padding: 1rem 10rem;
+
+    background-color: #372948;
+  }
+
+  .header-mobile-top-part ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-mobile-top-part ul li{
+    list-style: none;
+  }
+
+  
+  .user-header-mobile-icons-box{
+    display: flex;
+    gap: 3rem;
+  }
 
 
+  .header-mobile-bottom-part{
+    width: 100%;
+    padding-top: 6rem;
+    background-color: #372948;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
 
+  .logo-header-mobile-box{
 
+  }
 
+  .logo-header-mobile-box a{
 
+  }
 
+  .logo-header-mobile-box a img{
+    width: 16.2rem;
+    height: 11.2rem;
+    margin-right: 0;
+  }
 
+  .header-mobile-bottom-part form{
+    width: 70%;
 
+    margin-bottom: 3rem;
+  }
 
+  .header-mobile-bottom-part form input{
+    width: 100%;
+    min-width: 50px;
+    height: 4rem;
 
+    border-radius: 2rem;
+    border: none;
 
+    padding-left:1.6rem;
+
+    font-size: 1.6rem;
+
+    background-image: url("../img/lupa.svg");
+    background-size: 2.2rem;
+    background-repeat: no-repeat;
+    background-position: 98.7%; 
+  }
 
 
   main{
     height: 80rem;
+  }
+
+
+  @media (max-width:980px){
+    header{
+        display: none;
+    }
+
+    .nav-bar{
+        display: none;
+    }
+
+    .header-mobile{
+        display: block;
+    }
   }
