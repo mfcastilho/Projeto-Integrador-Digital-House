@@ -7,27 +7,40 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../../public/css/header.css">
+    <script src="../../public/js/showSubmenuHeaderMobile.js" defer></script>
 </head>
 <body>
     <div class="header-mobile">
         <div class="header-mobile-top-part">
-            <ul>
-                <div class="burger-menu-box">
-                    <li><a href=""><img src="../../public/img/menu-burguer.svg" alt=""></a></li>
+            <ul class="menu-burguer-list">
+                <div class="burger-menu-box" data-menu-burger>
+                    <li>
+                        <img src="../../public/img/menu-burguer.svg" alt="">
+                        
+                    </li>
                 </div>
                 <div class="user-header-mobile-icons-box">
                     <li><a href=""><img src="../../public/img/carrinho.svg" alt=""></a></li>
                     <li><a href=""><img src="../../public/img/login.svg" alt=""></a></li>
                 </div>
             </ul>
+            <div class="seta"></div>
+            <ul class="submenu">
+                <li class="user-name">Olá, cliente</li>
+                <li class="quit-button"><form action=""><button type="submit">Sair</button></form></li>
+                <hr>
+                <li class="user-account-button"><a href="">Minha conta</a></li>
+            </ul>
+            
         </div>
+        
 
         <div class="header-mobile-bottom-part">
             <div class="logo-header-mobile-box">
                 <a href=""><img src="../../public/img/logo-urbano-tshirt-trasparent.png" alt=""></a>
             </div>
             <form action="">
-                <input type="text" placeholder="O que você está produrando?">
+                <input type="text" placeholder="Buscar...">
             </form>
         </div>
     </div>
