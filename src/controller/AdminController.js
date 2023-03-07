@@ -6,7 +6,6 @@ const AdminController = {
 
         const products = ProductModel.findAll();
         
-
         res.render("admin/home-admin.ejs", {products});
     }
 }
