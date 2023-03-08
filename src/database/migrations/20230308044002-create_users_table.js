@@ -30,7 +30,7 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         allowNull: false
       },
-      addresses_id:{
+      address_id:{
         type: Sequelize.STRING,
         allowNull: false,
         references:{

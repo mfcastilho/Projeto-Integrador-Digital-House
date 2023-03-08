@@ -30,7 +30,7 @@ module.exports = {
       type: Sequelize.STRING,
       allowNull: false
     },
-    produc_id:{
+    product_id:{
       type: Sequelize.STRING,
       allowNull:false,
       references:{
