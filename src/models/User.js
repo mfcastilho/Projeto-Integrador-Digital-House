@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes)=>{
         timestamps: true
     });
 
-    User.associate() = (models)=>{
+    User.associate = (models)=>{
         User.belongsTo(models.Address, {
             foreignKey: "address_id",
             as: "address"
