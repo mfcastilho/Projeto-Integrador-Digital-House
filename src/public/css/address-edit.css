@@ -28,11 +28,8 @@ body{
 
   position: relative;
 
-
   margin-bottom: 1.4rem;
   padding: 2rem 10rem;
-  
- 
 }
 
 .register-button-section {
@@ -45,7 +42,7 @@ body{
     height: inherit; /* valores do pai */
     padding: 5rem 0;
     gap: 3rem; /* espaço entre os filhos */
-    margin-top: 20.3rem;
+    margin-top: 5rem;
 
 }
 
@@ -66,7 +63,7 @@ body{
 
   background-color: white;
   gap: 5px;
-  border-radius: 5px;
+  border-radius: .9rem;
   transition: background-color 450ms;
 }
 
@@ -111,6 +108,10 @@ form {
     gap: 1px;
 }
 
+.input-box input{
+  font-size: 1.6rem;
+}
+
 .assistant-form-box {
     display: flex;
     flex-direction: row;
@@ -128,22 +129,44 @@ form {
 }
 
 form button {
-  background-color: #4C3863;
-  width: 100px;
-  height: 40px;
+
+
+
+  background-color: #584374;
+  color: #D9D9D9;
+
   border: none;
-  color: white;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 17px;
+
+  width: 10rem;
+  height: 4rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: .4s;
+
   margin-top: auto; /* PQ O TOP COLOCOU PARA BAIXO? */
+
+  border-radius: .2rem;
+}
+
+
+.form-section form button:hover{
+
+  background-color: #372948;  
 }
 
 form div label {
   font-size: 2rem;
+  font-weight: 500;
 }
 
 form div input {
   background-color: #D9D9D9;
   border: none;
   height: 3rem;
+
+  padding-left: .5rem;
 }

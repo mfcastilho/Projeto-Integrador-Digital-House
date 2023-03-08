@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="/css/user-panel-personal-data.css">
 
     <link rel="icon" href="/img/favicon-logo-urbano.png">
+    
+    <link rel="stylesheet" href="/css/header.css">
+    <script src="/js/showSubmenuHeaderMobile.js" defer></script>
 
     <script src="/js/header-behavior.js" defer></script>
     <script src="/js/input-mask-functions.js" defer></script>
@@ -23,43 +26,20 @@
   <body id="body-div">
 
     <!-- ===== HEADER ===== -->
-    <%- include("./components/header.ejs") %>
+    <%- include("./components/header2.ejs") %>
 
     <main>
 
       <div class="main-container">
 
-        <section class="register-button-section">
-
-          
-
-          <a href="/usuario/<%= user.id %>/dados-pessoais" class="register-button">
-            <img src="/img/puppet-icon.svg" alt="">
-            <p>Dados pessoais</p>
-          </a>
-
-          <a href="" class="register-button">
-            <img src="/img/house-icon.svg" alt="">
-            <p>Endereços</p>
-          </a>
-
-          <a href="" class="register-button">
-            <img src="/img/bullet-list-icon.svg" alt="">
-            <p>Pedidos</p>
-          </a>
-
-          <a href="" class="register-button">
-            <img src="/img/power-off-icon.svg" alt="">
-            <p>Sair</p>
-          </a>
-
-        </section>
-
+    <!-- =====  MENU LATERAL COM BUTÕES DE EDIÇÃO ===== -->
+    <%- include("./components/user-edit-buttons.ejs") %>
+     
 
         <section class="form-section">
 
-         
-          <form id="personal-data-form" action="/usuario/<%= user.id%>/dados-pessoais" method="POST" class="">
+
+          <form id="personal-data-form" action="/usuario/area-cliente/<%= user.id%>/dados-pessoais" method="POST" class="">
 
             <div class="hugging-form">
 
@@ -89,7 +69,7 @@
       
               <div class="input-box large-input">
                 <label for="tel">Celular</label>
-                <input type="tel" name="tel" id="tel" maxlength="15" value="<%= user.cel %> "  required >
+                <input type="tel" name="tel" id="tel" maxlength="15" value="<%= user.tel %> "  required >
               </div>
       
               <div class="assistant-form-box">

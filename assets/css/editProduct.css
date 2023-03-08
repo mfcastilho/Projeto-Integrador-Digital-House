@@ -11,6 +11,9 @@
   box-sizing: border-box;
 }
 
+body{
+  
+}
 
 
 .content{
@@ -119,7 +122,5 @@
 }
 
 .btn-send:hover{
- 
-
   background-color: #4c3766;
 }

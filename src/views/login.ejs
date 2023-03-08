@@ -12,6 +12,9 @@
 
   <link rel="icon" href="/img/favicon-logo-urbano.png">
 
+  <link rel="stylesheet" href="/css/header.css">
+  <script src="/js/showSubmenuHeaderMobile.js" defer></script>
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 
   
@@ -20,7 +23,7 @@
 <body id="body-div">
 
 <!-- ===== HEADER ===== -->
-<%- include("./components/header.ejs") %>
+<%- include("./components/header2.ejs") %>
    
 <main>
 
@@ -38,8 +41,14 @@
 
           <div class="input-box">
             <label for="email-id">E-mail</label>
-            <input type="email" name="email" id="email-id">
+            <input type="text" name="email" id="email-id" value="<%= locals.old ? old.email : ""%> ">
           </div>
+
+          <% if(locals.errors && errors.email){ %>
+              <div class="danger" style="color: red;">
+                <%= errors.email.msg  %> 
+              </div>
+          <% } %> 
 
           <div class="hugging-elements">
 
@@ -47,10 +56,16 @@
               <label for="password-id">Senha</label>
               <input type="password" name="password" id="password-id">
             </div>
+
+
             <button type="submit">Login</button>
 
           </div>
-
+          <% if(locals.errors && errors.password){%>
+            <div class="danger">
+              <%= errors.password.msg %> 
+            </div>
+          <%} %> 
           
         </form>
       </div>
