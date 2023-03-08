@@ -37,104 +37,7 @@ body{
   height: 13.2rem;
 }
 
-header{
-  background-color: #372948;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-}
-
-
-
-header .logo-box img{
-  width: 15.2rem;
-  height: 10.2rem;
-  margin-right: 2rem;
-}
-
-
-/*Definindo o quanto de espaço do
-header que o formulário vai usar*/
-header form{
-  width: 50%;
-}
-
-
-header input{
-  width: 100%;
-  min-width: 50px;
-  height: 4rem;
-
-  border-radius: 2rem;
-  border: none;
-
-  padding-left:1.6rem;
-
-  font-size: 1.6rem;
-
-  background-image: url("../img/lupa.svg");
-  background-size: 2.2rem;
-  background-repeat: no-repeat;
-  background-position: 98.7%; 
-  /* background-position: right 5px bottom 8px; */
-
-}
-
-
-header input:focus{
-  outline: none;
-}
-
-header .user-icons-nav ul,.user-icons-nav li{
-  display: inline-block;
-}
-
-header .user-icons-nav img{
-  width: 3.2rem;
-  margin-left: 4rem;
-}
-
-
-
-
-/*Menu Mobile - none*/
-header .menu-mobile-icons-container{
-  display: none;
-}
-
-
-
-
-/*Barra de Navegação*/
-header .bar-nav{
-  background-color: #F6E4E4;
-  height: 5.1rem;
-  line-height:5.1rem;
-}
-
-header .bar-nav ul{
-  display: flex;
-  justify-content: center;
-  gap: 10rem;
-  
-}
-
-header .bar-nav ul li{
-  list-style: none;
-}
-
-header .bar-nav ul li a{
-  color: #251B37;
-
-  text-decoration: none;
-
-  font-size: 2.2rem;
-
-}
 
 
 /*----- main  -----*/
@@ -252,8 +155,6 @@ footer h4{
 
 .whatsapp-button{
 
-
-
   display: inline-block;
   
   background-color: #FFF;
@@ -298,65 +199,10 @@ footer h4{
     padding: 0 2rem;
   }
 
-
-  header{
-    display: flex;
-    flex-direction: column;
-    height: 23.8rem; 
-  }
-
-  header .menu-mobile-icons-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  header .menu-mobile-icons-container ul{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  header .logo-box img{
-    width: 16.2rem;
-    height: 11.2rem;
-    margin-right: 0; 
-  }
-
-  header .user-icons-mobile ul li:nth-child(2){
-    margin-left: 2rem;
-  }
-
-  header .user-icons-mobile ul li::marker{
-    color: #372948;
-  }
-
-  header form{
-    width: 84%;
-  }
-
-  header input{
-    height: 4.2rem;
-    margin-bottom: 1.8rem;
-  }
-
-  header .bar-nav{
-    display: none;
-  }
-
-  header .user-icons-nav ul{
-    display: none;
-  }
-
-  
   main{
     margin: 0 0;
 
-    padding: 2rem;
-  }
-
-  .banner{
-    margin-top: 2.9rem;
+    padding: 0 2rem;
   }
 
   .glider img{
@@ -372,12 +218,9 @@ footer h4{
     display: none;
   }
 
-
-
   .container-footer{
     padding: 0 2rem;
   }
-
 
   footer .container-footer h3{
     font-size: 2rem;
@@ -391,20 +234,16 @@ footer h4{
   
     margin-top: 4rem;
   }
-
-  
 }
 
 
 @media (max-width:767px){
-
   footer{
     height: 46.7rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
   }
 
   .container-footer{
@@ -439,32 +278,14 @@ footer h4{
 }
 
 
-@media (max-width:440px){
-  
-  header input::placeholder{
-    color: transparent;
-    /* visibility: hidden;*/  
-  }
-}
-
-
-
-
 @media (max-width:270px){
-
-  header{
-    min-width: 159px;
-  }
-  
 
   footer{
     width: 100%;
     min-width: 159px;
-    height: 66rem;
-
-  
-    
+    height: 66rem;  
   }
+
   footer .social-networks-box h3{
     text-align: start;
   }
@@ -496,7 +317,4 @@ footer h4{
     text-align: left;
   }
 
-  header .user-icons-mobile ul li:nth-child(2){
-    margin-left: 1rem;
-  }
 }

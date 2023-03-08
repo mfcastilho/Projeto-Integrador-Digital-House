@@ -28,11 +28,8 @@ body{
 
   position: relative;
 
-
   margin-bottom: 1.4rem;
   padding: 2rem 10rem;
-  
- 
 }
 
 .register-button-section {
@@ -45,7 +42,7 @@ body{
     height: inherit; /* valores do pai */
     padding: 5rem 0;
     gap: 3rem; /* espaço entre os filhos */
-    margin-top: 20.3rem;
+    margin-top: 5rem;
 
 }
 
