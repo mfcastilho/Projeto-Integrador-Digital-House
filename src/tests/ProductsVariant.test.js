@@ -47,7 +47,7 @@ async function getProductVariant(){
         raw: false
     });
 
-    console.log(productVariant);
+    console.log(productVariant.image);
 }
 
 
