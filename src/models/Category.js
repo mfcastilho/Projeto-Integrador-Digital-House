@@ -9,10 +9,15 @@ module.exports = (sequelize, DataTypes)=>{
             type: DataTypes. STRING,
             allowNull: false
         }
-    },{
+    },
+    {
         tableName:"categories",
         timestamps: true
     });
+
+    Category.associate = (models)=>{
+        Category.hasMany(models.Product);
+    }
 
     return Category;
 }

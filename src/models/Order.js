@@ -5,10 +5,6 @@ module.exports = (sequelize, DataTypes)=>{
             primaryKey: true,
             allowNull: false
         },
-        status:{
-            type: DataTypes.BOOLEN,
-            allowNull: false
-        },
         user_id:{
             type: DataTypes.STRING,
             allowNull: false
@@ -22,7 +18,11 @@ module.exports = (sequelize, DataTypes)=>{
         Order.belongsTo(models.User, {
             foreignKey: "user_id",
             as: "user"
-        })
+        });
+
+        Order.belongsToMany(models.ProductVariant, {
+            through: models.OrderDetail
+        });
     }
 
     return Order;

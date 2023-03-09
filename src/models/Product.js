@@ -21,9 +21,9 @@ module.exports = (sequelize, DataTypes) =>{
             type: DataTypes.BOOLEAN,
             allowNull: false
         },
-        category_id:{
+        categoryId:{
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
         }
     },{
         tableName: "products",
@@ -32,10 +32,12 @@ module.exports = (sequelize, DataTypes) =>{
 
     Product.associate = (models)=>{
         Product.belongsTo(models.Category, {
-            foreignKey: "category_id",
+            foreignKey: "categoryId",
             as: "category"
         });
+        
     }
+
 
     return Product;
 }

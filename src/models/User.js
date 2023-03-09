@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes)=>{
             allowNull: false
         },
         is_admin:{
-            type: DataTypes. BOOLOEAN,
+            type: DataTypes. BOOLEAN,
             allowNull: false
         },
         address_id:{
@@ -43,7 +43,11 @@ module.exports = (sequelize, DataTypes)=>{
             foreignKey: "address_id",
             as: "address"
         });
+
+        //User.hasMany(models.Order);
     }
+
+
 
     return User;
 }

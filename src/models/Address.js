@@ -30,5 +30,9 @@ module.exports = (sequelize, DataTypes) =>{
         timestamps: true
     });
 
+    // Address.associate = (models)=>{
+    //     Address.belongsTo(models.User);
+    // }
+
     return Address;
 }
