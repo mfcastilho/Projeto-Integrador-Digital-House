@@ -65,6 +65,27 @@ const HomeController = {
   
     return res.render("products-listing.ejs", {productsVariant:maleUniquesProducts});
   },
+  showFemaleProductsListing: async (req, res)=>{
+    const productsVariant = await ProductVariant.findAll({
+      include:[{
+        model: Product,
+        as:"product",
+        require: false
+      }],
+      raw: false
+  });
+
+  const femaleUniquesProducts = Object.values(
+    productsVariant.filter(productVariant => productVariant.model === "feminina").reduce((acc, productVariant)=>{
+      if(!acc[productVariant.product.name]){
+        acc[productVariant.product.name] = productVariant;
+      }
+      return acc;
+    }, {})
+  )
+  
+    return res.render("products-listing.ejs", {productsVariant:femaleUniquesProducts});
+  },
   showProduct: (req, res)=>{
 
     const {id} = req.params;
