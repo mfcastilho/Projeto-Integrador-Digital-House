@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-html{
-  font-family: 'Inter', sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html{
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+}
+body{
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
 .page {
     display: flex;
+    width: 100%;
 }
 
 a {
@@ -14,14 +26,14 @@ a {
 }
 
 aside.left {
-    width: 288px;
+    width: 20%;
     background-color: #372948;
     color: white;
 }
 
 .content {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     font-family: 'Inter', sans-serif;
 }
 
@@ -44,11 +56,12 @@ aside.left a.active {
 }
 
 .product-table{
-  width: 90%;
+  width: 100%;
 }
 .table-image{
   text-align: center;
 }
+
 
 
 .btn-primary {
@@ -85,7 +98,7 @@ aside.left a.active {
   font-weight: 500!important;
   border: none!important;
 
-  width: 70%;
+  width: 100%;
 }
 
 .edit-btn{
@@ -94,11 +107,11 @@ aside.left a.active {
   font-weight: 500!important;
   border: none!important;
 
-  width: 70%;
+  width: 100%;
 }
 
 .delete-btn-form{
-  width: 70%;
+  width: 100%;
 }
 
 .delete-btn{
@@ -108,13 +121,9 @@ aside.left a.active {
   width: 100%;
 }
 
-
-
-
-
 .container {
-    max-width: 1280px;
     width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
 }
 

@@ -85,28 +85,30 @@
 				<table class="table table-dark table-striped table-bordered product-table">
 					<thead>
 						<tr>
-              <th scope="col">ID</th>
-              <th scope="col">imagem</th>
-              <th scope="col">Nome</th>
-              <th scope="col">Preço</th>
-              <th scope="col">Tamanho</th>
-			  <th scope="col">Cor</th>
-              <th scope="col">Estoque</th>
-              <th scope="col">Ações</th>
+							<th scope="col">ID</th>
+							<th scope="col">imagem</th>
+							<th scope="col">Nome</th>
+							<th scope="col">Preço</th>
+							<th scope="col">Tamanho</th>
+							<th scope="col">Cor</th>
+							<th scope="col">Modelo</th>
+							<th scope="col">Estoque</th>
+							<th scope="col">Ações</th>
 						</tr>
 					</thead>
 
 					<tbody>
 						
-						<% products.forEach( product => { %>
+						<% productsVariant.forEach( productVariant => { %>
 							<tr>
-								<th class="product-id" scope="row"><%= product.id %> </th>
-								<td class="table-image"><img class="thumb product-image" src="<%= product.image %>" alt="" width="100px" height="100px"></td>
-								<td class="product-name"><%= product.name %></td>
-								<td class="product-price">R$ <%= product.price %></td>
-								<td class="product-size"><%= product.size %></td>
-								<td class="product-color"><%= product.color %></td>
-								<td class="product-stock-quantity"><%= product.quantity %></td>
+								<th s class="product-id" scope="row"><%= productVariant.id %> </th>
+								<td class="table-image"><img class="thumb product-image" src="/<%= productVariant.image %>" alt="" width="100px" height="100px"></td>
+								<td class="product-name"><%= productVariant.product.name %></td>
+								<td class="product-price">R$ <%= productVariant.product.price %></td>
+								<td class="product-size"><%= productVariant.size %></td>
+								<td class="product-color"><%= productVariant.color %></td>
+								<td class="product-color"><%= productVariant.model %></td>
+								<td class="product-stock-quantity"><%= productVariant.quantity %></td>
 								<td class="buttons-table-box">
 									<a href="#" type="button" class="btn btn-primary open-btn">Abrir</a>
 									<a href="#" type="button" class="btn btn-secondary edit-btn">Editar</a>
