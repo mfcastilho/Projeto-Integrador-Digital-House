@@ -1,10 +1,30 @@
 const dataBase = require("../data-base/dataBase.json");
-const HomeController = {
-  showHome: (req, res)=>{
+const {ProductVariant, Product} = require("../models");
 
-    const products = dataBase.products;
-    console.log(req.route.path);
-    return res.render("index.ejs", {products});
+const HomeController = {
+  showHome: async (req, res)=>{
+    //const products = dataBase.products;
+    const productsVariant = await ProductVariant.findAll({
+        include:[{
+          model: Product,
+          as:"product",
+          require: false
+        }],
+        raw: false
+    });
+
+    let productUniqueName = {};
+    let uniquesProducts = [];
+
+   for(let i =0; i<productsVariant.length;i++){
+    let name = productsVariant[i].product.name;
+    if(!productUniqueName[name]){
+      productUniqueName[name] = true;
+      uniquesProducts.push(productsVariant[i])
+    }
+   }
+   
+    return res.render("index.ejs", {productsVariant:uniquesProducts});
   },
   showProductsListing: (req, res)=>{
 
