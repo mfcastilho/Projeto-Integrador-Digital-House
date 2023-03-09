@@ -26,13 +26,44 @@ const HomeController = {
    
     return res.render("index.ejs", {productsVariant:uniquesProducts});
   },
-  showProductsListing: (req, res)=>{
+  showProductsListing: async (req, res)=>{
 
-    const dataBase = require("../data-base/dataBase.json");
-    const products = dataBase.products;
+    //const dataBase = require("../data-base/dataBase.json");
+    //const products = dataBase.products;
 
-    console.log(req.route.path);
-    return res.render("products-listing.ejs", {products});
+
+    const productsVariant = await ProductVariant.findAll({
+      include:[{
+        model: Product,
+        as:"product",
+        require: false
+      }],
+      raw: false
+  });
+
+    return res.render("products-listing.ejs", {productsVariant});
+  },
+  showMaleProductsListing: async (req, res)=>{
+  
+    const productsVariant = await ProductVariant.findAll({
+      include:[{
+        model: Product,
+        as:"product",
+        require: false
+      }],
+      raw: false
+  });
+
+  const maleUniquesProducts = Object.values(
+    productsVariant.filter(productVariant => productVariant.model === "masculina").reduce((acc, productVariant)=>{
+      if(!acc[productVariant.product.name]){
+        acc[productVariant.product.name] = productVariant;
+      }
+      return acc;
+    }, {})
+  )
+  
+    return res.render("products-listing.ejs", {productsVariant:maleUniquesProducts});
   },
   showProduct: (req, res)=>{
 

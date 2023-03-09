@@ -132,16 +132,16 @@
   
           <div class="products-listing-container">
     
-            <% products.forEach(product =>{ %>
+            <% productsVariant.forEach(productVariant =>{ %>
 
 
-              <a href="/produto/<%=product.id %>">
+              <a href="/produto/<%=productVariant.id %>">
                 <div class="product-card">
-                  <img class="tshirt-image" src="<%= product.imageSecundary %> " alt="">
-                  <img class="tshirt-print" src="<%= product.tShirtPrint %> " alt="">
+                  <img class="tshirt-image" src="/<%= productVariant.image %> " alt="">
+                  <img class="tshirt-print" src="/<%= productVariant.product.tshirt_print%> " alt="">
                   <div class="product-description">
-                    <h5><%= product.name %> </h5>
-                    <p>A partir de R$ <%= product.price.toFixed(2)%> </p>
+                    <h5><%= productVariant.product.name %> </h5>
+                    <p>A partir de R$ <%= productVariant.price%> </p>
                   </div>
                 </div>
               </a>
