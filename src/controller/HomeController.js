@@ -107,6 +107,27 @@ const HomeController = {
   
     return res.render("products-listing.ejs", {productsVariant:animeUniquesProducts});
   },
+  showMoviesProductsListing: async (req, res)=>{
+    const productsVariant = await ProductVariant.findAll({
+      include:[{
+        model: Product,
+        as:"product",
+        require: false
+      }],
+      raw: false
+  });
+
+  const movieUniquesProducts = Object.values(
+    productsVariant.filter(productVariant => productVariant.product.categoryId == "1").reduce((acc, productVariant)=>{
+      if(!acc[productVariant.product.name]){
+        acc[productVariant.product.name] = productVariant;
+      }
+      return acc;
+    }, {})
+  )
+  
+    return res.render("products-listing.ejs", {productsVariant:movieUniquesProducts});
+  },
   showProduct: (req, res)=>{
 
     const {id} = req.params;
