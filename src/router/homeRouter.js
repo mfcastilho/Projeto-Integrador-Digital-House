@@ -14,6 +14,8 @@ router.get("/listagem-produtos/femininos", HomeController.showFemaleProductsList
 router.get("/listagem-produtos/categoria/anime", HomeController.showAnimesProductsListing);
 router.get("/listagem-produtos/categoria/filme", HomeController.showMoviesProductsListing);
 router.get("/produto/:id", HomeController.showProduct);
+router.get("/produto/:id/masculino", HomeController.showMaleProduct);
+router.get("/produto/:id/feminino", HomeController.showFemaleProduct);
 
 
 
