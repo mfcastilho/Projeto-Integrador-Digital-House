@@ -33,14 +33,30 @@
 
           <div class="image-card-box">
 
-            <div class="image-card">
-              <img src="/<%= productVariant.product.tshirt_print  %> " alt="">
-            </div>
+            <a href="">
+              <div class="image-card">
+                <img src="/<%= productVariant.product.tshirt_print  %> " alt="">
+              </div>
+            </a>
+            
 
             <% productsVariant.forEach(productVariant=>{ %>
-              <div class="image-card">
-              <img src="/<%= productVariant.image %> " alt="">
-            </div>
+              <% if(productVariant.model == "masculina"){%>
+                <a href="/produto/<%= productVariant.id %>/masculino">
+                  <div class="image-card">
+                    <img src="/<%= productVariant.image %> " alt="">
+                  </div>
+                </a>
+              <% } else if(productVariant.model == "feminina"){ %>
+                <a href="/produto/<%= productVariant.id %>/feminino">
+                  <div class="image-card">
+                    <img src="/<%= productVariant.image %> " alt="">
+                  </div>
+                </a>
+              <% } %>
+
+              
+              
             <% }) %>
             
 
@@ -159,6 +175,15 @@
                 <% if(productVariant.color == "laranja"){ %>
                   <div class="color-hover">
                     <div class="color orange"></div>
+                  </div>
+                  
+                <% }else{ %>
+                  <div style="display: none;"></div>
+                <% }%>
+
+                <% if(productVariant.color == "cinza"){ %>
+                  <div class="color-hover">
+                    <div class="color gray"></div>
                   </div>
                   
                 <% }else{ %>
