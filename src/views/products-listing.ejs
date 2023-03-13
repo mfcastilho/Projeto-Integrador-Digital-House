@@ -24,6 +24,11 @@
   <script src="/js/main.js" defer></script>
   <script src="/js/showShirtPrint.js" defer></script>
 
+
+
+
+
+
 </head>
 
 
@@ -134,7 +139,7 @@
     
             <% productsVariant.forEach(productVariant =>{ %>
 
-              <% if(productsVariant.model == "masculina"){ %>
+              <% if(productVariant.model == "masculina"){ %>
                 <a href="/produto/<%=productVariant.id %>/masculino">
                   <div class="product-card">
                     <img class="tshirt-image" src="/<%= productVariant.image %> " alt="">

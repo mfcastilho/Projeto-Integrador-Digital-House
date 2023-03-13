@@ -130,6 +130,7 @@ const HomeController = {
       return acc;
     }, {})
   )
+    
   
     return res.render("products-listing.ejs", {productsVariant:movieUniquesProducts});
   },

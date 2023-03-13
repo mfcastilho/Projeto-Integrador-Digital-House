@@ -172,7 +172,8 @@ function sendDataToBackend(){
         }else{
             e.preventDefault();
             console.log(selectedModel)
-            alert("Selecione a cor e o tamanho da camiseta para fazer a compra");
+            Swal.fire('Selecione a cor e o tamanho da camiseta para fazer a compra')
+            // alert("Selecione a cor e o tamanho da camiseta para fazer a compra");
         }   
     })
 }
