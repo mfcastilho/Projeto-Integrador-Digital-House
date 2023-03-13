@@ -134,7 +134,7 @@
     
             <% productsVariant.forEach(productVariant =>{ %>
 
-              <% if(productsVariant.model = "masculina"){ %>
+              <% if(productsVariant.model == "masculina"){ %>
                 <a href="/produto/<%=productVariant.id %>/masculino">
                   <div class="product-card">
                     <img class="tshirt-image" src="/<%= productVariant.image %> " alt="">
@@ -145,7 +145,7 @@
                     </div>
                   </div>
                 </a>
-              <% }else{ %>
+              <% }else { %>
                 <a href="/produto/<%=productVariant.id %>/feminino">
                   <div class="product-card">
                     <img class="tshirt-image" src="/<%= productVariant.image %> " alt="">

@@ -14,8 +14,9 @@
 
   <link rel="stylesheet" href="/css/header.css">
   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
+  <script src="/js/selectingElementsIntTheInnerProduct.js" defer></script>
   
-  <script src="/js/header-behavior.js" defer></script>
+  <!-- <script src="/js/header-behavior.js" defer></script> -->
 </head>
 <body id="body-div">
 
@@ -39,7 +40,6 @@
               </div>
             </a>
             
-
             <% productsVariant.forEach(productVariant=>{ %>
               <% if(productVariant.model == "masculina"){%>
                 <a href="/produto/<%= productVariant.id %>/masculino">
@@ -55,8 +55,6 @@
                 </a>
               <% } %>
 
-              
-              
             <% }) %>
             
 
@@ -68,7 +66,7 @@
 
         </div>
 
-        <form action="" method="POST" class="infos-product-container">
+        <form id="selected-product-infos-form" action="/produto/><%= productVariant.id  %>/<%= routeGender  %>" method="POST" class="infos-product-container">
 
 
           <h3><%= productVariant.product.name  %></h3>
@@ -88,6 +86,8 @@
                   <div >Masculino</div> 
                 </a>
               <% } %>
+
+              
               
               <% if(tshirt.model == "feminina"){ %>
                 <a style="text-decoration: none;" href="/produto/<%= tshirt.id %>/feminino" class="female-button">
@@ -99,6 +99,7 @@
                 </a>
               <% } %>
               
+              <input id="model-input" type="hidden" name="model">
             </div>
 
           </div>
@@ -192,6 +193,7 @@
 
               <% }) %>
 
+              <input id="input-color" type="hidden" name="color">
             </div>
 
           </div>
@@ -204,11 +206,12 @@
             
 
             <div class="sizes-options-box">
+
+              <div class="size p">p</div>
+              <div class="size m">m</div>
+              <div class="size g">g</div>
               
-              <div class="size">p</div>
-              <div class="size">m</div>
-              <div class="size">g</div>
-                     
+              <input id="input-size" type="hidden" name="size">
             </div>
 
           </div>
@@ -220,16 +223,18 @@
               <p class="price-apresentation">A partir de</p>
               <span class="dollar-sign">R$</span>
               <span class="product-price"><%= productVariant.product.price  %></span>
+
+              <input id="input-price" type="hidden" name="price">
             </div>
 
-            <button class="buy-button">
+            <button type="submit" class="buy-button">
               <div class="hugging-button-elements">
                 <img src="/img/cart.svg" alt="">
                 Comprar
               </div>
             </button>
           </div>
-        </div>
+        </form>
 
       </section>
 

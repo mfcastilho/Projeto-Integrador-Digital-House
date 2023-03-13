@@ -47,23 +47,6 @@ const HomeController = {
   return res.render("index.ejs", {productsVariant:maleUniquesProducts});
 
   },
-  showProductsListing: async (req, res)=>{
-
-    //const dataBase = require("../data-base/dataBase.json");
-    //const products = dataBase.products;
-
-
-    const productsVariant = await ProductVariant.findAll({
-      include:[{
-        model: Product,
-        as:"product",
-        require: false
-      }],
-      raw: false
-  });
-
-    return res.render("products-listing.ejs", {productsVariant});
-  },
   showMaleProductsListing: async (req, res)=>{
   
     const productsVariant = await ProductVariant.findAll({
@@ -150,62 +133,6 @@ const HomeController = {
   
     return res.render("products-listing.ejs", {productsVariant:movieUniquesProducts});
   },
-  showProduct: async (req, res)=>{
-
-    const {id} = req.params;
-
-    //const dataBase = require("../data-base/dataBase.json");
-
-    const productVariant = await ProductVariant.findOne({
-      where: {id:id},
-      include:{
-        model: Product,
-        as: "product",
-        require: false
-      },
-      raw: false
-    })
-
-    
-    const productsVariant = await ProductVariant.findAll({
-      include:[{
-        model: Product,
-        as:"product",
-        require: false
-      }],
-      raw: false
-    });
-
-    let maleUniquesProducts = undefined;
-    let femaleUniquesProducts = undefined;
-    let chosenTshirt = undefined;
-    let tshirt = undefined;
-  
-    if(productVariant.model == "masculina"){
-
-      maleUniquesProducts = Object.values(
-        productsVariant.filter(productVariant => productVariant.model === "masculina")
-      )
-      chosenTshirt = maleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
-      tshirt = chosenTshirt.filter(tshirt=> tshirt.size == "M");
-
-    }else if(productVariant.model == "feminina"){
-
-      femaleUniquesProducts = Object.values(
-        productsVariant.filter(productVariant => productVariant.model === "feminina") 
-      )
-      chosenTshirt = femaleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
-      tshirt = chosenTshirt.filter(tshirt=> tshirt.size == "M");
-    }
-
-    // dataBase.products.forEach(product =>{
-    //   if(product.id == id){
-    //     return res.render("inner-product.ejs",{product});
-    //   } 
-    // });
-
-    return res.render("inner-product.ejs",{productVariant, productsVariant:tshirt});
-  },
   showMaleProduct: async (req, res)=>{
     const {id} = req.params;
     const productVariant = await ProductVariant.findOne({
@@ -239,7 +166,7 @@ const HomeController = {
     const chosenFemaleTshirt = femaleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
     const femaleTshirts = chosenFemaleTshirt.filter(tshirt=> tshirt.size == "M");
 
-  return res.render("inner-product.ejs",{productVariant, productsVariant:maleTshirts, tshirt:femaleTshirts[0]});
+  return res.render("inner-product.ejs",{productVariant, productsVariant:maleTshirts, tshirt:femaleTshirts[0], routeGender:"masculino"});
 
   },
   showFemaleProduct: async (req, res)=>{
@@ -276,7 +203,7 @@ const HomeController = {
     const maleTshirts = chosenMaleTshirt.filter(tshirt=> tshirt.size == "M");
 
 
-    return res.render("inner-product.ejs",{productVariant, productsVariant:femaleTshirts, tshirt:maleTshirts[0]});
+    return res.render("inner-product.ejs",{productVariant, productsVariant:femaleTshirts, tshirt:maleTshirts[0], routeGender:"feminino"});
 
   }
 }
