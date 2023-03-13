@@ -34,7 +34,7 @@
 
   <main>
 
-    <div class="main-container">
+    <form class="main-container">
 
       <div class="top-part">
         <h4 class="title styling-elements">Carrinho</h4>
@@ -58,15 +58,15 @@
         <div class="cart-content">
 
           <div class="product-content">
-            <a href=""><img src="/img/t-shirt-image.svg" alt=""></a>
+            <a href=""><img src="<%= product.productImage %>" alt=""></a>
             <div class="infos-product-box">
-              <a href=""><h3>Nome da Camisa</h3></a>
-              <p>Informações sobre o produto</p>
+              <a href=""><h3><%= product.productName %></h3></a>
+              <p>Camiseta 100% algodão</p>
             </div>
           </div>
 
           <div class="another-infos">
-            <p>R$75.99</p>
+            <p>R$<%= product.price %></p>
 
             <div class="the-amount-itens">
               <p class="left-item">
@@ -82,7 +82,7 @@
               </p>
             </div>
 
-            <p>R$75.99</p>
+            <p>R$<%= product.price %></p>
             <div class="image-box">
               <img src="/img/delete-image.svg" alt="">
             </div>
@@ -98,59 +98,11 @@
           <h4 class="total-title">Total: &NoBreak;</h4>
           <h4 class="total-price">R$75.99</h4>
         </div>
-        <div class="right-part styling-button">
-          <h4>Finalizar Compra</h4>
-        </div>
+        <button type="submit" class="right-part styling-button">
+          Finalizar Compra
+        </button>
       </div>
-
-      <!-- <table class="table">
-        <thead>
-          <tr>
-            <th colspan="2" width=""45%>
-              <h6>Produto</h6>
-            </th>
-            <th width="15%">
-              <h6>Preço Unitário</h6>
-            </th>
-            <th width="15%">
-              <h6>Quantidade</h6>
-            </th>
-            <th width="15%">
-              <h6>Subtotal</h6>
-            </th>
-            <th width="10%">
-              <h6>Excluir</h6>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="">
-              <div class="image">
-                <a href="">
-                  <img src="/img/t-shirt-image.svg" alt="">
-                </a>
-              </div>
-            </td>
-            <td>
-              <div class="product-info">
-                <a href="">Camiseta Rhapsody</a>
-                <div class="infos">
-                  <p class="
-                  inventory">Estoque:<strong>5 dias úteis</strong></p>
-                  <p class="color">Produto com uma cor:<span></span></p>
-                  <p class="size">Tamanho:<strong>M</strong></p>
-                </div>
-              </div>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table> -->
-    </div>
+    </form>
      
   </main>
 

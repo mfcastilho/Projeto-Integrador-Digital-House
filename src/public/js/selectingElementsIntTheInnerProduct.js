@@ -10,6 +10,8 @@ const divsColorButton = document.querySelectorAll(".color-hover");
 const sizeButton = document.querySelectorAll(".size");
 const buyButton = document.querySelector(".buy-button");
 const tagProductPrice = document.querySelector(".product-price");
+const tagProductImage = document.querySelector("#image");
+const tagProductName = document.querySelector("#product-name");
 
 
 const form = document.querySelector("#selected-product-infos-form");
@@ -17,7 +19,10 @@ const form = document.querySelector("#selected-product-infos-form");
 let selectedModel;
 let colorSelected;
 let sizeSelected;
-let selectProductPrice;
+let productPrice;
+let productImage;
+let productName;
+
 
 function detectingWhoGenderButtonIsSelect(){
     if(maleButton.classList.contains("active")){
@@ -131,8 +136,18 @@ function detectingWhoSizeButtonIsSelect(){
 }
 
 function getProductPrice(){
-    selectProductPrice = tagProductPrice.innerText;
-    console.log("Preço do produto: "+selectProductPrice);
+    productPrice = tagProductPrice.innerText;
+    console.log("Preço do produto: "+productPrice);
+}
+
+function getProductImage(){
+    productImage = tagProductImage.src;
+    console.log("imagem do produto: "+productImage);
+}
+
+function getProductName(){
+    productName = tagProductName.innerText;
+    console.log("Nome do produto: "+productName);
 }
 
 function sendDataToBackend(){
@@ -143,10 +158,16 @@ function sendDataToBackend(){
             const inputColor = document.querySelector("#input-color");
             const inputSize = document.querySelector("#input-size");
             const inputPrice = document.querySelector("#input-price");
+            const inputProductName = document.querySelector("#input-product-name");
+            const inputProductImage = document.querySelector("#input-product-image")
+
+
             inputModel.setAttribute("value", selectedModel);
             inputColor.setAttribute("value", colorSelected);
             inputSize.setAttribute("value", sizeSelected);
-            inputPrice.setAttribute("Value", selectProductPrice);
+            inputPrice.setAttribute("Value", productPrice);
+            inputProductName.setAttribute("value", productName);
+            inputProductImage.setAttribute("value", productImage);
 
         }else{
             e.preventDefault();
@@ -161,6 +182,8 @@ detectingWhoGenderButtonIsSelect();
 detectingWhColorButtonIsSelect();
 detectingWhoSizeButtonIsSelect();
 getProductPrice();
+getProductImage();
+getProductName();
 sendDataToBackend();
 
 

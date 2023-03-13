@@ -61,7 +61,7 @@
           </div>
 
           <div class="image-box">
-            <img src="/<%= productVariant.image  %> " alt="">
+            <img id="image" src="/<%= productVariant.image  %> " alt="">
           </div>
 
         </div>
@@ -69,7 +69,9 @@
         <form id="selected-product-infos-form" action="/produto/><%= productVariant.id  %>/<%= routeGender  %>" method="POST" class="infos-product-container">
 
 
-          <h3><%= productVariant.product.name  %></h3>
+          <h3 id="product-name"><%= productVariant.product.name  %></h3>
+          <input id="input-product-name" type="hidden" name="productName">
+          <input id="input-product-image" type="hidden" name="productImage">
 
           <div class="hugging-elements">
             <div class="title-box">           
