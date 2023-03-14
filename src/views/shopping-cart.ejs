@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="/css/header.css">
   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
   
-  <script src="/js/header-behavior.js" defer></script>
+
 </head>
 
 
@@ -34,7 +34,7 @@
 
   <main>
 
-    <form class="main-container">
+    <form action="" class="main-container">
 
       <div class="top-part">
         <h4 class="title styling-elements">Carrinho</h4>
@@ -58,15 +58,16 @@
         <div class="cart-content">
 
           <div class="product-content">
-            <a href=""><img src="<%= product.productImage %>" alt=""></a>
+            <a href=""><img src="<%= productVariant.image %>" alt=""></a>
             <div class="infos-product-box">
-              <a href=""><h3><%= product.productName %></h3></a>
-              <p>Camiseta 100% algodão</p>
+              <a href=""><h3><%= productVariant.product.name %></h3></a>
+              <p>Cor: <%= productVariant.color %></p>
+              <p>Tamanho: <%= productVariant.size %></p>
             </div>
           </div>
 
           <div class="another-infos">
-            <p>R$<%= product.price %></p>
+            <p>R$ <%= productVariant.product.price %></p>
 
             <div class="the-amount-itens">
               <p class="left-item">
@@ -82,7 +83,7 @@
               </p>
             </div>
 
-            <p>R$<%= product.price %></p>
+            <p>R$ <%= productVariant.product.price %></p>
             <div class="image-box">
               <img src="/img/delete-image.svg" alt="">
             </div>

@@ -36,21 +36,21 @@
 
           <div class="image-card-box">
 
-            <a href="">
+            <!-- <a href="">
               <div class="image-card">
                 <img src="/<%= productVariant.product.tshirt_print  %> " alt="">
               </div>
-            </a>
+            </a> -->
             
             <% productsVariant.forEach(productVariant=>{ %>
               <% if(productVariant.model == "masculina"){%>
-                <a href="/produto/<%= productVariant.id %>/masculino">
+                <a class="product-image image-color" href="/produto/<%= productVariant.id %>/masculino">
                   <div class="image-card">
                     <img src="/<%= productVariant.image %> " alt="">
                   </div>
                 </a>
               <% } else if(productVariant.model == "feminina"){ %>
-                <a href="/produto/<%= productVariant.id %>/feminino">
+                <a class="product-image image-color" href="/produto/<%= productVariant.id %>/feminino">
                   <div class="image-card">
                     <img src="/<%= productVariant.image %> " alt="">
                   </div>
@@ -58,8 +58,7 @@
               <% } %>
 
             <% }) %>
-            
-
+              
           </div>
 
           <div class="image-box">
@@ -68,12 +67,16 @@
 
         </div>
 
-        <form id="selected-product-infos-form" action="/produto/><%= productVariant.id  %>/<%= routeGender  %>" method="POST" class="infos-product-container">
+        <form id="selected-product-infos-form" action="/carrinho" method="POST" class="infos-product-container">
 
 
+          <div class="hidden" id="product-id"><%= productVariant.id %></div>
+          <input id="input-product-id" type="hidden" name="idProduct">  
+          
           <h3 id="product-name"><%= productVariant.product.name  %></h3>
           <input id="input-product-name" type="hidden" name="productName">
           <input id="input-product-image" type="hidden" name="productImage">
+          
 
           <div class="hugging-elements">
             <div class="title-box">           
@@ -109,7 +112,7 @@
           </div>
           
 
-          <div class="hugging-elements">
+          <!-- <div class="hugging-elements">
             <div class="title-box">
               <p>Cor</p>
             </div>
@@ -119,7 +122,7 @@
               <% productsVariant.forEach(productVariant=>{ %>
                 <% if(productVariant.color == "preto"){ %>
                   <div class="color-hover">
-                    <div class="color black"></div>
+                    <div class="color black image-color"></div>
                   </div>
                 <% }else{ %>
                     <div style="display: none;"></div>
@@ -127,7 +130,7 @@
 
                 <% if(productVariant.color == "branco"){ %>
                   <div class="color-hover">
-                    <div class="color white"></div>
+                    <div class="color white image-color"></div>
                   </div>
                 <% }else{ %>
                   <div style="display: none;"></div>
@@ -136,7 +139,7 @@
 
                 <% if(productVariant.color == "vermelho"){ %>
                   <div class="color-hover">
-                    <div class="color red"></div>
+                    <div class="color red image-color"></div>
                   </div>
                 <% }else{ %>
                   <div style="display: none;"></div>
@@ -145,7 +148,7 @@
 
                 <% if(productVariant.color == "azul"){ %>
                   <div class="color-hover">
-                    <div class="color blue"></div>
+                    <div class="color blue image-color"></div>
                   </div>
                 <% }else{ %>
                   <div style="display: none;"></div>
@@ -154,7 +157,7 @@
 
                 <% if(productVariant.color == "amarelo"){ %>
                   <div class="color-hover">
-                    <div class="color yellow"></div>
+                    <div class="color yellow image-color"></div>
                   </div>
                 <% }else{ %>
                   <div style="display: none;"></div>
@@ -162,7 +165,7 @@
 
                 <% if(productVariant.color == "verde"){ %>
                   <div class="color-hover">
-                    <div class="color green"></div>
+                    <div class="color green image-color"></div>
                   </div>  
                 <% }else{ %>
                   <div style="display: none;"></div>
@@ -170,7 +173,7 @@
 
                 <% if(productVariant.color == "rosa"){ %>
                   <div class="color-hover">
-                    <div class="color pink"></div>
+                    <div class="color pink image-color"></div>
                   </div>
                   
                 <% }else{ %>
@@ -179,7 +182,7 @@
 
                 <% if(productVariant.color == "laranja"){ %>
                   <div class="color-hover">
-                    <div class="color orange"></div>
+                    <div class="color orange image-color"></div>
                   </div>
                   
                 <% }else{ %>
@@ -188,7 +191,7 @@
 
                 <% if(productVariant.color == "cinza"){ %>
                   <div class="color-hover">
-                    <div class="color gray"></div>
+                    <div class="color gray image-color"></div>
                   </div>
                   
                 <% }else{ %>
@@ -200,7 +203,7 @@
               <input id="input-color" type="hidden" name="color">
             </div>
 
-          </div>
+          </div> -->
           
 
           <div class="hugging-elements">

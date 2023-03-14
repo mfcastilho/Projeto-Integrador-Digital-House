@@ -12,6 +12,9 @@ const buyButton = document.querySelector(".buy-button");
 const tagProductPrice = document.querySelector(".product-price");
 const tagProductImage = document.querySelector("#image");
 const tagProductName = document.querySelector("#product-name");
+const tagProductId = document.getElementById("product-id")
+
+const productsImages = document.querySelectorAll(".product-image");
 
 
 const form = document.querySelector("#selected-product-infos-form");
@@ -22,6 +25,9 @@ let sizeSelected;
 let productPrice;
 let productImage;
 let productName;
+let productId;
+
+
 
 
 function detectingWhoGenderButtonIsSelect(){
@@ -34,7 +40,10 @@ function detectingWhoGenderButtonIsSelect(){
     }
 }
 
+
 function detectingWhColorButtonIsSelect(){
+
+    
     buttonsColor.forEach((buttonColor)=>{
         buttonColor.addEventListener("click", (e)=>{
     
@@ -45,12 +54,14 @@ function detectingWhColorButtonIsSelect(){
     
             const clickedButton = e.target;
             const selected = buttonColor.parentNode
-    
+            
+            let colorSelected;
             if(clickedButton.classList.contains("black")){
     
                 console.log("Cor preto");
                 selected.classList.add("color-active");
                 colorSelected = "preto";
+                
                 return "preto";
     
             }else if(clickedButton.classList.contains("white")){
@@ -109,6 +120,8 @@ function detectingWhColorButtonIsSelect(){
                 colorSelected = "cinza";
                 return "cinza";
             }
+
+   
         });
     })
 }
@@ -135,6 +148,13 @@ function detectingWhoSizeButtonIsSelect(){
     });
 }
 
+function getProductId(){
+    tagProductId.style.display = "inline";
+    productId = tagProductId.innerText;
+    // tagProductId.style.display = "none";
+   
+}
+
 function getProductPrice(){
     productPrice = tagProductPrice.innerText;
     console.log("Preço do produto: "+productPrice);
@@ -153,17 +173,22 @@ function getProductName(){
 function sendDataToBackend(){
     form.addEventListener("submit", (e)=>{
       
-        if(selectedModel && colorSelected && sizeSelected){
+        if(selectedModel /*&& colorSelected*/ && sizeSelected){
+            // e.preventDefault()
             const inputModel = document.querySelector("#model-input");
-            const inputColor = document.querySelector("#input-color");
+            // const inputColor = document.querySelector("#input-color");
             const inputSize = document.querySelector("#input-size");
             const inputPrice = document.querySelector("#input-price");
             const inputProductName = document.querySelector("#input-product-name");
             const inputProductImage = document.querySelector("#input-product-image")
+            const inputProductId = document.querySelector("#input-product-id");
 
-
+            let id = tagProductId.innerText
+            console.log("Id do produto: "+id);
+            console.log(typeof id)
+            inputProductId.setAttribute("value", id);
             inputModel.setAttribute("value", selectedModel);
-            inputColor.setAttribute("value", colorSelected);
+            // inputColor.setAttribute("value", colorSelected);
             inputSize.setAttribute("value", sizeSelected);
             inputPrice.setAttribute("Value", productPrice);
             inputProductName.setAttribute("value", productName);
@@ -172,11 +197,12 @@ function sendDataToBackend(){
         }else{
             e.preventDefault();
             console.log(selectedModel)
-            Swal.fire('Selecione a cor e o tamanho da camiseta para fazer a compra')
+            Swal.fire('Selecione o tamanho da camiseta para fazer a compra')
             // alert("Selecione a cor e o tamanho da camiseta para fazer a compra");
         }   
     })
 }
+
 
 
 detectingWhoGenderButtonIsSelect();
