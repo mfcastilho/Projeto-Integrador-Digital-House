@@ -3,7 +3,9 @@ const router = express.Router();
 
 
 const UserController = require("../controller/UserController.js");
+const notLoggedMiddleware = require("../middlewares/notLoggedMiddleware");
 
+router.use(notLoggedMiddleware);
 
 
 router.get("/usuario/area-cliente/:id/dados-pessoais", UserController.showUserAreaPage);//estrutura controller finalizada

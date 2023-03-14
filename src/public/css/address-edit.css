@@ -33,50 +33,6 @@ body{
   margin: 3.7rem auto 1.4rem auto;
 }
 
-.register-button-section {
-    background-color: #4C3863;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    max-width: 23rem;
-    height: inherit; /* valores do pai */
-    padding: 5rem 0;
-    gap: 3rem; /* espaço entre os filhos */
-
-}
-
-.register-button-section a {
-  text-decoration: none;
-  align-items: center;
-
-}
-
-.register-button {
-  max-width: 20rem;
-  width: 80%;
-  height: 4.8rem;
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  background-color: white;
-  gap: 5px;
-  border-radius: .9rem;
-  transition: background-color 450ms;
-}
-
-.register-button p{
-    font-size: 2rem;
-    font-weight: 700;
-    color: black;
-}
-
-.register-button:hover {
-  background-color: #F6E4E4;
-}
-
 
 form div input {
   transition: background-color 450ms;

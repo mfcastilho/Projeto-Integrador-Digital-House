@@ -35,51 +35,6 @@ body{
  
 }
 
-.register-button-section {
-    background-color: #4C3863;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    max-width: 23rem;
-    height: inherit; /* valores do pai */
-    padding: 5rem 0;
-    gap: 3rem; /* espaço entre os filhos */
-    margin-top: 20.3rem;
-
-}
-
-.register-button-section a {
-  text-decoration: none;
-  align-items: center;
-
-}
-
-.register-button {
-  max-width: 20rem;
-  width: 80%;
-  height: 4.8rem;
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  background-color: white;
-  gap: 5px;
-  border-radius: 5px;
-  transition: background-color 450ms;
-}
-
-.register-button p{
-    font-size: 2rem;
-    font-weight: 700;
-    color: black;
-}
-
-.register-button:hover {
-  background-color: #F6E4E4;
-}
-
 
 form div input {
   transition: background-color 450ms;
@@ -92,7 +47,7 @@ form div input:hover{
 
 .form-section {
     width: 70%;
-<<<<<<<< HEAD:src/public/css/requests.css
+
     margin-top: 0;
     display: flex;
     flex-direction: row;
@@ -111,7 +66,7 @@ form div input:hover{
 
 .address-box {
     width: 100%;
-========
+
     margin-top: 20.3rem;
     
 }
@@ -132,11 +87,10 @@ form {
 }
 
 .assistant-form-box {
->>>>>>>> c1279d5102fbeefdf1d7eca49242260e4d2f7c94:assets/css/address-edit.css
+
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-<<<<<<<< HEAD:src/public/css/requests.css
     margin-top: 3rem;
     gap: 2rem;
 
@@ -170,9 +124,9 @@ form {
 
 } 
 
-========
+/* ========
     gap: 5px;
-}
+} */
 
 .hugging-form {
     width: 80%;
@@ -202,4 +156,4 @@ form div input {
   border: none;
   height: 3rem;
 }
->>>>>>>> c1279d5102fbeefdf1d7eca49242260e4d2f7c94:assets/css/address-edit.css
+
