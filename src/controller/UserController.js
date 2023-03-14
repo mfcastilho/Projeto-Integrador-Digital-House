@@ -2,88 +2,89 @@ const dataBase = require("../data-base/dataBase.json");
 const fs = require("fs");
 const path = require("path");
 
+const {User, Address} = require("../models");
+
 const UserModel = require("../data-base/UserModel");
 
 
 const UserController = {
-  showUserAreaPage: (req, res) =>{
+  showUserAreaPage: async (req, res) =>{
     const {id} = req.params;
 
-    const user = UserModel.findByPk(id);
-    if(!user){
-      return res 
-        .status(404)
-        .json("Usuário não encontrado");
-    }
+    // const user = UserModel.findByPk(id);
+    // if(!user){
+    //   return res 
+    //     .status(404)
+    //     .json("Usuário não encontrado");
+    // }
 
-    const birth = new Date(user.birthday);
-    const birthday = birth.toLocaleDateString("pt-BR", {timeZone: 'UTC'});
+    const user = await User.findByPk(id, {
+      include:{
+        model: Address,
+        as: "address",
+        require: false
+      },
+      raw:false
+    })
 
-    return res.render("user-panel-personal-data.ejs", {user, birthday});
+    return res.render("user-panel-personal-data.ejs", {user});
   },
-  showEditUserPersonalDataPage: (req, res) =>{
+
+  showEditUserPersonalDataPage: async (req, res) =>{
     
     const {id} = req.params;
 
-    const user = UserModel.findByPk(id);
-    if(!user){
-      return res 
-        .status(404)
-        .json("Usuário não encontrado");
-    }
+    // const user = UserModel.findByPk(id);
+    // if(!user){
+    //   return res 
+    //     .status(404)
+    //     .json("Usuário não encontrado");
+    // }
+
+    const user = await User.findByPk(id, {
+      include:{
+        model:Address,
+        as: "address",
+        require: false
+      },
+      raw: false
+    })
 
     return res.render("edit-user-panel-personal-data.ejs", {user});
   },
-  updateUserInfos: (req, res)=>{
-    const dbUsers = UserModel.findAll();
-    const {id} = req.params;
 
+  updateUserInfos: async (req, res)=>{
+    const {id} = req.params;
     const {
            email, 
-           password, 
-           person, 
            name, 
            cpf, 
            tel, 
-           birthday, 
+           password
           } = req.body;
 
-    const indexUser = dbUsers.findIndex(user=> user.id == id);
-    const user = UserModel.findByPk(id);
+    const user = await User.findByPk(id, {
+      include:{
+        model: Address,
+        as: "address",
+        require: false
+      },
+      raw:false
+    })      
 
-    if(!user){
-      return res 
-        .status(404)
-        .json("Usuário não encontrado");
-    }
-    
     const updateUser = {
       id,
-      email, 
-      password, 
-      person,
-       name,
-       cpf,
-       tel,
-       genre: user.genre,
-       birthday,
-       profilePicture: user.profilePicture,
-       zipCode: user.zipCode,
-       publicPlace: user.publicPlace,
-       number: user.number,
-       complement: user.complement,
-       district: user.district,
-       reference:user.reference,
-       city:user.city
+      email: email == undefined ? user.email : email, 
+      password: password == undefined ? user.password : password,
+       name: name == undefined ? user.name : name,
+       cpf: cpf == undefined ? user.cpf : cpf,
+       tel: tel == undefined ? user.tel : tel,
+       is_admin: false
     }
 
-    const response = UserModel.update(id, updateUser);
-
-    if(!response){
-      return res 
-        .status(404)
-        .json("Não foi possível fazer a atualização do usuário");
-    }
+    await User.update(updateUser, {
+      where:{id}
+    })
 
     return res.redirect(`/usuario/area-cliente/${updateUser.id}/dados-pessoais`);
   },
@@ -103,6 +104,7 @@ const UserController = {
   
     return res.render("address-page.ejs", {address: userAddress, user:userFound});
   },
+
   showEditUserAddress: (req, res)=>{
     const {id} = req.params;
     
@@ -118,6 +120,7 @@ const UserController = {
   
     return res.render("address-page-edit.ejs", {address: userAddress, user:userFound});
   },
+  
   updateUserAddressInfos: (req, res)=>{
     const {id} = req.params;
 
@@ -155,12 +158,15 @@ const UserController = {
 
     res.redirect(`/usuario/area-cliente/${id}/dados-pessoais`);  
   },
+
   showUserRequestesPage: (req, res)=>{
     
   },
+
   showEditUserRequestes: (req, res)=>{
     
   },
+
   updateUserRequestsInfos: (req, res)=>{
 
   }
