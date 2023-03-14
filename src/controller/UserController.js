@@ -89,21 +89,10 @@ const UserController = {
     return res.redirect(`/usuario/area-cliente/${updateUser.id}/dados-pessoais`);
   },
   
-  showUserAddressPage: (req, res)=>{
+  showUserAddressPage: async (req, res)=>{
     const {id} = req.params;
-    // console.log("id:"+id);
-    // const userFound = UserModel.findByPk(id);
-    // if(!userFound){
-    //   res
-    //     .status(404)
-    //     .json("Usuário não encontrado");
-    // }
-
-    // console.log(userFound)
-    // const userAddress = userFound.address;
-    // console.log(userAddress);
-
-    const userFound = User.findByPk(id, {
+   
+    const userFound = await User.findByPk(id, {
       include:{
         model: Address,
         as: "address",
@@ -112,10 +101,7 @@ const UserController = {
       raw: false
     });
 
-    
-
-  
-    return res.render("address-page.ejs", {address: userAddress, user:userFound});
+    return res.render("address-page.ejs", {user:userFound});
   },
 
   showEditUserAddress: (req, res)=>{

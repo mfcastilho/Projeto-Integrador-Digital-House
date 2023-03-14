@@ -19,7 +19,6 @@
 <body id="body-div">
 
 
-
  <!-- ===== HEADER ===== -->
  <%- include("./components/header2.ejs") %>
 
@@ -39,18 +38,18 @@
 
             <div class="input-box">
               <label for="address">Logradouro</label>   
-              <input type="text" name="address" id="address" required disabled value="<%= address.publicPlace %> ">
+              <input type="text" name="address" id="address" required disabled value="<%= user.address.public_place %> ">
             </div>
   
           
             <div class="assistant-form-box">
               <div class="input-box">
                 <label for="number">Número</label>   
-                <input type="text" name="number" id="number" required disabled value="<%= address.number %> " >
+                <input type="text" name="number" id="number" required disabled value="<%= user.address.number %> " >
               </div>
               <div class="input-box">
                 <label for="complement">Complemento</label>   
-                <input type="text" name="complement" id="complement" required disabled value="<%= address.complement %> ">
+                <input type="text" name="complement" id="complement" required disabled value="<%= user.address.complement %> ">
               </div>
             </div>
   
@@ -58,33 +57,33 @@
             <div class="assistant-form-box">
               <div class="input-box">
                 <label for="neighborhood">Bairro</label>   
-                <input type="text" name="neighborhood" id="neighborhood" required disabled value="<%= address.district %> ">
+                <input type="text" name="neighborhood" id="neighborhood" required disabled value="<%= user.address.district %> ">
               </div>
               <div class="input-box">
                 <label for="city">Cidade</label>   
-                <input type="text" name="city" id="city" required disabled value="<%= address.city %> ">
+                <input type="text" name="city" id="city" required disabled value="<%= user.address.city %> ">
               </div>
             </div>
 
             <div class="assistant-form-box">
               <div class="input-box">
                 <label for="state">Estado</label>   
-                <input type="text" name="state" id="state" required disabled value="<%= address.state %> ">
+                <input type="text" name="state" id="state" required disabled value="<%= user.address.state %> ">
               </div>
               <div class="input-box">
                 <label for="cep">CEP</label>   
-                <input type="text" name="cep" id="cep" required disabled value="<%= address.zipCode %> ">
+                <input type="text" name="cep" id="cep" required disabled value="<%= user.address.zip_code %> ">
               </div>  
             </div>
 
             <div class="input-box">
               <label for="address">Referência</label>   
-              <input type="text" name="address" id="address" required disabled value="<%= address.reference %> ">
+              <input type="text" name="address" id="address" required disabled value="<%= user.address.reference %> ">
             </div>
 
           </div>
 
-          <button type="submit">Editar</button>
+          <button class="send_button" type="submit">Editar</button>
 
         </form>
 
