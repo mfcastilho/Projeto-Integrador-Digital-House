@@ -13,6 +13,18 @@ module.exports = (sequelize, DataTypes) =>{
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        complement:{
+            type: DataTypes.STRING(90),
+            allowNull: false
+        },
+        reference:{
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        zip_code:{
+            type: DataTypes.STRING(10),
+            allowNull: false
+        },
         district:{
             type: DataTypes.STRING,
             allowNull: false

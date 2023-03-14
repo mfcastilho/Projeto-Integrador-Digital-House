@@ -28,8 +28,9 @@ body{
 
   position: relative;
 
-  margin-bottom: 1.4rem;
+
   padding: 2rem 10rem;
+  margin: 3.7rem auto 1.4rem auto;
 }
 
 .register-button-section {
@@ -42,7 +43,6 @@ body{
     height: inherit; /* valores do pai */
     padding: 5rem 0;
     gap: 3rem; /* espaço entre os filhos */
-    margin-top: 5rem;
 
 }
 
@@ -89,7 +89,7 @@ form div input:hover{
 
 .form-section {
     width: 70%;
-    margin-top: 20.3rem;
+    
     
 }
 
@@ -97,7 +97,7 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
+  position: relative;
 }
 
 
@@ -125,10 +125,11 @@ form {
     display: flex;
     gap: 25px;
     flex-direction: column;
+
   
 }
 
-form button {
+form .send_button {
 
 
 
@@ -147,8 +148,10 @@ form button {
 
   transition: .4s;
 
-  margin-top: auto; /* PQ O TOP COLOCOU PARA BAIXO? */
-
+   /* PQ O TOP COLOCOU PARA BAIXO? */
+  position: absolute;
+  right: 0;
+  bottom: 0;
   border-radius: .2rem;
 }
 

@@ -2,7 +2,7 @@ const isAdminMiddleware = (req, res, next)=>{
 
     const { userLogged } = req.session
     
-    if(!userLogged || !userLogged.isAdmin){
+    if(!userLogged || !userLogged.is_admin){
         return res.redirect("/");
     }
 

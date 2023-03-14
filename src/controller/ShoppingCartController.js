@@ -20,10 +20,14 @@ const ShoppingCartController = {
       raw: false
     })
 
+    
+
     return res.render("shopping-cart.ejs", {productVariant});
   },
 
   
+
+
 }
 
 module.exports = ShoppingCartController;
