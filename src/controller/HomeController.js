@@ -3,55 +3,36 @@ const {ProductVariant, Product} = require("../models");
 
 const HomeController = {
   showHome: async (req, res)=>{
-    //const products = dataBase.products;
-    const productsVariant = await ProductVariant.findAll({
-        include:[{
-          model: Product,
-          as:"product",
-          require: false
-        }],
-        raw: false
-    });
+  //   const products = dataBase.products;
+  //   const productsVariant = await ProductVariant.findAll({
+  //       include:[{
+  //         model: Product,
+  //         as:"product",
+  //         require: false
+  //       }],
+  //       raw: false
+  //   });
 
-    let productUniqueName = {};
-    let uniquesProducts = [];
+  //   let productUniqueName = {};
+  //   let uniquesProducts = [];
 
-   for(let i =0; i<productsVariant.length;i++){
-    let name = productsVariant[i].product.name;
-    if(!productUniqueName[name]){
-      productUniqueName[name] = true;
-      uniquesProducts.push(productsVariant[i])
-    }
-   }
+  //  for(let i =0; i<productsVariant.length;i++){
+  //   let name = productsVariant[i].product.name;
+  //   if(!productUniqueName[name]){
+  //     productUniqueName[name] = true;
+  //     uniquesProducts.push(productsVariant[i])
+  //   }
+  //  }
    
-    return res.render("index.ejs", {productsVariant:uniquesProducts});
-  },
-  showProductsListing: async (req, res)=>{
+  //   return res.render("index.ejs", {productsVariant:uniquesProducts});
 
-    //const dataBase = require("../data-base/dataBase.json");
-    //const products = dataBase.products;
-
-
-    const productsVariant = await ProductVariant.findAll({
-      include:[{
-        model: Product,
-        as:"product",
-        require: false
-      }],
-      raw: false
-  });
-
-    return res.render("products-listing.ejs", {productsVariant});
-  },
-  showMaleProductsListing: async (req, res)=>{
-  
-    const productsVariant = await ProductVariant.findAll({
-      include:[{
-        model: Product,
-        as:"product",
-        require: false
-      }],
-      raw: false
+  const productsVariant = await ProductVariant.findAll({
+    include:[{
+      model: Product,
+      as:"product",
+      require: false
+    }],
+    raw: false
   });
 
   const maleUniquesProducts = Object.values(
@@ -62,8 +43,32 @@ const HomeController = {
       return acc;
     }, {})
   )
+
+  return res.render("index.ejs", {productsVariant:maleUniquesProducts});
+
+  },
+  showMaleProductsListing: async (req, res)=>{
+  
+    const productsVariant = await ProductVariant.findAll({
+      include:[{
+        model: Product,
+        as:"product",
+        require: false
+      }],
+      raw: false
+    });
+
+    const maleUniquesProducts = Object.values(
+      productsVariant.filter(productVariant => productVariant.model === "masculina").reduce((acc, productVariant)=>{
+        if(!acc[productVariant.product.name]){
+          acc[productVariant.product.name] = productVariant;
+        }
+        return acc;
+      }, {})
+    )
   
     return res.render("products-listing.ejs", {productsVariant:maleUniquesProducts});
+
   },
   showFemaleProductsListing: async (req, res)=>{
     const productsVariant = await ProductVariant.findAll({
@@ -125,21 +130,82 @@ const HomeController = {
       return acc;
     }, {})
   )
+    
   
     return res.render("products-listing.ejs", {productsVariant:movieUniquesProducts});
   },
-  showProduct: (req, res)=>{
-
+  showMaleProduct: async (req, res)=>{
     const {id} = req.params;
+    const productVariant = await ProductVariant.findOne({
+      where: {id:id},
+      include:{
+        model: Product,
+        as: "product",
+        require: false
+      },
+      raw: false
+    })
 
-    const dataBase = require("../data-base/dataBase.json");
-
-
-    dataBase.products.forEach(product =>{
-      if(product.id == id){
-        return res.render("inner-product.ejs",{product});
-      } 
+    const productsVariant = await ProductVariant.findAll({
+      include:[{
+        model: Product,
+        as:"product",
+        require: false
+      }],
+      raw: false
     });
+
+    const maleUniquesProducts = Object.values(
+      productsVariant.filter(productVariant => productVariant.model === "masculina")
+    )
+    const chosenMaleTshirt = maleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
+    const maleTshirts = chosenMaleTshirt.filter(tshirt=> tshirt.size == "M");
+
+    const femaleUniquesProducts = Object.values(
+      productsVariant.filter(productVariant => productVariant.model === "feminina") 
+    )
+    const chosenFemaleTshirt = femaleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
+    const femaleTshirts = chosenFemaleTshirt.filter(tshirt=> tshirt.size == "M");
+
+  return res.render("inner-product.ejs",{productVariant, productsVariant:maleTshirts, tshirt:femaleTshirts[0], routeGender:"masculino"});
+
+  },
+  showFemaleProduct: async (req, res)=>{
+    const {id} = req.params;
+    const productVariant = await ProductVariant.findOne({
+      where: {id:id},
+      include:{
+        model: Product,
+        as: "product",
+        require: false
+      },
+      raw: false
+    })
+
+    const productsVariant = await ProductVariant.findAll({
+      include:[{
+        model: Product,
+        as:"product",
+        require: false
+      }],
+      raw: false
+    });
+
+    const femaleUniquesProducts = Object.values(
+      productsVariant.filter(productVariant => productVariant.model === "feminina") 
+    )
+    const chosenFemaleTshirt = femaleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
+    const femaleTshirts = chosenFemaleTshirt.filter(tshirt=> tshirt.size == "M");
+
+    const maleUniquesProducts = Object.values(
+      productsVariant.filter(productVariant => productVariant.model === "masculina")
+    )
+    const chosenMaleTshirt = maleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
+    const maleTshirts = chosenMaleTshirt.filter(tshirt=> tshirt.size == "M");
+
+
+    return res.render("inner-product.ejs",{productVariant, productsVariant:femaleTshirts, tshirt:maleTshirts[0], routeGender:"feminino"});
+
   }
 }
 

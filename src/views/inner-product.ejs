@@ -14,8 +14,11 @@
 
   <link rel="stylesheet" href="/css/header.css">
   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
+  <script src="/js/selectingElementsIntTheInnerProduct.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   
-  <script src="/js/header-behavior.js" defer></script>
+  <!-- <script src="/js/header-behavior.js" defer></script> -->
 </head>
 <body id="body-div">
 
@@ -33,26 +36,47 @@
 
           <div class="image-card-box">
 
-            <div class="image-card">
-              <img src="<%= product.imageSecundary  %> " alt="">
-            </div>
+            <!-- <a href="">
+              <div class="image-card">
+                <img src="/<%= productVariant.product.tshirt_print  %> " alt="">
+              </div>
+            </a> -->
+            
+            <% productsVariant.forEach(productVariant=>{ %>
+              <% if(productVariant.model == "masculina"){%>
+                <a class="product-image image-color" href="/produto/<%= productVariant.id %>/masculino">
+                  <div class="image-card">
+                    <img src="/<%= productVariant.image %> " alt="">
+                  </div>
+                </a>
+              <% } else if(productVariant.model == "feminina"){ %>
+                <a class="product-image image-color" href="/produto/<%= productVariant.id %>/feminino">
+                  <div class="image-card">
+                    <img src="/<%= productVariant.image %> " alt="">
+                  </div>
+                </a>
+              <% } %>
 
-            <div class="image-card">
-              <img src="<%= product.tShirtPrint  %> " alt="">
-            </div>
-
+            <% }) %>
+              
           </div>
 
           <div class="image-box">
-            <img src="<%= product.image  %> " alt="">
+            <img id="image" src="/<%= productVariant.image  %> " alt="">
           </div>
 
         </div>
 
-        <div class="infos-product-container">
+        <form id="selected-product-infos-form" action="/carrinho" method="POST" class="infos-product-container">
 
 
-          <h3><%= product.name  %></h3>
+          <div class="hidden" id="product-id"><%= productVariant.id %></div>
+          <input id="input-product-id" type="hidden" name="idProduct">  
+          
+          <h3 id="product-name"><%= productVariant.product.name  %></h3>
+          <input id="input-product-name" type="hidden" name="productName">
+          <input id="input-product-image" type="hidden" name="productImage">
+          
 
           <div class="hugging-elements">
             <div class="title-box">           
@@ -60,34 +84,126 @@
             </div>
             <div class="model-options-box">
             
-              <div class="male-button">
-                Masculino
-              </div>
-              <div class="female-button">
-                Feminino
-              </div>
+              <% if(tshirt.model == "masculina"){ %>
+                <a style="text-decoration: none;" href="/produto/<%= tshirt.id %>/masculino" class="male-button">
+                  <div >Masculino</div> 
+                </a>
+              <% } else{ %>
+                <a style="text-decoration: none;" href="" class="male-button active">
+                  <div >Masculino</div> 
+                </a>
+              <% } %>
+
+              
+              
+              <% if(tshirt.model == "feminina"){ %>
+                <a style="text-decoration: none;" href="/produto/<%= tshirt.id %>/feminino" class="female-button">
+                  <div >Feminino</div> 
+                </a>
+              <% } else{ %>
+                <a style="text-decoration: none;" href="" class="female-button active">
+                  <div >Feminino</div> 
+                </a>
+              <% } %>
+              
+              <input id="model-input" type="hidden" name="model">
             </div>
 
           </div>
           
 
-          <div class="hugging-elements">
+          <!-- <div class="hugging-elements">
             <div class="title-box">
               <p>Cor</p>
             </div>
             
             <div class="colors-options-box">
-              <div class="color black"></div>
-              <div class="color white"></div>
-              <div class="color red"></div>
-              <div class="color blue"></div>
-              <div class="color yellow"></div>
-              <div class="color green"></div>
-              <div class="color pink"></div>
-              <div class="color orange"></div>
+
+              <% productsVariant.forEach(productVariant=>{ %>
+                <% if(productVariant.color == "preto"){ %>
+                  <div class="color-hover">
+                    <div class="color black image-color"></div>
+                  </div>
+                <% }else{ %>
+                    <div style="display: none;"></div>
+                <% }%>
+
+                <% if(productVariant.color == "branco"){ %>
+                  <div class="color-hover">
+                    <div class="color white image-color"></div>
+                  </div>
+                <% }else{ %>
+                  <div style="display: none;"></div>
+                <% }%>
+
+
+                <% if(productVariant.color == "vermelho"){ %>
+                  <div class="color-hover">
+                    <div class="color red image-color"></div>
+                  </div>
+                <% }else{ %>
+                  <div style="display: none;"></div>
+                <% }%>
+
+
+                <% if(productVariant.color == "azul"){ %>
+                  <div class="color-hover">
+                    <div class="color blue image-color"></div>
+                  </div>
+                <% }else{ %>
+                  <div style="display: none;"></div>
+                <% }%>
+
+
+                <% if(productVariant.color == "amarelo"){ %>
+                  <div class="color-hover">
+                    <div class="color yellow image-color"></div>
+                  </div>
+                <% }else{ %>
+                  <div style="display: none;"></div>
+                <% }%>
+
+                <% if(productVariant.color == "verde"){ %>
+                  <div class="color-hover">
+                    <div class="color green image-color"></div>
+                  </div>  
+                <% }else{ %>
+                  <div style="display: none;"></div>
+                <% }%>
+
+                <% if(productVariant.color == "rosa"){ %>
+                  <div class="color-hover">
+                    <div class="color pink image-color"></div>
+                  </div>
+                  
+                <% }else{ %>
+                  <div style="display: none;"></div>
+                <% }%>
+
+                <% if(productVariant.color == "laranja"){ %>
+                  <div class="color-hover">
+                    <div class="color orange image-color"></div>
+                  </div>
+                  
+                <% }else{ %>
+                  <div style="display: none;"></div>
+                <% }%>
+
+                <% if(productVariant.color == "cinza"){ %>
+                  <div class="color-hover">
+                    <div class="color gray image-color"></div>
+                  </div>
+                  
+                <% }else{ %>
+                  <div style="display: none;"></div>
+                <% }%>
+
+              <% }) %>
+
+              <input id="input-color" type="hidden" name="color">
             </div>
 
-          </div>
+          </div> -->
           
 
           <div class="hugging-elements">
@@ -97,13 +213,12 @@
             
 
             <div class="sizes-options-box">
-              
-              <div class="size">p</div>
-              <div class="size">m</div>
-              <div class="size">g</div>
-              
 
-                         
+              <div class="size p">p</div>
+              <div class="size m">m</div>
+              <div class="size g">g</div>
+              
+              <input id="input-size" type="hidden" name="size">
             </div>
 
           </div>
@@ -114,17 +229,19 @@
             <div class="price-box title-box">
               <p class="price-apresentation">A partir de</p>
               <span class="dollar-sign">R$</span>
-              <span class="product-price"><%= product.price.toFixed(2)  %></span>
+              <span class="product-price"><%= productVariant.product.price  %></span>
+
+              <input id="input-price" type="hidden" name="price">
             </div>
 
-            <div class="buy-button">
+            <button type="submit" class="buy-button">
               <div class="hugging-button-elements">
                 <img src="/img/cart.svg" alt="">
-                <span>Comprar</span> 
+                Comprar
               </div>
-            </div>
+            </button>
           </div>
-        </div>
+        </form>
 
       </section>
 
