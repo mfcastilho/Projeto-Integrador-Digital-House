@@ -1,16 +1,17 @@
 const UserModel = require("../data-base/UserModel");
 const {validationResult} = require("express-validator");
+const {User, Address} = require("../models");
 
 const AuthController = {
     showRegister: (req, res)=>{
-       console.log(req.route.path);
-       console.log("Enviando rota /usuario/cadastro");
        return res.render("register.ejs");
     },
+
     showLogin: (req, res)=>{
         console.log(req.route.path);
         return res.render("login.ejs");
     },
+
     storeUser: (req, res)=>{
         console.log("Criando usuário");
         console.log(req.body);
@@ -45,24 +46,42 @@ const AuthController = {
         return res.redirect("/home");// 
         
     },
-    logging: (req, res)=>{
+
+    logging: async (req, res)=>{
 
     const resultValidations = validationResult(req);
 
-    const db = UserModel.findAll();
+    //const db = UserModel.findAll();
+
     const {email, password} = req.body;
+
+    
 
     if(resultValidations.errors.length > 0){
       return res.render("login.ejs", {errors:resultValidations.mapped(), old:req.body});
     }
 
-    //let userFound = false;
     let passwordIsCorrect = false;
 
+    //const user = db.find(user=>user.email==email);
+    const user = await User.findOne({
+      where:{
+        email:email
+      },
+      include:{
+        model: Address,
+        as: "address",
+        require: false
+      },
+      raw:false
+    })
 
-    const user = db.find(user=>user.email==email);
+    console.log(email)
+    console.log(password)
+    console.log(user.password)
+    
 
-    if(user == undefined){
+    if(user.email == undefined){
       return res.render("login.ejs",{
         errors:{
           email:{
@@ -71,8 +90,9 @@ const AuthController = {
         },
         old:req.body
       });
+
     }else{
-      //userFound = true;
+      
       if(user.password == password){
         passwordIsCorrect = true;
       }
@@ -88,18 +108,16 @@ const AuthController = {
         old:req.body
       });
     }
-
     req.session.userLogged = user;
 
-    console.log(req.session.userLogged)
-
-    if(user.isAdmin){
+    if(user.is_admin){
       return res.redirect("/admin/home")
     }
 
     return res.redirect("/");
     
     },
+
     logout: (req, res)=>{
       req.session.destroy();
       res.redirect("/");
