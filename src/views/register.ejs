@@ -72,7 +72,7 @@
 
         </section>
   
-        <section class="register-type-section">
+        <!-- <section class="register-type-section">
           <div class="section-title-box">
             <img src="/img/register-data-icon.svg" alt="">
             <h3>Tipo de cadastro</h3>
@@ -93,7 +93,7 @@
             <span class="input-erro-msg"></span>
             
           </div>
-        </section>
+        </section> -->
   
         <div class="wrapper-sections-box">
 
@@ -118,29 +118,34 @@
                 <span class="input-erro-msg"></span>
               </div>
 
-              <div class="input-box">
+              <!-- <div class="input-box">
                 <label for="cel-id">Celular</label>
                 <input type="tel" name="cel" id="cel-id">
                 <span class="input-erro-msg"></span>
-              </div>
+              </div> -->
   
               <div class="input-box">
-                <label for="tel-id">Telefone fixo</label>
+                <label for="tel-id">Telefone</label>
                 <input type="tel" name="tel" id="tel-id">
                 <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="genre-id">Sexo</label>
-                <input type="text" name="genre" id="genre-id">
-                <span class="input-erro-msg"></span>
+                <select class="select-gender">  
+                  <option name="genre" value="masculino">Masculino</option>
+                  <option name="genre" value="feminino">Feminino</option>
+                  <option name="genre" value="outro">Outro</option>
+                  <!-- <input type="text" name="genre" id="genre-id"> -->
+                  <span class="input-erro-msg"></span>
+                </select>
               </div>
   
-              <div class="input-box">
+              <!-- <div class="input-box">
                 <label for="birthday-id">Birthday</label>
                 <input type="date" name="birthday" id="birthday-id">
                 <span class="input-erro-msg"></span>
-              </div>
+              </div> -->
 
               <!--==== UPLOAD FOTO DO PERFIL(MULTER)====-->
 

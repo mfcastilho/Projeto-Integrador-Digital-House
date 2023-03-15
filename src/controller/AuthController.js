@@ -1,6 +1,7 @@
 const UserModel = require("../data-base/UserModel");
 const {validationResult} = require("express-validator");
 const {User, Address} = require("../models");
+const {v4:makeId} = require("uuid");
 
 const AuthController = {
     showRegister: (req, res)=>{
