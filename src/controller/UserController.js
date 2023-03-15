@@ -31,15 +31,7 @@ const UserController = {
   },
 
   showEditUserPersonalDataPage: async (req, res) =>{
-    
     const {id} = req.params;
-
-    // const user = UserModel.findByPk(id);
-    // if(!user){
-    //   return res 
-    //     .status(404)
-    //     .json("Usuário não encontrado");
-    // }
 
     const user = await User.findByPk(id, {
       include:{
@@ -107,16 +99,6 @@ const UserController = {
   showEditUserAddress: async (req, res)=>{
     const {id} = req.params;
     
-    // const userFound = UserModel.findByPk(id);
-    // if(!userFound){
-    //   res
-    //     .status(404)
-    //     .json("Usuário não encontrado");
-    // }
-
-    // const userAddress = userFound.address;
-    //console.log(userAddress);
-
     const userFound = await User.findByPk(id, {
       include:{
         model: Address,
@@ -129,42 +111,46 @@ const UserController = {
     return res.render("address-page-edit.ejs", {user:userFound});
   },
   
-  updateUserAddressInfos: (req, res)=>{
+  updateUserAddressInfos: async (req, res)=>{
     const {id} = req.params;
 
-    const userFound = UserModel.findByPk(id);
-    
-    const userUpdate = {
-      id:userFound.id,
-      email:userFound.email,
-      password:userFound.password,
-      name:userFound.name,
-      cpf:userFound.cpf,
-      tel:userFound.tel,
-      genre:userFound.genre,
-      birthday:userFound.birthday,
-      profilePicture:userFound.profilePicture,
-      address:{
-        zipCode:req.body.zipCode,
-        publicPlace:req.body.publicPlace,
-        number:req.body.number,
-        complement:req.body.complement,
-        district:req.body.district,
-        reference:req.body.reference,
-        city:req.body.city,
-        state:req.body.state
-      }
+    const {
+      zipCode,
+      publicPlace,
+      number,
+      complement,
+      district,
+      reference,
+      city,
+      state
+    } = req.body;
+
+    const user = await User.findByPk(id, {
+      include:{
+        model: Address,
+        as: "address",
+        require: false
+      },
+      raw:false
+    })  
+   
+    const userAddressUpdate = {
+      id: user.address.id,
+      zip_code: zipCode == undefined ? user.address.zip_code : zipCode,
+      public_place: publicPlace == undefined ? user.public_place : publicPlace,
+      number: number == undefined ? user.number : number,
+      complement: complement == undefined ? user.complement : complement,
+      district: district == undefined ? user.district : district,
+      reference: reference == undefined ? user.reference : reference, 
+      city: city == undefined ? user.city : city,
+      state: state == undefined ? user.state : state    
     }
 
-    const response = UserModel.update(id, userUpdate);
+    await Address.update(userAddressUpdate, {
+      where:{id:user.address.id}
+    })
 
-    if(!response){
-      res
-        .status(404)
-        .json("Erro!Usuário não foi atualizado no banco");
-    }
-
-    res.redirect(`/usuario/area-cliente/${id}/dados-pessoais`);  
+    res.redirect(`/usuario/area-cliente/${user.id}/dados-pessoais`);  
   },
 
   showUserRequestesPage: (req, res)=>{

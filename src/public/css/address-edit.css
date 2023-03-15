@@ -85,10 +85,7 @@ form {
   
 }
 
-form .send_button {
-
-
-
+.hugging-form button{
   background-color: #584374;
   color: #D9D9D9;
 
@@ -109,6 +106,32 @@ form .send_button {
   right: 0;
   bottom: 0;
   border-radius: .2rem;
+}
+
+
+.form-section form button{
+
+  background-color: #584374;
+  color: #D9D9D9;
+
+  border: none;
+
+  width: 10rem;
+  height: 4rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: .4s;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+
+  border-radius: .2rem; 
 }
 
 
