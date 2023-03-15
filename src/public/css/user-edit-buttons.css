@@ -12,6 +12,23 @@ body{
   font-family: 'PT Sans', sans-serif;
 }
 
+.main-container{
+  width: 100%;
+  max-width: 1280px;
+  margin: 2rem auto;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
+
+
+  margin: 3.7rem auto 1.4rem auto;
+  padding: 2rem 10rem; 
+}
+
 .register-button-section {
     background-color: #4C3863;
     display: flex;

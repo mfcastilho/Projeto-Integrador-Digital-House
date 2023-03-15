@@ -2,7 +2,7 @@ const dataBase = require("../data-base/dataBase.json");
 const fs = require("fs");
 const path = require("path");
 
-const {User, Address} = require("../models");
+const {User, Address, Order, OrderDetail} = require("../models");
 
 const UserModel = require("../data-base/UserModel");
 
@@ -10,13 +10,6 @@ const UserModel = require("../data-base/UserModel");
 const UserController = {
   showUserAreaPage: async (req, res) =>{
     const {id} = req.params;
-
-    // const user = UserModel.findByPk(id);
-    // if(!user){
-    //   return res 
-    //     .status(404)
-    //     .json("Usuário não encontrado");
-    // }
 
     const user = await User.findByPk(id, {
       include:{
@@ -153,8 +146,16 @@ const UserController = {
     res.redirect(`/usuario/area-cliente/${user.id}/dados-pessoais`);  
   },
 
-  showUserRequestesPage: (req, res)=>{
-    
+  showUserRequestesPage: async (req, res)=>{
+    const {id} = req.params;
+
+    const order = await Order.findOne({
+      where:{user_id: id}
+    });
+
+    console.log(order);
+
+    res.render("requests.ejs")
   },
 
   showEditUserRequestes: (req, res)=>{
