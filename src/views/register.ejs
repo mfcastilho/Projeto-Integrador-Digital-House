@@ -55,7 +55,7 @@
 
             <div class="input-box">
               <label for="confirm-email-id">Confirmar E-mail</label>
-              <input type="text" name="confirmEmail" id="confirm-email-id" >
+              <input type="text" name="confirmEmail" id="confirm-email-id" value="<%= locals.old ? old.confirmEmail : "" %>">
               <span class="input-erro-msg"></span>
               <% if(locals.errors && errors.confirmEmail){ %>
                 <div class="danger">
@@ -144,8 +144,8 @@
               <div class="input-box">
                 <label for="gender">Sexo</label>
                 <select name="gender" class="select-gender">  
-                  <option value="masculino">Masculino</option>
-                  <option value="feminino">Feminino</option>
+                  <option value="masculino" <%= locals.old && old.gender == "masculino" ? "selected" : "" %>>Masculino</option>
+                  <option value="feminino" <%= locals.old && old.gender == "feminino" ? "selected" : "" %>>Feminino</option>
                   <option value="outro" selected>Outro</option>
                 </select>
                 <span class="input-erro-msg"></span>
@@ -249,33 +249,33 @@
                 <div class="input-box">
                   <label for="state">UF</label>
                   <select name="state" class="select-state" id="state-id">
-                    <option value="AC">AC</option>
-                    <option value="AL">AL</option>
-                    <option value="AP">AP</option>
-                    <option value="AM">AM</option>
-                    <option value="BA">BA</option>
-                    <option value="CE">CE</option>
-                    <option value="DF">DF</option>
-                    <option value="ES">ES</option>
-                    <option value="GO">GO</option>
-                    <option value="MA">MA</option>
-                    <option value="MT">MT</option>
-                    <option value="MS">MS</option>
-                    <option value="MG">MG</option>
-                    <option value="PA">PA</option>
-                    <option value="PB">PB</option>
-                    <option value="PR">PR</option>
-                    <option value="PE">PE</option>
-                    <option value="PI">PI</option>
-                    <option value="RJ">RJ</option>
-                    <option value="RN">RN</option>
-                    <option value="RS">RS</option>
-                    <option value="RO">RO</option>
-                    <option value="RR">RR</option>
-                    <option value="SC">SC</option>
-                    <option value="SP">SP</option>
-                    <option value="SE">SE</option>
-                    <option value="TO">TO</option>
+                    <option value="AC" <%= locals.old && old.state == "AC" ? "selected" : "" %>>AC</option>
+                    <option value="AL" <%= locals.old && old.state == "AL" ? "selected" : "" %>>AL</option>
+                    <option value="AP" <%= locals.old && old.state == "AP" ? "selected" : "" %>>AP</option>
+                    <option value="AM" <%= locals.old && old.state == "AM" ? "selected" : "" %>>AM</option>
+                    <option value="BA" <%= locals.old && old.state == "BA" ? "selected" : "" %>>BA</option>
+                    <option value="CE" <%= locals.old && old.state == "CE" ? "selected" : "" %>>CE</option>
+                    <option value="DF" <%= locals.old && old.state == "DF" ? "selected" : "" %>>DF</option>
+                    <option value="ES" <%= locals.old && old.state == "ES" ? "selected" : "" %>>ES</option>
+                    <option value="GO" <%= locals.old && old.state == "GO" ? "selected" : "" %>>GO</option>
+                    <option value="MA" <%= locals.old && old.state == "MA" ? "selected" : "" %>>MA</option>
+                    <option value="MT" <%= locals.old && old.state == "MT" ? "selected" : "" %>>MT</option>
+                    <option value="MS" <%= locals.old && old.state == "MS" ? "selected" : "" %>>MS</option>
+                    <option value="MG" <%= locals.old && old.state == "MG" ? "selected" : "" %>>MG</option>
+                    <option value="PA" <%= locals.old && old.state == "PA" ? "selected" : "" %>>PA</option>
+                    <option value="PB" <%= locals.old && old.state == "PB" ? "selected" : "" %>>PB</option>
+                    <option value="PR" <%= locals.old && old.state == "PR" ? "selected" : "" %>>PR</option>
+                    <option value="PE" <%= locals.old && old.state == "PE" ? "selected" : "" %>>PE</option>
+                    <option value="PI" <%= locals.old && old.state == "PI" ? "selected" : "" %>>PI</option>
+                    <option value="RJ" <%= locals.old && old.state == "RJ" ? "selected" : "" %>>RJ</option>
+                    <option value="RN" <%= locals.old && old.state == "RN" ? "selected" : "" %>>RN</option>
+                    <option value="RS" <%= locals.old && old.state == "RS" ? "selected" : "" %>>RS</option>
+                    <option value="RO" <%= locals.old && old.state == "RO" ? "selected" : "" %>>RO</option>
+                    <option value="RR" <%= locals.old && old.state == "RR" ? "selected" : "" %>>RR</option>
+                    <option value="SC" <%= locals.old && old.state == "SC" ? "selected" : "" %>>SC</option>
+                    <option value="SP" <%= locals.old && old.state == "SP" ? "selected" : "" %>>SP</option>
+                    <option value="SE" <%= locals.old && old.state == "SE" ? "selected" : "" %>>SE</option>
+                    <option value="TO" <%= locals.old && old.state == "TO" ? "selected" : "" %>>TO</option>
                   </select>
                   <span class="input-erro-msg"></span>
                 </div>

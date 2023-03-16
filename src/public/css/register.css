@@ -15,6 +15,9 @@ body{
   font-family: 'PT Sans', sans-serif;
 }
 
+main{
+  margin-bottom: 2rem;
+}
 .main-container{
   
   width: 100%;
