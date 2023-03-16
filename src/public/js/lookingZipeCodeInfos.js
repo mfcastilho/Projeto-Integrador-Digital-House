@@ -48,17 +48,17 @@ function handleSubmit(event){
   
   let formOk = false;
 
-  function handleInputsStatus(input){
+  // function handleInputsStatus(input){
 
-    if(input.value == ""){
-      input.style.outline = "2px solid red";
-      return formOk = false;
-    }else{
-      input.style.outline = "2px solid lightgreen";
-      return formOk = true;
-    }
+  //   if(input.value == ""){
+  //     input.style.outline = "2px solid red";
+  //     return formOk = false;
+  //   }else{
+  //     input.style.outline = "2px solid lightgreen";
+  //     return formOk = true;
+  //   }
 
-  }
+  // }
 
   handleInputsStatus(inputZipCode);
   handleInputsStatus(inputNumber);
@@ -113,15 +113,9 @@ async function fetchCepData(){
   });
 
   if(street == undefined || neighborhood == undefined){
-
-    // console.log("Entrou");
     inputDistrict.value = "";
     inputpublicPlace.value = "";
   }
-
-
-  // inputState.value = state;
-
 }
 
 

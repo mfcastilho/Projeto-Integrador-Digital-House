@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/css/header.css">
   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
   
-  <script src="/js/header-behavior.js" defer></script>
+
   <script src="/js/validationRegisterForm.js" defer></script>
   <script src="/js/lookingZipeCodeInfos.js" defer></script>
 </head>
@@ -42,15 +42,29 @@
 
             <div class="input-box">
               <label for="email-id">E-mail</label>
-              <input type="email" name="email" id="email-id">
+              <input type="text" name="email" id="email-id" value="<%= locals.old ? old.email : "" %>">
               <span class="input-erro-msg"></span>
+              <% if(locals.errors && errors.email){ %>
+                <div class="danger">
+                  <%= errors.email.msg %>
+                </div>
+              <% } %>
             </div>
+            
+            
 
             <div class="input-box">
               <label for="confirm-email-id">Confirmar E-mail</label>
-              <input type="email" name="confirmEmail" id="confirm-email-id">
+              <input type="text" name="confirmEmail" id="confirm-email-id" >
               <span class="input-erro-msg"></span>
+              <% if(locals.errors && errors.email){ %>
+                <div class="danger">
+                  <%= errors.email.msg %>
+                </div>
+              <% } %>
             </div>
+
+            
             
           </div>
 
@@ -60,40 +74,31 @@
               <label for="password-id">Senha</label>
               <input type="password" name="password" id="password-id">
               <span class="input-erro-msg"></span>
+              <% if(locals.errors && errors.password){ %>
+                <div class="danger">
+                  <%= errors.password.msg %>
+                </div>
+            <% } %>
             </div>
+
+            
 
             <div class="input-box">
               <label for="confirm-password-id">Confirmar senha</label>
               <input type="password" name="confirmPassword" id="confirm-password-id">
               <span class="input-erro-msg"></span>
+              <% if(locals.errors && errors.password){ %>
+                <div class="danger">
+                  <%= errors.password.msg %>
+                </div>
+              <% } %>
             </div>
+
+            
 
           </div>
 
         </section>
-  
-        <!-- <section class="register-type-section">
-          <div class="section-title-box">
-            <img src="/img/register-data-icon.svg" alt="">
-            <h3>Tipo de cadastro</h3>
-          </div>
-          
-          <div class="wrapper-radio-button-box">
-
-            <div class="radio-button-box">           
-              <input type="radio" name="person" id="fisical-person-id" value="pessoa fisica" checked>
-              <label for="fisical-person-id">Pessoa física</label>
-            </div>
-            <span class="input-erro-msg"></span>
-
-            <div class="radio-button-box">              
-              <input type="radio" name="person" id="legal-persson-id" value="pessoa juridica">
-              <label for="legal-persson-id">Pessoa jurídica</label>
-            </div>
-            <span class="input-erro-msg"></span>
-            
-          </div>
-        </section> -->
   
         <div class="wrapper-sections-box">
 
@@ -108,54 +113,31 @@
 
               <div class="input-box">
                 <label for="name-id">Nome completo</label>
-                <input type="text" name="name" id="name-id">
+                <input type="text" name="name" id="name-id" value="<%= locals.old ? old.name : "" %>">
                 <span class="input-erro-msg"></span>
               </div>
   
               <div class="input-box">
                 <label for="cpf-id">CPF</label>
-                <input type="text" name="cpf" id="cpf-id">
-                <span class="input-erro-msg"></span>
-              </div>
-
-              <!-- <div class="input-box">
-                <label for="cel-id">Celular</label>
-                <input type="tel" name="cel" id="cel-id">
-                <span class="input-erro-msg"></span>
-              </div> -->
-  
-              <div class="input-box">
-                <label for="tel-id">Telefone</label>
-                <input type="tel" name="tel" id="tel-id">
+                <input type="text" name="cpf" id="cpf-id" value="<%= locals.old ? old.cpf : "" %>">
                 <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
-                <label for="genre-id">Sexo</label>
-                <select class="select-gender">  
-                  <option name="genre" value="masculino">Masculino</option>
-                  <option name="genre" value="feminino">Feminino</option>
-                  <option name="genre" value="outro">Outro</option>
-                  <!-- <input type="text" name="genre" id="genre-id"> -->
-                  <span class="input-erro-msg"></span>
+                <label for="tel">Telefone</label>
+                <input type="tel" name="tel" id="tel" value="<%= locals.old ? old.tel : "" %>">
+                <span class="input-erro-msg"></span>
+              </div>
+
+              <div class="input-box">
+                <label for="gender">Sexo</label>
+                <select name="gender" class="select-gender">  
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                  <option value="outro" selected>Outro</option>
                 </select>
+                <span class="input-erro-msg"></span>
               </div>
-  
-              <!-- <div class="input-box">
-                <label for="birthday-id">Birthday</label>
-                <input type="date" name="birthday" id="birthday-id">
-                <span class="input-erro-msg"></span>
-              </div> -->
-
-              <!--==== UPLOAD FOTO DO PERFIL(MULTER)====-->
-
-              <!-- <div class="input-box">
-                <label for="profile-picture-id">url da foto de perfil</label>
-                <input type="text" name="profilePicture" id="profile-picture-id">
-                <span class="input-erro-msg"></span>
-              </div> -->
-
-              <!--==== UPLOAD FOTO DO PERFIL(MULTER)====-->
 
             </div>
 
@@ -173,7 +155,7 @@
 
               <div class="input-box">
                 <label for="zip-code-id">Cep</label>
-                <input type="text" name="zipCode" id="zip-code-id">
+                <input type="text" name="zipCode" id="zip-code-id" value="<%= locals.old ? old.zipCode : "" %>">
                 <span class="input-erro-msg"></span>
               </div>
   
@@ -181,13 +163,13 @@
               <div class="hugging-inputs-box">
                 <div class="input-box public-place">
                   <label for="public-place-id">Logradouro</label>
-                  <input type="text" name="publicPlace" id="public-place-id">
+                  <input type="text" name="publicPlace" id="public-place-id" value="<%= locals.old ? old.publicPlace : "" %>">
                   <span class="input-erro-msg"></span>
                 </div>
   
                 <div class="input-box address-number">
                   <label for="number-id">Número</label>
-                  <input type="number" name="number" id="number-id">
+                  <input type="number" name="number" id="number-id" value="<%= locals.old ? old.number : "" %>">
                   <span class="input-erro-msg"></span>
                 </div>
               </div>
@@ -195,59 +177,59 @@
   
               <div class="input-box">
                 <label for="complement-id">Complemento</label>
-                <input type="text" name="complement" id="complement-id">
+                <input type="text" name="complement" id="complement-id" value="<%= locals.old ? old.complement : "" %>">
                 <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="district-id">Bairro</label>
-                <input type="text" name="district" id="district-id">
+                <input type="text" name="district" id="district-id" value="<%= locals.old ? old.district : "" %>">
                 <span class="input-erro-msg"></span>
               </div>
 
               <div class="input-box">
                 <label for="reference-id">Referência</label>
-                <input type="text" name="reference" id="reference-id">
+                <input type="text" name="reference" id="reference-id" value="<%= locals.old ? old.reference : "" %>">
                 <span class="input-erro-msg"></span>
               </div>
   
               <div class="hugging-inputs-box">
                 <div class="input-box city">
                   <label for="city-id">Cidade</label>
-                  <input type="text" name="city" id="city-id">
+                  <input type="text" name="city" id="city-id" value="<%= locals.old ? old.city : "" %>">
                   <span class="input-erro-msg"></span>
                 </div>
   
                 <div class="input-box state">
-                  <label for="state-id">UF</label>
-                  <select name="state-id" id="state-id">
-                    <option value="Acre">AC</option>
-                    <option value="Alagoas">AL</option>
-                    <option value="Amapá">AP</option>
-                    <option value="Amazonas">AM</option>
-                    <option value="Bahia">BA</option>
-                    <option value="Ceará">CE</option>
-                    <option value="Distrito Federal">DF</option>
-                    <option value="Espírito Santo">ES</option>
-                    <option value="Goiás">GO</option>
-                    <option value="Maranhão">MA</option>
-                    <option value="Mato Grosso">MT</option>
-                    <option value="Mato Grosso do Sul">MS</option>
-                    <option value="Minas Gerais">MG</option>
-                    <option value="Pará">PA</option>
-                    <option value="Paraíba">PB</option>
-                    <option value="Paraná">PR</option>
-                    <option value="Pernambuco">PE</option>
-                    <option value="Piauí">PI</option>
-                    <option value="Rio de Janeiro" >RJ</option>
-                    <option value="Rio Grande do Norte">RN</option>
-                    <option value="Rio Grande do Sul">RS</option>
-                    <option value="Rondônia">RO</option>
-                    <option value="Roraima">RR</option>
-                    <option value="Santa Catarina">SC</option>
-                    <option value="São Paulo">SP</option>
-                    <option value="Sergipe">SE</option>
-                    <option value="Tocantins">TO</option>
+                  <label for="state">UF</label>
+                  <select name="state" id="state-id">
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
                   </select>
                   <span class="input-erro-msg"></span>
                 </div>

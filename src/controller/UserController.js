@@ -1,10 +1,10 @@
-const dataBase = require("../data-base/dataBase.json");
-const fs = require("fs");
-const path = require("path");
+// const dataBase = require("../data-base/dataBase.json");
+// const fs = require("fs");
+// const path = require("path");
 
 const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
 
-const UserModel = require("../data-base/UserModel");
+// const UserModel = require("../data-base/UserModel");
 
 
 const UserController = {
@@ -20,7 +20,7 @@ const UserController = {
       raw:false
     })
 
-    return res.render("user-panel-personal-data.ejs", {user});
+    return res.render("personal-data-page.ejs", {user});
   },
 
   showEditUserPersonalDataPage: async (req, res) =>{
@@ -35,7 +35,7 @@ const UserController = {
       raw: false
     })
 
-    return res.render("edit-user-panel-personal-data.ejs", {user});
+    return res.render("personal-data-page-edit.ejs", {user});
   },
 
   updateUserInfos: async (req, res)=>{
@@ -185,12 +185,10 @@ const UserController = {
     const [year, month, day] = dateOnly.split("-");
     const formattedDate = `${day}/${month}/${year}`
 
-    // console.log(orderDetail.productVariant.product_id);
-    // console.log(orderDetail.order_id)
-    // console.log(formattedDate)
-    // console.log(product.name)
+    console.log(order.user_id)
 
     const orderInfos = {
+      userId: order.user_id,
       orderCode: orderDetail.order_id,
       orderDate: formattedDate,
       productName: product.name,
@@ -203,11 +201,62 @@ const UserController = {
 
     console.log(orderInfos)
 
-    res.render("requests.ejs", {order:orderInfos})
+    res.render("requests-page.ejs", {order:orderInfos});
   },
 
-  showEditUserRequestes: (req, res)=>{
-    
+  showEditUserRequests: async (req, res)=>{
+    const {id} = req.params;
+
+    const order = await Order.findOne({
+      where:{user_id: id}  
+    });
+
+    const orderDetail = await OrderDetail.findOne({
+      where:{order_id: order.id},
+      include:[
+        {
+        model: Order,
+        as: "order",
+        require: false
+        },
+        {
+          model: ProductVariant,
+          as: "productVariant",
+          require: false
+        }
+      ],
+      raw: false
+    })
+
+    const product = await Product.findOne({
+      where:{id:orderDetail.productVariant.product_id},
+      include:{
+        model: Category,
+        as: "category",
+        require: false
+      },
+      raw: false
+    })
+
+    const createdAt = orderDetail.order.createdAt;
+    const dateOnly = createdAt.toISOString().split("T")[0];
+    const [year, month, day] = dateOnly.split("-");
+    const formattedDate = `${day}/${month}/${year}`
+
+
+    const orderInfos = {
+      userId: order.user_id,
+      orderCode: orderDetail.order_id,
+      orderDate: formattedDate,
+      productName: product.name,
+      productModel: orderDetail.productVariant.model,
+      productSize: orderDetail.productVariant.size,
+      productColor: orderDetail.productVariant.color,
+      quantity: orderDetail.quantity
+
+    }
+
+    res.render("requests-page-edit.ejs", {order:orderInfos});
   },
 
   updateUserRequestsInfos: (req, res)=>{

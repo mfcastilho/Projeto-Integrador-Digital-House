@@ -54,7 +54,7 @@ body{
 
   position: absolute;
   bottom: 2rem;
-  right: 17%;
+  right: 8%;
 
   border-radius: .2rem; 
 }
@@ -78,7 +78,8 @@ body{
 }
 
 .assistant-form-box input{
-  width: 70%;
+  width: 90%;
+  padding-left: .6rem;
 }
 
 .info-request {
@@ -126,5 +127,6 @@ form div input:hover{
 }
 
 .quantity-class{
-  width: 35%;
+  width: 45%;
+  padding-left: .6rem;
 }

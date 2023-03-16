@@ -268,3 +268,8 @@ input:-webkit-autofill {
   width: 19%;
   margin: 0;
 }
+
+.danger{
+  color: red;
+  margin-bottom: 2rem;
+}
