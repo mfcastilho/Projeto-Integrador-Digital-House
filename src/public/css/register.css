@@ -151,7 +151,6 @@ input:-webkit-autofill {
 
 .input-box{
   width: 80%;
-
 }
 
 
@@ -162,6 +161,12 @@ input:-webkit-autofill {
   background-color: #d8d9db;
 }
 
+.select-state{
+  height: 2.95rem;
+  border: 0.05rem solid #d3d2d2;
+  font-size: 1.6rem;
+  background-color: #d8d9db;
+}
 
 
 .inputs-column-behavior{
@@ -265,11 +270,10 @@ input:-webkit-autofill {
 }
 
 .state, .address-number{
-  width: 19%;
+  width: 45%;
   margin: 0;
 }
 
 .danger{
   color: red;
-  margin-bottom: 2rem;
 }
