@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/requests.css">
+    <link rel="stylesheet" href="/css/user-edit-buttons.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+
+
+    <title>Urbano t-shirts</title>
+
+    <link rel="stylesheet" href="/css/header.css">
+    <script src="/js/showSubmenuHeaderMobile.js" defer></script>
+</head>
+
+<body id="body-div">
+
+
+
+    <!-- ===== HEADER ===== -->
+  <%- include("./components/header2.ejs") %>
+
+    <main>
+
+        <div class="main-container">
+
+            <!-- =====  MENU LATERAL COM BUTÕES DE EDIÇÃO ===== -->
+    <%- include("./components/user-edit-buttons.ejs") %>
+
+            <section class="form-section">
+
+              <form class="request-form" action="/usuario/area-cliente/<%= order.userId %>/pedidos/editar" method="GET">
+      
+                <div class="hugging-form off-mode-style">
+      
+                  <div class="assistant-form-box">
+                    <div class="input-box">
+                      <label for="requestNumber">Código do Pedido:</label>   
+                      <input type="text" name="requestNumber" id="requestNumber" required disabled value="<%= order.orderCode %>" >
+                    </div>
+                    <div class="input-box">
+                      <label for="requestData">Data do pedido:</label>   
+                      <input type="text" name="requestData" id="requestData" required disabled value="<%= order.orderDate %>">
+                    </div>
+                  </div>
+        
+                
+                  <div class="assistant-form-box">
+                    <div class="input-box">
+                      <label for="productName">Produto</label>   
+                      <input type="text" name="productName" id="productName" required disabled value="<%= order.productName %>">
+                    </div>
+                    <div class="input-box">
+                      <label for="productModel">Modelo</label>   
+                      <input type="text" name="productModel" id="productModel" required disabled value="<%= order.productModel %>">
+                    </div>
+                  </div>
+      
+                  <div class="assistant-form-box">
+                    <div class="input-box">
+                      <label for="productSize">Tamanho</label>   
+                      <input type="text" name="productSize" id="productSize" required disabled value="<%= order.productSize %>">
+                    </div>
+                    <div class="input-box">
+                      <label for="productColor">Cor</label>   
+                      <input type="text" name="productColor" id="productColor" required disabled value="<%= order.productColor %>">
+                    </div>  
+                  </div>
+      
+                  <div class="input-box">
+                    <label for="quantity">Quantidade</label>   
+                    <input class="quantity-class" type="text" name="quantity" id="quantity" required disabled value="<%= order.quantity %>">
+                  </div>
+      
+                </div>
+      
+                <!-- <button class="send_button" type="submit">Editar</button> -->
+      
+              </form>
+      
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+  <%- include("./components/footer.ejs") %>
+
+  <!-- ===== WHATSAPP BUTTON ===== -->
+  <%- include("./components/whatsapp-button.ejs") %>
+
+    <script src="assets/js/header-behavior.js"></script>
+</body>
+
+</html>

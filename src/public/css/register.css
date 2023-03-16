@@ -154,6 +154,16 @@ input:-webkit-autofill {
 
 }
 
+
+.select-gender{
+  height: 2.95rem;
+  border: 0.05rem solid #d3d2d2;
+  font-size: 1.6rem;
+  background-color: #d8d9db;
+}
+
+
+
 .inputs-column-behavior{
   margin-top: 3rem;
   padding-left: 3rem;
@@ -245,7 +255,8 @@ input:-webkit-autofill {
 
 .hugging-inputs-box select{
   height: 2.95rem;
-  border: 0.05rem solid #c2c0c0;
+  border: 0.05rem solid #d3d2d2;
+  background-color: #d8d9db;
 } 
 
 .city, .public-place{
@@ -256,4 +267,9 @@ input:-webkit-autofill {
 .state, .address-number{
   width: 19%;
   margin: 0;
+}
+
+.danger{
+  color: red;
+  margin-bottom: 2rem;
 }

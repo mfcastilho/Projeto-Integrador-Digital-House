@@ -12,9 +12,10 @@
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/user-panel-personal-data.css">
+    <link rel="stylesheet" href="/css/user-edit-buttons.css">
 
     <link rel="icon" href="/img/favicon-logo-urbano.png">
-    
+
     <link rel="stylesheet" href="/css/header.css">
     <script src="/js/showSubmenuHeaderMobile.js" defer></script>
 
@@ -32,58 +33,59 @@
 
       <div class="main-container">
 
-    <!-- =====  MENU LATERAL COM BUTÕES DE EDIÇÃO ===== -->
+         <!-- =====  MENU LATERAL COM BUTÕES DE EDIÇÃO ===== -->
     <%- include("./components/user-edit-buttons.ejs") %>
-     
+
 
         <section class="form-section">
+          
+          <form id="personal-data-form" action="/usuario/area-cliente/<%= user.id%>/dados-pessoais/editar" method="GET" class="">
 
-
-          <form id="personal-data-form" action="/usuario/area-cliente/<%= user.id%>/dados-pessoais" method="POST" class="">
-
-            <div class="hugging-form">
+            <div class="hugging-form off-mode-style">
 
               <div class="input-box large-input">
                 <label for="name">Nome completo</label>
-                <input type="text" name="name" id="name" required value="<%= user.name %> ">
+                <input type="text" name="name" id="name" required disabled value="<%= user.name %> ">
               </div>
             
               <div class="assistant-form-box">
       
                 <div class="input-box">
                   <label for="cpf">CPF</label>
-                  <input type="text" name="cpf" id="cpf" required value="<%= user.cpf %> "> 
+                  <input type="text" name="cpf" id="cpf" required disabled value="<%= user.cpf %> "> 
                 </div>
+      
+                
               
               </div>
       
               <div class="input-box large-input">
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" value="<%= user.email %> " required >
+                <input type="email" name="email" id="email" value="<%= user.email %> " required disabled>
               </div>
       
               <div class="input-box large-input">
-                <label for="tel">Celular</label>
-                <input type="tel" name="tel" id="tel" maxlength="15" value="<%= user.tel %> "  required >
+                <label for="tel">Telefone</label>
+                <input type="tel" name="tel" id="tel" maxlength="15" value="<%= user.tel %> "  required disabled>
               </div>
       
               <div class="assistant-form-box">
       
                 <div class="input-box">
-                  <label for="password">Senha</label>
-                  <input type="password" name="password" id="new-password" value="<%= user.password %>"  required >
+                  <label for="new-password">Senha</label>
+                  <input type="password" name="new-password" id="new-password" value="<%= user.password %>"  required disabled>
                 </div>
       
-                <div class="input-box">
+                <!-- <div class="input-box">
                   <label for="type-again">Confirmar senha</label>
-                  <input type="password" name="type-again" id="type-again">
-                </div>
+                  <input type="password" name="type-again" id="type-again" required disabled>
+                </div> -->
 
               </div>
 
             </div>
               
-            <button type="submit">Salvar</button>
+            <button type="submit">Editar</button>
 
           </form>
 

@@ -15,114 +15,54 @@ body{
   font-family: 'PT Sans', sans-serif;
 }
 
-
-.main-container{
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
- 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-
-  position: relative;
-
-
-  margin-bottom: 1.4rem;
-  padding: 2rem 10rem;
-  
- 
-}
-
-.register-button-section {
-    background-color: #4C3863;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    max-width: 23rem;
-    height: inherit; /* valores do pai */
-    padding: 5rem 0;
-    gap: 3rem; /* espaço entre os filhos */
-    margin-top: 20.3rem;
-
-}
-
-.register-button-section a {
-  text-decoration: none;
-  align-items: center;
-
-}
-
-.register-button {
-  max-width: 20rem;
-  width: 80%;
-  height: 4.8rem;
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  background-color: white;
-  gap: 5px;
-  border-radius: 5px;
-  transition: background-color 450ms;
-}
-
-.register-button p{
-    font-size: 2rem;
-    font-weight: 700;
-    color: black;
-}
-
-.register-button:hover {
-  background-color: #F6E4E4;
-}
-
-
-form div input {
-  transition: background-color 450ms;
-
-}
-
-form div input:hover{
-  background-color: #F6E4E4;
-}
-
 .form-section {
     width: 70%;
-<<<<<<<< HEAD:src/public/css/requests.css
-    margin-top: 0;
-    display: flex;
-    flex-direction: row;
+    margin-left: 3rem ;
 }
 
-.addresses {
-    background-color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    margin-top: 0;
 
-    
+.request-form{
+  padding: 2rem;
+  position: relative;
+  border: 1px solid black;
+  border-radius: .3rem;
+  width: 90%;
+  margin: 2rem 0;
 }
 
-.address-box {
-    width: 100%;
-========
-    margin-top: 20.3rem;
-    
-}
-
-form {
+.hugging-form {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column; 
   
 }
 
+.form-section form button{
+  background-color: #584374;
+  color: #D9D9D9;
+
+  border: none;
+
+  width: 10rem;
+  height: 4rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: .4s;
+
+  position: absolute;
+  bottom: 2rem;
+  right: 8%;
+
+  border-radius: .2rem; 
+}
+
+.form-section form button:hover{
+
+  background-color: #372948;  
+}
 
 .input-box {
     display: flex;
@@ -132,14 +72,14 @@ form {
 }
 
 .assistant-form-box {
->>>>>>>> c1279d5102fbeefdf1d7eca49242260e4d2f7c94:assets/css/address-edit.css
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-<<<<<<<< HEAD:src/public/css/requests.css
-    margin-top: 3rem;
-    gap: 2rem;
+}
 
+.assistant-form-box input{
+  width: 90%;
+  padding-left: .6rem;
 }
 
 .info-request {
@@ -159,9 +99,7 @@ form {
     background-color: #D9D9D9;
     width: 100%;
     font-size: 2rem;
-    padding: 1rem;
-    margin-top: -9rem;
-
+    padding: 1rem; 
 }
 
 .description {
@@ -170,28 +108,8 @@ form {
 
 } 
 
-========
-    gap: 5px;
-}
 
-.hugging-form {
-    width: 80%;
-    display: flex;
-    gap: 25px;
-    flex-direction: column;
-  
-}
 
-form button {
-  background-color: #4C3863;
-  width: 100px;
-  height: 40px;
-  border: none;
-  color: white;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 17px;
-  margin-top: auto; /* PQ O TOP COLOCOU PARA BAIXO? */
-}
 
 form div label {
   font-size: 2rem;
@@ -201,5 +119,14 @@ form div input {
   background-color: #D9D9D9;
   border: none;
   height: 3rem;
+  transition: background-color 450ms;
 }
->>>>>>>> c1279d5102fbeefdf1d7eca49242260e4d2f7c94:assets/css/address-edit.css
+
+form div input:hover{
+  background-color: #F6E4E4;
+}
+
+.quantity-class{
+  width: 45%;
+  padding-left: .6rem;
+}
