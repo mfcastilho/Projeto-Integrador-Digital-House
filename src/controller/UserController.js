@@ -1,22 +1,15 @@
-const dataBase = require("../data-base/dataBase.json");
-const fs = require("fs");
-const path = require("path");
+// const dataBase = require("../data-base/dataBase.json");
+// const fs = require("fs");
+// const path = require("path");
 
-const {User, Address} = require("../models");
+const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
 
-const UserModel = require("../data-base/UserModel");
+// const UserModel = require("../data-base/UserModel");
 
 
 const UserController = {
   showUserAreaPage: async (req, res) =>{
     const {id} = req.params;
-
-    // const user = UserModel.findByPk(id);
-    // if(!user){
-    //   return res 
-    //     .status(404)
-    //     .json("Usuário não encontrado");
-    // }
 
     const user = await User.findByPk(id, {
       include:{
@@ -27,19 +20,11 @@ const UserController = {
       raw:false
     })
 
-    return res.render("user-panel-personal-data.ejs", {user});
+    return res.render("personal-data-page.ejs", {user});
   },
 
   showEditUserPersonalDataPage: async (req, res) =>{
-    
     const {id} = req.params;
-
-    // const user = UserModel.findByPk(id);
-    // if(!user){
-    //   return res 
-    //     .status(404)
-    //     .json("Usuário não encontrado");
-    // }
 
     const user = await User.findByPk(id, {
       include:{
@@ -50,7 +35,7 @@ const UserController = {
       raw: false
     })
 
-    return res.render("edit-user-panel-personal-data.ejs", {user});
+    return res.render("personal-data-page-edit.ejs", {user});
   },
 
   updateUserInfos: async (req, res)=>{
@@ -104,66 +89,174 @@ const UserController = {
     return res.render("address-page.ejs", {user:userFound});
   },
 
-  showEditUserAddress: (req, res)=>{
+  showEditUserAddress: async (req, res)=>{
     const {id} = req.params;
     
-    const userFound = UserModel.findByPk(id);
-    if(!userFound){
-      res
-        .status(404)
-        .json("Usuário não encontrado");
-    }
-
-    const userAddress = userFound.address;
-    console.log(userAddress);
+    const userFound = await User.findByPk(id, {
+      include:{
+        model: Address,
+        as: "address",
+        require: false
+      },
+      raw: false
+    });
   
-    return res.render("address-page-edit.ejs", {address: userAddress, user:userFound});
+    return res.render("address-page-edit.ejs", {user:userFound});
   },
   
-  updateUserAddressInfos: (req, res)=>{
+  updateUserAddressInfos: async (req, res)=>{
     const {id} = req.params;
 
-    const userFound = UserModel.findByPk(id);
-    
-    const userUpdate = {
-      id:userFound.id,
-      email:userFound.email,
-      password:userFound.password,
-      name:userFound.name,
-      cpf:userFound.cpf,
-      tel:userFound.tel,
-      genre:userFound.genre,
-      birthday:userFound.birthday,
-      profilePicture:userFound.profilePicture,
-      address:{
-        zipCode:req.body.zipCode,
-        publicPlace:req.body.publicPlace,
-        number:req.body.number,
-        complement:req.body.complement,
-        district:req.body.district,
-        reference:req.body.reference,
-        city:req.body.city,
-        state:req.body.state
-      }
+    const {
+      zipCode,
+      publicPlace,
+      number,
+      complement,
+      district,
+      reference,
+      city,
+      state
+    } = req.body;
+
+    const user = await User.findByPk(id, {
+      include:{
+        model: Address,
+        as: "address",
+        require: false
+      },
+      raw:false
+    })  
+   
+    const userAddressUpdate = {
+      id: user.address.id,
+      zip_code: zipCode == undefined ? user.address.zip_code : zipCode,
+      public_place: publicPlace == undefined ? user.public_place : publicPlace,
+      number: number == undefined ? user.number : number,
+      complement: complement == undefined ? user.complement : complement,
+      district: district == undefined ? user.district : district,
+      reference: reference == undefined ? user.reference : reference, 
+      city: city == undefined ? user.city : city,
+      state: state == undefined ? user.state : state    
     }
 
-    const response = UserModel.update(id, userUpdate);
+    await Address.update(userAddressUpdate, {
+      where:{id:user.address.id}
+    })
 
-    if(!response){
-      res
-        .status(404)
-        .json("Erro!Usuário não foi atualizado no banco");
+    res.redirect(`/usuario/area-cliente/${user.id}/dados-pessoais`);  
+  },
+
+  showUserRequestesPage: async (req, res)=>{
+    const {id} = req.params;
+
+    const order = await Order.findOne({
+      where:{user_id: id}  
+    });
+
+    const orderDetail = await OrderDetail.findOne({
+      where:{order_id: order.id},
+      include:[
+        {
+        model: Order,
+        as: "order",
+        require: false
+        },
+        {
+          model: ProductVariant,
+          as: "productVariant",
+          require: false
+        }
+      ],
+      raw: false
+    })
+
+    const product = await Product.findOne({
+      where:{id:orderDetail.productVariant.product_id},
+      include:{
+        model: Category,
+        as: "category",
+        require: false
+      },
+      raw: false
+    })
+
+    const createdAt = orderDetail.order.createdAt;
+    const dateOnly = createdAt.toISOString().split("T")[0];
+    const [year, month, day] = dateOnly.split("-");
+    const formattedDate = `${day}/${month}/${year}`
+
+    console.log(order.user_id)
+
+    const orderInfos = {
+      userId: order.user_id,
+      orderCode: orderDetail.order_id,
+      orderDate: formattedDate,
+      productName: product.name,
+      productModel: orderDetail.productVariant.model,
+      productSize: orderDetail.productVariant.size,
+      productColor: orderDetail.productVariant.color,
+      quantity: orderDetail.quantity
+
     }
 
-    res.redirect(`/usuario/area-cliente/${id}/dados-pessoais`);  
+    console.log(orderInfos)
+
+    res.render("requests-page.ejs", {order:orderInfos});
   },
 
-  showUserRequestesPage: (req, res)=>{
-    
-  },
+  showEditUserRequests: async (req, res)=>{
+    const {id} = req.params;
 
-  showEditUserRequestes: (req, res)=>{
-    
+    const order = await Order.findOne({
+      where:{user_id: id}  
+    });
+
+    const orderDetail = await OrderDetail.findOne({
+      where:{order_id: order.id},
+      include:[
+        {
+        model: Order,
+        as: "order",
+        require: false
+        },
+        {
+          model: ProductVariant,
+          as: "productVariant",
+          require: false
+        }
+      ],
+      raw: false
+    })
+
+    const product = await Product.findOne({
+      where:{id:orderDetail.productVariant.product_id},
+      include:{
+        model: Category,
+        as: "category",
+        require: false
+      },
+      raw: false
+    })
+
+    const createdAt = orderDetail.order.createdAt;
+    const dateOnly = createdAt.toISOString().split("T")[0];
+    const [year, month, day] = dateOnly.split("-");
+    const formattedDate = `${day}/${month}/${year}`
+
+
+    const orderInfos = {
+      userId: order.user_id,
+      orderCode: orderDetail.order_id,
+      orderDate: formattedDate,
+      productName: product.name,
+      productModel: orderDetail.productVariant.model,
+      productSize: orderDetail.productVariant.size,
+      productColor: orderDetail.productVariant.color,
+      quantity: orderDetail.quantity
+
+    }
+
+    res.render("requests-page-edit.ejs", {order:orderInfos});
   },
 
   updateUserRequestsInfos: (req, res)=>{

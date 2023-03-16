@@ -1,6 +1,10 @@
 const UserModel = require("../data-base/UserModel");
 const {validationResult} = require("express-validator");
 const {User, Address} = require("../models");
+const {v4:makeId} = require("uuid");
+const comparingRegisterEmails =  require("../public/js/comparingRegisterEmails");
+const comparingRegisterPasswords = require("../public/js/comparingRegisterPasswords");
+
 
 const AuthController = {
     showRegister: (req, res)=>{
@@ -8,54 +12,75 @@ const AuthController = {
     },
 
     showLogin: (req, res)=>{
-        console.log(req.route.path);
         return res.render("login.ejs");
     },
 
-    storeUser: (req, res)=>{
-        console.log("Criando usuário");
-        console.log(req.body);
-        
-        const {email, password, person, name, cpf, cel, tel, genre, birthday, profilePicture, zipCode, publicPlace, number, complement, district, reference, city} = req.body;
-          
-        const newUser = {
-          id:makeId(),
-          email, 
-          password, 
-          person,
-           name,
-           cpf,
-           cel,
-           tel,
-           genre,
-           birthday,
-           profilePicture,
-           zipCode,
-           publicPlace,
-           number,
-           complement,
-           district,
-           reference,
-           city
-        }
-    
-        dataBase.users.push(newUser);
-        const dbJSON = JSON.stringify(dataBase);
-    
-        fs.writeFileSync(path.resolve("src", "data-base", "dataBase.json"), dbJSON);
-        return res.redirect("/home");// 
+    storeUser: async (req, res)=>{
+      const resultValidations = validationResult(req);
+      const {email, confirmEmail, password, confirmPassword, name, cpf, tel, gender, zipCode, publicPlace, number, complement, district, reference, city, state} = req.body;
+      
+      console.log(gender)
+      if(resultValidations.errors.length > 0){
+        return res.render("register.ejs", {errors:resultValidations.mapped(), old:req.body});
+      }
+
+      // const emailResp = comparingRegisterEmails(email, confirmEmail);
+      // if(!emailResp){
+      //   return res.render("register.ejs", {
+      //     errors:{
+      //       email:{
+      //         msg: "A confirmação de email está incorreta"
+      //       }
+      //     },
+      //     old: req.body
+      //   })
+      // }
+      // const passwordResp = comparingRegisterPasswords(password, confirmPassword);
+      // if(!passwordResp){
+      //   return res.render("register.ejs",{
+      //     errors:{
+      //       password:{
+      //         msg: "A confirmação da senha está incorreta"
+      //       }
+      //     },
+      //     old: req.body
+      //   })
+      // }
+
+      const newUserAddress = {
+        id:makeId(),
+        public_place:publicPlace,
+        number:number,
+        complement:complement,
+        reference:reference,
+        zip_code:zipCode,
+        district:district,
+        city:city,
+        state:state
+      }
+
+      const newUser = {
+        id:makeId(),
+        name:name,
+        cpf:cpf,
+        gender: gender,
+        email:email, 
+        password:password, 
+        tel:tel,
+        is_admin: false,
+        address_id:newUserAddress.id
+      }
+      await Address.create(newUserAddress);
+      await User.create(newUser);
+
+      return res.redirect("/login"); 
         
     },
 
     logging: async (req, res)=>{
 
     const resultValidations = validationResult(req);
-
-    //const db = UserModel.findAll();
-
     const {email, password} = req.body;
-
-    
 
     if(resultValidations.errors.length > 0){
       return res.render("login.ejs", {errors:resultValidations.mapped(), old:req.body});
@@ -63,7 +88,6 @@ const AuthController = {
 
     let passwordIsCorrect = false;
 
-    //const user = db.find(user=>user.email==email);
     const user = await User.findOne({
       where:{
         email:email
@@ -75,11 +99,6 @@ const AuthController = {
       },
       raw:false
     })
-
-    console.log(email)
-    console.log(password)
-    console.log(user.password)
-    
 
     if(user.email == undefined){
       return res.render("login.ejs",{

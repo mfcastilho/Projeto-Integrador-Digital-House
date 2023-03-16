@@ -11,7 +11,7 @@ router.get("/login", AuthController.showLogin);
 router.post("/login", validations, AuthController.logging);
 
 router.get("/usuario/cadastro", AuthController.showRegister); 
-router.post("/usuario/cadastro", AuthController.storeUser);
+router.post("/usuario/cadastro", validations, AuthController.storeUser);
 
 router.post("/usuario/logout", AuthController.logout);
 
