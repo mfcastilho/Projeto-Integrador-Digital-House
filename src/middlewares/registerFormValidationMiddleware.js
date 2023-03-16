@@ -9,7 +9,10 @@ const registerFormValidationMiddleware = [
     .isEmail().withMessage("Digite um formato de email correto"),
     
     check("confirmEmail").custom((value, {req})=>{
-      if(value !== req.body.email){
+
+      if(value == ""){
+        throw new Error("campo obrigatório")
+      }else if(value !== req.body.email){
           throw new Error("E-mail não batem. Verifique o valor digitado.")
       }
   
@@ -22,7 +25,9 @@ const registerFormValidationMiddleware = [
     .isLength( {min:6} ).withMessage("A senha precisa ter no mínimo 6 caracteres"),
 
   check("confirmPassword").custom((value, {req})=>{
-    if(value !== req.body.password){
+    if(value == ""){
+      throw new Error("campo obrigatório")
+    }else if(value !== req.body.password){
         throw new Error("Senhas não batem. Verifique o valor digitado.")
     }
 
@@ -74,7 +79,10 @@ const registerFormValidationMiddleware = [
 
   check("city") 
   .trim().bail()
-  .notEmpty().withMessage("campo obrigatório")
+  .notEmpty().withMessage("campo obrigatório"),
+  
+  check("state") 
+  .trim()
     
 ]
 

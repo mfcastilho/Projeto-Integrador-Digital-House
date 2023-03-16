@@ -19,33 +19,10 @@ const AuthController = {
       const resultValidations = validationResult(req);
       const {email, confirmEmail, password, confirmPassword, name, cpf, tel, gender, zipCode, publicPlace, number, complement, district, reference, city, state} = req.body;
       
-      console.log(gender)
+      console.log(state)
       if(resultValidations.errors.length > 0){
         return res.render("register.ejs", {errors:resultValidations.mapped(), old:req.body});
       }
-
-      // const emailResp = comparingRegisterEmails(email, confirmEmail);
-      // if(!emailResp){
-      //   return res.render("register.ejs", {
-      //     errors:{
-      //       email:{
-      //         msg: "A confirmação de email está incorreta"
-      //       }
-      //     },
-      //     old: req.body
-      //   })
-      // }
-      // const passwordResp = comparingRegisterPasswords(password, confirmPassword);
-      // if(!passwordResp){
-      //   return res.render("register.ejs",{
-      //     errors:{
-      //       password:{
-      //         msg: "A confirmação da senha está incorreta"
-      //       }
-      //     },
-      //     old: req.body
-      //   })
-      // }
 
       const newUserAddress = {
         id:makeId(),
