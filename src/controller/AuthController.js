@@ -59,6 +59,9 @@ const AuthController = {
     const resultValidations = validationResult(req);
     const {email, password} = req.body;
 
+    console.log(email)
+    console.log(password)
+
     if(resultValidations.errors.length > 0){
       return res.render("login.ejs", {errors:resultValidations.mapped(), old:req.body});
     }
@@ -77,7 +80,7 @@ const AuthController = {
       raw:false
     })
 
-    if(user.email == undefined){
+    if(!user){
       return res.render("login.ejs",{
         errors:{
           email:{
