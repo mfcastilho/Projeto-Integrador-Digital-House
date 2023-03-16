@@ -42,11 +42,11 @@
                   <div class="assistant-form-box">
                     <div class="input-box">
                       <label for="requestNumber">Código do Pedido:</label>   
-                      <input type="text" name="requestNumber" id="requestNumber" required disabled value="" >
+                      <input type="text" name="requestNumber" id="requestNumber" required disabled value="<%= order.orderCode %>" >
                     </div>
                     <div class="input-box">
                       <label for="requestData">Data do pedido:</label>   
-                      <input type="text" name="requestData" id="requestData" required disabled value="">
+                      <input type="text" name="requestData" id="requestData" required disabled value="<%= order.orderDate %>">
                     </div>
                   </div>
         
@@ -54,28 +54,28 @@
                   <div class="assistant-form-box">
                     <div class="input-box">
                       <label for="productName">Produto</label>   
-                      <input type="text" name="productName" id="productName" required disabled value="">
+                      <input type="text" name="productName" id="productName" required disabled value="<%= order.productName %>">
                     </div>
                     <div class="input-box">
                       <label for="productModel">Modelo</label>   
-                      <input type="text" name="productModel" id="productModel" required disabled value="">
+                      <input type="text" name="productModel" id="productModel" required disabled value="<%= order.productModel %>">
                     </div>
                   </div>
       
                   <div class="assistant-form-box">
                     <div class="input-box">
                       <label for="productSize">Tamanho</label>   
-                      <input type="text" name="productSize" id="productSize" required disabled value="">
+                      <input type="text" name="productSize" id="productSize" required disabled value="<%= order.productSize %>">
                     </div>
                     <div class="input-box">
                       <label for="productColor">Cor</label>   
-                      <input type="text" name="productColor" id="productColor" required disabled value="">
+                      <input type="text" name="productColor" id="productColor" required disabled value="<%= order.productColor %>">
                     </div>  
                   </div>
       
                   <div class="input-box">
                     <label for="quantity">Quantidade</label>   
-                    <input class="quantity-class" type="text" name="quantity" id="quantity" required disabled value="">
+                    <input class="quantity-class" type="text" name="quantity" id="quantity" required disabled value="<%= order.quantity %>">
                   </div>
       
                 </div>

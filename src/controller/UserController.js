@@ -2,7 +2,7 @@ const dataBase = require("../data-base/dataBase.json");
 const fs = require("fs");
 const path = require("path");
 
-const {User, Address, Order, OrderDetail} = require("../models");
+const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
 
 const UserModel = require("../data-base/UserModel");
 
@@ -150,12 +150,60 @@ const UserController = {
     const {id} = req.params;
 
     const order = await Order.findOne({
-      where:{user_id: id}
+      where:{user_id: id}  
     });
 
-    console.log(order);
+    const orderDetail = await OrderDetail.findOne({
+      where:{order_id: order.id},
+      include:[
+        {
+        model: Order,
+        as: "order",
+        require: false
+        },
+        {
+          model: ProductVariant,
+          as: "productVariant",
+          require: false
+        }
+      ],
+      raw: false
+    })
 
-    res.render("requests.ejs")
+    const product = await Product.findOne({
+      where:{id:orderDetail.productVariant.product_id},
+      include:{
+        model: Category,
+        as: "category",
+        require: false
+      },
+      raw: false
+    })
+
+    const createdAt = orderDetail.order.createdAt;
+    const dateOnly = createdAt.toISOString().split("T")[0];
+    const [year, month, day] = dateOnly.split("-");
+    const formattedDate = `${day}/${month}/${year}`
+
+    // console.log(orderDetail.productVariant.product_id);
+    // console.log(orderDetail.order_id)
+    // console.log(formattedDate)
+    // console.log(product.name)
+
+    const orderInfos = {
+      orderCode: orderDetail.order_id,
+      orderDate: formattedDate,
+      productName: product.name,
+      productModel: orderDetail.productVariant.model,
+      productSize: orderDetail.productVariant.size,
+      productColor: orderDetail.productVariant.color,
+      quantity: orderDetail.quantity
+
+    }
+
+    console.log(orderInfos)
+
+    res.render("requests.ejs", {order:orderInfos})
   },
 
   showEditUserRequestes: (req, res)=>{
