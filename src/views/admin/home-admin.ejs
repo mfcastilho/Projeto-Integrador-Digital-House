@@ -126,9 +126,9 @@
 										<a href="/produto/<%= productVariant.id %>/feminino" type="button" class="btn btn-primary open-btn" target="_blank">Abrir</a>
 									<% } %>
 									
-									<a href="#" type="button" class="btn btn-edit-custom edit-btn">Editar</a>
+									<a href="/admin/produtos/editar" type="button" class="btn btn-edit-custom edit-btn">Editar</a>
 
-									<form action="#" method="POST" class="delete-btn-form">
+									<form action="/admin/produtos/excluir?_method=DELETE" method="POST" class="delete-btn-form">
 										<button type="submit" class="btn btn-danger delete-btn">Excluir</button>
 									</form>								
 								</td>

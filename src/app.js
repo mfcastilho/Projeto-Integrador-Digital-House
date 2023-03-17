@@ -2,6 +2,10 @@
 const express = require("express");
 const app = express();
 const session = require("express-session");
+const methodOverride = require("method-override");
+
+
+
 
 
 
@@ -33,7 +37,7 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-
+app.use(methodOverride("_method"));
 
 
 //transformando a pasta public em estática(global)
