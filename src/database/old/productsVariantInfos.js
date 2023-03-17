@@ -8,8 +8,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-fem-branca.jpeg",
         size: "P",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"26b6e9f94f9152595b869dfb6b4fa470",
@@ -19,8 +19,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-fem-branca.jpeg",
         size: "M",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"185dd2fdc527f612ec4b240f98b1d2a9",
@@ -30,8 +30,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-fem-branca.jpeg",
         size: "G",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"fd93c1f4c5ee0a4ce221736b93c6b02e",
@@ -41,8 +41,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-fem-preta.jpeg",
         size: "P",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"dbf76438fb971e0b7e1b27285296fb16",
@@ -52,8 +52,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-fem-preta.jpeg",
         size: "M",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"60fcff84871d313d7020b6f0c52ef55e",
@@ -63,8 +63,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-fem-preta.jpeg",
         size: "G",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"aec3e2d9f21a186a5997375a8c71ac5c",
@@ -74,8 +74,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-masc-branca.jpeg",
         size: "",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"2ae69ff6be0c99d61b23a27a236e932a",
@@ -85,8 +85,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-masc-branca.jpeg",
         size: "",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"bfe933fa5155f786160922b1ac81041a",
@@ -96,8 +96,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-masc-branca.jpeg",
         size: "",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"84bffeeabff45e5a5c7312ef81b95d3b",
@@ -107,8 +107,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-masc-preta.jpeg",
         size: "P",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"40cf87687d16db6dc2b3547e86a45031",
@@ -118,8 +118,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-masc-preta.jpeg",
         size: "M",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8b56cfeebac871a92360dc9f30d6f80e",
@@ -129,8 +129,8 @@ const productsVariant = [
         image: "img/camiseta-animefury-masc-preta.jpeg",
         size: "G",
         product_id: "768995cb9938c64531e3e0d51d83f9f0",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c5d5a4a4b4ddhiu674xfhgifx5a4a4b4d5c5d5a4a4",
@@ -140,8 +140,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-fem-branca.jpeg",
         size: "P",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e6e5188d5c36d1fzfhzu9i994ca7dd9af6c48",
@@ -151,8 +151,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-fem-branca.jpeg",
         size: "M",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"1f0e0fca7dd9af6c48e6e5188d5c36d1",
@@ -162,8 +162,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-fem-branca.jpeg",
         size: "G",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"348c831a09b9c7f261b6d28e0b43aaea",
@@ -173,8 +173,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-fem-preta.jpeg",
         size: "P",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5c5d5a4a4b4d5c5d5a4e9a4e4b4d5c5d",
@@ -184,8 +184,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-fem-preta.jpeg",
         size: "M",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5a4a4b4d5c5gjhzldkjsghlj805c5d5a4a4b4d",
@@ -195,8 +195,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-fem-preta.jpeg",
         size: "G",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5d5a4a4b4d5c5d5a4adhgfzjzd5c5d5a4a4b",
@@ -206,8 +206,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-masc-azul.jpeg",
         size: "P",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4d5c5d5akjfçjiçojfd5c5d5a4a4b4d5c5d5a",
@@ -217,8 +217,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-masc-azul.jpeg",
         size: "M",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9a6c48e6e5188d5c36d11f0e0fca7dd9",
@@ -228,8 +228,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-masc-azul.jpeg",
         size: "G",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"83af15f95dc335c8b1d65b29ef587b0f",
@@ -239,8 +239,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-masc-branca.jpeg",
         size: "P",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4a4b4d5c5d876dhlkhy786655d5a4a4b4d5c",
@@ -250,8 +250,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-masc-branca.jpeg",
         size: "M",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6d1f0e0f7d9a6c48e6e5188d5c36d11f",
@@ -261,8 +261,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-masc-branca.jpeg",
         size: "G",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9f6e518c6d1f0e0fca7dd9af6c48e6e",
@@ -272,8 +272,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-masc-preta.jpeg",
         size: "P",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4a4b4d5c5der4a4b4d5c5d5a4a4b4d5c",
@@ -283,8 +283,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-masc-preta.jpeg",
         size: "M",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"1b6d28e0b43aaea348c831a09b9c7f26",
@@ -294,8 +294,8 @@ const productsVariant = [
         image: "img/camiseta-anothertitan-masc-preta.jpeg",
         size: "G",
         product_id: "70f175bcf29236f93bae59c660001547",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d5c5d5a4a4b4d5c5d5a4a4b4d5c5d5a4",
@@ -305,8 +305,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-fem-branca.jpeg",
         size: "P",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a4b4d5c5d5a4a4b4d5c5d5a4a4b4d5c5",
@@ -316,8 +316,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-fem-branca.jpeg",
         size: "M",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f95dc335c8b1d65b29ef587b0f83af15",
@@ -327,8 +327,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-fem-branca.jpeg",
         size: "G",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a4e9a4e4b4d5c5d5a4a4b4d5c5d5a4e9",
@@ -338,8 +338,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-fem-preta.jpeg",
         size: "P",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6e5188d5c36d11f0e0fca7dd9af6c48e",
@@ -349,8 +349,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-fem-preta.jpeg",
         size: "M",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4e4b4d5c5d5a4a4b4d5c5d5a4e9a4e4b",
@@ -360,8 +360,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-fem-preta.jpeg",
         size: "G",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8d5c36d11f0e0fca7dd9af6c48e6e518",
@@ -371,8 +371,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-masc-branca.jpeg",
         size: "P",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b4d5c5d5a4a4b4d5c5d5a4a4b4d5c5d5",
@@ -382,8 +382,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-masc-branca.jpeg",
         size: "M",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"1d9c1ca5f09e20d15e35e06a8c91a108",
@@ -393,8 +393,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-masc-branca.jpeg",
         size: "G",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6e3525d5ac9b20f5b1a82a40d31ecdcf",
@@ -404,8 +404,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-masc-preta.jpeg",
         size: "P",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"2df6d9a14c5180e18158d6abf41d8ed5",
@@ -415,8 +415,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-masc-preta.jpeg",
         size: "M",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"fbe0f89a51de5626b9c3f90af4ef4f6d",
@@ -426,8 +426,8 @@ const productsVariant = [
         image: "img/camiseta-berserk-masc-preta.jpeg",
         size: "G",
         product_id: "00ec13aa3bb8400e8a41e911dfd0a68e",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e183b54d2f7a8b1c74e75e84f950c0b9",
@@ -437,8 +437,8 @@ const productsVariant = [
         image: "img/camiseta-cowboyredemption-fem-preta.jpeg",
         size: "P",
         product_id: "420cc238e0a9fad5d736ac4788169554",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"25e7c63fbd0a14a432d357e8fbbe75ca",
@@ -448,8 +448,8 @@ const productsVariant = [
         image: "img/camiseta-cowboyredemption-fem-preta.jpeg",
         size: "M",
         product_id: "420cc238e0a9fad5d736ac4788169554",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c740c7e98d9badeff7daa847f1d1b1a3",
@@ -459,8 +459,8 @@ const productsVariant = [
         image: "img/camiseta-cowboyredemption-fem-preta.jpeg",
         size: "G",
         product_id: "420cc238e0a9fad5d736ac4788169554",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3c13f87b6e1fcd9d9f4c3a4b4d83b790",
@@ -470,8 +470,8 @@ const productsVariant = [
         image: "img/camiseta-cowboyredemption-masc-preta.jpeg",
         size: "P",
         product_id: "420cc238e0a9fad5d736ac4788169554",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b6f87c531ea1d2d2c891f92d87f17e57",
@@ -481,8 +481,8 @@ const productsVariant = [
         image: "img/camiseta-cowboyredemption-masc-preta.jpeg",
         size: "M",
         product_id: "420cc238e0a9fad5d736ac4788169554",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"aab7ecaa76f8fbdefc04a834be00c958",
@@ -492,8 +492,8 @@ const productsVariant = [
         image: "img/camiseta-cowboyredemption-masc-preta.jpeg",
         size: "G",
         product_id: "420cc238e0a9fad5d736ac4788169554",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d6d3e3c4f4e7d6b8a6f2c6f1b6c0c6d9",
@@ -503,8 +503,8 @@ const productsVariant = [
         image: "img/camiseta-cowboyredemption-masc-vermelha.jpeg",
         size: "P",
         product_id: "420cc238e0a9fad5d736ac4788169554",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5a21bc5f903d5a7678b6f9a2c1d3f3e7",
@@ -514,8 +514,8 @@ const productsVariant = [
         image: "img/camiseta-cowboyredemption-masc-vermelha.jpeg",
         size: "M",
         product_id: "420cc238e0a9fad5d736ac4788169554",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8c82b60d91ea91e2c0721b9a9f56ebea",
@@ -525,8 +525,8 @@ const productsVariant = [
         image: "img/camiseta-cowboyredemption-masc-vermelha.jpeg",
         size: "G",
         product_id: "420cc238e0a9fad5d736ac4788169554",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"904a6f49e6b0d89d76f16c2f1e9c0be7",
@@ -536,8 +536,8 @@ const productsVariant = [
         image: "img/camiseta-death-fem-branca.jpeg",
         size: "P",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e6bb7f6a62fa6fbf55dfdc732b90e57c",
@@ -547,8 +547,8 @@ const productsVariant = [
         image: "img/camiseta-death-fem-branca.jpeg",
         size: "M",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9fc2652e11e3d3c56cf80d86204f7ee1",
@@ -558,8 +558,8 @@ const productsVariant = [
         image: "img/camiseta-death-fem-branca.jpeg",
         size: "G",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
 
     {
@@ -570,8 +570,8 @@ const productsVariant = [
         image: "img/camiseta-death-fem-preta.jpeg",
         size: "P",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"1a1c12a9f9aa73e0c5d687e276f2cc21",
@@ -581,8 +581,8 @@ const productsVariant = [
         image: "img/camiseta-death-fem-preta.jpeg",
         size: "M",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"2d2c3a3bb9a7bc9e4685dbad7a20ee0d",
@@ -592,8 +592,8 @@ const productsVariant = [
         image: "img/camiseta-death-fem-preta.jpeg",
         size: "G",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4a4b0c7d6dcd5a5c5d5a4a4b4d5c5d5a",
@@ -603,8 +603,8 @@ const productsVariant = [
         image: "img/camiseta-death-masc-branca.jpeg",
         size: "P",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5d5a4a4b4d5c5d5a4a4b4d5c5d5a4a4b",
@@ -614,8 +614,8 @@ const productsVariant = [
         image: "img/camiseta-death-masc-branca.jpeg",
         size: "M",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4d5c5d5a4a4b4d7c5d5a4a4b4d5c5da",
@@ -625,8 +625,8 @@ const productsVariant = [
         image: "img/camiseta-death-masc-branca.jpeg",
         size: "G",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a4b4d5c5d5a4a4c5d5a4a4b4d5c5",
@@ -636,8 +636,8 @@ const productsVariant = [
         image: "img/camiseta-death-masc-preta.jpeg",
         size: "P",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5c5d5a4a4b4d5c5d5a4a4b4d5c5d5a4a",
@@ -647,8 +647,8 @@ const productsVariant = [
         image: "img/camiseta-death-masc-preta.jpeg",
         size: "M",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"61d71e52d36a138f2669d9b6f074f6b8",
@@ -658,8 +658,8 @@ const productsVariant = [
         image: "img/camiseta-death-masc-preta.jpeg",
         size: "G",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a92ab12147e3b3ee1da8d6c75f9b8129",
@@ -669,8 +669,8 @@ const productsVariant = [
         image: "img/camiseta-death-masc-vermelha.jpeg",
         size: "P",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7d8c5186dc6182f19ef3a3fcda7d8ce6",
@@ -680,8 +680,8 @@ const productsVariant = [
         image: "img/camiseta-death-masc-vermelha.jpeg",
         size: "M",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"39f56a35c2a2ebc6d11cb14eb0cf29c2",
@@ -691,8 +691,8 @@ const productsVariant = [
         image: "img/camiseta-death-masc-vermelha.jpeg",
         size: "G",
         product_id: "bf5ddcfbfeb1c3affd54efad7069aac9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"1a1e9de7439c536aa156e24b8ee1d88e",
@@ -702,8 +702,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-fem-azul.jpeg",
         size: "P",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"20f16d2f8b18c44d9e091dc3c3bc1d8d",
@@ -713,8 +713,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-fem-azul.jpeg",
         size: "M",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7c768c1d77ba4d54662e408c26c1f691",
@@ -724,8 +724,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-fem-azul.jpeg",
         size: "G",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a6c02b6de865c6f3bb7c70c74da25a7d",
@@ -735,8 +735,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-fem-branca.jpeg",
         size: "P",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"11e9c9c07dfe2b2af04583c59a7de035",
@@ -746,8 +746,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-fem-branca.jpeg",
         size: "M",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e7e15f89dc5cfc9f470320d0c5f67ec5",
@@ -757,8 +757,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-fem-branca.jpeg",
         size: "G",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7a67b99a34d969f2e9833aaeecc2dc95",
@@ -768,8 +768,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-fem-preta.jpeg",
         size: "P",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"2350fa20fb0e4e4ec4af4c4d4f3e3c3d",
@@ -779,8 +779,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-fem-preta.jpeg",
         size: "M",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3c3d4f3e4e4ec4af4c4d4f3e2350fa20",
@@ -790,8 +790,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-fem-preta.jpeg",
         size: "G",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4e4ec4af4c4d4f3e2350fa203c3d4f3e",
@@ -801,8 +801,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-masc-azul.jpeg",
         size: "P",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c4af4c4d4f3e2350fa203c3d4f3e4e4e",
@@ -812,8 +812,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-masc-azul.jpeg",
         size: "M",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"0d15e9c0e9e16f09ef33d85bb0be0daa",
@@ -823,8 +823,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-masc-azul.jpeg",
         size: "G",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
 
     {
@@ -835,8 +835,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-masc-branca.jpeg",
         size: "P",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"16b784f1093f3f1906d5db6adbd2dd4c",
@@ -846,8 +846,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-masc-branca.jpeg",
         size: "M",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"0d10ba747b01f46cb8f75d0dfec7f240",
@@ -857,8 +857,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-masc-branca.jpeg",
         size: "G",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"94f716062fc6f90c7cb2a07e104a8eab",
@@ -868,8 +868,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-masc-preta.jpeg",
         size: "P",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b4e1f92d4ed4c4df3e3c3d4f4ec4af4c",
@@ -879,8 +879,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-masc-preta.jpeg",
         size: "M",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4d4f3e3c3d4f4ec4af4c4d4f92d4ed4c",
@@ -890,8 +890,8 @@ const productsVariant = [
         image: "img/camiseta-evillook-masc-preta.jpeg",
         size: "G",
         product_id: "93634e9bd73ed4fdb2794a598b1ec3b9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"af4c4d4f3e3c3d4f4ec4e1f92d4ed4c",
@@ -901,8 +901,8 @@ const productsVariant = [
         image: "img/camiseta-grandspacecowboy-fem-preta.jpeg",
         size: "P",
         product_id: "643f3f234d05a02eddbf6724ba1494a8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3e3c3d4f4ec4af4c4d4f92d4ed4c4d4f",
@@ -912,8 +912,8 @@ const productsVariant = [
         image: "img/camiseta-grandspacecowboy-fem-preta.jpeg",
         size: "M",
         product_id: "643f3f234d05a02eddbf6724ba1494a8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e1f92d4ed4c4df3e3c3d4f4ec4af4c4",
@@ -923,8 +923,8 @@ const productsVariant = [
         image: "img/camiseta-grandspacecowboy-fem-preta.jpeg",
         size: "G",
         product_id: "643f3f234d05a02eddbf6724ba1494a8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"25e2e0473ed97a2e85d0dc18102f1c68",
@@ -934,8 +934,8 @@ const productsVariant = [
         image: "img/camiseta-grandspacecowboy-masc-preta.jpeg",
         size: "P",
         product_id: "643f3f234d05a02eddbf6724ba1494a8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7b0a69a8a0de536fb07348f34c76c30b",
@@ -945,8 +945,8 @@ const productsVariant = [
         image: "img/camiseta-grandspacecowboy-masc-preta.jpeg",
         size: "M",
         product_id: "643f3f234d05a02eddbf6724ba1494a8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9f032307a7190892d58be93877e0428a",
@@ -956,8 +956,8 @@ const productsVariant = [
         image: "img/camiseta-grandspacecowboy-masc-preta.jpeg",
         size: "G",
         product_id: "643f3f234d05a02eddbf6724ba1494a8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
 
     {
@@ -968,8 +968,8 @@ const productsVariant = [
         image: "img/camiseta-grandspacecowboy-masc-vermelha.jpeg",
         size: "P",
         product_id: "643f3f234d05a02eddbf6724ba1494a8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f2e7e15f89dc5cfc9f470320d0c5f67e",
@@ -979,8 +979,8 @@ const productsVariant = [
         image: "img/camiseta-grandspacecowboy-masc-vermelha.jpeg",
         size: "M",
         product_id: "643f3f234d05a02eddbf6724ba1494a8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7e456ebf88b6400f96f98ba7f5b0c57d",
@@ -990,8 +990,8 @@ const productsVariant = [
         image: "img/camiseta-grandspacecowboy-masc-vermelha.jpeg",
         size: "G",
         product_id: "643f3f234d05a02eddbf6724ba1494a8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5d5ed24d2c5f5ff7d8c5186dc6182f19",
@@ -1001,8 +1001,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-fem-azul.jpeg",
         size: "P",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e278b8f6c9a6fc1decbfc23fbd70d8b4",
@@ -1012,8 +1012,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-fem-azul.jpeg",
         size: "M",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"56ef58a497c195b2ad9a9d34a4bc4c4b",
@@ -1023,8 +1023,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-fem-azul.jpeg",
         size: "G",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"73a59f492e2a2c3081e7ed1b3d9dd7ec",
@@ -1034,8 +1034,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-fem-preta.jpeg",
         size: "P",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"47b89d365c52238440a2a2ea1b1e0291",
@@ -1045,8 +1045,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-fem-preta.jpeg",
         size: "M",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9b6f074f6b861d71e52d36a138f2669",
@@ -1056,8 +1056,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-fem-preta.jpeg",
         size: "G",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c15f9b8129a92ab12147e3b3ee1da8d",
@@ -1067,8 +1067,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-masc-azul.jpeg",
         size: "P",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"59b6e0385116c788b04e30c6d9e72df1",
@@ -1078,8 +1078,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-masc-azul.jpeg",
         size: "M",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7d8ce639f56a35c2a2ebc6d11cb14eb0",
@@ -1089,8 +1089,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-masc-azul.jpeg",
         size: "G",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"2f8b18c44d9e091dc3c3bc1d8d20f16d",
@@ -1100,8 +1100,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-masc-preta.jpeg",
         size: "P",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5186dc6182f19ef3a3fcda7d8c5186dc",
@@ -1111,8 +1111,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-masc-preta.jpeg",
         size: "M",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3fcda7d8ce639f56a35c2a2ebc6d11cb",
@@ -1122,8 +1122,8 @@ const productsVariant = [
         image: "img/camiseta-invenciveis-masc-preta.jpeg",
         size: "G",
         product_id: "edbd0187d75e5e36a49f427b9ecb1c18",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4c4d4f3e3c3d4f4ec4af4c4d4f3e2350",
@@ -1133,8 +1133,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-fem-azul.jpeg",
         size: "P",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3d4f3e4e4ec4af4c4d4f3e2350fa203c",
@@ -1144,8 +1144,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-fem-azul.jpeg",
         size: "M",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"0be0daa0d15e9c0e9e16f09ef33d85bb",
@@ -1155,8 +1155,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-fem-azul.jpeg",
         size: "G",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"bb1f1a1a080b604fe5d04a999accc29c",
@@ -1166,8 +1166,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-fem-branca.jpeg",
         size: "P",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3f3f1906d5db6adbd2dd4c16b784f109",
@@ -1177,8 +1177,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-fem-branca.jpeg",
         size: "M",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"fec7f2400d10ba747b01f46cb8f75d0d",
@@ -1188,8 +1188,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-fem-branca.jpeg",
         size: "G",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f4c4df3e3c3d4f4ec4af4c4d4f92d4ed",
@@ -1199,8 +1199,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-fem-preta.jpeg",
         size: "P",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4c4df3e3c3d4f4ec4e1f92d4ed4c4df3",
@@ -1210,8 +1210,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-fem-preta.jpeg",
         size: "M",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4ec4af4c4d4f92d4ed4c4d4f3e3c3d4f",
@@ -1221,8 +1221,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-fem-preta.jpeg",
         size: "G",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"85bb0be0daa0d15e9c0e9e16f09ef33d",
@@ -1232,8 +1232,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-masc-azul.jpeg",
         size: "P",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"85bb0be0daa0dgfdluyuh0e9e16f09ef33d",
@@ -1243,8 +1243,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-masc-azul.jpeg",
         size: "M",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"0c74da25a7da6c02b6de865c6f3bb7c7",
@@ -1254,8 +1254,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-masc-azul.jpeg",
         size: "G",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4e4ec4dhfsdahkdhd4f3e2350fa203c3d4f3e",
@@ -1265,8 +1265,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-masc-branca.jpeg",
         size: "P",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c4d4f3e2350fa203c3d4f3e4e4ec4af",
@@ -1276,8 +1276,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-masc-branca.jpeg",
         size: "M",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8b1e00dfbf49e6a3b3ebe9366aa731dc6d7638e7",
@@ -1287,8 +1287,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-masc-branca.jpeg",
         size: "G",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d0f81a8dd96580c7ccbe4781cc2d08df8d63f376",
@@ -1298,8 +1298,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-masc-preta.jpeg",
         size: "P",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a0d74b9c7dda13cf63a59f7f1c883d12aef95c21",
@@ -1309,8 +1309,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-masc-preta.jpeg",
         size: "M",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8e7f6d5c4b3a2918c0b9a7d6e5f4c3b2a1908e7f",
@@ -1320,8 +1320,8 @@ const productsVariant = [
         image: "img/camiseta-kimetsu-masc-preta.jpeg",
         size: "G",
         product_id: "cdc15b47c6437bb212c4f1c91ebbb033",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b1d42f8d7f49e6a3b3ebe9366aa731dc6d7638e7",
@@ -1331,8 +1331,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-fem-azul.jpeg",
         size: "P",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6c7d8a9b9c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1",
@@ -1342,8 +1342,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-fem-azul.jpeg",
         size: "M",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e",
@@ -1353,8 +1353,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-fem-azul.jpeg",
         size: "G",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6f5e4d3c2b1a0987f6e5d4c3b2a1098f7e6d5c4",
@@ -1364,8 +1364,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-fem-preta.jpeg",
         size: "P",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c3b2a1d0e9f8c7b6a5948d7e6f5e4c3b2a1098f",
@@ -1375,8 +1375,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-fem-preta.jpeg",
         size: "M",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7d6e5f4c3b2a1d09e8f7c6b5a49382b1a0",
@@ -1386,8 +1386,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-fem-preta.jpeg",
         size: "G",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9f8e7d6c5b4a39281706f5e4d3c2b1a09",
@@ -1397,8 +1397,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-masc-azul.jpeg",
         size: "P",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
 
     {
@@ -1409,8 +1409,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-masc-azul.jpeg",
         size: "M",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f2e1d0c9b8a7f6e5d4c3b2a1098f7e6d5c4",
@@ -1420,8 +1420,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-masc-azul.jpeg",
         size: "G",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5d6c7b8a9f0e1d2c3b4a58439e0f1d2c3b4a58",
@@ -1431,8 +1431,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-masc-branca.jpeg",
         size: "P",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d",
@@ -1442,8 +1442,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-masc-branca.jpeg",
         size: "M",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f4e5d6c7b8a9a0b1c2d3e4f5a6b7c8d9e0f1a2",
@@ -1453,8 +1453,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-masc-branca.jpeg",
         size: "G",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1",
@@ -1464,8 +1464,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-masc-preta.jpeg",
         size: "P",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
@@ -1475,8 +1475,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-masc-preta.jpeg",
         size: "M",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3",
@@ -1486,8 +1486,8 @@ const productsVariant = [
         image: "img/camiseta-studioghibli-masc-preta.jpeg",
         size: "G",
         product_id: "30f5c58f338f2aa9ed720b2730378ce1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e5f6g7h8i9j0hgzh756875p6q7r8s9t0u1v2w3",
@@ -1497,8 +1497,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-fem-azul.jpeg",
         size: "P",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d9e0f1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7",
@@ -1508,8 +1508,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-fem-azul.jpeg",
         size: "M",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3",
@@ -1519,8 +1519,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-fem-azul.jpeg",
         size: "G",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4",
@@ -1530,8 +1530,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-fem-preta.jpeg",
         size: "P",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8a9b0c1d2e3f4g5h6i7j8k9l0m1n2o3p4q5r6s7",
@@ -1541,8 +1541,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-fem-preta.jpeg",
         size: "M",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7c8d9e0f1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6",
@@ -1552,8 +1552,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-fem-preta.jpeg",
         size: "G",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5",
@@ -1563,8 +1563,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-masc-azul.jpeg",
         size: "P",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"g8h9i0j1k2l3m4n5o5p6q7r8s9t0u1v2w3x4y5z6",
@@ -1574,8 +1574,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-masc-azul.jpeg",
         size: "M",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6f7g8h9i0j1k2l3m4n5o5p6q7r8s9t0u1v2w3x4",
@@ -1585,8 +1585,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-masc-azul.jpeg",
         size: "G",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5e6f7g8h9i0j1k2l3m4n5o5p6q7r8s9t0u1v2w3",
@@ -1596,8 +1596,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-masc-preta.jpeg",
         size: "P",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8b9c0d1e2f3ghiuhfui6j7k8l9m0n1o2p3q4r5s6t7",
@@ -1607,8 +1607,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-masc-preta.jpeg",
         size: "M",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6",
@@ -1618,8 +1618,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-masc-preta.jpeg",
         size: "G",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4f5e6d7c8b9a0b1c2d3e4f5a6b7c8d9e0f1a2b",
@@ -1629,8 +1629,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-masc-vermelha.jpeg",
         size: "P",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3",
@@ -1640,8 +1640,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-masc-vermelha.jpeg",
         size: "M",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t",
@@ -1651,8 +1651,8 @@ const productsVariant = [
         image: "img/camiseta-treinadorpokemon-masc-vermelha.jpeg",
         size: "G",
         product_id: "beb441846ccc98e59a40a4c39519212b",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3d8fa61b6f02b88f7430bdc38ebf72f6",
@@ -1662,8 +1662,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-fem-azul.jpeg",
         size: "P",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f6c48e6e5188d5c36d11f0e0fca7dd9a",
@@ -1673,8 +1673,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-fem-azul.jpeg",
         size: "M",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7b0f83af15f95dc335c8b1d65b29ef58",
@@ -1684,8 +1684,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-fem-azul.jpeg",
         size: "G",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a5b9f4a4a4b4d5c5d5a4a4b4d5c5d5a4",
@@ -1695,8 +1695,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-fem-branca.jpeg",
         size: "P",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9a4e4b4d5c5d5a4a4b4d5c5d5a4e9a4",
@@ -1706,8 +1706,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-fem-branca.jpeg",
         size: "M",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c7f261b6d28e0b43aaea348c831a09b9",
@@ -1717,8 +1717,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-fem-branca.jpeg",
         size: "G",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6c9f6e518c6d1f0e0f7d9a6c48e6e518",
@@ -1728,8 +1728,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-fem-preta.jpeg",
         size: "P",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5c5d5a4a4b4d5c5dsdgksdb4d5c5d5a4a",
@@ -1739,8 +1739,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-fem-preta.jpeg",
         size: "M",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8d5c36d11f0e0fca7dd9c48e6e518",
@@ -1750,8 +1750,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-fem-preta.jpeg",
         size: "G",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5d5a4e9a4e4b4d5c5d5a4a4b4d5c5d5",
@@ -1761,8 +1761,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-masc-azul.jpeg",
         size: "P",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9f4a4a4b4d5c5d5a4a4b4d5c5d5a4e9a",
@@ -1772,8 +1772,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-masc-azul.jpeg",
         size: "M",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f83af15f95dc335c8b1d65b29ef587b0",
@@ -1783,8 +1783,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-masc-azul.jpeg",
         size: "G",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b9f4a4a4b4d5c5d5a4a4b4d5c5d5a4a5",
@@ -1794,8 +1794,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-masc-branca.jpeg",
         size: "P",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"1b6f02b88f7430bdc38ebf72f63d8fa",
@@ -1805,8 +1805,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-masc-branca.jpeg",
         size: "M",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4e4b4d5c5d5a4a4b4d5c5d5a4e9a4e9",
@@ -1816,8 +1816,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-masc-branca.jpeg",
         size: "G",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6e5188d5c36d11f0e0fca7dd9af6c48",
@@ -1827,8 +1827,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-masc-preta.jpeg",
         size: "P",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5a4a4b4d5c5d5a4a4b4d5c5d5a4a4b4",
@@ -1838,8 +1838,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-masc-preta.jpeg",
         size: "M",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"261b6d28e0b43aaea348c831a09b9c7",
@@ -1849,8 +1849,8 @@ const productsVariant = [
         image: "img/camiseta-aforça-masc-preta.jpeg",
         size: "G",
         product_id: "8e4e94g2-bd1f-8282-8f29-cf512e5622v7",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f15f95dc335c8b1d65b29ef587b0f83",
@@ -1860,8 +1860,8 @@ const productsVariant = [
         image: "img/camiseta-alieninside-fem-preta.jpeg",
         size: "P",
         product_id: "8f3z81h8-cg2d-2357-2g32-cf45h5713c6",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4a4b4d5c5d5hfk\hfh4b4d5c5d5a4a4b4d5",
@@ -1871,8 +1871,8 @@ const productsVariant = [
         image: "img/camiseta-alieninside-fem-preta.jpeg",
         size: "M",
         product_id: "8f3z81h8-cg2d-2357-2g32-cf45h5713c6",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e518c6d1f0e0f7d9a6c48e6e5188d5c",
@@ -1882,8 +1882,8 @@ const productsVariant = [
         image: "img/camiseta-alieninside-fem-preta.jpeg",
         size: "G",
         product_id: "8f3z81h8-cg2d-2357-2g32-cf45h5713c6",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4b4d5c5d5a4a4b4d5c5d5a4e9a4e4b4",
@@ -1893,8 +1893,8 @@ const productsVariant = [
         image: "img/camiseta-alieninside-masc-azul.jpeg",
         size: "P",
         product_id: "8f3z81h8-cg2d-2357-2g32-cf45h5713c6",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9a4e9a4e4b4d5c5d5a4a4b4d5c5d5a4",
@@ -1904,8 +1904,8 @@ const productsVariant = [
         image: "img/camiseta-alieninside-masc-azul.jpeg",
         size: "M",
         product_id: "8f3z81h8-cg2d-2357-2g32-cf45h5713c6",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"af15f95dc335c8b1d65b29ef587b0f8",
@@ -1915,8 +1915,8 @@ const productsVariant = [
         image: "img/camiseta-alieninside-masc-azul.jpeg",
         size: "G",
         product_id: "8f3z81h8-cg2d-2357-2g32-cf45h5713c6",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a4a4b4d5c2jk9dspo5a4a4b4d5c5d5a4a4",
@@ -1926,8 +1926,8 @@ const productsVariant = [
         image: "img/camiseta-alieninside-masc-preta.jpeg",
         size: "P",
         product_id: "8f3z81h8-cg2d-2357-2g32-cf45h5713c6",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e326c2cc8918c455d92ce1f9d9c52387",
@@ -1937,8 +1937,8 @@ const productsVariant = [
         image: "img/camiseta-alieninside-masc-preta.jpeg",
         size: "M",
         product_id: "8f3z81h8-cg2d-2357-2g32-cf45h5713c6",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"0c0f867b78d6c51eebeeb8f2677d6919",
@@ -1948,8 +1948,8 @@ const productsVariant = [
         image: "img/camiseta-alieninside-masc-preta.jpeg",
         size: "G",
         product_id: "8f3z81h8-cg2d-2357-2g32-cf45h5713c6",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b7c49d8f366a7c2e711bf46d51c086f8",
@@ -1959,8 +1959,8 @@ const productsVariant = [
         image: "img/camiseta-anakin-fem-preta.jpeg",
         size: "P",
         product_id: "1s7z31j5-fn8w-1692-3h91-vh37j2927k9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7cdd52b9f7eaf1a8a77c7a2f181d46c7",
@@ -1970,8 +1970,8 @@ const productsVariant = [
         image: "img/camiseta-anakin-fem-preta.jpeg",
         size: "M",
         product_id: "1s7z31j5-fn8w-1692-3h91-vh37j2927k9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8f66eb1c83a41d3f81ec8a32441f050f",
@@ -1981,8 +1981,8 @@ const productsVariant = [
         image: "img/camiseta-anakin-fem-preta.jpeg",
         size: "G",
         product_id: "1s7z31j5-fn8w-1692-3h91-vh37j2927k9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3e0717503a3e2030d5c5f6ac2c6e0db6",
@@ -1992,8 +1992,8 @@ const productsVariant = [
         image: "img/camiseta-anakin-masc-preta.jpeg",
         size: "P",
         product_id: "1s7z31j5-fn8w-1692-3h91-vh37j2927k9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"458a59349d426901456413ad72e4d4e2",
@@ -2003,8 +2003,8 @@ const productsVariant = [
         image: "img/camiseta-anakin-masc-preta.jpeg",
         size: "M",
         product_id: "1s7z31j5-fn8w-1692-3h91-vh37j2927k9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"0fde8618b15faa898ed390320d0c5f67",
@@ -2014,8 +2014,8 @@ const productsVariant = [
         image: "img/camiseta-anakin-masc-preta.jpeg",
         size: "G",
         product_id: "1s7z31j5-fn8w-1692-3h91-vh37j2927k9",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f0dd0e45d7c98d8dfed2911d95f43d0c",
@@ -2025,8 +2025,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-fem-branca.jpeg",
         size: "P",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8dc0c7f59d076e9c1d6408ca33e3ed3a",
@@ -2036,8 +2036,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-fem-branca.jpeg",
         size: "M",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a145de114e5a6cbdd3a3dc99c3055d6c",
@@ -2047,8 +2047,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-fem-branca.jpeg",
         size: "G",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"2a2e2a2d2c5f5ff7d8c5186dc6182f19",
@@ -2058,8 +2058,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-fem-preta.jpeg",
         size: "P",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"cee35a942f6c1ed15eadd78f0814afad",
@@ -2069,8 +2069,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-fem-preta.jpeg",
         size: "M",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4f4ec4af4c4d4f3e3c3d4f3e2350fa20",
@@ -2080,8 +2080,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-fem-preta.jpeg",
         size: "G",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3c3d4f4ec4af4c4d4f3e2350fa203c3d",
@@ -2091,8 +2091,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-masc-branca.jpeg",
         size: "P",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7d8ce63jdhlzkdhkgjhx35c2a2ebc6d11cb14eb0",
@@ -2102,8 +2102,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-masc-branca.jpeg",
         size: "M",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d3f3bfc3dbc2f2d2c5f5ff7d8c5186dc",
@@ -2113,8 +2113,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-masc-branca.jpeg",
         size: "G",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3c3d4f3e4e4ehdgsdgsdkk4c4d4f3e2350fa20",
@@ -2124,8 +2124,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-masc-preta.jpeg",
         size: "P",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4af4c4d4f3e2350fa203c3d4f3e4e4ec",
@@ -2135,8 +2135,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-masc-preta.jpeg",
         size: "M",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7e777e727c5f5ff7d8c5186dc6182f19",
@@ -2146,8 +2146,8 @@ const productsVariant = [
         image: "img/camiseta-autodacompadecida-masc-preta.jpeg",
         size: "G",
         product_id: "3z5d42d9-vm6s-4563-4g63-hv85b5646f3",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d8d3c3dbc2f2d2c5f5ff7d8c5186dc61",
@@ -2157,8 +2157,8 @@ const productsVariant = [
         image: "img/camiseta-bruxado71-fem-preta.jpeg",
         size: "P",
         product_id: "3d5g67f7-gh9s-5743-9f74-cs87g8547j8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c5c7d8ce639f56a35c2a2ebc6d11cb14",
@@ -2168,8 +2168,8 @@ const productsVariant = [
         image: "img/camiseta-bruxado71-fem-preta.jpeg",
         size: "M",
         product_id: "3d5g67f7-gh9s-5743-9f74-cs87g8547j8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f1e0d5c5f6ac2c6e0db63e0717503a3e",
@@ -2179,8 +2179,8 @@ const productsVariant = [
         image: "img/camiseta-bruxado71-fem-preta.jpeg",
         size: "G",
         product_id: "3d5g67f7-gh9s-5743-9f74-cs87g8547j8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"1d9bde0ef6cf455f6d670b6a11b0db4b",
@@ -2190,8 +2190,8 @@ const productsVariant = [
         image: "img/camiseta-bruxado71-masc-preta.jpeg",
         size: "P",
         product_id: "3d5g67f7-gh9s-5743-9f74-cs87g8547j8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6a2a6c4d6f2b6c4d6f2b6c4d6f2b6c4d",
@@ -2201,8 +2201,8 @@ const productsVariant = [
         image: "img/camiseta-bruxado71-masc-preta.jpeg",
         size: "M",
         product_id: "3d5g67f7-gh9s-5743-9f74-cs87g8547j8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6d3a9a6a4c6d4c6d4c6d4c6d4c6d4c6d",
@@ -2212,8 +2212,8 @@ const productsVariant = [
         image: "img/camiseta-bruxado71-masc-preta.jpeg",
         size: "G",
         product_id: "3d5g67f7-gh9s-5743-9f74-cs87g8547j8",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4c6d4c6d4c6d4c6d4c6d3a9a6a4c6d4c",
@@ -2223,8 +2223,8 @@ const productsVariant = [
         image: "img/camiseta-clubedaluta-fem-preta.jpeg",
         size: "P",
         product_id: "1d6f78g7-fg7f-8794-3h74-af73a3678p1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d174c2451f8b2ca60bf75d9b1e7c48e8",
@@ -2234,8 +2234,8 @@ const productsVariant = [
         image: "img/camiseta-clubedaluta-fem-preta.jpeg",
         size: "M",
         product_id: "1d6f78g7-fg7f-8794-3h74-af73a3678p1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7c654d1330d7c10a979125e2c9d9b24f",
@@ -2245,8 +2245,8 @@ const productsVariant = [
         image: "img/camiseta-clubedaluta-fem-preta.jpeg",
         size: "G",
         product_id: "1d6f78g7-fg7f-8794-3h74-af73a3678p1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"48dd8c2307a71a3ef3b416b08eb49b39",
@@ -2256,8 +2256,8 @@ const productsVariant = [
         image: "img/camiseta-clubedaluta-masc-preta.jpeg",
         size: "P",
         product_id: "1d6f78g7-fg7f-8794-3h74-af73a3678p1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9baa2a7c563a84e0bdf23578c38d2e49",
@@ -2267,8 +2267,8 @@ const productsVariant = [
         image: "img/camiseta-clubedaluta-masc-preta.jpeg",
         size: "M",
         product_id: "1d6f78g7-fg7f-8794-3h74-af73a3678p1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4cb4d9c9cf25fcb79c41a85fcfe1e704",
@@ -2278,8 +2278,8 @@ const productsVariant = [
         image: "img/camiseta-clubedaluta-masc-preta.jpeg",
         size: "G",
         product_id: "1d6f78g7-fg7f-8794-3h74-af73a3678p1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d5bf5a6a5e6f7a6c5e6d155b6f88da6a",
@@ -2289,8 +2289,8 @@ const productsVariant = [
         image: "img/camiseta-clubedaluta-masc-vermelha.jpeg",
         size: "P",
         product_id: "1d6f78g7-fg7f-8794-3h74-af73a3678p1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"2f4d4f87b4a4a9d3b3a3a47a7c1f8f5f",
@@ -2300,8 +2300,8 @@ const productsVariant = [
         image: "img/camiseta-clubedaluta-masc-vermelha.jpeg",
         size: "M",
         product_id: "1d6f78g7-fg7f-8794-3h74-af73a3678p1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b5a786a01c6f5abac9b9dd0baf6c5f2e",
@@ -2311,8 +2311,8 @@ const productsVariant = [
         image: "img/camiseta-clubedaluta-masc-vermelha.jpeg",
         size: "G",
         product_id: "1d6f78g7-fg7f-8794-3h74-af73a3678p1",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7b469a212b1a7c2b2cb9a7a1bcb0ab48",
@@ -2322,8 +2322,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-fem-branco.jpeg",
         size: "P",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a623447e56d024cb3e3f3c78e1dc0c9d",
@@ -2333,8 +2333,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-fem-branco.jpeg",
         size: "M",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"295dd7907c6cb3788a3a7b3d3c3b7a39",
@@ -2344,8 +2344,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-fem-branco.jpeg",
         size: "G",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"71d122f77c06e7b144456352e651c979",
@@ -2355,8 +2355,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-fem-preta.jpeg",
         size: "P",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b963a1c7f2d34a02d7de1ba54f900b7a",
@@ -2366,8 +2366,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-fem-preta.jpeg",
         size: "M",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5b5d1a5e6c52abf8b9ac9b43f3b3d7c4",
@@ -2377,8 +2377,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-fem-preta.jpeg",
         size: "G",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"a6c80f6f4c345166a01d63bc9b8c2b0f",
@@ -2388,8 +2388,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-masc-azul.jpeg",
         size: "P",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5d5a5e5a5c5e5a5c5d5e5b5c5a5e5b5d",
@@ -2399,8 +2399,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-masc-azul.jpeg",
         size: "M",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"71c8e54fcd18a14498dfc9d9b8e31eb1",
@@ -2410,8 +2410,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-masc-azul.jpeg",
         size: "G",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e1ec32148b0a8c3b3f3c6d9e6e1c3b3",
@@ -2421,8 +2421,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-masc-branca.jpeg",
         size: "P",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3e4d4d4c4f4e4e4c4d4e4f4c4d4f4e4c",
@@ -2432,8 +2432,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-masc-branca.jpeg",
         size: "M",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f5b5d5a5e5c5aisido95b5c5d5b5e5d5c5a",
@@ -2443,8 +2443,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-masc-branca.jpeg",
         size: "G",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7d96f2d49c8e012b9d9b2f2d49c8e01",
@@ -2454,8 +2454,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-masc-preta.jpeg",
         size: "P",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"56cdaa89103cc3b3f3c3d9b9ba689c2",
@@ -2465,8 +2465,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-masc-preta.jpeg",
         size: "M",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8c8d8c8d8ddhhd798uud08c8d8c8d8c",
@@ -2476,8 +2476,8 @@ const productsVariant = [
         image: "img/camiseta-evileyes-masc-preta.jpeg",
         size: "G",
         product_id: "f9e5a4b199ba363ec76e7140098c2304",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"1f1e1c1d1e1c178687safhjsfj1e1c1d1f1c1e",
@@ -2487,8 +2487,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-fem-azul.jpeg",
         size: "P",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f5b5d5a5efdho89575b5c5d5b5e5d5c5a",
@@ -2498,8 +2498,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-fem-azul.jpeg",
         size: "M",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"420d35f24c7ee36f994ca96c7e1af03f",
@@ -2509,8 +2509,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-fem-azul.jpeg",
         size: "G",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8298a06861f1d54f53b86d3cb3fbdbb1",
@@ -2520,8 +2520,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-fem-branca.jpeg",
         size: "P",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c3ab97d3f11a8e88e10f5cb1f5a5c5b5",
@@ -2531,8 +2531,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-fem-branca.jpeg",
         size: "M",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7b85eaf5df5d2f1189b57c7ccbc4a4f4",
@@ -2542,8 +2542,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-fem-branca.jpeg",
         size: "G",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"896e1b67dc08cf2d3e3f9dfb32759c0a",
@@ -2553,8 +2553,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-fem-preta.jpeg",
         size: "P",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"235b7915a5agifu845bb35f5d5d5a5f5f5a5",
@@ -2564,8 +2564,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-fem-preta.jpeg",
         size: "M",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f4c4cc4e85d2dc7e96faddbf43250c01",
@@ -2575,8 +2575,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-fem-preta.jpeg",
         size: "G",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"9c52616c35a6b77d6b8c6d7a07c42a98",
@@ -2586,8 +2586,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-azul.jpeg",
         size: "P",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"52ac9e40f1c10f10d2d3b3e8d6a61e18",
@@ -2597,8 +2597,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-azul.jpeg",
         size: "M",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7d6a40ac9e18e88c3e2d3d3b8c2d7a6",
@@ -2608,8 +2608,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-azul.jpeg",
         size: "G",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c6d7a6b8ac9e18e83835d2d3b3e8d6a",
@@ -2619,8 +2619,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-branca.jpeg",
         size: "P",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"35a6b77d6b8c6d7a07c42a98c4c4cc4",
@@ -2630,8 +2630,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-branca.jpeg",
         size: "M",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d2dc7e96faddbf43250c01f4c4cc4e85",
@@ -2641,8 +2641,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-branca.jpeg",
         size: "G",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5d2d3psid76f6d6a61e1852ac9e40f1c10f1",
@@ -2652,8 +2652,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-cinza.jpeg",
         size: "P",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"40ac9e18e88c3e2d3d3b8c2d7a67d6a",
@@ -2663,8 +2663,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-cinza.jpeg",
         size: "M",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"b8c6d7a07c42a98c4c4cc4e85d2dc7e9",
@@ -2674,8 +2674,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-cinza.jpeg",
         size: "G",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6faddbf43250c01f4c4cc4e85d2dc7e9",
@@ -2685,8 +2685,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-preta.jpeg",
         size: "P",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8c6d7a07c42a98c4c4cc4e85d2dc7e96",
@@ -2696,8 +2696,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-preta.jpeg",
         size: "M",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"faddbf43250c01f4c4cc4e85d2dc7e96",
@@ -2707,8 +2707,8 @@ const productsVariant = [
         image: "img/camiseta-magojedi-masc-preta.jpeg",
         size: "G",
         product_id: "b91e7d7e526798aa496662c641b7146a",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"d3b3e8d6a61e1852ac9e40f1c10f10d2",
@@ -2718,8 +2718,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-fem-azul.jpeg",
         size: "P",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"2d3b8c2d7a67d6a40ac9e18e88c3e2d3",
@@ -2729,8 +2729,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-fem-azul.jpeg",
         size: "M",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5d2d3bjhsfkjf9876siusfjs2ac9e40f1c10f1",
@@ -2740,8 +2740,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-fem-azul.jpeg",
         size: "G",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8c3e2d3d3b8c2d7a67d6a40ac9e18e88",
@@ -2751,8 +2751,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-fem-branca.jpeg",
         size: "P",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6d7a07c42a98c4c4cc4e85d2dc7e96fa",
@@ -2762,8 +2762,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-fem-branca.jpeg",
         size: "M",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"52f2abff55fc93e3fc3af7fc8a93a81c40f25392e0ed9b68",
@@ -2773,8 +2773,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-fem-branca.jpeg",
         size: "G",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"492aa7a67a82d6e11e8ab0f87637f78b31f9d1d3697af10c",
@@ -2784,8 +2784,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-fem-preta.jpeg",
         size: "P",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7f3d3f308a7a6c123bfa92e91d9e2e8b1c37b1d31bdc432abf",
@@ -2795,8 +2795,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-fem-preta.jpeg",
         size: "M",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e45eb95e1e2450b6c23d8d7f1679133207940a18eae2fc9268",
@@ -2806,8 +2806,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-fem-preta.jpeg",
         size: "G",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"5f5566db79054e3d5d5e5b5c5a5a5e5d5c5b5d5e5e5a5d5c5b5d",
@@ -2817,8 +2817,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-masc-azul.jpeg",
         size: "P",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c4f8824df66a1d8d4f8996b69319e48a69d9ec6438e7ca6c84a6",
@@ -2828,8 +2828,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-masc-azul.jpeg",
         size: "M",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f2e29e1ebc41788c212dc91cb9d2c36fb514b447c41e947e7b4680d",
@@ -2839,8 +2839,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-masc-azul.jpeg",
         size: "G",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"7e65c42aefbc7a9a1e8d7c2a2dcd54ab3cf3d98442479bf9b153c1b7",
@@ -2850,8 +2850,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-masc-branca.jpeg",
         size: "P",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"99b21e0af3c3b3f3ca1c245dd2d28b9c621b580d19cc02f63cc74e562",
@@ -2861,8 +2861,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-masc-branca.jpeg",
         size: "M",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"20ec7e039f63ce81ec0b7c056c492f1d8c6f7bb6f16e142930b9a8b2c1b",
@@ -2872,8 +2872,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-masc-branca.jpeg",
         size: "G",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4a4d4e8d8c5b5a5a5c5d5e5f5e5c5d5b5d5c5a5b5c5e5d5e5c5d5b5d5c",
@@ -2883,8 +2883,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-masc-preta.jpeg",
         size: "P",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"68c0e1e2a57a0d33f14c42c68f0a74db0e390cbb7f836c1f23b7afcc2b54",
@@ -2894,8 +2894,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-masc-preta.jpeg",
         size: "M",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"583ea9d9b8403699ec8c8587fb768d69c98e7e95f6341c3e3f901ecb36fa7",
@@ -2905,8 +2905,8 @@ const productsVariant = [
         image: "img/camiste-middleearthadventure-masc-preta.jpeg",
         size: "G",
         product_id: "6a2691436cd142261b11da4ea005b5e5",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"8a1687d05e2f2c7cf09ca8ce6d7d83f2c068f1b9ed0715a5f3d5f0bcfa08f",
@@ -2916,8 +2916,8 @@ const productsVariant = [
         image: "img/camiseta-terramedia-fem-preto.jpeg",
         size: "P",
         product_id: "2a711ef456f8086bcb2dc498714be7de",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"6aa7b481d1ed023062172f9b2c6e61e6d4c6d4b6e6d5c6e5d6d4c6d5b6e5c6",
@@ -2927,8 +2927,8 @@ const productsVariant = [
         image: "img/camiseta-terramedia-fem-preto.jpeg",
         size: "M",
         product_id: "2a711ef456f8086bcb2dc498714be7de",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"782c5dc5b5d5e5e5d5c5b5a5b5c5e5f5d5c5e5b5d5e5a5c5d5e5c5d5b5d5c5e",
@@ -2938,8 +2938,8 @@ const productsVariant = [
         image: "img/camiseta-terramedia-fem-preto.jpeg",
         size: "G",
         product_id: "2a711ef456f8086bcb2dc498714be7de",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"f0d232fd9c9b8cb88fde6fa057a1d73b56fcb8be",
@@ -2949,8 +2949,8 @@ const productsVariant = [
         image: "img/camiseta-terramedia-masc-cinza.jpeg",
         size: "P",
         product_id: "2a711ef456f8086bcb2dc498714be7de",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3d5a5af5f9f8f30c5b946eef4207f0c070f1546e",
@@ -2960,8 +2960,8 @@ const productsVariant = [
         image: "img/camiseta-terramedia-masc-cinza.jpeg",
         size: "M",
         product_id: "2a711ef456f8086bcb2dc498714be7de",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"c30ef1d9e9a3e6a3b3ebe9366aa731dc6d7638e7",
@@ -2971,8 +2971,8 @@ const productsVariant = [
         image: "img/camiseta-terramedia-masc-cinza.jpeg",
         size: "G",
         product_id: "2a711ef456f8086bcb2dc498714be7de",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"4f4a2b50db990e6b75c6ee0b46be26d52f8d7f69",
@@ -2982,8 +2982,8 @@ const productsVariant = [
         image: "img/camiseta-terramedia-masc-preto.jpeg",
         size: "P",
         product_id: "2a711ef456f8086bcb2dc498714be7de",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"e5470d4e4c8b40ad0b0646ba11a54b214f6f49e6",
@@ -2993,8 +2993,8 @@ const productsVariant = [
         image: "img/camiseta-terramedia-masc-preto.jpeg",
         size: "M",
         product_id: "2a711ef456f8086bcb2dc498714be7de",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id:"3d18e9f9d0e99ca15c3e5d7edee73f2998b5f3ec",
@@ -3004,8 +3004,8 @@ const productsVariant = [
         image: "img/camiseta-terramedia-masc-preto.jpeg",
         size: "G",
         product_id: "2a711ef456f8086bcb2dc498714be7de",
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     }
 
 ]
