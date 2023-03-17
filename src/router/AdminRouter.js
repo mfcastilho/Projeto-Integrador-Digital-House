@@ -19,6 +19,7 @@ router.use(isLoginMiddleware);
 
 /*--- ROTAS--- */
 router.get("/admin/home", AdminController.showHomeAdmin);
+router.get("/admin/produtos/cadastro", AdminController.showProductRegisterPage);
 
 
 module.exports = router;
