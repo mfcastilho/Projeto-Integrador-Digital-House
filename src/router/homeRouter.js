@@ -1,13 +1,20 @@
+
+/*--- IMPORTAÇÕES --- */
 const express = require("express");
 const router = express.Router()
 
+
+/*--- IMPORTAÇÕES DO CONTROLLERS --- */
 const HomeController = require("../controller/HomeController.js");
 const isLogginMiddleware = require("../middlewares/isLoginMiddleware");
 
+
+
+/*--- MIDDLEWARE --- */
 router.use(isLogginMiddleware);
 
 
-
+/*--- ROTAS --- */
 router.get("/", HomeController.showHome);
 router.get("/home", HomeController.showHome);
 
