@@ -23,7 +23,7 @@
 	<main>
 		<div class="page">
 			<aside class="d-flex flex-column flex-shrink-0 p-3 min-vh-100 left">
-				<a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none logo-box">
+				<a href="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none logo-box">
 					<span class="fs-4"><img src="/img/logo-urbano-tshirt-trasparent.png" alt="" class="logo"></span>
 				</a>
 				<hr>
@@ -119,7 +119,13 @@
 								<td class="product-color"><%= productVariant.model %></td>
 								<td class="product-stock-quantity"><%= productVariant.quantity %></td>
 								<td class="buttons-table-box">
-									<a href="#" type="button" class="btn btn-primary open-btn">Abrir</a>
+
+									<% if(productVariant.model == "masculina"){ %>
+										<a href="/produto/<%= productVariant.id %>/masculino" type="button" class="btn btn-primary open-btn" target="_blank">Abrir</a>
+									<% }else{ %>
+										<a href="/produto/<%= productVariant.id %>/feminino" type="button" class="btn btn-primary open-btn" target="_blank">Abrir</a>
+									<% } %>
+									
 									<a href="#" type="button" class="btn btn-secondary edit-btn">Editar</a>
 
 									<form action="#" method="POST" class="delete-btn-form">
