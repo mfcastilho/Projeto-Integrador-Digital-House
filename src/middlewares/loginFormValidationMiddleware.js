@@ -1,6 +1,7 @@
 const { check } = require("express-validator");
 
 
+
 const loginFormValidationMiddleware = [
   check("email")
       .trim().bail()
