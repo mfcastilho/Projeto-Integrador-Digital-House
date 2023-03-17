@@ -23,8 +23,8 @@
 	<main>
 		<div class="page">
 			<aside class="d-flex flex-column flex-shrink-0 p-3 min-vh-100 left">
-				<a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none logo-box">
-					<span class="fs-4"><img src="../../../assets/img/urbano6.png" alt="" class="logo"></span>
+				<a href="/home" target="_blank" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none logo-box">
+					<span class="fs-4"><img src="/img/logo-urbano-tshirt-trasparent.png" alt="" class="logo"></span>
 				</a>
 				<hr>
 
@@ -34,11 +34,11 @@
 						data-bs-toggle="dropdown" aria-expanded="false">
 						
 						<% if(locals.userLogged && userLogged){ %>
-							<img src="<%= userLogged.profilePicture %>" alt="" width="32" height="32" class="rounded-circle me-2">
-							<strong><%= userLogged.name %></strong>
+							<!-- <img src="<%= userLogged.profilePicture %>" alt="" width="32" height="32" class="rounded-circle me-2"> -->
+							<strong class="user-name"><%= userLogged.name %></strong>
 						<% } else{ %>
 							<img src="https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png" alt="" width="32" height="32" class="rounded-circle me-2">
-							<strong>Nome do usuário</strong>
+							<strong class="user-name">Nome do usuário</strong>
 						<% } %>
 						
 					</a>
@@ -71,6 +71,15 @@
 							Cadastrar Produto
 						</a>
 					</li>
+
+					<li class="nav-item">
+						<a href="/admin/pedidos" class="nav-link" aria-current="page">
+							<svg class="bi pe-none me-2" width="16" height="16">
+								<use xlink:href="#home"></use>
+							</svg>
+							Pedidos
+						</a>
+					</li>
 		
 		
 				</ul>
@@ -78,22 +87,22 @@
 	
 			<section class="content">
 				<div class="d-flex flex-column mt-3">
-					<h1 class="mb-3 product-title">Produtos</h1>
-					<a href="/admin/produtos/cadastro" class="btn btn-primary mb-3 button-register" >Cadastrar</a>
+				 <h1 class="mb-3 product-title ">Produtos</h1>
+					<!-- <a href="/admin/produtos/cadastro" class="btn btn-primary mb-3 button-register" >Cadastrar</a> -->
 				</div>
 	
 				<table class="table table-dark table-striped table-bordered product-table">
 					<thead>
 						<tr>
-							<th scope="col">ID</th>
+							<th scope="col" class="col">ID</th>
 							<th scope="col">imagem</th>
 							<th scope="col">Nome</th>
-							<th scope="col">Preço</th>
+							<th scope="col" class="col-1">Preço</th>
 							<th scope="col">Tamanho</th>
 							<th scope="col">Cor</th>
-							<th scope="col">Modelo</th>
+							<th scope="col" class="col-1">Modelo</th>
 							<th scope="col">Estoque</th>
-							<th scope="col">Ações</th>
+							<th scope="col" class="col-1">Ações</th>
 						</tr>
 					</thead>
 
@@ -101,7 +110,7 @@
 						
 						<% productsVariant.forEach( productVariant => { %>
 							<tr>
-								<th s class="product-id" scope="row"><%= productVariant.id %> </th>
+								<th class="product-id" scope="row"><%= productVariant.id %> </th>
 								<td class="table-image"><img class="thumb product-image" src="/<%= productVariant.image %>" alt="" width="100px" height="100px"></td>
 								<td class="product-name"><%= productVariant.product.name %></td>
 								<td class="product-price">R$ <%= productVariant.product.price %></td>
@@ -110,8 +119,14 @@
 								<td class="product-color"><%= productVariant.model %></td>
 								<td class="product-stock-quantity"><%= productVariant.quantity %></td>
 								<td class="buttons-table-box">
-									<a href="#" type="button" class="btn btn-primary open-btn">Abrir</a>
-									<a href="#" type="button" class="btn btn-secondary edit-btn">Editar</a>
+
+									<% if(productVariant.model == "masculina"){ %>
+										<a href="/produto/<%= productVariant.id %>/masculino" type="button" class="btn btn-primary open-btn" target="_blank">Abrir</a>
+									<% }else{ %>
+										<a href="/produto/<%= productVariant.id %>/feminino" type="button" class="btn btn-primary open-btn" target="_blank">Abrir</a>
+									<% } %>
+									
+									<a href="#" type="button" class="btn btn-edit-custom edit-btn">Editar</a>
 
 									<form action="#" method="POST" class="delete-btn-form">
 										<button type="submit" class="btn btn-danger delete-btn">Excluir</button>

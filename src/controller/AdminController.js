@@ -18,6 +18,10 @@ const AdminController = {
         console.log(productsVariant)
         
         res.render("admin/home-admin.ejs", {productsVariant});
+    },
+
+    showProductRegisterPage: (req, res)=>{
+        return res.render("admin/products/productRegister.ejs");
     }
 }
 

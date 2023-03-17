@@ -2,8 +2,8 @@ const UserModel = require("../data-base/UserModel");
 const {validationResult} = require("express-validator");
 const {User, Address} = require("../models");
 const {v4:makeId} = require("uuid");
-const comparingRegisterEmails =  require("../public/js/comparingRegisterEmails");
-const comparingRegisterPasswords = require("../public/js/comparingRegisterPasswords");
+const bcrypt = require("bcrypt");
+
 
 
 const AuthController = {
@@ -24,6 +24,8 @@ const AuthController = {
         return res.render("register.ejs", {errors:resultValidations.mapped(), old:req.body});
       }
 
+      const hashPassword = bcrypt.hashSync(password, 10);
+
       const newUserAddress = {
         id:makeId(),
         public_place:publicPlace,
@@ -42,7 +44,7 @@ const AuthController = {
         cpf:cpf,
         gender: gender,
         email:email, 
-        password:password, 
+        password:hashPassword, 
         tel:tel,
         is_admin: false,
         address_id:newUserAddress.id
@@ -59,14 +61,9 @@ const AuthController = {
     const resultValidations = validationResult(req);
     const {email, password} = req.body;
 
-    console.log(email)
-    console.log(password)
-
     if(resultValidations.errors.length > 0){
       return res.render("login.ejs", {errors:resultValidations.mapped(), old:req.body});
     }
-
-    let passwordIsCorrect = false;
 
     const user = await User.findOne({
       where:{
@@ -80,33 +77,6 @@ const AuthController = {
       raw:false
     })
 
-    if(!user){
-      return res.render("login.ejs",{
-        errors:{
-          email:{
-            msg:"Usuário não existe"
-          }
-        },
-        old:req.body
-      });
-
-    }else{
-      
-      if(user.password == password){
-        passwordIsCorrect = true;
-      }
-    }
-
-    if(!passwordIsCorrect){
-      return res.render("login.ejs",{
-        errors:{
-          password:{
-            msg:"Senha incorreta"
-          }
-        },
-        old:req.body
-      });
-    }
     req.session.userLogged = user;
 
     if(user.is_admin){
