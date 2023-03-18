@@ -164,19 +164,27 @@ const HomeController = {
       productsVariant.filter(productVariant => productVariant.model === "masculina")
     )
     const chosenMaleTshirt = maleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
-    const maleTshirts = chosenMaleTshirt.filter(tshirt=> tshirt.size == "M");
+    const maleTshirts = chosenMaleTshirt.filter((tshirt, index, array)=>{
+      return index == array.findIndex(item=> item.color == tshirt.color);
+    });
+
+    const maleTshirtsSizes = chosenMaleTshirt.filter((tshirt, index, array)=>{
+      return index === array.findIndex(item=> item.size == tshirt.size);
+    });
 
     const femaleUniquesProducts = Object.values(
       productsVariant.filter(productVariant => productVariant.model === "feminina") 
     )
     const chosenFemaleTshirt = femaleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
-    const femaleTshirts = chosenFemaleTshirt.filter(tshirt=> tshirt.size == "M");
+    const femaleTshirts = chosenFemaleTshirt.filter((tshirt, index, array)=>{
+      return index == array.findIndex(item=> item.color == tshirt.color);
+    });
 
     if(!femaleTshirts[0]){
-      return res.render("inner-product-male.ejs",{productVariant, productsVariant:maleTshirts, routeGender:"masculino"});
+      return res.render("inner-product-male.ejs",{productVariant, productsVariant:maleTshirts, routeGender:"masculino", sizes:maleTshirtsSizes});
     }
 
-    return res.render("inner-product.ejs",{productVariant, productsVariant:maleTshirts, tshirt:femaleTshirts[0], routeGender:"masculino"});
+    return res.render("inner-product.ejs",{productVariant, productsVariant:maleTshirts, tshirt:femaleTshirts[0], routeGender:"masculino", sizes:maleTshirtsSizes});
 
   },
 
@@ -208,25 +216,26 @@ const HomeController = {
     // const femaleTshirts = chosenFemaleTshirt.filter(tshirt=> tshirt.size == "M");
     const femaleTshirts = chosenFemaleTshirt.filter((tshirt, index, array)=>{
       return index == array.findIndex(item=> item.color == tshirt.color);
-    })
-     
-    console.log(chosenFemaleTshirt)
+    });
 
+    const femaleTshirtsSizes = chosenFemaleTshirt.filter((tshirt, index, array)=>{
+      return index === array.findIndex(item=> item.size == tshirt.size);
+    });
+     
     const maleUniquesProducts = Object.values(
       productsVariant.filter(productVariant => productVariant.model === "masculina")
     )
 
     const chosenMaleTshirt = maleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
-    const maleTshirts = chosenMaleTshirt.filter(tshirt=> tshirt.size == "M");
-
-
-
+    const maleTshirts = chosenMaleTshirt.filter((tshirt, index, array)=>{
+      return index == array.findIndex(item=> item.color == tshirt.color);
+    });
 
     if(!maleTshirts[0]){
-      return res.render("inner-product-female.ejs",{productVariant, productsVariant:femaleTshirts, routeGender:"feminino"});
+      return res.render("inner-product-female.ejs",{productVariant, productsVariant:femaleTshirts, routeGender:"feminino", sizes:femaleTshirtsSizes});
     }
 
-    return res.render("inner-product.ejs",{productVariant, productsVariant:femaleTshirts, tshirt:maleTshirts[0], routeGender:"feminino"});
+    return res.render("inner-product.ejs",{productVariant, productsVariant:femaleTshirts, tshirt:maleTshirts[0], routeGender:"feminino", sizes:femaleTshirtsSizes});
 
   }
 }
