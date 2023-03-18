@@ -1,6 +1,4 @@
-console.log("rodando...");
 let urlAtual = window.location.href;
-console.log("URL:"+urlAtual);
 
 
 const maleButton = document.querySelector(".male-button");
@@ -13,6 +11,7 @@ const tagProductPrice = document.querySelector(".product-price");
 const tagProductImage = document.querySelector("#image");
 const tagProductName = document.querySelector("#product-name");
 const tagProductId = document.getElementById("product-id")
+// const tagProductQuantity = document.getElementById("quantity")
 
 const productsImages = document.querySelectorAll(".product-image");
 
@@ -26,6 +25,7 @@ let productPrice;
 let productImage;
 let productName;
 let productId;
+// let productQuantity;
 
 
 
@@ -148,6 +148,11 @@ function detectingWhoSizeButtonIsSelect(){
     });
 }
 
+// function getProductQuantity(){
+//     productQuantity = tagProductQuantity.innerHTML;
+//     return productQuantity;
+// }
+
 function getProductId(){
     tagProductId.style.display = "inline";
     productId = tagProductId.innerText;
@@ -157,24 +162,19 @@ function getProductId(){
 
 function getProductPrice(){
     productPrice = tagProductPrice.innerText;
-    console.log("Preço do produto: "+productPrice);
 }
 
 function getProductImage(){
     productImage = tagProductImage.src;
-    console.log("imagem do produto: "+productImage);
 }
 
 function getProductName(){
     productName = tagProductName.innerText;
-    console.log("Nome do produto: "+productName);
 }
 
 function sendDataToBackend(){
     form.addEventListener("submit", (e)=>{
 
-        console.log(sizeSelected)
-      
         if(selectedModel /*&& colorSelected*/ && sizeSelected){
             // e.preventDefault()
             const inputModel = document.querySelector("#model-input");
@@ -184,6 +184,7 @@ function sendDataToBackend(){
             const inputProductName = document.querySelector("#input-product-name");
             const inputProductImage = document.querySelector("#input-product-image")
             const inputProductId = document.querySelector("#input-product-id");
+            // const inputProductQuantity = document.querySelector("input-quantity-id");
 
             let id = tagProductId.innerHTML
             console.log("Id do produto: "+id);
@@ -195,6 +196,10 @@ function sendDataToBackend(){
             inputPrice.setAttribute("Value", productPrice);
             inputProductName.setAttribute("value", productName);
             inputProductImage.setAttribute("value", productImage);
+            
+            // inputProductQuantity.setAttribute("value", getProductQuantity());
+
+            // console.log(inputProductQuantity.value)
 
         }else{
             e.preventDefault();

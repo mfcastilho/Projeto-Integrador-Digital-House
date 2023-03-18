@@ -1,26 +1,36 @@
-console.log("rodando....");
-
 
 const plusSymbol = document.querySelector(".right-item");
 const minusSymbol = document.querySelector(".left-item");
 const quantity = document.querySelector(".center-item");
+const inputProductQuantity = document.querySelector("#input-quantity-id");
+
+
+let productQuantity;
 
 function quantityButtonsFuntion(){
+    
+    let quantityNumber = Number(quantity.innerHTML);
+
     plusSymbol.addEventListener("click", ()=>{
-        let quantityNumber = Number(quantity.innerHTML);
+        
         quantityNumber++;
-        console.log(quantityNumber)
         quantity.innerHTML = quantityNumber;
+        inputProductQuantity.setAttribute("value", quantityNumber.toString())
+        // console.log(inputProductQuantity.value)
     });
 
     minusSymbol.addEventListener("click", ()=>{
         let quantityNumber = Number(quantity.innerHTML);
         quantityNumber--;
-        console.log(quantityNumber)
         quantity.innerHTML = quantityNumber;
-        if(quantity.innerHTML <= 0){
-            quantity.innerHTML = 1;
+
+        if(quantityNumber <= 0){
+            quantityNumber = 1;
+            quantity.innerHTML = quantityNumber; 
         }
+
+        inputProductQuantity.setAttribute("value", quantityNumber.toString())
+        // console.log(inputProductQuantity.value)
     });
 }
 

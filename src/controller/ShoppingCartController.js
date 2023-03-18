@@ -24,7 +24,7 @@ const ShoppingCartController = {
 
     console.log(productVariant)
 
-    return res.render("shopping-cart.ejs", {productVariant, size});
+    return res.render("shopping-cart.ejs", {productVariant, size, quantity});
   },
 
   

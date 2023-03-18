@@ -172,6 +172,15 @@ const HomeController = {
       return index === array.findIndex(item=> item.size == tshirt.size);
     });
 
+    const sizeOrder = ["P", "M", "G"];
+    maleTshirtsSizes.sort((a, b)=>{
+      const aIndex = sizeOrder.indexOf(a.size);
+      const bIndex = sizeOrder.indexOf(b.size);
+      return aIndex - bIndex
+    });
+
+  
+
     const femaleUniquesProducts = Object.values(
       productsVariant.filter(productVariant => productVariant.model === "feminina") 
     )
@@ -220,6 +229,13 @@ const HomeController = {
 
     const femaleTshirtsSizes = chosenFemaleTshirt.filter((tshirt, index, array)=>{
       return index === array.findIndex(item=> item.size == tshirt.size);
+    });
+
+    const sizeOrder = ["P", "M", "G"];
+    femaleTshirtsSizes.sort((a, b)=>{
+      const aIndex = sizeOrder.indexOf(a.size);
+      const bIndex = sizeOrder.indexOf(b.size);
+      return aIndex - bIndex
     });
      
     const maleUniquesProducts = Object.values(
