@@ -35,8 +35,6 @@ const AdminController = {
                color, 
                size, 
                quantity, 
-               /*image,*/ 
-               /*tshirtPrint,*/ 
                price, 
                category} = req.body;
                
@@ -63,9 +61,6 @@ const AdminController = {
                 newProductCategoryId = c.id;
             }
        })
-
-        // const products = await Product.findAll();
-        // const productExist = products.filter(product => product.name == name);
 
         if(!productExist){
             const image = "img/"+req.files["image"][0].filename;
