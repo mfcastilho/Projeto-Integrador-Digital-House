@@ -1,7 +1,6 @@
-const UserModel = require("../data-base/UserModel");
-const {validationResult} = require("express-validator");
-const {User, Address} = require("../models");
-const {v4:makeId} = require("uuid");
+const { validationResult } = require("express-validator");
+const { User, Address } = require("../models");
+const { v4:makeId } = require("uuid");
 const bcrypt = require("bcrypt");
 
 
