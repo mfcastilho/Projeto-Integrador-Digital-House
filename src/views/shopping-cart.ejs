@@ -62,7 +62,7 @@
             <div class="infos-product-box">
               <a href=""><h3><%= productVariant.product.name %></h3></a>
               <p>Cor: <%= productVariant.color %></p>
-              <p>Tamanho: <%= productVariant.size %></p>
+              <p>Tamanho: <%= size %></p>
             </div>
           </div>
 
@@ -70,17 +70,9 @@
             <p>R$ <%= productVariant.product.price %></p>
 
             <div class="the-amount-itens">
-              <p class="left-item">
-                <span class="material-symbols-outlined">
-                  remove
-                  </span>
-              </p>
-              <p class="center-item">1</p>
-              <p class="right-item">
-                <span class="material-symbols-outlined">
-                  add
-                  </span>
-              </p>
+              
+              <p class="center-item"><%= quantity %></p>
+              
             </div>
 
             <p>R$ <%= productVariant.product.price %></p>

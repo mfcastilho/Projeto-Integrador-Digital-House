@@ -111,7 +111,7 @@ body{
 
 
 .hugging-elements .title-box{
-  width: 19%;
+  width: 23%;
 
   text-align: right;
 }
@@ -271,6 +271,45 @@ body{
   font-weight: 600;
 }
 
+.the-amount-quantity-itens{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .6rem;
+
+}
+
+.left-item{
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.left-item:hover{
+  background-color: black;
+  color: #FFF;
+}
+
+.right-item{
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.right-item:hover{
+  background-color: black;
+  color: #FFF;
+}
+
+.center-item{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
 .buy-button{
   display: flex;
   justify-content: center;
@@ -353,6 +392,10 @@ body{
   font-style: italic;
 
   font-size: 1.7rem;
+}
+
+::selection {
+  background-color: transparent;
 }
 
 /**/
