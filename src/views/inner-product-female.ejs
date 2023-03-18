@@ -43,20 +43,12 @@
             </a> -->
             
             <% productsVariant.forEach(productVariant=>{ %>
-              <% if(productVariant.model == "masculina"){%>
-                <a class="product-image image-color" href="/produto/<%= productVariant.id %>/masculino">
-                  <div class="image-card">
-                    <img src="/<%= productVariant.image %> " alt="">
-                  </div>
-                </a>
-              <% } else if(productVariant.model == "feminina"){ %>
+              
                 <a class="product-image image-color" href="/produto/<%= productVariant.id %>/feminino">
                   <div class="image-card">
                     <img src="/<%= productVariant.image %> " alt="">
                   </div>
                 </a>
-              <% } %>
-
             <% }) %>
               
           </div>
