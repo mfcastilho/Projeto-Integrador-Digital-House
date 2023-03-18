@@ -214,13 +214,24 @@
             </div>
             
 
-            <div class="sizes-options-box">
+            <!-- <div class="sizes-options-box">
 
               <div class="size p">p</div>
               <div class="size m">m</div>
               <div class="size g">g</div>
               
               <input id="input-size" type="hidden" name="size">
+            </div> -->
+
+            <div class="sizes-options-box">
+
+              <% sizes.forEach(size=>{%>
+                <div class="size">
+                  <%= size.size%>
+                  </div>
+              <%}) %>
+              <input id="input-size" type="hidden" name="size">
+
             </div>
 
           </div>
