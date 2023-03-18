@@ -29,6 +29,7 @@ app.set("view engine", "ejs");
 //setando para o express o caminho da pasta views
 app.set("views", path.resolve("src", "views"));
 
+//configuração da session
 app.use(session({
   secret:"mysecretpassword",
   resave: true,

@@ -73,6 +73,15 @@
                     </li>
 
                     <li class="nav-item">
+                        <a href="/admin/produtos/editar" class="nav-link " aria-current="page">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#home"></use>
+                            </svg>
+                            Editar Produto
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
 						<a href="/admin/pedidos" class="nav-link" aria-current="page">
 							<svg class="bi pe-none me-2" width="16" height="16">
 								<use xlink:href="#home"></use>
@@ -87,7 +96,7 @@
             <section class="content">
                <h1 class="title">Cadastrar</h1>
 
-               <form action="#">
+               <form action="/admin/produtos/cadastro" method="POST" enctype="multipart/form-data">
                    
                 <div class="elements-container">
 
@@ -148,14 +157,14 @@
                         </div>
                         
                         <div class="wrapper-inputs">
-                            <label for="tshirt-print">Estampa</label>
-                            <input type="file" name="tshirt-print" id="tshirt-print">
+                            <label for="tshirtPrint">Estampa</label>
+                            <input type="file" name="tshirtPrint" id="tshirtPrint">
                         </div>
     
-                        <div class="wrapper-inputs">
+                        <!-- <div class="wrapper-inputs">
                             <label for="discount">Desconto</label>
                             <input type="number" name="discount" id="discount" min="0" max="100" step=".01">
-                        </div>
+                        </div> -->
     
                         <div class="wrapper-inputs">
                             <label for="price">Preço</label>
@@ -167,8 +176,8 @@
                             <label for="category">Categoria</label>
                             <select name="category" id="category">
                                 
-                             <option value="Filmes">Filme</option>
-                             <option value="Animes">Anime</option> 
+                             <option value="filme">Filme</option>
+                             <option value="anime">Anime</option> 
                             
                             </select>
                           </div>
