@@ -85,28 +85,14 @@
             <div class="model-options-box">
 
               
-            
-              <% if(tshirt.model == "masculina"){ %>
-                <a style="text-decoration: none;" href="/produto/<%= tshirt.id %>/masculino" class="male-button">
-                  <div >Masculino</div> 
-                </a>
-              <% } else{ %>
-                <a style="text-decoration: none;" href="" class="male-button active">
-                  <div >Masculino</div> 
-                </a>
-              <% } %>
+          <a style="text-decoration: none;" href="" class="male-button active">
+            <div >Masculino</div> 
+          </a>
 
-              
-              
-              <% if(tshirt.model == "feminina"){ %>
-                <a style="text-decoration: none;" href="/produto/<%= tshirt.id %>/feminino" class="female-button">
-                  <div >Feminino</div> 
-                </a>
-              <% } else{ %>
-                <a style="text-decoration: none;" href="" class="female-button active">
-                  <div >Feminino</div> 
-                </a>
-              <% } %>
+          <a style="text-decoration: none; display: none;" href="" class="female-button">
+            <div >Feminino</div> 
+          </a>
+
               
               <input id="model-input" type="hidden" name="model">
             </div>
