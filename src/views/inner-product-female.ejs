@@ -205,9 +205,9 @@
             <div class="sizes-options-box">
 
               <% sizes.forEach(size=>{%>
-                <div class="size">
+                <div class="size <%=size.size%>">
                   <%= size.size%>
-                  </div>
+                </div>
               <%}) %>
               <input id="input-size" type="hidden" name="size">
 

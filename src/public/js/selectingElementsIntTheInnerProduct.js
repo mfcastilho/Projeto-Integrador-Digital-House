@@ -137,11 +137,11 @@ function detectingWhoSizeButtonIsSelect(){
             clickedButton = e.target;
             clickedButton.classList.add("size-selected");
     
-            if(clickedButton.classList.contains("p")){
+            if(clickedButton.classList.contains("P")){
                 sizeSelected = "P";
-            }else if(clickedButton.classList.contains("m")){
+            }else if(clickedButton.classList.contains("M")){
                 sizeSelected = "M";
-            }else if(clickedButton.classList.contains("g")){
+            }else if(clickedButton.classList.contains("G")){
                 sizeSelected = "G";
             }
         });
