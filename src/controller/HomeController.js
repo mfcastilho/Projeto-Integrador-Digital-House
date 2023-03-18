@@ -205,7 +205,12 @@ const HomeController = {
       productsVariant.filter(productVariant => productVariant.model === "feminina") 
     )
     const chosenFemaleTshirt = femaleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
-    const femaleTshirts = chosenFemaleTshirt.filter(tshirt=> tshirt.size == "M");
+    // const femaleTshirts = chosenFemaleTshirt.filter(tshirt=> tshirt.size == "M");
+    const femaleTshirts = chosenFemaleTshirt.filter((tshirt, index, array)=>{
+      return index == array.findIndex(item=> item.color == tshirt.color);
+    })
+     
+    console.log(chosenFemaleTshirt)
 
     const maleUniquesProducts = Object.values(
       productsVariant.filter(productVariant => productVariant.model === "masculina")
@@ -213,6 +218,9 @@ const HomeController = {
 
     const chosenMaleTshirt = maleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
     const maleTshirts = chosenMaleTshirt.filter(tshirt=> tshirt.size == "M");
+
+
+
 
     if(!maleTshirts[0]){
       return res.render("inner-product-female.ejs",{productVariant, productsVariant:femaleTshirts, routeGender:"feminino"});
