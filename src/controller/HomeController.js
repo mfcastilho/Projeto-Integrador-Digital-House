@@ -47,6 +47,7 @@ const HomeController = {
   return res.render("index.ejs", {productsVariant:maleUniquesProducts});
 
   },
+
   showMaleProductsListing: async (req, res)=>{
   
     const productsVariant = await ProductVariant.findAll({
@@ -70,6 +71,7 @@ const HomeController = {
     return res.render("products-listing.ejs", {productsVariant:maleUniquesProducts});
 
   },
+
   showFemaleProductsListing: async (req, res)=>{
     const productsVariant = await ProductVariant.findAll({
       include:[{
@@ -91,6 +93,7 @@ const HomeController = {
   
     return res.render("products-listing.ejs", {productsVariant:femaleUniquesProducts});
   },
+
   showAnimesProductsListing: async (req, res)=>{
     const productsVariant = await ProductVariant.findAll({
       include:[{
@@ -112,6 +115,7 @@ const HomeController = {
   
     return res.render("products-listing.ejs", {productsVariant:animeUniquesProducts});
   },
+
   showMoviesProductsListing: async (req, res)=>{
     const productsVariant = await ProductVariant.findAll({
       include:[{
@@ -134,6 +138,7 @@ const HomeController = {
   
     return res.render("products-listing.ejs", {productsVariant:movieUniquesProducts});
   },
+
   showMaleProduct: async (req, res)=>{
     const {id} = req.params;
     const productVariant = await ProductVariant.findOne({
@@ -167,9 +172,14 @@ const HomeController = {
     const chosenFemaleTshirt = femaleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
     const femaleTshirts = chosenFemaleTshirt.filter(tshirt=> tshirt.size == "M");
 
-  return res.render("inner-product.ejs",{productVariant, productsVariant:maleTshirts, tshirt:femaleTshirts[0], routeGender:"masculino"});
+    if(!femaleTshirts[0]){
+      return res.render("inner-product-male.ejs",{productVariant, productsVariant:maleTshirts, routeGender:"masculino"});
+    }
+
+    return res.render("inner-product.ejs",{productVariant, productsVariant:maleTshirts, tshirt:femaleTshirts[0], routeGender:"masculino"});
 
   },
+
   showFemaleProduct: async (req, res)=>{
     const {id} = req.params;
     const productVariant = await ProductVariant.findOne({
@@ -200,9 +210,13 @@ const HomeController = {
     const maleUniquesProducts = Object.values(
       productsVariant.filter(productVariant => productVariant.model === "masculina")
     )
+
     const chosenMaleTshirt = maleUniquesProducts.filter(tshirt=> tshirt.product.name == productVariant.product.name)
     const maleTshirts = chosenMaleTshirt.filter(tshirt=> tshirt.size == "M");
 
+    if(!maleTshirts[0]){
+      return res.render("inner-product-female.ejs",{productVariant, productsVariant:femaleTshirts, routeGender:"feminino"});
+    }
 
     return res.render("inner-product.ejs",{productVariant, productsVariant:femaleTshirts, tshirt:maleTshirts[0], routeGender:"feminino"});
 
