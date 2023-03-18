@@ -7,7 +7,7 @@ const ShoppingCartController = require("../controller/ShoppingCartController.js"
 router.get("/carrinho", ShoppingCartController.showShoppingCart);
 
 router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
-// router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
+router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
 
 
 

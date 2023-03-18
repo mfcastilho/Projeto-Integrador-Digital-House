@@ -172,6 +172,8 @@ function getProductName(){
 
 function sendDataToBackend(){
     form.addEventListener("submit", (e)=>{
+
+        console.log(sizeSelected)
       
         if(selectedModel /*&& colorSelected*/ && sizeSelected){
             // e.preventDefault()
@@ -183,7 +185,7 @@ function sendDataToBackend(){
             const inputProductImage = document.querySelector("#input-product-image")
             const inputProductId = document.querySelector("#input-product-id");
 
-            let id = tagProductId.innerText
+            let id = tagProductId.innerHTML
             console.log("Id do produto: "+id);
             console.log(typeof id)
             inputProductId.setAttribute("value", id);

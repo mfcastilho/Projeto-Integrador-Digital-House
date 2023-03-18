@@ -8,7 +8,9 @@ const ShoppingCartController = {
   },
 
   getProductInfosToBuy: async (req, res)=>{
-   const {idProduct, size} = req.body
+   const {idProduct, size, quantity} = req.body;
+
+   console.log("quantidade"+quantity)
 
     const productVariant = await ProductVariant.findOne({
       where:{id:idProduct},
@@ -20,7 +22,7 @@ const ShoppingCartController = {
       raw: false
     })
 
-    
+    console.log(productVariant)
 
     return res.render("shopping-cart.ejs", {productVariant, size});
   },

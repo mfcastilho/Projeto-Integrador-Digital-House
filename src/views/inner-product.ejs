@@ -16,6 +16,7 @@
 
    <link rel="stylesheet" href="/css/header.css">
    <script src="/js/showSubmenuHeaderMobile.js" defer></script>
+   <script src="/js/turningQuantityButtonsIntoDynamicOnes.js" defer></script>
    <script src="/js/selectingElementsIntTheInnerProduct.js" defer></script>
 
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -73,9 +74,7 @@
                <form id="selected-product-infos-form" action="/carrinho" method="POST" class="infos-product-container">
 
 
-                  <div class="hidden" id="product-id">
-                     <%= productVariant.id %>
-                  </div>
+                  <div class="hidden" id="product-id"><%= productVariant.id %></div>
                   <input id="input-product-id" type="hidden" name="idProduct">
 
                   <h3 id="product-name">
@@ -243,7 +242,7 @@
                               remove
                            </span>
                         </p>
-                        <p class="center-item">1</p>
+                        <p class="center-item" id="quantity">1</p>
                         <p class="right-item">
                            <span class="material-symbols-outlined">
                               add
