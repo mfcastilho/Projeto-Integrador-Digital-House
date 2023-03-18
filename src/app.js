@@ -2,6 +2,10 @@
 const express = require("express");
 const app = express();
 const session = require("express-session");
+const methodOverride = require("method-override");
+
+
+
 
 
 
@@ -25,6 +29,7 @@ app.set("view engine", "ejs");
 //setando para o express o caminho da pasta views
 app.set("views", path.resolve("src", "views"));
 
+//configuração da session
 app.use(session({
   secret:"mysecretpassword",
   resave: true,
@@ -33,7 +38,7 @@ app.use(session({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-
+app.use(methodOverride("_method"));
 
 
 //transformando a pasta public em estática(global)
