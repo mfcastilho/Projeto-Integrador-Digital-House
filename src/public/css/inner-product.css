@@ -284,6 +284,12 @@ body{
   align-items: center;
   border: 1px solid black;
   border-radius: .5rem;
+  cursor: pointer;
+}
+
+.left-item:hover{
+  background-color: black;
+  color: #FFF;
 }
 
 .right-item{
@@ -291,6 +297,12 @@ body{
   align-items: center;
   border: 1px solid black;
   border-radius: .5rem;
+  cursor: pointer;
+}
+
+.right-item:hover{
+  background-color: black;
+  color: #FFF;
 }
 
 .center-item{

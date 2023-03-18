@@ -1,98 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urbano t-shirts</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Urbano t-shirts</title>
 
 
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/inner-product.css">
+   <link rel="stylesheet" href="/css/style.css">
+   <link rel="stylesheet" href="/css/inner-product.css">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 
-  <link rel="stylesheet" href="/css/header.css">
-  <script src="/js/showSubmenuHeaderMobile.js" defer></script>
-  <script src="/js/selectingElementsIntTheInnerProduct.js" defer></script>
+   <link rel="stylesheet" href="/css/header.css">
+   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
+   <script src="/js/selectingElementsIntTheInnerProduct.js" defer></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
-  <!-- <script src="/js/header-behavior.js" defer></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   <!-- <script src="/js/header-behavior.js" defer></script> -->
 </head>
+
 <body id="body-div">
 
 
-  <!-- ===== HEADER ===== -->
-  <%- include("./components/header2.ejs") %>
-   
-  <main>
+   <!-- ===== HEADER ===== -->
+   <%- include("./components/header2.ejs") %>
 
-    <div class="main-container">
+      <main>
 
-      <section class="top-part-section">
+         <div class="main-container">
 
-        <div class="images-product-container">
+            <section class="top-part-section">
 
-          <div class="image-card-box">
+               <div class="images-product-container">
 
-            <!-- <a href="">
+                  <div class="image-card-box">
+
+                     <!-- <a href="">
               <div class="image-card">
                 <img src="/<%= productVariant.product.tshirt_print  %> " alt="">
               </div>
             </a> -->
-            
-            <% productsVariant.forEach(productVariant=>{ %>
-              
-                <a class="product-image image-color" href="/produto/<%= productVariant.id %>/feminino">
-                  <div class="image-card">
-                    <img src="/<%= productVariant.image %> " alt="">
+
+                     <% productsVariant.forEach(productVariant=>{ %>
+
+                        <a class="product-image image-color" href="/produto/<%= productVariant.id %>/feminino">
+                           <div class="image-card">
+                              <img src="/<%= productVariant.image %> " alt="">
+                           </div>
+                        </a>
+                        <% }) %>
+
                   </div>
-                </a>
-            <% }) %>
-              
-          </div>
 
-          <div class="image-box">
-            <img id="image" src="/<%= productVariant.image  %> " alt="">
-          </div>
+                  <div class="image-box">
+                     <img id="image" src="/<%= productVariant.image  %> " alt="">
+                  </div>
 
-        </div>
+               </div>
 
-        <form id="selected-product-infos-form" action="/carrinho" method="POST" class="infos-product-container">
+               <form id="selected-product-infos-form" action="/carrinho" method="POST" class="infos-product-container">
 
 
-          <div class="hidden" id="product-id"><%= productVariant.id %></div>
-          <input id="input-product-id" type="hidden" name="idProduct">  
-          
-          <h3 id="product-name"><%= productVariant.product.name  %></h3>
-          <input id="input-product-name" type="hidden" name="productName">
-          <input id="input-product-image" type="hidden" name="productImage">
-          
+                  <div class="hidden" id="product-id">
+                     <%= productVariant.id %>
+                  </div>
+                  <input id="input-product-id" type="hidden" name="idProduct">
 
-          <div class="hugging-elements">
-            <div class="title-box">           
-              <p>Modelo</p>
-            </div>
-            <div class="model-options-box">
+                  <h3 id="product-name">
+                     <%= productVariant.product.name %>
+                  </h3>
+                  <input id="input-product-name" type="hidden" name="productName">
+                  <input id="input-product-image" type="hidden" name="productImage">
 
 
-          <a style="text-decoration: none; display: none;" href="" class="male-button">
-              <div >Masculino</div> 
-          </a>
-            
-          <a style="text-decoration: none;" href="" class="female-button active">
-            <div >Feminino</div> 
-          </a>
-        
-              
-              <input id="model-input" type="hidden" name="model">
-            </div>
+                  <div class="hugging-elements">
+                     <div class="title-box">
+                        <p>Modelo</p>
+                     </div>
+                     <div class="model-options-box">
 
-          </div>
-          
 
-          <!-- <div class="hugging-elements">
+                        <a style="text-decoration: none; display: none;" href="" class="male-button">
+                           <div>Masculino</div>
+                        </a>
+
+                        <a style="text-decoration: none;" href="" class="female-button active">
+                           <div>Feminino</div>
+                        </a>
+
+
+                        <input id="model-input" type="hidden" name="model">
+                     </div>
+
+                  </div>
+
+
+                  <!-- <div class="hugging-elements">
             <div class="title-box">
               <p>Cor</p>
             </div>
@@ -184,77 +191,99 @@
             </div>
 
           </div> -->
-          
-
-          <div class="hugging-elements">
-            <div class="title-box">
-              <p>Tamanho</p>
-            </div>
-            
-            <div class="sizes-options-box">
-
-              <% sizes.forEach(size=>{%>
-                <div class="size <%=size.size%>">
-                  <%= size.size%>
-                </div>
-              <%}) %>
-              <input id="input-size" type="hidden" name="size">
-
-            </div>
 
 
+                  <div class="hugging-elements">
+                     <div class="title-box">
+                        <p>Tamanho</p>
+                     </div>
 
-          </div>
-          
+                     <div class="sizes-options-box">
 
-          <div class="hugging-elements">
+                        <% sizes.forEach(size=>{%>
+                           <div class="size <%=size.size%>">
+                              <%= size.size%>
+                           </div>
+                        <%}) %>
+                              <input id="input-size" type="hidden" name="size">
 
-            <div class="price-box title-box">
-              <p class="price-apresentation">A partir de</p>
-              <span class="dollar-sign">R$</span>
-              <span class="product-price"><%= productVariant.product.price  %></span>
+                     </div>
 
-              <input id="input-price" type="hidden" name="price">
-            </div>
+                  </div>
 
-            <button type="submit" class="buy-button">
-              <div class="hugging-button-elements">
-                <img src="/img/cart.svg" alt="">
-                Comprar
-              </div>
-            </button>
-          </div>
-        </form>
+                  <div class="hugging-elements">
+                     <div class="title-box">
+                        <p>Quantidade</p>
+                     </div>
+                     <div class="the-amount-quantity-itens">
+                        <p class="left-item">
+                           <span class="material-symbols-outlined">
+                              remove
+                           </span>
+                        </p>
+                        <p class="center-item">1</p>
+                        <p class="right-item">
+                           <span class="material-symbols-outlined">
+                              add
+                           </span>
+                        </p>
+                     </div>
+                     <input id="quantity-id" type="hidden" name="quantity">
+                  </div>
 
-      </section>
 
-      <section class="bottom-part-section">
+                  <div class="hugging-elements">
 
-        <div class="hugging-measurements-infos">
-         
-          <img src="/img/measurements-male.svg" alt="">
-          
-          <img src="/img/measurements-female.svg" alt="">
-        </div>
+                     <div class="price-box title-box">
+                        <p class="price-apresentation">A partir de</p>
+                        <span class="dollar-sign">R$</span>
+                        <span class="product-price">
+                           <%= productVariant.product.price %>
+                        </span>
 
-        <div class="hugging-others-infos">
-          <h3>Confira as medidas e outras informações.</h3>
-          <p><strong>Composição:</strong> 100% algodão</p>
-          <p><strong>Estampa:</strong> Digital</p>
-          <p>As medidas podem variar em aproximadamente 2 cm para mais ou para menos e a malha poderá encolher até 5% após a primeira lavagem. </p>
-        </div>
-        
-      </section>
-    </div>
-     
-  </main>
+                        <input id="input-price" type="hidden" name="price">
+                     </div>
 
-  <!-- ===== FOOTER ===== -->
-  <%- include("./components/footer.ejs") %>
+                     <button type="submit" class="buy-button">
+                        <div class="hugging-button-elements">
+                           <img src="/img/cart.svg" alt="">
+                           Comprar
+                        </div>
+                     </button>
+                  </div>
+               </form>
 
-  <!-- ===== WHATSAPP BUTTON ===== -->
-  <%- include("./components/whatsapp-button.ejs") %>
+            </section>
 
-  
+            <section class="bottom-part-section">
+
+               <div class="hugging-measurements-infos">
+
+                  <img src="/img/measurements-male.svg" alt="">
+
+                  <img src="/img/measurements-female.svg" alt="">
+               </div>
+
+               <div class="hugging-others-infos">
+                  <h3>Confira as medidas e outras informações.</h3>
+                  <p><strong>Composição:</strong> 100% algodão</p>
+                  <p><strong>Estampa:</strong> Digital</p>
+                  <p>As medidas podem variar em aproximadamente 2 cm para mais ou para menos e a malha poderá encolher
+                     até 5% após a primeira lavagem. </p>
+               </div>
+
+            </section>
+         </div>
+
+      </main>
+
+      <!-- ===== FOOTER ===== -->
+      <%- include("./components/footer.ejs") %>
+
+         <!-- ===== WHATSAPP BUTTON ===== -->
+         <%- include("./components/whatsapp-button.ejs") %>
+
+
 </body>
+
 </html>
