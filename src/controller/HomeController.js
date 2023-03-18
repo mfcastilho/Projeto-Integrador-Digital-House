@@ -1,4 +1,3 @@
-const dataBase = require("../data-base/dataBase.json");
 const {ProductVariant, Product} = require("../models");
 
 const HomeController = {
