@@ -67,7 +67,7 @@
           </div>
 
           <div class="another-infos">
-            <p>R$ <%= productVariant.product.price %></p>
+            <p>R$ <%= productVariant.product.price.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
 
             <div class="the-amount-itens">
               
@@ -75,7 +75,7 @@
               
             </div>
 
-            <p>R$ <%= productVariant.product.price %></p>
+            <p>R$ <%= productVariant.product.price.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
             <div class="image-box">
               <img src="/img/delete-image.svg" alt="">
             </div>

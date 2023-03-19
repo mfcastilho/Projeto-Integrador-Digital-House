@@ -146,7 +146,7 @@
                     <img class="tshirt-print" src="/<%= productVariant.product.tshirt_print%> " alt="">
                     <div class="product-description">
                       <h5><%= productVariant.product.name %> </h5>
-                      <p>A partir de R$ <%= productVariant.product.price%> </p>
+                      <p>A partir de R$ <%= productVariant.product.price.toLocaleString("pt-BR", {minimumFractionDigits:2}) %> </p>
                     </div>
                   </div>
                 </a>
