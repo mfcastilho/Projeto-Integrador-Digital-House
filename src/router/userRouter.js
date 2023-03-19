@@ -4,6 +4,7 @@ const router = express.Router();
 
 const UserController = require("../controller/UserController.js");
 const notLoggedMiddleware = require("../middlewares/notLoggedMiddleware");
+const errorMiddleware = require("../middlewares/genericErrorMiddleware");
 
 router.use(notLoggedMiddleware);
 
@@ -26,7 +27,7 @@ router.post("/usuario/area-cliente/:id/endereco", UserController.updateUserAddre
 router.post("/usuario/area-cliente/:id/pedidos", UserController.updateUserRequestsInfos);
 
 
-
+router.use(errorMiddleware)
 
 
 

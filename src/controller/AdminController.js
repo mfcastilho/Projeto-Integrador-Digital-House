@@ -6,29 +6,62 @@ const { ProductVariant, Product, Category } = require("../models");
 const AdminController = {
     showHomeAdmin: async (req, res)=>{
 
-        //const products = ProductModel.findAll();
+        const url = req.originalUrl;
+
         const productsVariant = await ProductVariant.findAll({
             include:[{
                 model: Product,
                 as: "product",
                 require: false
             }],
+
             raw: false
         });
 
         console.log(productsVariant)
         
-        res.render("admin/home-admin.ejs", {productsVariant});
+        res.render("admin/home-admin.ejs", {productsVariant, url});
     },
 
     showProductRegisterPage: (req, res)=>{
-        return res.render("admin/products/productRegister.ejs");
+
+        const url = req.originalUrl;
+        return res.render("admin/products/productRegister.ejs", {url});
     },
-    showEditProductPage: (req, res)=>{
-        return res.render("admin/products/editProduct.ejs");
+
+    showEditProductPage: async (req, res)=>{
+        const url = req.originalUrl;
+        
+        const {id} = req.params;
+
+        const productVariant = await ProductVariant.findOne({
+            where:{id:id},
+            include:{
+                model: Product,
+                as: "product",
+                require: false
+            },
+            raw: false
+        });
+
+        const product = await Product.findOne({
+            where:{id:productVariant.product_id},
+            include:{
+                model: Category,
+                as: "category",
+                require: false
+            },
+            raw:false
+        });
+
+
+        
+        return res.render("admin/products/editProduct.ejs", {url, productVariant, product});
     },
 
     storeProduct: async (req, res)=>{
+        const url = req.originalUrl;
+
         const resultValidations = validationResult(req);
         const {name, 
                model, 
@@ -39,7 +72,7 @@ const AdminController = {
                category} = req.body;
                
         if(resultValidations.errors.length > 0){
-            return res.render("admin/products/productRegister.ejs", {errors:resultValidations.mapped(), old:req.body});
+            return res.render("admin/products/productRegister.ejs", {errors:resultValidations.mapped(), old:req.body, url});
         }
 
         const productExist = await Product.findOne({
@@ -110,7 +143,7 @@ const AdminController = {
     },
 
     editProduct: (req, res)=>{
-
+        
     },
 
     deleteProduct: (req, res)=>{

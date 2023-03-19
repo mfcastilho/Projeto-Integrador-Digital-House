@@ -6,7 +6,10 @@ const router = express.Router()
 
 /*--- IMPORTAÇÕES DO CONTROLLERS --- */
 const HomeController = require("../controller/HomeController.js");
+
+
 const isLogginMiddleware = require("../middlewares/isLoginMiddleware");
+const errorMiddleware = require("../middlewares/genericErrorMiddleware");
 
 
 
@@ -27,6 +30,6 @@ router.get("/listagem-produtos/categoria/filme", HomeController.showMoviesProduc
 router.get("/produto/:id/masculino", HomeController.showMaleProduct);
 router.get("/produto/:id/feminino", HomeController.showFemaleProduct);
 
-
+router.use(errorMiddleware)
 
 module.exports = router;

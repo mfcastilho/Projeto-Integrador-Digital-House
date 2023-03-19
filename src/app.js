@@ -22,6 +22,7 @@ const userRouter = require("./router/userRouter.js");
 const adminRouter = require("./router/adminRouter");
 
 
+
 //mostrando para o express que iremos usar uma
 //template engine e especificando que iremos usar ejs
 app.set("view engine", "ejs");
@@ -34,7 +35,9 @@ app.use(session({
   secret:"mysecretpassword",
   resave: true,
   saveUninitialized: true
-}))
+}));
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
@@ -52,6 +55,8 @@ app.use(shoppingCartRouter);
 app.use(authRouter);
 app.use(userRouter);
 app.use(adminRouter);
+
+
 
 
 
