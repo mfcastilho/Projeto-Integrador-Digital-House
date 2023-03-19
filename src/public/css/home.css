@@ -38,6 +38,9 @@ body{
   margin-top: 4rem;
 }
 
+main {
+  
+}
 
 main .featureds h2{
   font-size: 2.6rem;
@@ -49,6 +52,8 @@ main .featureds hr{
   color: #e2dfdf;
   border-bottom: 1px solid #e2dfdf;
 }
+
+
 main .featureds .featured-products-container{
   display: flex;
   justify-content: center;

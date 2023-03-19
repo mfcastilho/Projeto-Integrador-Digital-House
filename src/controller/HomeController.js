@@ -1,29 +1,8 @@
+
 const {ProductVariant, Product} = require("../models");
 
 const HomeController = {
   showHome: async (req, res)=>{
-  //   const products = dataBase.products;
-  //   const productsVariant = await ProductVariant.findAll({
-  //       include:[{
-  //         model: Product,
-  //         as:"product",
-  //         require: false
-  //       }],
-  //       raw: false
-  //   });
-
-  //   let productUniqueName = {};
-  //   let uniquesProducts = [];
-
-  //  for(let i =0; i<productsVariant.length;i++){
-  //   let name = productsVariant[i].product.name;
-  //   if(!productUniqueName[name]){
-  //     productUniqueName[name] = true;
-  //     uniquesProducts.push(productsVariant[i])
-  //   }
-  //  }
-   
-  //   return res.render("index.ejs", {productsVariant:uniquesProducts});
 
   const productsVariant = await ProductVariant.findAll({
     include:[{
@@ -43,7 +22,9 @@ const HomeController = {
     }, {})
   )
 
-  return res.render("index.ejs", {productsVariant:maleUniquesProducts});
+  const limitMaxProductInHomePage = maleUniquesProducts.slice(0, 20);
+
+  return res.render("index.ejs", {productsVariant:limitMaxProductInHomePage});
 
   },
 
