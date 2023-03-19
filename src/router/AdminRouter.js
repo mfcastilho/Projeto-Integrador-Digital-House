@@ -34,7 +34,7 @@ router.use(isLoginMiddleware);
 /*--- ROTAS--- */
 router.get("/admin/home", AdminController.showHomeAdmin);
 router.get("/admin/produtos/cadastro", AdminController.showProductRegisterPage);
-router.get("/admin/produtos/editar", AdminController.showEditProductPage);
+router.get("/admin/produtos/:id/editar", AdminController.showEditProductPage);
 
 router.post("/admin/produtos/cadastro", uploadFile.fields([
     {name: "image", maxCount: 1},

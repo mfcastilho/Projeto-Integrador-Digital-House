@@ -20,7 +20,7 @@ const shoppingCartRouter = require("./router/shoppingCartRouter.js");
 const authRouter = require("./router/authRouter");
 const userRouter = require("./router/userRouter.js");
 const adminRouter = require("./router/adminRouter");
-const errorRouter = require("./router/ErrorRouter");
+
 
 
 //mostrando para o express que iremos usar uma
@@ -37,9 +37,6 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.use((error, req, res, next)=>{
-  res.redirect("/error?code=500");
-})
 
 
 app.use(express.json());
@@ -58,6 +55,8 @@ app.use(shoppingCartRouter);
 app.use(authRouter);
 app.use(userRouter);
 app.use(adminRouter);
+
+
 
 
 

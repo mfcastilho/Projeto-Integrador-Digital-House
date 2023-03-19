@@ -26,75 +26,8 @@
     <main>
         <div class="page">
             
-            <aside class="d-flex flex-column flex-shrink-0 p-3 min-vh-100 left ">
-                <a href="/home" target="_blank"  class="logo-box">
-                    <span class="fs-4"><img src="/img/logo-urbano-tshirt-trasparent.png" alt="" class="logo"></span>
-                </a>
-                <hr>
-              
-                <div class="dropdown">
-                    <a href="" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <!-- <img src="https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png" alt="" width="32" height="32" class="rounded-circle me-2"> -->
-                        <% if(locals.userLogged && userLogged){ %>
-							<!-- <img src="<%= userLogged.profilePicture %>" alt="" width="32" height="32" class="rounded-circle me-2"> -->
-							<strong class="user-name"><%= userLogged.name %></strong>
-						<% } else{ %>
-							<img src="https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png" alt="" width="32" height="32" class="rounded-circle me-2">
-							<strong class="user-name">Nome do usuário</strong>
-						<% } %>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                        <li><a class="dropdown-item" href="#">Cadastrar Admin</a></li>
-                        <li><a class="dropdown-item" href="#">Configurações</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sair</a></li>
-                    </ul>
-                </div>
-              
-                <hr>
-                <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="">
-                        <a href="/admin/home" class="nav-link" aria-current="page">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#home"></use>
-                            </svg>
-                            Produtos
-                        </a>
-                    </li>
-              
-                    <li class="nav-item">
-                        <a href="/admin/produtos/cadastro" class="nav-link" aria-current="page">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#home"></use>
-                            </svg>
-                            Cadastrar Produto
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="/admin/produtos/editar" class="nav-link active" aria-current="page">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#home"></use>
-                            </svg>
-                            Editar Produto
-                        </a>
-                    </li>
-              
-                    <li class="nav-item">
-						<a href="/admin/pedidos" class="nav-link" aria-current="page">
-							<svg class="bi pe-none me-2" width="16" height="16">
-								<use xlink:href="#home"></use>
-							</svg>
-							Pedidos
-						</a>
-					</li>
-                   
-              
-                </ul>
-              </aside>
+            <!-- Side bar-->
+			<%- include("../../components/admin/sideBar.ejs")  %>
     
             <section class="content">
                <h1 class="title">Editar</h1>
@@ -106,14 +39,14 @@
                     <div class="hugging-left-elements">
                         <div class="wrapper-inputs">
                             <label for="name">Nome</label>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="name" id="name" value="<%= productVariant.product.name  %>">
                         </div>
         
                         <div class="wrapper-inputs">
                           <label for="model">Modelo</label>
                           <select name="model" id="model">
-                           <option value="feminina">Feminino</option>
-                           <option value="masculina">Masculino</option>  
+                           <option value="feminina" <%= productVariant.model == "feminina" ? "selected" : ""  %>>Feminino</option>
+                           <option value="masculina" <%= productVariant.model == "masculina" ? "selected" : ""  %>>Masculino</option>  
                           </select>
                         </div>
         
@@ -121,18 +54,18 @@
                             <label for="color">Cores</label>
                             <select name="color" id="color">
         
-                                <option value="branco">Branco</option>
-                                <option value="azul">Azul</option>
-                                 <option value="vermelho">Vermelho</option>
-                                 <option value="verde">Verde</option>
-                                 <option value="rosa">Rosa</option> 
-                                 <option value="marrom">Marrom</option>
-                                 <option value="laranja">Laranja</option> 
-                                 <option value="cinza">Cinza</option>  
-                                 <option value="amarelo">Amarelo</option> 
-                                 <option value="roxo">Roxo</option> 
-                                 <option value="preto">Preto</option> 
-                                 <option value="gelo">Gelo</option> 
+                                <option value="branco" <%= productVariant.color == "branco" ? "selected" : ""  %>>Branco</option>
+                                <option value="azul" <%= productVariant.color == "azul" ? "selected" : ""  %>>Azul</option>
+                                 <option value="vermelho" <%= productVariant.color == "vermelho" ? "selected" : ""  %>>Vermelho</option>
+                                 <option value="verde" <%= productVariant.color == "verde" ? "selected" : ""  %>>Verde</option>
+                                 <option value="rosa" <%= productVariant.color == "rosa" ? "selected" : ""  %>>Rosa</option> 
+                                 <option value="marrom" <%= productVariant.color == "marrom" ? "selected" : ""  %>>Marrom</option>
+                                 <option value="laranja" <%= productVariant.color == "laranja" ? "selected" : ""  %>>Laranja</option> 
+                                 <option value="cinza" <%= productVariant.color == "cinza" ? "selected" : ""  %>>Cinza</option>  
+                                 <option value="amarelo" <%= productVariant.color == "amarelo" ? "selected" : ""  %>>Amarelo</option> 
+                                 <option value="roxo" <%= productVariant.color == "roxo" ? "selected" : ""  %>>Roxo</option> 
+                                 <option value="preto" <%= productVariant.color == "preto" ? "selected" : ""  %>>Preto</option> 
+                                 <option value="gelo" <%= productVariant.color == "gelo" ? "selected" : ""  %>>Gelo</option> 
                              
                             </select>
                           </div>
@@ -141,9 +74,9 @@
                             <label for="size">Tamanho</label>
                             <select name="size" id="size">
                                 
-                             <option value="P">P</option>
-                             <option value="M">M</option> 
-                             <option value="G">G</option>
+                             <option value="P" <%= productVariant.size == "P" ? "selected" : ""  %>>P</option>
+                             <option value="M" <%= productVariant.size == "M" ? "selected" : ""  %>>M</option> 
+                             <option value="G" <%= productVariant.size == "G" ? "selected" : ""  %>>G</option>
                           
                              
                             </select>
@@ -151,7 +84,7 @@
         
                           <div class="wrapper-inputs">
                               <label for="quantity">Quantidade</label>
-                              <input type="number" name="quantity" id="quantity">
+                              <input type="number" name="quantity" id="quantity" value="<%= productVariant.quantity  %>">
                           </div>
     
     
@@ -167,7 +100,7 @@
                         
                         <div class="wrapper-inputs">
                             <label for="tshirtPrint">Estampa</label>
-                            <input type="file" name="tshirtPrint" id="tshirtPrint">
+                            <input type="file" name="tshirtPrint" id="tshirtPrint" disabled>
                         </div>
     
                         <!-- <div class="wrapper-inputs">
@@ -175,9 +108,10 @@
                             <input type="number" name="discount" id="discount" min="0" max="100" step=".01">
                         </div>
      -->
+                        
                         <div class="wrapper-inputs">
                             <label for="price">Preço</label>
-                            <input type="number" name="price" id="price">
+                            <input type="number" name="price" id="price" value="<%= productVariant.product.price.toFixed(2)%>">
                         </div>
     
     
@@ -185,8 +119,8 @@
                             <label for="category">Categoria</label>
                             <select name="category" id="category">
                                 
-                             <option value="filme">Filmes</option>
-                             <option value="anime">Animes</option> 
+                             <option value="filme" <%= product.category == "filme" ? "selected" : ""  %>>Filmes</option>
+                             <option value="anime" <%= product.category == "anime" ? "selected" : ""  %>>Animes</option> 
                             
                             </select>
                           </div>
