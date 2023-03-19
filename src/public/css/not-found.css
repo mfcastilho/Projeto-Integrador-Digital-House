@@ -1,0 +1,35 @@
+@import url('./global.css');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+.error-container{
+    margin: 60px 0;
+}
+
+article h2{
+    font-size: 160px;
+    color: #372948;
+    font-family: 'Dancing Script', cursive;
+}
+.error {
+
+    display: flex;
+    flex-direction: column;
+    gap: 62px;
+    justify-content: center;
+    align-items: center;
+    color: #372948;
+    font-family: 'Dancing Script', cursive;
+}
+
+.error h1 {
+    font-size: 62px;
+}
+
+.error article {
+    text-align: center;
+}
+
+.error article img {
+    width: 70%;
+}

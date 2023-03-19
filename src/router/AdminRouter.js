@@ -2,7 +2,6 @@
 const express = require("express");
 const router = express.Router();
 
-
 const multer = require("multer");
 const path = require("path");
 
@@ -24,6 +23,7 @@ const AdminController = require("../controller/AdminController");
 /*--- IMPORTAÇÃO DOS MIDDLEWARES --- */
 const isLoginMiddleware = require("../middlewares/isLoginMiddleware");
 const isAdminMiddleware = require("../middlewares/isAdminMiddleware");
+const errorMiddleware = require("../middlewares/genericErrorMiddleware");
 
 
 /*--- IMPLEMENTAÇÃO DOS MIDDLEWARES --- */
@@ -45,5 +45,7 @@ router.post("/admin/produtos/cadastro", uploadFile.fields([
 router.put("/admin/produtos/:id/editar", AdminController.editProduct);
 router.delete("/admin/produtos/:id/excluir", AdminController.deleteProduct);
 
+
+router.use(errorMiddleware)
 
 module.exports = router;

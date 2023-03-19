@@ -110,7 +110,7 @@ const AdminController = {
     },
 
     editProduct: (req, res)=>{
-
+        
     },
 
     deleteProduct: (req, res)=>{
