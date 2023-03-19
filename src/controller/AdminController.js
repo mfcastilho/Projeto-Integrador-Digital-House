@@ -143,7 +143,12 @@ const AdminController = {
     },
 
     editProduct: (req, res)=>{
+        const {id} = req.params;
+
+        const {name, model, color, size, quantity, /*image, tshirtPrint,*/ price, category} = req.body;
+
         
+
     },
 
     deleteProduct: (req, res)=>{

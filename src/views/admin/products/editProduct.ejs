@@ -42,17 +42,17 @@
                             <input class="off-mode-style" type="text" name="name" id="name" value="<%= productVariant.product.name  %>" disabled>
                         </div>
         
-                        <div class="wrapper-inputs">
+                        <div class="wrapper-inputs off-mode-style">
                           <label for="model">Modelo</label>
-                          <select name="model" id="model">
+                          <select name="model" id="model" disabled>
                            <option value="feminina" <%= productVariant.model == "feminina" ? "selected" : ""  %>>Feminino</option>
                            <option value="masculina" <%= productVariant.model == "masculina" ? "selected" : ""  %>>Masculino</option>  
                           </select>
                         </div>
         
-                        <div class="wrapper-inputs">
+                        <div class="wrapper-inputs off-mode-style">
                             <label for="color">Cores</label>
-                            <select name="color" id="color">
+                            <select name="color" id="color" disabled>
         
                                 <option value="branco" <%= productVariant.color == "branco" ? "selected" : ""  %>>Branco</option>
                                 <option value="azul" <%= productVariant.color == "azul" ? "selected" : ""  %>>Azul</option>
@@ -70,9 +70,9 @@
                             </select>
                           </div>
         
-                          <div class="wrapper-inputs">
+                          <div class="wrapper-inputs off-mode-style">
                             <label for="size">Tamanho</label>
-                            <select name="size" id="size">
+                            <select name="size" id="size" disabled>
                                 
                              <option value="P" <%= productVariant.size == "P" ? "selected" : ""  %>>P</option>
                              <option value="M" <%= productVariant.size == "M" ? "selected" : ""  %>>M</option> 
@@ -115,9 +115,9 @@
                         </div>
     
     
-                        <div class="wrapper-inputs">
+                        <div class="wrapper-inputs off-mode-style">
                             <label for="category">Categoria</label>
-                            <select name="category" id="category">
+                            <select name="category" id="category" disabled>
                                 
                              <option value="filme" <%= product.category == "filme" ? "selected" : ""  %>>Filmes</option>
                              <option value="anime" <%= product.category == "anime" ? "selected" : ""  %>>Animes</option> 
