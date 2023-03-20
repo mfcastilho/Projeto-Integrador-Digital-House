@@ -142,12 +142,57 @@ const AdminController = {
         return res.redirect("/admin/home");          
     },
 
-    editProduct: (req, res)=>{
+    editProduct: async (req, res)=>{
         const {id} = req.params;
 
-        const {name, model, color, size, quantity, /*image, tshirtPrint,*/ price, category} = req.body;
+        const {quantity,price} = req.body;
+        let image;
 
+        const productVariant = await ProductVariant.findByPk(id);
+
+        if(req.file){
+            image = "img/"+req.file.filename;
+            const resultProductVariant = await ProductVariant.update(
+                {
+                    quantity:quantity,
+                    image:image
+                },
+                {
+                    where:{id:id}  
+                }
+            );
+
+            const resultProduct = await Product.update(
+                {
+                    price:price
+                },
+                {
+                    where:{id:productVariant.product_id}
+                }
+            );
+
+            return res.redirect("/admin/home");
+        }
+
+        const resultProductVariant = await ProductVariant.update(
+            {
+                quantity:quantity,
+            },
+            {
+                where:{id:id}  
+            }
+        )
         
+        const resultProduct = await Product.update(
+            {
+                price:price
+            },
+            {
+                where:{id:productVariant.product_id}
+            }
+        )
+
+        return res.redirect("/admin/home");
 
     },
 
