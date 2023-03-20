@@ -18,6 +18,9 @@
 		defer>
 	</script>
 
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+	<script src="/js/confirmDeleteProduct.js" defer></script>
+
 	<title>Admin</title>
 </head>
 
@@ -71,8 +74,8 @@
 									
 									<a href="/admin/produtos/<%= productVariant.id %>/editar" type="button" class="btn btn-edit-custom edit-btn">Editar</a>
 
-									<form action="/admin/produtos/excluir?_method=DELETE" method="POST" class="delete-btn-form">
-										<button type="submit" class="btn btn-danger delete-btn">Excluir</button>
+									<form id="delete-form-id"  onclick="confirmDelete('<%= productVariant.id %>')" class="delete-btn-form">
+										<button id="delete-button-id" type="submit" class="btn btn-danger delete-btn">Excluir</button>
 									</form>								
 								</td>
 							</tr>

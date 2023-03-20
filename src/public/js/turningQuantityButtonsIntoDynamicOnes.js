@@ -10,6 +10,7 @@ let productQuantity;
 function quantityButtonsFuntion(){
     
     let quantityNumber = Number(quantity.innerHTML);
+    console.log(quantityNumber)
 
     plusSymbol.addEventListener("click", ()=>{
         
@@ -32,6 +33,8 @@ function quantityButtonsFuntion(){
         inputProductQuantity.setAttribute("value", quantityNumber.toString())
         // console.log(inputProductQuantity.value)
     });
+
+    inputProductQuantity.setAttribute("value", quantityNumber.toString())
 }
 
 quantityButtonsFuntion();

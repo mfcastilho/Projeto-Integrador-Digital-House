@@ -42,7 +42,7 @@ router.post("/admin/produtos/cadastro", uploadFile.fields([
 ]), AdminController.storeProduct);
 
 
-router.put("/admin/produtos/:id/editar", AdminController.editProduct);
+router.put("/admin/produtos/:id/editar", uploadFile.single("image"), AdminController.editProduct);
 router.delete("/admin/produtos/:id/excluir", AdminController.deleteProduct);
 
 
