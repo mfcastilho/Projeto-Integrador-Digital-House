@@ -62,7 +62,7 @@
             <div class="infos-product-box">
               <a href=""><h3><%= productVariant.product.name %></h3></a>
               <p>Cor: <%= productVariant.color %></p>
-              <p>Tamanho: <%= size %></p>
+              <p>Tamanho: <%= productVariant.size %></p>
             </div>
           </div>
 
@@ -75,7 +75,7 @@
               
             </div>
 
-            <p>R$ <%= productVariant.product.price.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
+            <p>R$ <%= total.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
             <div class="image-box">
               <img src="/img/delete-image.svg" alt="">
             </div>
@@ -89,7 +89,7 @@
       <div class="bottom-part">
         <div class="left-part styling-bottom-elements">
           <h4 class="total-title">Total: &NoBreak;</h4>
-          <h4 class="total-price">R$75.99</h4>
+          <h4 class="total-price">R$ <%= total.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></h4>
         </div>
         <button type="submit" class="right-part styling-button">
           Finalizar Compra

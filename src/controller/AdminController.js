@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const { v4:makeId } = require("uuid")
 const { ProductVariant, Product, Category } = require("../models");
+// const confirmDeleteProduct = require("./../public/js/confirmDeleteProduct")
 
 
 const AdminController = {
@@ -196,8 +197,14 @@ const AdminController = {
 
     },
 
-    deleteProduct: (req, res)=>{
-        
+    deleteProduct: async (req, res)=>{
+        const {id} = req.params;
+        const {idProduct, resp} = req.body
+        console.log("ID do produto: "+id);
+
+        await ProductVariant.destroy({
+            where:{id:id}
+        });
     }
 
 }
