@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const { v4:makeId } = require("uuid")
 const { ProductVariant, Product, Category } = require("../models");
+// const confirmDeleteProduct = require("./../public/js/confirmDeleteProduct")
 
 
 const AdminController = {
@@ -142,12 +143,68 @@ const AdminController = {
         return res.redirect("/admin/home");          
     },
 
-    editProduct: (req, res)=>{
+    editProduct: async (req, res)=>{
+        const {id} = req.params;
+
+        const {quantity,price} = req.body;
+        let image;
+
+        const productVariant = await ProductVariant.findByPk(id);
+
+        if(req.file){
+            image = "img/"+req.file.filename;
+            const resultProductVariant = await ProductVariant.update(
+                {
+                    quantity:quantity,
+                    image:image
+                },
+                {
+                    where:{id:id}  
+                }
+            );
+
+            const resultProduct = await Product.update(
+                {
+                    price:price
+                },
+                {
+                    where:{id:productVariant.product_id}
+                }
+            );
+
+            return res.redirect("/admin/home");
+        }
+
+        const resultProductVariant = await ProductVariant.update(
+            {
+                quantity:quantity,
+            },
+            {
+                where:{id:id}  
+            }
+        )
         
+        const resultProduct = await Product.update(
+            {
+                price:price
+            },
+            {
+                where:{id:productVariant.product_id}
+            }
+        )
+
+        return res.redirect("/admin/home");
+
     },
 
-    deleteProduct: (req, res)=>{
-        
+    deleteProduct: async (req, res)=>{
+        const {id} = req.params;
+        const {idProduct, resp} = req.body
+        console.log("ID do produto: "+id);
+
+        await ProductVariant.destroy({
+            where:{id:id}
+        });
     }
 
 }
