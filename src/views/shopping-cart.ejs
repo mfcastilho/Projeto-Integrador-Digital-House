@@ -55,34 +55,40 @@
           
         </div>
 
-        <div class="cart-content">
-
-          <div class="product-content">
-            <a href=""><img src="<%= productVariant.image %>" alt=""></a>
-            <div class="infos-product-box">
-              <a href=""><h3><%= productVariant.product.name %></h3></a>
-              <p>Cor: <%= productVariant.color %></p>
-              <p>Tamanho: <%= productVariant.size %></p>
-            </div>
-          </div>
-
-          <div class="another-infos">
-            <p>R$ <%= productVariant.product.price.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
-
-            <div class="the-amount-itens">
-              
-              <p class="center-item"><%= quantity %></p>
-              
-            </div>
-
-            <p>R$ <%= total.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
-            <div class="image-box">
-              <img src="/img/delete-image.svg" alt="">
-            </div>
-            
-          </div>
-
-        </div>
+        <% if(!carrinho.length){ %>
+          <h3>Carrinho Vazio! 😔</h3>
+        <% }else{ %>
+              <% carrinho.forEach(product=>{ %>
+                <div class="cart-content">
+                  <div class="product-content">
+                    <a href=""><img src="<%= product.image %>" alt=""></a>
+                    <div class="infos-product-box">
+                      <a href=""><h3><%= product.name %></h3></a>
+                      <p>Cor: <%= product.color %></p>
+                      <p>Tamanho: <%= product.size %></p>
+                    </div>
+                  </div>
+        
+                  <div class="another-infos">
+                    <p>R$ <%= product.price.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
+        
+                    <div class="the-amount-itens">
+                      
+                      <p class="center-item"><%= product.quantity %></p>
+                      
+                    </div>
+        
+                    <p>R$ <%= product.totalPriceProduct.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
+                    <div class="image-box">
+                      <img src="/img/delete-image.svg" alt="">
+                    </div>
+                    
+                  </div>
+        
+                </div>
+              <% }) %>
+        <% } %>
+        
 
       </div>
 

@@ -6,11 +6,16 @@ const ShoppingCartController = require("../controller/ShoppingCartController.js"
 const errorMiddleware = require("../middlewares/genericErrorMiddleware");
 
 
-router.get("/carrinho", ShoppingCartController.showShoppingCart);
+// router.get("/carrinho", ShoppingCartController.showShoppingCart);
+// router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
+// router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
 
-router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
-router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
 
-router.use(errorMiddleware)
+router.get("/carrinho", ShoppingCartController.show);
+router.post("/carrinho/adicionar", ShoppingCartController.addCart);
+
+
+
+// router.use(errorMiddleware)
 
 module.exports = router;
