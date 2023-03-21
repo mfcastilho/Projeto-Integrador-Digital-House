@@ -70,19 +70,19 @@ const ShoppingCartController = {
    },
 
    show: (req, res)=> {
-      const { carrinho } = req.session.userLogged;
+      const { shoppingcart } = req.session.userLogged;
 
       let total = 0;
 
-      if(!carrinho){
-         return res.render("shopping-cart.ejs", {carrinho: [], total});
+      if(!shoppingcart){
+         return res.render("shopping-cart.ejs", {shoppingcart: [], total});
       }
 
-      carrinho.forEach(product=>{
+      shoppingcart.forEach(product=>{
          total += Number(product.totalPriceProduct)
       });
 
-      return res.render("shopping-cart.ejs", {carrinho, total});
+      return res.render("shopping-cart.ejs", {shoppingcart, total});
       
    },
 
@@ -137,10 +137,10 @@ const ShoppingCartController = {
          totalPriceProduct:totalPriceProduct
       }
 
-      if(req.session.userLogged.carrinho){
-         req.session.userLogged.carrinho.push(productToCart);
+      if(req.session.userLogged.shoppingcart){
+         req.session.userLogged.shoppingcart.push(productToCart);
       }else{
-         req.session.userLogged.carrinho = [productToCart];
+         req.session.userLogged.shoppingcart = [productToCart];
       }
 
       return res.redirect("/carrinho");

@@ -55,10 +55,10 @@
           
         </div>
 
-        <% if(!carrinho.length){ %>
+        <% if(!shoppingcart.length){ %>
           <h3>Carrinho Vazio! 😔</h3>
         <% }else{ %>
-              <% carrinho.forEach(product=>{ %>
+              <% shoppingcart.forEach(product=>{ %>
                 <div class="cart-content">
                   <div class="product-content">
                     <a href=""><img src="<%= product.image %>" alt=""></a>
