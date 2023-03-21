@@ -16,6 +16,7 @@ const shoppingCartRouter = require("./router/shoppingCartRouter.js");
 const authRouter = require("./router/authRouter");
 const userRouter = require("./router/userRouter.js");
 const adminRouter = require("./router/adminRouter");
+const checkoutRouter = require("./router/checkoutRouter");
 
 
 //mostrando para o express que iremos usar uma
@@ -47,6 +48,7 @@ app.use(shoppingCartRouter);
 app.use(authRouter);
 app.use(userRouter);
 app.use(adminRouter);
+app.use(checkoutRouter);
 
 
 

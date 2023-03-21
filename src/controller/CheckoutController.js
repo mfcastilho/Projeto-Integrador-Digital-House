@@ -1,4 +1,4 @@
-const {ProductVariant, Product} = require("../models");
+const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
 
 const CheckoutController = {
 
@@ -22,15 +22,23 @@ const CheckoutController = {
          
      
          return res.render("checkout-page.ejs", {productVariant});
-
-         const {idUser} = req.body
-         
-         const user = User.findByPk(id, {
-            include:{
-
-          })
-      
     },
+
+    showUserInfos: (req, res) => {
+        const { idUser } = req.params;
+            const users = getInfoFromDatabase("users");
+            const userFound = users.find((user) => user.id === id);
+
+            return res.render("checkout-page.ejs", {userFound});
+    },
+    
+    delivery: (req, res) =>{
+        const { name, email, password } = req.body;
+
+        const deliveryAddress = 
+        return res.render("checkout-page.ejs", {})
+    }
+
 
 }
 
