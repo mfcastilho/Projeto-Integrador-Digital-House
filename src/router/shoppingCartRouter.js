@@ -3,7 +3,11 @@ const router = express.Router()
 
 const ShoppingCartController = require("../controller/ShoppingCartController.js");
 
+const notLoggedMiddleware = require("../middlewares/notLoggedMiddleware")
+
 const errorMiddleware = require("../middlewares/genericErrorMiddleware");
+
+
 
 
 // router.get("/carrinho", ShoppingCartController.showShoppingCart);
@@ -11,11 +15,11 @@ const errorMiddleware = require("../middlewares/genericErrorMiddleware");
 // router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
 
 
-router.get("/carrinho", ShoppingCartController.show);
+router.get("/carrinho", notLoggedMiddleware, ShoppingCartController.show);
 router.post("/carrinho/adicionar", ShoppingCartController.addCart);
 
 
 
-// router.use(errorMiddleware)
+router.use(errorMiddleware);
 
 module.exports = router;
