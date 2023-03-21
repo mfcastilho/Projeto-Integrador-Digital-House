@@ -9,15 +9,9 @@ const errorMiddleware = require("../middlewares/genericErrorMiddleware");
 
 
 
-
-// router.get("/carrinho", ShoppingCartController.showShoppingCart);
-// router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
-// router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
-
-
-router.get("/carrinho", notLoggedMiddleware, ShoppingCartController.show);
-router.post("/carrinho/adicionar", ShoppingCartController.addCart);
-
+router.get("/carrinho", notLoggedMiddleware, ShoppingCartController.showShoppingCartPage);
+router.post("/carrinho/adicionar", ShoppingCartController.addShoppingCart);
+router.delete("/carrinho/:id/deletar", ShoppingCartController.removeShoppingCart);
 
 
 router.use(errorMiddleware);
