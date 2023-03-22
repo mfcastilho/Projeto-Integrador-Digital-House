@@ -88,7 +88,7 @@ body{
   display: flex;
 }
 
-.color-attribute{
+/* .color-attribute{
   margin-left: 4px;
   margin-top: 4px;
 
@@ -98,7 +98,7 @@ body{
   border: 1px solid black;
 
   border: none;
-}
+} */
 
 .product-info{
   width: 70%;
@@ -598,6 +598,148 @@ input[type=text]{
   background-color: #49356e;
 }
 
+.branco{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: #FFF;
+  width: 12px;
+  height: 12px;
+  border: .1px solid black;
+
+}
+
+.azul{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: rgb(7, 102, 192);
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.vermelho{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: rgb(131, 15, 15);
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.verde{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: rgb(3, 92, 3);
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.rosa{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: rgb(204, 114, 164);
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.marrom{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: rgb(83, 47, 47);
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.laranja{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: rgb(255, 115, 0);
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.cinza{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: gray;
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.amarelo{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: rgb(245, 226, 52);
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.roxo{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: rgb(82, 3, 82);
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.preto{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: #000;
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
+
+.gelo{
+  margin-left: 4px;
+  margin-top: 4px;
+
+  background-color: #e9e6e6;
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
+  border: none;
+}
 
 
 

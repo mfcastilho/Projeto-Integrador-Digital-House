@@ -20,7 +20,7 @@ const shoppingCartRouter = require("./router/shoppingCartRouter.js");
 const authRouter = require("./router/authRouter");
 const userRouter = require("./router/userRouter.js");
 const adminRouter = require("./router/adminRouter");
-const checkoutRouter = require("./router/checkoutRouter");
+const checkoutRouter = require("./router/checkoutRouter")
 
 
 
@@ -53,10 +53,11 @@ app.use(express.static(path.resolve("src", "public")));
 //Rotas
 app.use(homeRouter);
 app.use(shoppingCartRouter);
+app.use(checkoutRouter);
 app.use(authRouter);
 app.use(userRouter);
 app.use(adminRouter);
-app.use(checkoutRouter);
+
 
 
 
