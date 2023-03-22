@@ -10,6 +10,7 @@ const errorMiddleware = require("../middlewares/genericErrorMiddleware");
 
 
 router.get("/carrinho",  notLoggedMiddleware, ShoppingCartController.showShoppingCartPage);
+// router.get("/checkout", ShoppingCartController.showCheckout);
 router.post("/carrinho/adicionar", onlyBuyIfIsLoggedMiddleware, ShoppingCartController.addShoppingCart);
 router.delete("/carrinho/:id/deletar", ShoppingCartController.removeShoppingCart);
 

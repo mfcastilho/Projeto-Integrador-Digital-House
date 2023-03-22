@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/css/checkout-page.css">
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/css/checkout-page.css">
+  <link rel="stylesheet" href="/css/style.css">
 
   <link rel="icon" href="/img/favicon-logo-urbano.png">
 
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/css/header.css">
   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
 
-  <script src="/public/js/openCheckoutPageForm.js" defer></script>
+  <script src="/js/openCheckoutPageForm.js" defer></script>
 </head>
 <body id="body-div">
 
@@ -29,7 +29,7 @@
 
     <div class="main-container">
       
-      <form action="">
+      <form action="/checkout" method="POST">
 
         <div class="top-part">
              
@@ -55,21 +55,22 @@
             </div>
           </div>
   
-          <div class="products-info-box">
+          <% user.shoppingcart.forEach(product=>{ %>
+            <div class="products-info-box">
             <div class="product-info">
   
               <div class="product-name">
-                <h4>Nome da Camiseta</h4>
+                <h4><%= product.name %></h4>
               </div>
   
               <div class="product-color-box">
                 <span class="title-color">Produto na cor:</span>
-                <div class="color-attribute"></div>
+                <div class="<%= product.color %>"></div>
               </div>
   
               <div class="product-size-box">
                 <span class="title-size">Tamanho:
-                  <strong class="size-Attribute">M</strong>
+                  <strong class="size-Attribute"><%= product.size %></strong>
                 </span>
               </div>
   
@@ -77,15 +78,17 @@
   
             <div class="wrapper-quantity-price-info">
               <div class="quantity-info-box">
-                <p>1</p>
+                <p><%= product.quantity %></p>
               </div>
                 
               <div class="price-info-box">
-                <p>R$ 79,90</p>
+                <p>R$ <%= product.totalPriceProduct.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
               </div>
             </div>
   
           </div>
+          <%}) %>
+          
   
           <div class="subtotal-info-box">
   
@@ -94,7 +97,7 @@
             <div class="wrapper-subtotal-info">
               <div class="infos-part">
                 <div class="title-subtotal">Subtotal:</div>
-                <span class="subtotal">R$ 79,90</span>
+                <span class="subtotal">R$ <%= total.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></span>
               </div>
               <div class="space-part"></div>
               
@@ -126,7 +129,7 @@
   
               <div class="infos-part">
                 <span class="title-total">Total:</span>
-                <span class="total">R$ 79,90</span>
+                <span class="total">R$ <%= total %></span>
               </div>
               <div class="space-part"></div>
   
@@ -145,7 +148,7 @@
   
               <div class="title-box">
   
-                <img class="personal-data-image" src="/public/img/personal-data-icon.svg" alt="">
+                <img class="personal-data-image" src="/img/personal-data-icon.svg" alt="">
                 <p>Dados Cadastrais</p>
   
               </div>
@@ -155,35 +158,35 @@
                 <div class="name-box">
   
                   <strong class="name">Nome:</strong>
-                  <span>Nome do cliente</span>
+                  <span><%= user.name %></span>
   
                 </div>
   
                 <div class="email-box">
   
                   <strong class="name">Email:</strong>
-                  <span>cliente@mail.com</span>
+                  <span><%= user.email %></span>
   
                 </div>
   
                 <div class="cel-box">
   
                   <strong class="name">Celular:</strong>
-                  <span>(21)99999-9999</span>
+                  <span><%= user.tel %></span>
   
                 </div>
   
-                <div class="registration-type--box">
+                <!-- <div class="registration-type--box">
   
                   <strong class="name">Tipo de Cadastro:</strong>
                   <span>Pessoa Física</span>
   
-                </div>
+                </div> -->
   
                 <div class="individual-registration-number-box">
   
                   <strong class="name">CPF:</strong>
-                  <span>111.111.111-11</span>
+                  <span><%= user.cpf %></span>
   
                 </div>
   
@@ -194,65 +197,65 @@
             <div class="low-part-box">
   
               <div class="title-box">
-                <img class="address-image" src="/public/img/address-icon.svg" alt="">
+                <img class="address-image" src="/img/address-icon.svg" alt="">
                 <p>Endereço Cadastrado</p>
               </div>
 
               <div class="user-infos-box address-mfo-box">
   
-                <div class="name-box addres-name-box">
+                <!-- <div class="name-box addres-name-box">
   
                   <strong class="name address-name">Nome do Endereço:</strong>
                   <span>Casa</span>
   
-                </div>
+                </div> -->
   
                 <div class="email-box zip-code-box">
   
                   <strong class="name zip-code">Cep:</strong>
-                  <span>33333333</span>
+                  <span><%= user.address.zip_code %></span>
   
                 </div>
   
                 <div class="cel-box public-place-box">
   
                   <strong class="name public-place">Logradouro:</strong>
-                  <span>Rua</span>
+                  <span><%= user.address.public_place %></span>
   
                 </div>
   
                 <div class="registration-type--box number-box">
   
                   <strong class="name number">Número:</strong>
-                  <span>555</span>
+                  <span><%= user.address.number %></span>
   
                 </div>
   
                 <div class="individual-registration-number-box complement-box">
   
                   <strong class="name complement-box">Complemento:</strong>
-                  <span>casa </span>
+                  <span><%= user.address.complement %></span>
   
                 </div>
 
                 <div class="individual-registration-number-box district-box">
   
                   <strong class="name district">Bairro:</strong>
-                  <span>centro</span>
+                  <span><%= user.address.district %></span>
   
                 </div>
 
                 <div class="individual-registration-number-box city-box">
   
                   <strong class="name city">Cidade:</strong>
-                  <span>São Paulo</span>
+                  <span><%= user.address.city %></span>
   
                 </div>
 
                 <div class="individual-registration-number-box state-box">
   
                   <strong class="name state">Estado:</strong>
-                  <span>SP</span>
+                  <span><%= user.address.state %></span>
   
                 </div>
   
@@ -265,7 +268,7 @@
           <div class="delivery-part-box">
   
             <div class="title-box">
-              <img class="delivery-image" src="/public/img/delivery-icon.svg" alt="">
+              <img class="delivery-image" src="/img/delivery-icon.svg" alt="">
               <p>Entrega</p>
             </div>
   
@@ -308,7 +311,7 @@
           <div class="payment-part-box">
   
             <div class="title-box">
-              <img src="/public/img/payment-icon.svg" alt="">
+              <img src="/img/payment-icon.svg" alt="">
               <p>Pagamento</p>
             </div>
             <div class="radio-buttons-box">
@@ -319,9 +322,9 @@
                 </div>
 
                 <div class="payment-cards">
-                  <img src="/public/img/card-visa-icon.svg" alt="">
-                  <img src="/public/img/card-elo-icon.svg" alt="">
-                  <img src="/public/img/card-master-icon.svg" alt="">
+                  <img src="/img/card-visa-icon.svg" alt="">
+                  <img src="/img/card-elo-icon.svg" alt="">
+                  <img src="/img/card-master-icon.svg" alt="">
                 </div>
 
                 <span class="expand-payment-form">...</span>
@@ -433,7 +436,7 @@
                   <input type="radio" name="payment_radio_button" id="ticket_payment" value="ticket">
                 </div>
                 <div class="payment-ticket">
-                  <img src="/public/img/boleto-icon.svg" alt="">
+                  <img src="/img/boleto-icon.svg" alt="">
                 </div>
 
               </div>
@@ -446,7 +449,7 @@
               
               <div class="change-payment-form-box">
                 <div class="edit-button">
-                  <img src="/public/img/edit-icon-png-3587.png" alt="">
+                  <img src="/img/edit-icon-png-3587.png" alt="">
                   <div>Alterar a forma de pagamento</div>
                 </div>
               </div>

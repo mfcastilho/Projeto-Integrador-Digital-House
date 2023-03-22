@@ -3,7 +3,18 @@ const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = r
 const CheckoutController = {
 
     showCheckout: (req, res)=>{
-        return res.render("checkout-page.ejs");
+        const {total} = req.body;
+        const {userLogged} = req.session;
+        
+        return res.render("checkout-page.ejs", {total, user:userLogged});
+    },
+
+    getCheckoutInfos: (req, res)=>{
+
+    },
+
+    completedPurchase: (req, res)=>{
+
     },
 
     showProductInfosToBuy: (req, res)=>{
