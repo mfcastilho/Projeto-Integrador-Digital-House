@@ -97,9 +97,11 @@
           <h4 class="total-title">Total: &NoBreak;</h4>
           <h4 class="total-price">R$ <%= total.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></h4>
         </div>
-        <button type="submit" class="right-part styling-button">
-          Finalizar Compra
-        </button>
+        <form class="right-part " action="/checkout" method="POST">
+          <button type="submit" class="styling-button">Finalizar Compra</button>
+          <input type="hidden" name="shoppingcart" value="<%= shoppingcart  %>">
+          <input type="hidden" name="total" value="<%= total %>">
+        </form> 
       </div>
     </section>
      
