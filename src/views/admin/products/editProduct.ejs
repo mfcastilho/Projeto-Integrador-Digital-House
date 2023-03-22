@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/home-admin.css">
+    <link rel="stylesheet" href="/css/editProduct.css">
+
+    <link rel="icon" href="/img/favicon-logo-urbano.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"
+        defer>
+    </script>
+
+    <title>Admin</title>
+</head>
+
+<body>
+    <main>
+        <div class="page">
+            
+            <!-- Side bar-->
+			<%- include("../../components/admin/sideBar.ejs")  %>
+    
+            <section class="content">
+               <h1 class="title">Editar</h1>
+
+               <form action="/admin/produtos/<%= productVariant.id %>/editar?_method=PUT" method="POST" enctype="multipart/form-data">
+                   
+                <div class="elements-container">
+
+                    <div class="hugging-left-elements">
+                        <div class="wrapper-inputs off-mode-style">
+                            <label for="name ">Nome</label>
+                            <input class="off-mode-style" type="text" name="name" id="name" value="<%= productVariant.product.name  %>" disabled>
+                        </div>
+        
+                        <div class="wrapper-inputs off-mode-style">
+                          <label for="model">Modelo</label>
+                          <select name="model" id="model" disabled>
+                           <option value="feminina" <%= productVariant.model == "feminina" ? "selected" : ""  %>>Feminino</option>
+                           <option value="masculina" <%= productVariant.model == "masculina" ? "selected" : ""  %>>Masculino</option>  
+                          </select>
+                        </div>
+        
+                        <div class="wrapper-inputs off-mode-style">
+                            <label for="color">Cores</label>
+                            <select name="color" id="color" disabled>
+        
+                                <option value="branco" <%= productVariant.color == "branco" ? "selected" : ""  %>>Branco</option>
+                                <option value="azul" <%= productVariant.color == "azul" ? "selected" : ""  %>>Azul</option>
+                                 <option value="vermelho" <%= productVariant.color == "vermelho" ? "selected" : ""  %>>Vermelho</option>
+                                 <option value="verde" <%= productVariant.color == "verde" ? "selected" : ""  %>>Verde</option>
+                                 <option value="rosa" <%= productVariant.color == "rosa" ? "selected" : ""  %>>Rosa</option> 
+                                 <option value="marrom" <%= productVariant.color == "marrom" ? "selected" : ""  %>>Marrom</option>
+                                 <option value="laranja" <%= productVariant.color == "laranja" ? "selected" : ""  %>>Laranja</option> 
+                                 <option value="cinza" <%= productVariant.color == "cinza" ? "selected" : ""  %>>Cinza</option>  
+                                 <option value="amarelo" <%= productVariant.color == "amarelo" ? "selected" : ""  %>>Amarelo</option> 
+                                 <option value="roxo" <%= productVariant.color == "roxo" ? "selected" : ""  %>>Roxo</option> 
+                                 <option value="preto" <%= productVariant.color == "preto" ? "selected" : ""  %>>Preto</option> 
+                                 <option value="gelo" <%= productVariant.color == "gelo" ? "selected" : ""  %>>Gelo</option> 
+                             
+                            </select>
+                          </div>
+        
+                          <div class="wrapper-inputs off-mode-style">
+                            <label for="size">Tamanho</label>
+                            <select name="size" id="size" disabled>
+                                
+                             <option value="P" <%= productVariant.size == "P" ? "selected" : ""  %>>P</option>
+                             <option value="M" <%= productVariant.size == "M" ? "selected" : ""  %>>M</option> 
+                             <option value="G" <%= productVariant.size == "G" ? "selected" : ""  %>>G</option>
+                          
+                             
+                            </select>
+                          </div>
+        
+                          <div class="wrapper-inputs">
+                              <label for="quantity">Quantidade</label>
+                              <input type="number" name="quantity" id="quantity" value="<%= productVariant.quantity  %>">
+                          </div>
+    
+    
+    
+                    </div>
+    
+                    <div class="hugging-right-elements">
+    
+                        <div class="wrapper-inputs">
+                            <label for="image">Imagem</label>
+                            <input type="file" name="image" id="image">
+                        </div>
+                        
+                        <div class="wrapper-inputs off-mode-style">
+                            <label  for="tshirtPrint">Estampa</label>
+                            <input type="file" name="tshirtPrint" id="tshirtPrint"  disabled>
+                        </div>
+    
+                        <!-- <div class="wrapper-inputs">
+                            <label for="discount">Desconto</label>
+                            <input type="number" name="discount" id="discount" min="0" max="100" step=".01">
+                        </div>
+     -->
+                        
+                        <div class="wrapper-inputs">
+                            <label for="price">Preço</label>
+                            <input type="number" name="price" id="price" value="<%= productVariant.product.price.toFixed(2)%>">
+                        </div>
+    
+    
+                        <div class="wrapper-inputs off-mode-style">
+                            <label for="category">Categoria</label>
+                            <select name="category" id="category" disabled>
+                                
+                             <option value="filme" <%= product.category == "filme" ? "selected" : ""  %>>Filmes</option>
+                             <option value="anime" <%= product.category == "anime" ? "selected" : ""  %>>Animes</option> 
+                            
+                            </select>
+                          </div>
+    
+                    </div>
+
+                </div>
+            
+                <button type="submit" class="btn-send">Enviar</button>
+
+               </form>      
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

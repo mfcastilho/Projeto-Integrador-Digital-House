@@ -34,7 +34,7 @@
 
   <main>
 
-    <form action="" class="main-container">
+    <section action="" class="main-container">
 
       <div class="top-part">
         <h4 class="title styling-elements">Carrinho</h4>
@@ -55,55 +55,53 @@
           
         </div>
 
-        <div class="cart-content">
-
-          <div class="product-content">
-            <a href=""><img src="<%= productVariant.image %>" alt=""></a>
-            <div class="infos-product-box">
-              <a href=""><h3><%= productVariant.product.name %></h3></a>
-              <p>Cor: <%= productVariant.color %></p>
-              <p>Tamanho: <%= productVariant.size %></p>
-            </div>
-          </div>
-
-          <div class="another-infos">
-            <p>R$ <%= productVariant.product.price %></p>
-
-            <div class="the-amount-itens">
-              <p class="left-item">
-                <span class="material-symbols-outlined">
-                  remove
-                  </span>
-              </p>
-              <p class="center-item">1</p>
-              <p class="right-item">
-                <span class="material-symbols-outlined">
-                  add
-                  </span>
-              </p>
-            </div>
-
-            <p>R$ <%= productVariant.product.price %></p>
-            <div class="image-box">
-              <img src="/img/delete-image.svg" alt="">
-            </div>
-            
-          </div>
-
-        </div>
+        <% if(!shoppingcart.length){ %>
+          <h3>Carrinho Vazio! 😔</h3>
+        <% }else{ %>
+              <% shoppingcart.forEach(product=>{ %>
+                <div class="cart-content">
+                  <div class="product-content">
+                    <a href=""><img src="<%= product.image %>" alt=""></a>
+                    <div class="infos-product-box">
+                      <a href=""><h3><%= product.name %></h3></a>
+                      <p>Cor: <%= product.color %></p>
+                      <p>Tamanho: <%= product.size %></p>
+                    </div>
+                  </div>
+        
+                  <div class="another-infos">
+                    <p>R$ <%= product.price.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
+        
+                    <div class="the-amount-itens">
+                      
+                      <p class="center-item"><%= product.quantity %></p>
+                      
+                    </div>
+        
+                    <p>R$ <%= product.totalPriceProduct.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
+                    <form action="/carrinho/<%= product.id %>/deletar?_method=DELETE" method="POST" class="image-box">                  
+                      <button type="submit" style="border: none;"><img src="/img/delete-image.svg" alt="" style="width: 14px;"></button>
+                    </form>
+                    
+                  </div>
+        
+                </div>
+              <% }) %>
+        <% } %>
+        
 
       </div>
 
       <div class="bottom-part">
         <div class="left-part styling-bottom-elements">
           <h4 class="total-title">Total: &NoBreak;</h4>
-          <h4 class="total-price">R$75.99</h4>
+          <h4 class="total-price">R$ <%= total.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></h4>
         </div>
         <button type="submit" class="right-part styling-button">
           Finalizar Compra
         </button>
       </div>
-    </form>
+    </section>
      
   </main>
 

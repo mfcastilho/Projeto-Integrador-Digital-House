@@ -108,19 +108,28 @@ body{
 .btn-send{
   width: 84%;
   height: 3rem;
-
-  border-radius: 1rem;
+  border-radius: .5rem;
   border: none;
-
-
   font-size: 1.8rem;
-
   margin: 0 auto;
-
   color: #FFF;
   background-color: #553a77;
+  transition: 0.6s all;
 }
 
 .btn-send:hover{
-  background-color: #4c3766;
+  background-color: #43305a;
+}
+
+.logo-box{
+  text-align: center;
+}
+
+.logo{
+  width: 50%;
+}
+
+
+.off-mode-style{
+  opacity: 0.45;
 }

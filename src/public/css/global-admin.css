@@ -77,7 +77,7 @@ aside.left a.active {
 }
 
 .btn-primary:hover {
-    background-color: #8D72E1!important;
+    background-color: #dbd6e7!important;
     border: none!important;
 }
 
@@ -102,7 +102,7 @@ aside.left a.active {
 }
 
 .edit-btn{
-  background-color: #3C2C57!important;
+  background-color: #523b77!important;
   color: #FFF!important;
   font-weight: 500!important;
   border: none!important;
@@ -110,6 +110,9 @@ aside.left a.active {
   width: 100%;
 }
 
+.edit-btn:hover{
+  background-color: #483568!important;
+}
 .delete-btn-form{
   width: 100%;
 }

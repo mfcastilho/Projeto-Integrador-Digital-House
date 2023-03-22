@@ -3,12 +3,17 @@ const router = express.Router()
 
 const ShoppingCartController = require("../controller/ShoppingCartController.js");
 
-
-router.get("/carrinho", ShoppingCartController.showShoppingCart);
-
-router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
-router.post("/carrinho", ShoppingCartController.getProductInfosToBuy);
+const notLoggedMiddleware = require("../middlewares/notLoggedMiddleware")
+const onlyBuyIfIsLoggedMiddleware = require("../middlewares/onlyBuyIfIsLoggedMiddleware");
+const errorMiddleware = require("../middlewares/genericErrorMiddleware");
 
 
 
-module.exports = router;
+router.get("/carrinho",  notLoggedMiddleware, ShoppingCartController.showShoppingCartPage);
+router.post("/carrinho/adicionar", onlyBuyIfIsLoggedMiddleware, ShoppingCartController.addShoppingCart);
+router.delete("/carrinho/:id/deletar", ShoppingCartController.removeShoppingCart);
+
+
+router.use(errorMiddleware);
+
+module.exports = router; 

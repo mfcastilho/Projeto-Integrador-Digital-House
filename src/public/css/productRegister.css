@@ -1,3 +1,4 @@
+@import url('./global-admin.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 
@@ -9,6 +10,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+main{
+  max-width:1366px;
+  width: 100%;
+  padding: 0;
+}
+
+.page{
+  width: 100%;
 }
 
 .content{
@@ -102,21 +113,23 @@
 .btn-send{
   width: 84%;
   height: 3rem;
-
-  border-radius: 1rem;
+  border-radius: .5rem;
   border: none;
-
-
   font-size: 1.8rem;
-
   margin: 0 auto;
-
   color: #FFF;
   background-color: #553a77;
+  transition: 0.6s all;
 }
 
 .btn-send:hover{
- 
+  background-color: #43305a;
+}
 
-  background-color: #4c3766;
+.logo-box{
+  text-align: center;
+}
+
+.logo{
+  width: 50%;
 }

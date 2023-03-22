@@ -2,6 +2,10 @@
 const express = require("express");
 const app = express();
 const session = require("express-session");
+const methodOverride = require("method-override");
+
+
+
 
 
 
@@ -19,6 +23,7 @@ const adminRouter = require("./router/adminRouter");
 const checkoutRouter = require("./router/checkoutRouter");
 
 
+
 //mostrando para o express que iremos usar uma
 //template engine e especificando que iremos usar ejs
 app.set("view engine", "ejs");
@@ -26,15 +31,18 @@ app.set("view engine", "ejs");
 //setando para o express o caminho da pasta views
 app.set("views", path.resolve("src", "views"));
 
+//configuração da session
 app.use(session({
   secret:"mysecretpassword",
   resave: true,
   saveUninitialized: true
-}))
+}));
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-
+app.use(methodOverride("_method"));
 
 
 //transformando a pasta public em estática(global)
@@ -49,6 +57,8 @@ app.use(authRouter);
 app.use(userRouter);
 app.use(adminRouter);
 app.use(checkoutRouter);
+
+
 
 
 
