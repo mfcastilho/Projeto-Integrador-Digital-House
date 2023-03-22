@@ -35,7 +35,7 @@ const CheckoutController = {
     delivery: (req, res) =>{
         const { name, email, password } = req.body;
 
-        const deliveryAddress = 
+
         return res.render("checkout-page.ejs", {})
     }
 
