@@ -16,4 +16,4 @@ router.delete("/carrinho/:id/deletar", ShoppingCartController.removeShoppingCart
 
 router.use(errorMiddleware);
 
-module.exports = router;
+module.exports = router; 
