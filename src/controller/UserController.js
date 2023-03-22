@@ -20,6 +20,8 @@ const UserController = {
       raw:false
     })
 
+    
+
     return res.render("personal-data-page.ejs", {user});
   },
 
