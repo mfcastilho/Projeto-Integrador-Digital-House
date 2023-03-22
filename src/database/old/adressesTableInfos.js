@@ -11,8 +11,8 @@ const addresses = [
         district: "Centro",
         city: "São Paulo",
         state: "SP",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     },
     {
         id: "5d6c7b8a9f0e1d2c3b4a58439e0f1d2c3b4a58",
@@ -24,8 +24,8 @@ const addresses = [
         district: "Barra da Tijuca",
         city: "Rio de Janeiro",
         state: "RJ",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
+        createdAt: new Date(),
+        updatedAt: new Date()
     }
 ]
 
