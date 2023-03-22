@@ -3,10 +3,10 @@ const notLoggedMiddleware = (req, res, next)=>{
 
     if(!req.session.userLogged){
 
-        res.redirect("/")
+        return res.redirect("/")
     }
 
-    next();
+    return next();
 }
 
 module.exports = notLoggedMiddleware;

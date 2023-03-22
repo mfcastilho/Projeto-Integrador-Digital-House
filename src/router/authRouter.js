@@ -3,6 +3,7 @@ const router = express.Router();
 
 const loginFormValidationMiddleware = require("../middlewares/loginFormValidationMiddleware");
 const registerFormValidationMiddleware = require("../middlewares/registerFormValidationMiddleware")
+
 const errorMiddleware = require("../middlewares/genericErrorMiddleware");
 
 const AuthController = require("../controller/AuthController.js");
