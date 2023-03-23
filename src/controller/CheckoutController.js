@@ -1,20 +1,31 @@
 const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
+const { validationResult } = require("express-validator");
 
 const CheckoutController = {
 
     showCheckout: (req, res)=>{
         const {total} = req.body;
         const {userLogged} = req.session;
+
+        const openFormCard = false;
         
-        return res.render("checkout-page.ejs", {total, user:userLogged});
-    },
-
-    getCheckoutInfos: (req, res)=>{
-
+        return res.render("checkout-page.ejs", {total, user:userLogged, openFormCard});
     },
 
     completedPurchase: (req, res)=>{
 
+        const validation = validationResult(req);
+
+        const { total} = req.body;
+        const { userLogged } = req.session;
+        const openFormCard = true;
+
+        if(validation.errors.length > 0){
+
+            res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
+        }
+
+        res.redirect("requests-page.ejs");
     },
 
     showProductInfosToBuy: (req, res)=>{
