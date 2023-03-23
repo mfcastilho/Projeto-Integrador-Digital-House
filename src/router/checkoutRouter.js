@@ -3,8 +3,11 @@ const router = express.Router();
 
 const CheckoutController = require("../controller/CheckoutController.js");
 
+const creditCardFormValidationMiddleware = require("../middlewares/creditCardFormValidationMiddleware");
+
+
 router.post("/checkout", CheckoutController.showCheckout);
-// router.post("/checkout", CheckoutController.completedPurchase);
+router.post("/final-checkout", creditCardFormValidationMiddleware, CheckoutController.completedPurchase);
 // router.post("/checkout", CheckoutController.showProductInfosToBuy);
 // router.get("/checkout", CheckoutController.showUserInfos);
 
