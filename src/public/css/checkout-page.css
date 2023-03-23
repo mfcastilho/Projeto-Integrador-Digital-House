@@ -741,7 +741,9 @@ input[type=text]{
   border: none;
 }
 
-
+.invalid-card{
+  border-color: red;
+}
 
 
 

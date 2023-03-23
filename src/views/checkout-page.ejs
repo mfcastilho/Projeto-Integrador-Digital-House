@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="/css/header.css">
   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
 
+  <script src="/js/creditCardFormValidation.js" defer></script>
+
+  <script src="/js/insertDeliveryValueInTotal.js" defer></script>
+
   <script src="/js/openCheckoutPageForm.js" defer></script>
 </head>
 <body id="body-div">
@@ -29,7 +33,7 @@
 
     <div class="main-container">
       
-      <form action="/checkout" method="POST">
+      <form action="/final-checkout" method="POST">
 
         <div class="top-part">
              
@@ -129,7 +133,8 @@
   
               <div class="infos-part">
                 <span class="title-total">Total:</span>
-                <span class="total">R$ <%= total %></span>
+                <span>R$</span>
+                <span class="total"><%= total %></span>
               </div>
               <div class="space-part"></div>
   
@@ -280,15 +285,15 @@
                 </div>
 
                 <div class="delivery-infos">
-                  <span class="delivery-price">R$20,00</span>
-                  <span class="delivery-days">12dias</span>
+                  <span>R$</span>
+                  <span class="delivery-price">20</span>
+                  <span class="delivery-days">12 dias</span>
                   <span class="delivery-type">PAC</span>
                 </div>
                 
-
               </div>
 
-              <div class="wrapper-radio-buttons">
+              <!-- <div class="wrapper-radio-buttons">
                 <div class="input-radio-button-box">
                   <input type="radio" name="delivery_radio_button" id="address_radio_button">
                 </div>
@@ -298,12 +303,8 @@
                   <span class="delivery-days">12dias</span>
                   <span class="delivery-type">PAC</span>
                 </div>
+              </div> -->
 
-              </div>
-              
-
-
-             
             </div>
 
           </div>
@@ -385,7 +386,7 @@
 
                   <div class="wrapper-input-and-label number_card-class-input">
                     <label for="number_card">Número do Cartão</label>
-                    <input type="text" name="number_card" id="number_card" class="number_card-class" placeholder="xxx xxx xxxx xxx">
+                    <input type="text" name="number_card" id="number_card" maxlength="16" pattern="[0-9]+" class="number_card-class" placeholder="xxxx xxxx xxxx xxxx">
                   </div>
 
                   <div class="wrapper-input-and-label card_expiring_date-class-input">
@@ -403,7 +404,7 @@
 
                   <div class="wrapper-input-and-label security_code-class-input">
                     <label for="security_code">Cód. de Segurança</label>
-                    <input type="text" name="security_code" id="security_code" placeholder="CCV">
+                    <input type="text" name="security_code" maxlength="3" pattern="[0-9]+" id="security_code" placeholder="CCV">
                   </div>
 
                   <div class="wrapper-input-and-label installments-class-input">
@@ -427,7 +428,8 @@
 
                 <div class="payment-value-box">
                   <div class="value-title">Valor:&nbsp;</div>
-                  <div class="value"> R$79,90</div>
+                  <span>R$</span>
+                  <div class="value"></div>
                 </div>
               </div>
 
@@ -443,7 +445,8 @@
               <div class="show-value-payment">
                 <div class="payment-value-box">
                   <div class="value-title">Valor:&nbsp;</div>
-                  <div class="value"> R$79,90</div>
+                  <span>R$</span>
+                  <div class="value" id="ticket-value"></div>
                 </div>
               </div>
               
@@ -456,7 +459,7 @@
 
               
 
-              
+              <input type="hidden" name="totalPriceToPay" id="input-Total-price">
              
             </div>
 

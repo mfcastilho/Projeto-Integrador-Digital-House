@@ -9,12 +9,13 @@ const CheckoutController = {
         return res.render("checkout-page.ejs", {total, user:userLogged});
     },
 
-    getCheckoutInfos: (req, res)=>{
-
-    },
-
     completedPurchase: (req, res)=>{
+        const { totalPriceToPay, number_card, card_expiring_date, card_holder_name, security_code, installments } = req.body;
+        const { userLogged } = req.session
 
+        res.send({
+            number_card, card_expiring_date, card_holder_name, security_code, installments
+        });
     },
 
     showProductInfosToBuy: (req, res)=>{

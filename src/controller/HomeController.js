@@ -2,6 +2,7 @@
 const {ProductVariant, Product} = require("../models");
 
 const HomeController = {
+
   showHome: async (req, res)=>{
 
   const productsVariant = await ProductVariant.findAll({
@@ -159,8 +160,6 @@ const HomeController = {
       return aIndex - bIndex
     });
 
-  
-
     const femaleUniquesProducts = Object.values(
       productsVariant.filter(productVariant => productVariant.model === "feminina") 
     )
@@ -234,6 +233,7 @@ const HomeController = {
     return res.render("inner-product.ejs",{productVariant, productsVariant:femaleTshirts, tshirt:maleTshirts[0], routeGender:"feminino", sizes:femaleTshirtsSizes});
 
   }
+  
 }
 
 module.exports = HomeController;
