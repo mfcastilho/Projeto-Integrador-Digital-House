@@ -1,5 +1,9 @@
 const numberCardInput = document.querySelector("#number_card");
-const securityCodeInput = document.querySelector("#security_code")
+const securityCodeInput = document.querySelector("#security_code");
+
+
+
+
 
 numberCardInput.addEventListener("input", ()=>{
 
@@ -16,4 +20,6 @@ numberCardInput.addEventListener("input", ()=>{
 
     numberCardInput.classList.toggle("invalid-card", !validCardNumber);
 });
+
+
 

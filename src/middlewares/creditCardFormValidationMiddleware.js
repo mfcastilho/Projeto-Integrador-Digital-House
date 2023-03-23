@@ -20,11 +20,8 @@ creditCardFormValidationMiddleware = [
     check("security_code")
         .trim().bail()
         .notEmpty().withMessage("o campo não pode ficar sozinho")
-        .isNumeric({min:3, max:3}).withMessage("o campo só aceita números"),
-
-    check("installments")
-        .notEmpty("o campo não pode ficar sem ser selecionado")    
-       
+        .isNumeric({min:3, max:3}).withMessage("o campo só aceita números")
+      
 ]
 
 

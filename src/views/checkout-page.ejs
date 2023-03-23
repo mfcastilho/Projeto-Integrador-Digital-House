@@ -33,7 +33,7 @@
 
     <div class="main-container">
       
-      <form action="/final-checkout" method="POST">
+      <form id="checkout-form" action="/final-checkout" method="POST">
 
         <div class="top-part">
              
@@ -89,7 +89,7 @@
                 <p>R$ <%= product.totalPriceProduct.toLocaleString("pt-BR", {minimumFractionDigits:2}) %></p>
               </div>
             </div>
-  
+            
           </div>
           <%}) %>
           
@@ -137,7 +137,7 @@
                 <span class="total"><%= total %></span>
               </div>
               <div class="space-part"></div>
-  
+              <input type="hidden" name="total" id="input-total">
               
             </div>
   
@@ -286,7 +286,7 @@
 
                 <div class="delivery-infos">
                   <span>R$</span>
-                  <span class="delivery-price">20</span>
+                  <span class="delivery-price">20.00</span>
                   <span class="delivery-days">12 dias</span>
                   <span class="delivery-type">PAC</span>
                 </div>
@@ -318,8 +318,8 @@
             <div class="radio-buttons-box">
   
               <div class="wrapper-radio-buttons credit_card_payment">
-                <div class="input-radio-button-box">
-                  <input type="radio" name="payment_radio_button" id="credit_card_payment" value="creditCard">
+                <div class="input-radio-button-box" >
+                  <input type="radio" name="payment_radio_button" id="credit_card_payment" value="creditCard" >
                 </div>
 
                 <div class="payment-cards">
@@ -332,7 +332,7 @@
               </div>
 
               <!-- Fomulário do Cartão-->
-              <div class="wrapper-payment-form payment_form" id="payment_form_id">
+              <div class="wrapper-payment-form payment_form" id="payment_form_id" <%= openFormCard ? `style=display:block` : `style=display:none`  %>>
 
                 <!--Credit card image -->
                 <div class="credit-card-image-container">
@@ -387,17 +387,26 @@
                   <div class="wrapper-input-and-label number_card-class-input">
                     <label for="number_card">Número do Cartão</label>
                     <input type="text" name="number_card" id="number_card" maxlength="16" pattern="[0-9]+" class="number_card-class" placeholder="xxxx xxxx xxxx xxxx">
+                    <% if(locals.errors && errors.number_card){ %>
+                      <div class="danger"><%= errors.number_card.msg %></div>
+                    <% } %>
                   </div>
 
                   <div class="wrapper-input-and-label card_expiring_date-class-input">
                     <label for="card_expiring_date">Validade</label>
                     <input type="text" name="card_expiring_date" id="card_expiring_date" class="card_expiring_date-class" placeholder="xx/xx">
+                    <% if(locals.errors && errors.card_expiring_date){ %>
+                      <div class="danger"><%= errors.card_expiring_date.msg %></div>
+                    <% } %>
                   </div>
                 </div>
 
                 <div class="wrapper-input-and-label card_holder_name-input-class">
                   <label for="card_holder_name">Nome do Titular</label>
                   <input type="text" name="card_holder_name" id="card_holder_name">
+                  <% if(locals.errors && errors.card_holder_name){ %>
+                    <div class="danger"><%= errors.card_holder_name.msg %></div>
+                  <% } %>
                 </div>
 
                 <div class="wrapper-right-left-parts">
@@ -405,6 +414,9 @@
                   <div class="wrapper-input-and-label security_code-class-input">
                     <label for="security_code">Cód. de Segurança</label>
                     <input type="text" name="security_code" maxlength="3" pattern="[0-9]+" id="security_code" placeholder="CCV">
+                    <% if(locals.errors && errors.security_code){ %>
+                      <div class="danger"><%= errors.security_code.msg %></div>
+                    <% } %>
                   </div>
 
                   <div class="wrapper-input-and-label installments-class-input">

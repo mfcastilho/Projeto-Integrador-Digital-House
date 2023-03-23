@@ -7,6 +7,10 @@ const finalTicketValue = document.querySelector("#ticket-value")
 const inputCardValidation = document.querySelector("#card_expiring_date");
 
 
+const form = document.querySelector("#checkout-form");
+
+
+
 inputAddress.addEventListener("click", ()=>{
 
     const inputTotalPrice = document.querySelector("#input-Total-price"); 
@@ -44,3 +48,10 @@ inputCardValidation.addEventListener("input", (e)=>{
         e.target.value = "";
       }   
 });
+
+
+form.addEventListener("submit", ()=>{
+  const totalInput = document.querySelector("#input-total");
+
+  totalInput.setAttribute("value", total.innerHTML);
+})

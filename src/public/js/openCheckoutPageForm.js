@@ -18,7 +18,7 @@ const divcreditCardPayment = document.querySelector(".credit_card_payment");
 const changePaymentFormBox = document.querySelector(".change-payment-form-box");
 
 
-creditCardPayment.addEventListener("click", ()=>{
+creditCardPayment.addEventListener("change", ()=>{
   paymentFormulary.style.display = "block";
   divTicketPayment.style.display = "none";
 
