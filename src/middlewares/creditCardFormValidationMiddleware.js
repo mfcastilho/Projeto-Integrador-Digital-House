@@ -16,7 +16,7 @@ creditCardFormValidationMiddleware = [
     check("card_holder_name")
         .trim().bail()
         .notEmpty().withMessage("o campo não pode ficar vazio").bail()
-        .isString().withMessage("esse campo não aceita números"),
+        .matches(/^[a-zA-Z]+$/).withMessage("esse campo não aceita números"),
 
     check("security_code")
         .trim().bail()
