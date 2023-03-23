@@ -17,17 +17,3 @@ numberCardInput.addEventListener("input", ()=>{
     numberCardInput.classList.toggle("invalid-card", !validCardNumber);
 });
 
-// securityCodeInput.addEventListener("input", ()=>{
-    
-//     const securityCode = securityCodeInput.value;
-
-//     securityCode = securityCode.replace(/\D/g, "");
-
-//     securityCodeInput.value = securityCode;
-
-//     securityCode = securityCode.replace(/\s/g, "").length == 3;
-
-//     securityCodeInput.value = securityCode;
-    
-//     // const validSecurityCaode = 
-// })
