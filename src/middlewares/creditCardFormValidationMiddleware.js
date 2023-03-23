@@ -1,6 +1,7 @@
 const { check } = require("express-validator");
 
 creditCardFormValidationMiddleware = [
+    
     check("number_card")
         .trim().bail()
         .notEmpty().withMessage("O campo não pode ficar vazio")
