@@ -25,7 +25,11 @@ const CheckoutController = {
             res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
         }
 
-        res.redirect("requests-page.ejs");
+        
+
+        console.log(userLogged)
+
+        res.redirect(`/usuario/area-cliente/${userLogged.id}/dados-pessoais`);
     },
 
     showProductInfosToBuy: (req, res)=>{

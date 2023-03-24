@@ -386,7 +386,7 @@
 
                   <div class="wrapper-input-and-label number_card-class-input">
                     <label for="number_card">Número do Cartão</label>
-                    <input type="text" name="number_card" id="number_card" maxlength="16" pattern="[0-9]+" class="number_card-class" placeholder="xxxx xxxx xxxx xxxx">
+                    <input type="text" name="number_card" id="number_card" maxlength="16" class="number_card-class" placeholder="xxxx xxxx xxxx xxxx">
                     <% if(locals.errors && errors.number_card){ %>
                       <div class="danger"><%= errors.number_card.msg %></div>
                     <% } %>
@@ -413,7 +413,7 @@
 
                   <div class="wrapper-input-and-label security_code-class-input">
                     <label for="security_code">Cód. de Segurança</label>
-                    <input type="text" name="security_code" maxlength="3" pattern="[0-9]+" id="security_code" placeholder="CCV">
+                    <input  type="text" name="security_code" maxlength="3" id="security_code" placeholder="CCV">
                     <% if(locals.errors && errors.security_code){ %>
                       <div class="danger"><%= errors.security_code.msg %></div>
                     <% } %>
