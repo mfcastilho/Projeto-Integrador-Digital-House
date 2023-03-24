@@ -1,5 +1,6 @@
 const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
 const { validationResult } = require("express-validator");
+const {v4:makeId} = require("uuid");
 
 const CheckoutController = {
 
@@ -26,6 +27,7 @@ const CheckoutController = {
         }
 
         const newOrder = {
+            id:makeId(),
             user_id: userLogged.id
         }
 
@@ -35,16 +37,21 @@ const CheckoutController = {
             where: {user_id: userLogged.id}
         })
 
-        for(let i = 0; i <= userLogged.shoppingcart.lenght; i++){
+        userLogged.shoppingcart.forEach(async productVariant=>{
             let newOrderDetails = {
-                products_variant_id: userLogged.shoppingcart[i].id,
-                order_id: order.id,
-                quantity: userLogged.shoppingcart[i].quantity,
+                id:makeId(),
+                product_variant_id: productVariant.id,
+                order_id: newOrder.id,
+                quantity: productVariant.quantity,
             }
 
-            await OrderDetail.create(newOrderDetails);
-        }
+            console.log(newOrderDetails)
 
+            await OrderDetail.create(newOrderDetails);
+        })
+
+
+       
 
         // res.json(userLogged.shoppingcart)
 
