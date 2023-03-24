@@ -1,5 +1,6 @@
 const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
 const { validationResult } = require("express-validator");
+const {v4:makeId} = require("uuid");
 
 const CheckoutController = {
 
@@ -12,7 +13,7 @@ const CheckoutController = {
         return res.render("checkout-page.ejs", {total, user:userLogged, openFormCard});
     },
 
-    completedPurchase: (req, res)=>{
+    completedPurchase: async (req, res)=>{
 
         const validation = validationResult(req);
 
@@ -24,7 +25,36 @@ const CheckoutController = {
             res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
         }
 
-        res.redirect("requests-page.ejs");
+        const newOrder = {
+            id:makeId(),
+            user_id: userLogged.id
+        }
+
+        await Order.create(newOrder);
+
+        const order = Order.findOne({
+            where: {user_id: userLogged.id}
+        })
+
+        userLogged.shoppingcart.forEach(async productVariant=>{
+            let newOrderDetails = {
+                id:makeId(),
+                product_variant_id: productVariant.id,
+                order_id: newOrder.id,
+                quantity: productVariant.quantity,
+            }
+
+            console.log(newOrderDetails)
+
+            await OrderDetail.create(newOrderDetails);
+        })
+
+
+       
+
+        // res.json(userLogged.shoppingcart)
+
+        res.redirect(`/usuario/area-cliente/${userLogged.id}/dados-pessoais`);
     },
 
     showProductInfosToBuy: (req, res)=>{

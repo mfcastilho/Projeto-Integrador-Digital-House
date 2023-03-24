@@ -9,6 +9,7 @@ const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = r
 
 
 const UserController = {
+
   showUserAreaPage: async (req, res) =>{
     const {id} = req.params;
 
@@ -60,12 +61,12 @@ const UserController = {
         require: false
       },
       raw:false
-    })      
+    })  
+    
 
     const updateUser = {
       id,
-      email: email == undefined ? user.email : email, 
-      password: password == undefined ? user.password : hashPassword,
+      email: email == undefined ? user.email : email,
        name: name == undefined ? user.name : name,
        cpf: cpf == undefined ? user.cpf : cpf,
        tel: tel == undefined ? user.tel : tel,
@@ -74,7 +75,15 @@ const UserController = {
 
     await User.update(updateUser, {
       where:{id}
-    })
+    });
+
+    if(password){
+      const hashPassword = bcrypt.hashSync(password, 10);
+      await User.update(updateUser,
+        {password:hashPassword}, 
+        {where:{id}}
+        );
+    }
 
     return res.redirect(`/usuario/area-cliente/${updateUser.id}/dados-pessoais`);
   },
