@@ -2,6 +2,7 @@
 // const fs = require("fs");
 // const path = require("path");
 
+const bcrypt = require("bcrypt");
 const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
 
 // const UserModel = require("../data-base/UserModel");
@@ -50,6 +51,8 @@ const UserController = {
            password
           } = req.body;
 
+    const hashPassword = bcrypt.hashSync(password, 10);      
+
     const user = await User.findByPk(id, {
       include:{
         model: Address,
@@ -62,7 +65,7 @@ const UserController = {
     const updateUser = {
       id,
       email: email == undefined ? user.email : email, 
-      password: password == undefined ? user.password : password,
+      password: password == undefined ? user.password : hashPassword,
        name: name == undefined ? user.name : name,
        cpf: cpf == undefined ? user.cpf : cpf,
        tel: tel == undefined ? user.tel : tel,

@@ -21,7 +21,6 @@ const CheckoutController = {
         const openFormCard = true;
 
         if(validation.errors.length > 0){
-
             res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
         }
 
@@ -60,7 +59,6 @@ const CheckoutController = {
 
         return res.render("checkout-page.ejs", {})
     }
-
 
 }
 
