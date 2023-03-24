@@ -1,4 +1,5 @@
 const { check } = require("express-validator");
+const {User} = require("../models");
 
 
 const registerFormValidationMiddleware =  [
@@ -6,7 +7,15 @@ const registerFormValidationMiddleware =  [
     check("email")
       .trim().bail()
       .notEmpty().withMessage("campo obrigatório").bail()
-      .isEmail().withMessage("Digite um formato de email correto"),
+      .isEmail().withMessage("Digite um formato de email correto")
+      .custom(async (email)=>{
+        const user = await User.findOne({where:{email:email}});
+        if(user){
+          throw new Error("Esse email já se encontra cadastrado");
+        }
+
+        return true;
+      }),
       
     check("confirmEmail")
     .trim().bail()
