@@ -12,7 +12,7 @@ const CheckoutController = {
         return res.render("checkout-page.ejs", {total, user:userLogged, openFormCard});
     },
 
-    completedPurchase: (req, res)=>{
+    completedPurchase: async (req, res)=>{
 
         const validation = validationResult(req);
 
@@ -25,9 +25,28 @@ const CheckoutController = {
             res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
         }
 
-        
+        const newOrder = {
+            user_id: userLogged.id
+        }
 
-        console.log(userLogged)
+        await Order.create(newOrder);
+
+        const order = Order.findOne({
+            where: {user_id: userLogged.id}
+        })
+
+        for(let i = 0; i <= userLogged.shoppingcart.lenght; i++){
+            let newOrderDetails = {
+                products_variant_id: userLogged.shoppingcart[i].id,
+                order_id: order.id,
+                quantity: userLogged.shoppingcart[i].quantity,
+            }
+
+            await OrderDetail.create(newOrderDetails);
+        }
+
+
+        // res.json(userLogged.shoppingcart)
 
         res.redirect(`/usuario/area-cliente/${userLogged.id}/dados-pessoais`);
     },
