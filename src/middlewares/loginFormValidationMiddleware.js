@@ -22,9 +22,9 @@ const loginFormValidationMiddleware = [
       .custom(async (password, {req})=>{
         const email = req.body.email;
         const user = await User.findOne({where:{email}});
-        const checkPassword = bcrypt.compareSync(password, user.password)
+        const checkPassword = bcrypt.compareSync(password, user.password);
         if(!checkPassword){
-            throw new Error("senha incorreta")
+            throw new Error("senha incorreta");
         }
 
         return true;

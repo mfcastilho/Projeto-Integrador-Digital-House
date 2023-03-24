@@ -2,6 +2,7 @@
 // const fs = require("fs");
 // const path = require("path");
 
+const bcrypt = require("bcrypt");
 const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
 
 // const UserModel = require("../data-base/UserModel");
@@ -51,7 +52,7 @@ const UserController = {
            password
           } = req.body;
 
-        
+    const hashPassword = bcrypt.hashSync(password, 10);      
 
     const user = await User.findByPk(id, {
       include:{
