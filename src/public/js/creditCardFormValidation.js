@@ -22,4 +22,14 @@ numberCardInput.addEventListener("input", ()=>{
 });
 
 
+securityCodeInput.addEventListener("input", ()=>{
+    let securityCode = securityCodeInput.value;
+
+    securityCode = securityCode.replace(/\D/g, "");
+    securityCodeInput.value = securityCode;
+})
+
+
+
+
 

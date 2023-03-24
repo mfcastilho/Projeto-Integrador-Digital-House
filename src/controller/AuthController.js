@@ -2,6 +2,11 @@ const { validationResult } = require("express-validator");
 const { User, Address } = require("../models");
 const { v4:makeId } = require("uuid");
 const bcrypt = require("bcrypt");
+const notifier = require("node-notifier");
+const path = require("path");
+
+
+
 
 
 
@@ -22,6 +27,8 @@ const AuthController = {
       if(resultValidations.errors.length > 0){
         return res.render("register.ejs", {errors:resultValidations.mapped(), old:req.body});
       }
+
+      
 
       const hashPassword = bcrypt.hashSync(password, 10);
 
@@ -51,6 +58,12 @@ const AuthController = {
       await Address.create(newUserAddress);
       await User.create(newUser);
 
+      notifier.notify({
+        title: "",
+        message:"Usuário cadastrado com sucesso",
+        icon: path.resolve("src", "public", "img" ,"logo-urbano-tshirt-trasparent.png"),
+      })
+
       return res.redirect("/login"); 
         
     },
@@ -59,6 +72,7 @@ const AuthController = {
 
     const resultValidations = validationResult(req);
     const {email, password} = req.body;
+
 
     if(resultValidations.errors.length > 0){
       return res.render("login.ejs", {errors:resultValidations.mapped(), old:req.body});
