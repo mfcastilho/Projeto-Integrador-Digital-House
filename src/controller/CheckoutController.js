@@ -47,6 +47,17 @@ const CheckoutController = {
             console.log(newOrderDetails)
 
             await OrderDetail.create(newOrderDetails);
+
+            let product = await ProductVariant.findOne({
+                where:{id:productVariant.id}
+            });
+
+            let newProductVariantQuantity = product.quantity - productVariant.quantity;
+
+            await ProductVariant.update(
+                { quantity:newProductVariantQuantity},
+                {where:{id:productVariant.id}}
+            )
         })
 
 
@@ -56,39 +67,6 @@ const CheckoutController = {
 
         res.redirect(`/usuario/area-cliente/${userLogged.id}/dados-pessoais`);
     },
-
-    showProductInfosToBuy: (req, res)=>{
-        const {idProduct} = req.body //ver como faz para só mostar os dados
-     
-         const productVariant = ProductVariant.findOne({
-           where:{id:idProduct},
-           include:{
-             model: Product,
-             as: "product",
-             require: true
-           },
-           raw: false
-         })
-     
-         
-     
-         return res.render("checkout-page.ejs", {productVariant});
-    },
-
-    showUserInfos: (req, res) => {
-        const { idUser } = req.params;
-            const users = getInfoFromDatabase("users");
-            const userFound = users.find((user) => user.id === id);
-
-            return res.render("checkout-page.ejs", {userFound});
-    },
-    
-    delivery: (req, res) =>{
-        const { name, email, password } = req.body;
-
-
-        return res.render("checkout-page.ejs", {})
-    }
 
 }
 
