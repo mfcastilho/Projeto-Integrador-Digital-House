@@ -7,9 +7,6 @@ const path = require("path");
 
 
 
-
-
-
 const AuthController = {
     showRegister: (req, res)=>{
        return res.render("register.ejs");

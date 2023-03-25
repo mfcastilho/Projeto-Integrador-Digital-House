@@ -1,7 +1,7 @@
 const { validationResult } = require("express-validator");
 const { v4:makeId } = require("uuid")
 const { ProductVariant, Product, Category } = require("../models");
-// const confirmDeleteProduct = require("./../public/js/confirmDeleteProduct")
+
 
 
 const AdminController = {
