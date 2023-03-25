@@ -1,87 +1,91 @@
 
-
-<!-- 
-  <div class="menu-mobile">
-
-    <div class="menu-burguer-box">
-      <img src="./assets/img/menu-burguer.svg" alt="menu icon">
-    </div>
-
-    <nav class="user-icons-mobile">
-      <ul>
-        <li><a href=""><img src="./assets/img/carrinho.svg" alt=""></a></li>
-        <li><a href="login.html"><img id="login-img" src="./assets/img/login.svg" alt=""></a></li>
-      </ul>
-    </nav>
-
-  </div> -->
-
-  
-  <header>
-
-  
-    <div class="container" data-container>
-
-      <div class="menu-mobile-icons-container">
-
-        <div class="menu-burguer-box">
-          <img src="/img/menu-burguer.svg" alt="menu icon">
-        </div>
-
-        <nav class="user-icons-mobile">
-          <ul>
-            <li><a href="/carrinho"><img src="/img/carrinho.svg" alt=""></a></li>
-            <li><a href="/login"><img id="login-img" src="/img/login.svg" alt=""></a></li>
-          </ul>
-        </nav>
-
-      </div>
-
-
-      
-
-      <div class="logo-box" data-logo-box>
-        <a href="/home"><img id="logo" data-logo src="/img/logo-urbano-tshirt-trasparent.png" alt=""></a>
-      </div>
-      
-      <form action="" id="form-id" data-form-id>
-        <input type="text" placeholder="O que você procura?">
-      </form>
-      
-      <nav class="user-icons-nav">
-        <ul>
-          <li><a href="/carrinho"><img src="/img/carrinho.svg" alt=""></a></li>
-          
-          <% if(locals.userLogged && userLogged){ %>
-            <li><a href="/usuario/area-cliente/<%= userLogged.id %>/dados-pessoais"><img id="login-img" src="/img/login.svg" alt=""></a></li>
-            <li style="color: #FFF;">
-              <p>Olá,</p>
-              <div class="hugging" style="display:flex; align-items: flex-end;">
-                <p style="width: 300%;"><%= userLogged.name %></p>
-                <form action="/usuario/logout" method="POST">
-                  <button type="submit" style="font-size: 1rem;margin-left: 6px;cursor: pointer;">Sair</button>
-                </form>
-              </div>
-              
-            </li>
-          <% } else{ %>
-            <li><a href="/login"><img id="login-img" src="/img/login.svg" alt=""></a></li>
-          <% } %>
+<div class="header-mobile">
+    <div class="header-mobile-top-part">
+        <ul class="menu-burguer-list">
+            <div class="burger-menu-box" data-menu-burger>
+                <li>
+                    <img src="/img/menu-burguer.svg" alt="">
+                    
+                </li>
+            </div>
+            <div class="user-header-mobile-icons-box">
+                <li><a href="/carrinho"><img src="/img/carrinho.svg" alt=""></a></li>
+                <li><a href="/login"><img src="/img/login.svg" alt=""></a></li>
+            </div>
+        </ul>
+        <div class="seta"></div>
+        <ul class="submenu">
+            <li><a href="/listagem-produtos/masculinos">Masculino</a></li>
+            <hr>
+            <li><a href="/listagem-produtos/femininos">Feminino</a></li>
+            <hr>
+            <li><a href="/listagem-produtos/categoria/filme">Filmes</a></li>
+            <hr>
+            <li><a href="/listagem-produtos/categoria/anime">Animes</a></li>
         </ul>
         
-      </nav>
-      
     </div>
-
     
 
-    <nav class="bar-nav" data-bar-nav>
-      <ul>
-        <li><a href="/listagem-produtos">Masculino</a></li>
-        <li><a href="/listagem-produtos">Feminino</a></li>
-        <li><a href="/listagem-produtos">Filmes</a></li>
-        <li><a href="/listagem-produtos">Animes</a></li>
-      </ul>
-    </nav>
+    <div class="header-mobile-bottom-part">
+        <div class="logo-header-mobile-box">
+            <a href="/"><img src="/img/logo-urbano-tshirt-trasparent.png" alt=""></a>
+        </div>
+        <form action="/search" method="GET">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit" class="lupa"></button>
+        </form>
+    </div>
+</div>
 
-  </header>
+<header>
+    <ul class="header-container">
+        <div class="logo-box">
+            <li><a href="/"><img src="/img/logo-urbano-tshirt-trasparent.png" alt=""></a></li>               
+        </div>
+        <form action="/search" method="GET">
+            <input type="text" name="query" placeholder="O que você procura?">
+            <button type="submit" class="lupa"></button>
+        </form>
+
+        <div class="user-header-icons">
+            <li><a href="/carrinho"><img src="/img/carrinho.svg" alt=""></a></li>
+
+            <% if(locals.userLogged && userLogged){ %>
+                <li><a href="/usuario/area-cliente/<%= userLogged.id %>/dados-pessoais"><img src="/img/login.svg" alt=""></a></li>
+                <li style="color: #FFF;">
+                    <p>Olá,</p>
+                    <div class="hugging" style="display:flex; align-items: flex-end;">
+                        <p style="width: 300%;"><%= userLogged.name %></p>
+                        <form action="/usuario/logout" method="POST">
+                        <button type="submit" style="font-size: 1rem;margin-left: 6px;cursor: pointer;">Sair</button>
+                        </form>
+                    </div>
+                    
+                    </li>
+            <% } else { %>
+                <li><a href="/login"><img id="login-img" src="/img/login.svg" alt=""></a></li>
+            <% } %>
+
+            <div class="submenu-box">
+                <div class="seta"></div>
+                <ul class="submenu">
+                    <li class="user-name">Olá, cliente</li>
+                    <li class="quit-button"><form action=""><button type="submit">Sair</button></form></li>
+                    <hr>
+                    <li class="user-account-button"><a href="">Minha conta</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </ul>
+</header>
+<nav class="nav-bar">
+    <ul>
+        <li><a href="/listagem-produtos/masculinos">Masculino</a></li>
+        <li><a href="/listagem-produtos/femininos">Feminino</a></li>
+        <li><a href="/listagem-produtos/categoria/filme">Filmes</a></li>
+        <li><a href="/listagem-produtos/categoria/anime">Animes</a></li>
+    </ul>
+</nav>
+
