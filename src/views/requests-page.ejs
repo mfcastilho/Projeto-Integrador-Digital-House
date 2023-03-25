@@ -31,12 +31,17 @@
 
     <main>
 
+
         <div class="main-container">
 
             <!-- =====  MENU LATERAL COM BUTÕES DE EDIÇÃO ===== -->
     <%- include("./components/user-edit-buttons.ejs") %>
 
             <section class="form-section">
+
+              <% if(orders.length == 0){%>
+                  <h2>Não há pedidos no momento...</h2>
+              <%} %>
 
               <% orders.forEach(order=>{ %>
                 
