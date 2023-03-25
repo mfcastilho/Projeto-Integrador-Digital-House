@@ -1,3 +1,6 @@
+const bcrypt = require("bcrypt");
+const mileneHashPassword = bcrypt.hashSync("@M1234", 10);
+const mariaHashPassword = bcrypt.hashSync("@M1234", 10);
 
 
 const users = [
