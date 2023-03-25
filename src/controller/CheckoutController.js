@@ -47,6 +47,17 @@ const CheckoutController = {
             console.log(newOrderDetails)
 
             await OrderDetail.create(newOrderDetails);
+
+            let product = await ProductVariant.findOne({
+                where:{id:productVariant.id}
+            });
+
+            let newProductVariantQuantity = product.quantity - productVariant.quantity;
+
+            await ProductVariant.update(
+                { quantity:newProductVariantQuantity},
+                {where:{id:productVariant.id}}
+            )
         })
 
 
