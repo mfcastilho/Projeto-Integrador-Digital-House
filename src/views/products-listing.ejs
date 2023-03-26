@@ -14,14 +14,13 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/products-listing.css">
+  <link rel="stylesheet" href="/css/header.css">
 
   <link rel="icon" href="/img/favicon-logo-urbano.png">
 
-  <link rel="stylesheet" href="/css/header.css">
+  
   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
-
-  <script src="/js/header-behavior.js" defer></script>
-  <script src="/js/main.js" defer></script>
+  <script src="/js/colorsFilter.js" defer></script>
   <script src="/js/showShirtPrint.js" defer></script>
 
 
@@ -47,8 +46,9 @@
 
         <h2>Camisetas</h2>
         <select name="choice-order-filter" id="choice-order-filter">
+          <option data-content >Escolher filtro</option>
           <option data-content value="alphabetical-order">Ordem alfabética</option>
-          <option data-content value="best-sellers">Mais vendidos</option>
+          <!-- <option data-content value="best-sellers">Mais vendidos</option> -->
           <option data-content value="lowest-price">Menor preço</option>
           <option data-content value="biggest-price">Maior preço</option>
         </select>
@@ -70,7 +70,7 @@
               <h3>Tamanho</h3>
 
               <div class="top">
-                <input type="checkbox" name="p-size-label" id="p-size-label" checked>
+                <input type="checkbox" name="p-size-label" id="p-size-label">
                 <label id="first-size-label" for="p-size-label" class="size-label">P</label>
     
                 <input type="checkbox" name="m-size-label" id="m-size-label">
@@ -81,7 +81,7 @@
   
               </div>
 
-              <div class="bottom">
+              <!-- <div class="bottom">
                 <input type="checkbox" name="gg-size-label" id="gg-size-label">
                 <label for="gg-size-label" class="size-label">GG</label>
     
@@ -90,7 +90,7 @@
                 
                 <input type="checkbox" name="xgg-size-label" id="xgg-size-label">
                 <label for="xgg-size-label" class="size-label">XGG</label>
-              </div>
+              </div> -->
               
             </div>
 
@@ -102,7 +102,7 @@
               </div>
               
               <div class="bottom">
-                <input type="checkbox" name="feminine" id="feminine" checked>
+                <input type="checkbox" name="feminine" id="feminine">
                 <label for="feminine" class="genre-label">Feminino</label>
               </div>
               
@@ -136,6 +136,10 @@
         <section class="products-listing">
   
           <div class="products-listing-container">
+
+            <% if(typeof msg === "string"){%>
+                <h2><%= msg %></h2>
+            <%} %>
     
             <% productsVariant.forEach(productVariant =>{ %>
 

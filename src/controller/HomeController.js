@@ -1,5 +1,5 @@
-
 const {ProductVariant, Product} = require("../models");
+
 
 const HomeController = {
 
@@ -48,6 +48,8 @@ const HomeController = {
         return acc;
       }, {})
     )
+
+    
   
     return res.render("products-listing.ejs", {productsVariant:maleUniquesProducts});
 
@@ -71,6 +73,8 @@ const HomeController = {
       return acc;
     }, {})
   )
+
+  let msg;
   
     return res.render("products-listing.ejs", {productsVariant:femaleUniquesProducts});
   },

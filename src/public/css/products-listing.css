@@ -220,7 +220,7 @@ main .products-listing-container .product-card .product-description p{
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  gap: .2rem;
+  gap: .1rem;
 }
 
 .color-square{

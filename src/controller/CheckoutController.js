@@ -1,4 +1,4 @@
-const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
+const {Order, OrderDetail, ProductVariant} = require("../models");
 const { validationResult } = require("express-validator");
 const {v4:makeId} = require("uuid");
 
