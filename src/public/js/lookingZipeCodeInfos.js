@@ -27,9 +27,6 @@ const CONFIG = {
 }
 
 
-
-
-
 //=======CHAMANDO AS FUNÇÕES=======
 
 formulario.addEventListener("submit", handleSubmit);

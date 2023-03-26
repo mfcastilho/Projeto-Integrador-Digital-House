@@ -134,7 +134,9 @@ form {
   border-radius: .2rem; 
 }
 
-
+.form-section{
+  margin-left: 3rem;
+}
 .form-section form button:hover{
 
   background-color: #372948;  

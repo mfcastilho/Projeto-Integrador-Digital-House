@@ -18,8 +18,9 @@ body{
 
 .form-section {
     width: 70%;
-    margin-left: 3rem ;
+    margin-left: 3rem ;   
 }
+
 
 
 .request-form{
@@ -28,7 +29,10 @@ body{
   border: 1px solid black;
   border-radius: .3rem;
   width: 90%;
-  margin: 2rem 0;
+
+}
+.bottom-space{
+  margin-bottom: 2rem;
 }
 
 .hugging-form {
@@ -108,9 +112,6 @@ body{
   gap: 1rem;
 
 } 
-
-
-
 
 form div label {
   font-size: 2rem;
