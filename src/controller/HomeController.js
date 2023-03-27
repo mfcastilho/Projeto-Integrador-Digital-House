@@ -30,6 +30,7 @@ const HomeController = {
   },
 
   showMaleProductsListing: async (req, res)=>{
+    
   
     const productsVariant = await ProductVariant.findAll({
       include:[{

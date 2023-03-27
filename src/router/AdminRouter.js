@@ -44,6 +44,7 @@ router.post("/admin/produtos/cadastro", uploadFile.fields([
 
 router.put("/admin/produtos/:id/editar", uploadFile.single("image"), AdminController.editProduct);
 router.delete("/admin/produtos/:id/excluir", AdminController.deleteProduct);
+// router.get("/admin/produtos/:id/excluir", AdminController.deleteProduct);
 
 
 router.use(errorMiddleware)
