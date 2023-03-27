@@ -15,7 +15,7 @@ const FiltersControllers = {
 
         const productsVariantsColorFiltered = productsVariants.filter((productVariant)=>{
             return productVariant.color === color
-        })
+        });
 
         const tshirtsSearchResults = productsVariantsColorFiltered.filter((tshirt, index, array)=>{
             return index == array.findIndex(item=> item.product.name == tshirt.product.name);
@@ -25,11 +25,13 @@ const FiltersControllers = {
 
         if(tshirtsSearchResults.length == 0){
 
+            let productsVariant;
+
             msg = "Não foi encontrado nenhuma camiseta com a cor escolhida!"
-            res.render("products-listing.ejs", {productsVariant:"", msg});
+            return res.render("products-listing.ejs", {productsVariant, msg});
         }
 
-        res.render("products-listing.ejs", {productsVariant:tshirtsSearchResults, msg});
+        return res.render("products-listing.ejs", {productsVariant:tshirtsSearchResults, msg});
 
     }
 }

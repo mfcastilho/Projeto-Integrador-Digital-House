@@ -70,7 +70,7 @@ input:-webkit-autofill {
   display: flex;
   flex-direction: column;
 
-  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
 }
 
 
@@ -114,7 +114,7 @@ input:-webkit-autofill {
   transition: .4s;
 
   position: absolute;
-  bottom: 0;
+  bottom: 3.5px;
   right: 0;
 
 
