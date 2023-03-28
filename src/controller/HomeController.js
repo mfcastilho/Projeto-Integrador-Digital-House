@@ -31,6 +31,7 @@ const HomeController = {
 
   showAllProducts: async (req, res)=>{
 		const color = req.query.color;
+    const order = req.query.order;
 	
 		const productsVariant = await ProductVariant.findAll({
 		include:[{
@@ -40,6 +41,28 @@ const HomeController = {
 		}],
 		raw: false
 		});
+
+    if(order){
+
+      if(order == "ordemAlfabetica"){
+        
+
+        productsVariant.product.name.sort();
+
+        return res.render("products-listing.ejs", {productsVariant});
+
+      }else if(order == "menorPreco"){
+
+        productsVariant.product.price.sort((a, b)=>b - a);
+        return res.render("products-listing.ejs", {productsVariant});
+
+      }else if(order == "maiorPreco"){
+        productsVariant.product.price.sort((a, b)=>a - b);
+        return res.render("products-listing.ejs", {productsVariant});
+      }
+
+    }
+
 		
 		//se a cor foi escolhida pelo usuário   
 		if(color){
