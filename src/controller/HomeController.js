@@ -29,8 +29,48 @@ const HomeController = {
 
   },
 
+  showAllProducts: async (req, res)=>{
+		const color = req.query.color;
+	
+		const productsVariant = await ProductVariant.findAll({
+		include:[{
+			model: Product,
+			as:"product",
+			require: false
+		}],
+		raw: false
+		});
+		
+		//se a cor foi escolhida pelo usuário   
+		if(color){
+
+		  const productsVariantsColorFiltered = productsVariant.filter((productVariant)=>{
+			  return productVariant.color === color
+		  });
+  
+		  const tshirtsSearchResults = productsVariantsColorFiltered.filter((tshirt, index, array)=>{
+				  return index == array.findIndex(item=> item.product.name == tshirt.product.name);
+		  });
+  
+
+		  //se NÃO existe a camiseta com a cor selecionda
+		  if(tshirtsSearchResults.length == 0){
+  
+			  const tshirtArray = [];
+			  const msg = "Não foi encontrado nenhuma camiseta com a cor escolhida!";
+			  return res.render("products-listing.ejs", {productsVariant:tshirtArray, msg});
+  
+		  }
+  
+		  return res.render("products-listing.ejs", {productsVariant:tshirtsSearchResults});
+	  } 
+	 
+	  return res.render("products-listing.ejs", {productsVariant});
+ },
+
   showMaleProductsListing: async (req, res)=>{
     
+    const color = req.query.color;
   
     const productsVariant = await ProductVariant.findAll({
       include:[{
@@ -41,7 +81,7 @@ const HomeController = {
       raw: false
     });
 
-    const maleUniquesProducts = Object.values(
+    let maleUniquesProducts = Object.values(
       productsVariant.filter(productVariant => productVariant.model === "masculina").reduce((acc, productVariant)=>{
         if(!acc[productVariant.product.name]){
           acc[productVariant.product.name] = productVariant;
@@ -50,79 +90,202 @@ const HomeController = {
       }, {})
     )
 
-    
+   //se a cor foi escolhida pelo usuário   
+   if(color){
+
+       maleUniquesProducts = productsVariant.filter(productsVariant=>{
+         return productsVariant.model == "masculina";
+       })
+
+      const productsVariantsColorFiltered = maleUniquesProducts.filter((productVariant)=>{
+         return productVariant.color === color
+      });
+
+      const tshirtsSearchResults = productsVariantsColorFiltered.filter((tshirt, index, array)=>{
+            return index == array.findIndex(item=> item.product.name == tshirt.product.name);
+      });
+
+
+      
+      //se NÃO existe a camiseta com a cor selecionda
+      if(tshirtsSearchResults.length == 0){
+
+         const tshirtArray = [];
+         const msg = "Não foi encontrado nenhuma camiseta com a cor escolhida!";
+         return res.render("products-listing.ejs", {productsVariant:tshirtArray, msg});
+
+      }
+
+      return res.render("products-listing.ejs", {productsVariant:tshirtsSearchResults});
+   } 
   
+
     return res.render("products-listing.ejs", {productsVariant:maleUniquesProducts});
 
   },
 
   showFemaleProductsListing: async (req, res)=>{
-    const productsVariant = await ProductVariant.findAll({
-      include:[{
-        model: Product,
-        as:"product",
-        require: false
-      }],
-      raw: false
-  });
+      const color = req.query.color;
 
-  const femaleUniquesProducts = Object.values(
-    productsVariant.filter(productVariant => productVariant.model === "feminina").reduce((acc, productVariant)=>{
-      if(!acc[productVariant.product.name]){
-        acc[productVariant.product.name] = productVariant;
-      }
-      return acc;
-    }, {})
-  )
+      const productsVariant = await ProductVariant.findAll({
+         include:[{
+         model: Product,
+         as:"product",
+         require: false
+         }],
+         raw: false
+      });
 
-  let msg;
+      let femaleUniquesProducts = Object.values(
+         productsVariant.filter(productVariant => productVariant.model === "feminina").reduce((acc, productVariant)=>{
+            if(!acc[productVariant.product.name]){
+            acc[productVariant.product.name] = productVariant;
+            }
+            return acc;
+         }, {})
+      )
+
+      //se a cor foi escolhida pelo usuário   
+   if(color){
+
+      femaleUniquesProducts = productsVariant.filter(productsVariant=>{
+        return productsVariant.model == "feminina";
+      })
+
+     const productsVariantsColorFiltered = femaleUniquesProducts.filter((productVariant)=>{
+        return productVariant.color === color
+     });
+
+     const tshirtsSearchResults = productsVariantsColorFiltered.filter((tshirt, index, array)=>{
+           return index == array.findIndex(item=> item.product.name == tshirt.product.name);
+     });
+
+
+     
+     //se NÃO existe a camiseta com a cor selecionda
+     if(tshirtsSearchResults.length == 0){
+
+        const tshirtArray = [];
+        const msg = "Não foi encontrado nenhuma camiseta com a cor escolhida!";
+        return res.render("products-listing.ejs", {productsVariant:tshirtArray, msg});
+
+     }
+
+     return res.render("products-listing.ejs", {productsVariant:tshirtsSearchResults});
+  } 
+
   
-    return res.render("products-listing.ejs", {productsVariant:femaleUniquesProducts});
+  
+      return res.render("products-listing.ejs", {productsVariant:femaleUniquesProducts});
   },
 
   showAnimesProductsListing: async (req, res)=>{
-    const productsVariant = await ProductVariant.findAll({
-      include:[{
-        model: Product,
-        as:"product",
-        require: false
-      }],
-      raw: false
-  });
 
-  const animeUniquesProducts = Object.values(
-    productsVariant.filter(productVariant => productVariant.product.categoryId == "2").reduce((acc, productVariant)=>{
-      if(!acc[productVariant.product.name]){
-        acc[productVariant.product.name] = productVariant;
-      }
-      return acc;
-    }, {})
-  )
+      const color = req.query.color;
+
+      const productsVariant = await ProductVariant.findAll({
+         include:[{
+         model: Product,
+         as:"product",
+         require: false
+         }],
+         raw: false
+      });
+
+      let animeUniquesProducts = Object.values(
+         productsVariant.filter(productVariant => productVariant.product.categoryId == "2").reduce((acc, productVariant)=>{
+            if(!acc[productVariant.product.name]){
+            acc[productVariant.product.name] = productVariant;
+            }
+            return acc;
+         }, {})
+      )
+
+      //se a cor foi escolhida pelo usuário   
+      if(color){
+
+         animeUniquesProducts = productsVariant.filter(productsVariant=>{
+         return productsVariant.product.categoryId == 2;
+         })
+
+         const productsVariantsColorFiltered = animeUniquesProducts.filter((productVariant)=>{
+            return productVariant.color === color;
+         });
+
+         const tshirtsSearchResults = productsVariantsColorFiltered.filter((tshirt, index, array)=>{
+               return index == array.findIndex(item=> item.product.name == tshirt.product.name);
+         });
+
+
+      
+         //se NÃO existe a camiseta com a cor selecionda
+         if(tshirtsSearchResults.length == 0){
+
+            const tshirtArray = [];
+            const msg = "Não foi encontrado nenhuma camiseta com a cor escolhida!";
+            return res.render("products-listing.ejs", {productsVariant:tshirtArray, msg});
+
+         }
+
+         return res.render("products-listing.ejs", {productsVariant:tshirtsSearchResults});
+      } 
   
-    return res.render("products-listing.ejs", {productsVariant:animeUniquesProducts});
+      return res.render("products-listing.ejs", {productsVariant:animeUniquesProducts});
   },
 
   showMoviesProductsListing: async (req, res)=>{
-    const productsVariant = await ProductVariant.findAll({
-      include:[{
-        model: Product,
-        as:"product",
-        require: false
-      }],
-      raw: false
-  });
 
-  const movieUniquesProducts = Object.values(
-    productsVariant.filter(productVariant => productVariant.product.categoryId == "1").reduce((acc, productVariant)=>{
-      if(!acc[productVariant.product.name]){
-        acc[productVariant.product.name] = productVariant;
-      }
-      return acc;
-    }, {})
-  )
+      const color = req.query.color;
+
+      const productsVariant = await ProductVariant.findAll({
+         include:[{
+         model: Product,
+         as:"product",
+         require: false
+         }],
+         raw: false
+      });
+
+      let movieUniquesProducts = Object.values(
+         productsVariant.filter(productVariant => productVariant.product.categoryId == "1").reduce((acc, productVariant)=>{
+            if(!acc[productVariant.product.name]){
+            acc[productVariant.product.name] = productVariant;
+            }
+            return acc;
+         }, {})
+      )
+
+      //se a cor foi escolhida pelo usuário   
+      if(color){
+
+         movieUniquesProducts = productsVariant.filter(productsVariant=>{
+         return productsVariant.product.categoryId == 1;
+         })
+
+         const productsVariantsColorFiltered = movieUniquesProducts.filter((productVariant)=>{
+            return productVariant.color === color;
+         });
+
+         const tshirtsSearchResults = productsVariantsColorFiltered.filter((tshirt, index, array)=>{
+               return index == array.findIndex(item=> item.product.name == tshirt.product.name);
+         });
+
+
+      
+         //se NÃO existe a camiseta com a cor selecionda
+         if(tshirtsSearchResults.length == 0){
+
+            const tshirtArray = [];
+            const msg = "Não foi encontrado nenhuma camiseta com a cor escolhida!";
+            return res.render("products-listing.ejs", {productsVariant:tshirtArray, msg});
+
+         }
+
+         return res.render("products-listing.ejs", {productsVariant:tshirtsSearchResults});
+      } 
     
   
-    return res.render("products-listing.ejs", {productsVariant:movieUniquesProducts});
+       return res.render("products-listing.ejs", {productsVariant:movieUniquesProducts});
   },
 
   showMaleProduct: async (req, res)=>{

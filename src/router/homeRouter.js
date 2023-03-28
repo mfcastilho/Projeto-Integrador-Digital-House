@@ -22,6 +22,8 @@ router.use(isLogginMiddleware);
 router.get("/", HomeController.showHome);
 router.get("/home", HomeController.showHome);
 
+router.get("/listagem-produtos", HomeController.showAllProducts);
+
 router.get("/listagem-produtos/masculinos", HomeController.showMaleProductsListing);
 router.get("/listagem-produtos/femininos", HomeController.showFemaleProductsListing);
 

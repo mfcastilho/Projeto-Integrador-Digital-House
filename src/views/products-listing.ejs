@@ -20,7 +20,8 @@
 
   
   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
-  <script src="/js/colorsFilter.js" defer></script>
+  <!-- <script src="/js/colorsFilter.js" defer></script> -->
+  <script src="/js/filters.js" defer></script>
   <script src="/js/showShirtPrint.js" defer></script>
 
 
@@ -97,12 +98,12 @@
             <div class="box-genre-checkboxs filters-box-divs">
 
               <div class="top">
-                <input type="checkbox" name="masculine" id="masculine">
+                <input type="checkbox" name="masculine" id="masculine" onclick="redirect()">
                 <label for="masculine" class="genre-label">Masculino</label>
               </div>
               
               <div class="bottom">
-                <input type="checkbox" name="feminine" id="feminine">
+                <input type="checkbox" name="feminine" id="feminine" onclick="redirect()">
                 <label for="feminine" class="genre-label">Feminino</label>
               </div>
               
