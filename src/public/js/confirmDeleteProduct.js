@@ -47,25 +47,3 @@ returnResp();
 
 
 
-
-
-
-  
-
-
-
-// deleteButton.addEventListener("click", async (e)=>{
-//     e.preventDefault();
-//     try {
-//         const result = await confirmDelete();
-//         if(result){
-//             return true;
-//         }else{
-//             return false
-//         }
-//     } catch (error) {
-        
-//     }
-    
-// });
-
