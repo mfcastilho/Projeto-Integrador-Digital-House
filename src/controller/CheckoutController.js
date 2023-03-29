@@ -20,6 +20,7 @@ const CheckoutController = {
         const { total} = req.body;
         const { userLogged } = req.session;
         const openFormCard = true;
+        
 
         if(validation.errors.length > 0){
             return res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
