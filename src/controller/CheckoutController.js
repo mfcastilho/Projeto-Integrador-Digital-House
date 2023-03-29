@@ -20,9 +20,10 @@ const CheckoutController = {
         const { total} = req.body;
         const { userLogged } = req.session;
         const openFormCard = true;
+        
 
         if(validation.errors.length > 0){
-            res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
+            return res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
         }
 
         const newOrder = {
@@ -65,7 +66,7 @@ const CheckoutController = {
 
         // res.json(userLogged.shoppingcart)
 
-        res.redirect(`/usuario/area-cliente/${userLogged.id}/dados-pessoais`);
+        return res.redirect(`/usuario/area-cliente/${userLogged.id}/dados-pessoais`);
     },
 
 }
