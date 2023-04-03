@@ -70,6 +70,7 @@ const UserController = {
          name: name == undefined ? user.name : name,
          cpf: cpf == undefined ? user.cpf : cpf,
          tel: tel == undefined ? user.tel : tel,
+         password: password == undefined ? user.password : hashPassword,
          is_admin: false
       }
 
