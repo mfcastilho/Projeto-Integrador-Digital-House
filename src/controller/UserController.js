@@ -23,7 +23,6 @@ const UserController = {
       })
 
 
-
       return res.render("personal-data-page.ejs", { user });
    },
 
