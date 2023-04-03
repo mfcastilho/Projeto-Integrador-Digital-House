@@ -4,8 +4,7 @@
 ## Projeto Urbano T-Shirts - E-commerce de camisetas
 
 
-
-![312254680_813436936557489_4270382496041990052_n-removebg-preview](https://user-images.githubusercontent.com/113199352/222766436-3cb186ca-e65a-4262-8152-ff6f41c6c965.png)
+![logo-projeto](https://github.com/mfcastilho/Projeto-Integrador-Digital-House/blob/master/src/public/midias/logo-urbano-tshirt-redonds.png)
 
 
 
@@ -15,6 +14,7 @@
 * [1. Sobre o projeto](#1-sobre-o-projeto)
 * [2. Apresentação do usuário](#2-apresentação-do-usuário)
 * [3. Apresentação do administrador](#3-apresentação-do-administrador)
+* [4. Inicialização do projeto](#4-inicialização-do-projeto)
 
 ## 1. Sobre o projeto:
  Chamado de Projeto Integrador, proposto em aula, para aplicar todas as ferramentas e frameworks aprendidos durante o curso intensivo. Desenvolvido por 5 pessoas dedicadas. 
@@ -33,6 +33,14 @@ https://user-images.githubusercontent.com/113199352/222765080-2ef493f9-360f-4326
 ## 3. Apresentação do administrador:
 
 https://user-images.githubusercontent.com/113199352/222765325-cd8808be-ecf1-4616-9d43-d85cb7f788c3.mov
+
+## 4. Inicialização do projeto:
+
+> - $ npm install 
+> - $ npx sequelize db:create 
+> - $ npx sequelize db:migrate 
+> - $ npx sequelize db:seed:all 
+> - $ npm run dev
 
 
 
