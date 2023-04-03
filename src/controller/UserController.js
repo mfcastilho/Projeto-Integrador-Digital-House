@@ -65,25 +65,27 @@ const UserController = {
 
       const updateUser = {
          id,
-         email: email == undefined ? user.email : email,
-         name: name == undefined ? user.name : name,
-         cpf: cpf == undefined ? user.cpf : cpf,
-         tel: tel == undefined ? user.tel : tel,
-         password: password == undefined ? user.password : hashPassword,
+         email: email ?? user.email,
+         name: name ?? user.name,
+         cpf: cpf ?? user.cpf,
+         tel: tel ?? user.tel,
          is_admin: false
+      }
+
+     
+      if (password) {
+         const hashPassword = bcrypt.hashSync(password, 10);
+         updateUser.password = hashPassword;
       }
 
       await User.update(updateUser, {
          where: { id }
       });
 
-      if (password) {
-         const hashPassword = bcrypt.hashSync(password, 10);
-         await User.update(updateUser,
-            { password: hashPassword },
-            { where: { id } }
-         );
-      }
+      const userUpdated = await User.findByPk(id);
+
+      req.session.userLogged = userUpdated;
+
 
       return res.redirect(`/usuario/area-cliente/${updateUser.id}/dados-pessoais`);
    },
