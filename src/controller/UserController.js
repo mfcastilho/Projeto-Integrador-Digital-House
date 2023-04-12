@@ -84,7 +84,10 @@ const UserController = {
 
       const userUpdated = await User.findByPk(id);
 
-      req.session.userLogged = userUpdated;
+      req.session.userLogged.name = userUpdated.name;
+
+      console.log(userUpdated)
+      console.log(req.session.userLogged)
 
 
       return res.redirect(`/usuario/area-cliente/${updateUser.id}/dados-pessoais`);
