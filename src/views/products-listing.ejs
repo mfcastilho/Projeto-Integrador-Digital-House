@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/products-listing.css">
+  <link rel="stylesheet" href="/css/header.css">
 
   <link rel="icon" href="/img/favicon-logo-urbano.png">
 
-  <link rel="stylesheet" href="/css/header.css">
+  
   <script src="/js/showSubmenuHeaderMobile.js" defer></script>
-
-  <script src="/js/header-behavior.js" defer></script>
-  <script src="/js/main.js" defer></script>
+  <!-- <script src="/js/colorsFilter.js" defer></script> -->
+  <script src="/js/filters.js" defer></script>
   <script src="/js/showShirtPrint.js" defer></script>
 
 
@@ -46,11 +46,12 @@
       <div class="top-part">
 
         <h2>Camisetas</h2>
-        <select name="choice-order-filter" id="choice-order-filter">
-          <option data-content value="alphabetical-order">Ordem alfabética</option>
-          <option data-content value="best-sellers">Mais vendidos</option>
-          <option data-content value="lowest-price">Menor preço</option>
-          <option data-content value="biggest-price">Maior preço</option>
+        <select name="choice-order-filter" id="choice-order-filter" onchange="orderFilter()">
+          <option data-content >Escolher filtro</option>
+          <option data-content value="alphabeticalOrder">Ordem alfabética</option>
+          <!-- <option data-content value="best-sellers">Mais vendidos</option> -->
+          <option data-content value="lowestPrice">Menor preço</option>
+          <option data-content value="biggestPrice">Maior preço</option>
         </select>
 
       </div>
@@ -65,12 +66,12 @@
           <h3>Filtros</h3>
           <div class="filters-box">
   
-            <div class="box-size-checkboxs filters-box-divs">
+            <!-- <div class="box-size-checkboxs filters-box-divs">
 
               <h3>Tamanho</h3>
 
               <div class="top">
-                <input type="checkbox" name="p-size-label" id="p-size-label" checked>
+                <input type="checkbox" name="p-size-label" id="p-size-label">
                 <label id="first-size-label" for="p-size-label" class="size-label">P</label>
     
                 <input type="checkbox" name="m-size-label" id="m-size-label">
@@ -92,17 +93,17 @@
                 <label for="xgg-size-label" class="size-label">XGG</label>
               </div>
               
-            </div>
+            </div> -->
 
             <div class="box-genre-checkboxs filters-box-divs">
 
               <div class="top">
-                <input type="checkbox" name="masculine" id="masculine">
+                <input type="checkbox" name="masculine" id="masculine" onclick="redirect()">
                 <label for="masculine" class="genre-label">Masculino</label>
               </div>
               
               <div class="bottom">
-                <input type="checkbox" name="feminine" id="feminine" checked>
+                <input type="checkbox" name="feminine" id="feminine" onclick="redirect()">
                 <label for="feminine" class="genre-label">Feminino</label>
               </div>
               
@@ -136,36 +137,44 @@
         <section class="products-listing">
   
           <div class="products-listing-container">
+
+            <% if(typeof msg === "string"){%>
+                <h2><%= msg %></h2>
+            <%} %>
+
+            <% if(Array.isArray(productsVariant)){%>
+              <% productsVariant.forEach(productVariant =>{ %>
+
+                <% if(productVariant.model == "masculina"){ %>
+                  <a href="/produto/<%=productVariant.id %>/masculino">
+                    <div class="product-card">
+                      <img class="tshirt-image" src="/<%= productVariant.image %> " alt="">
+                      <img class="tshirt-print" src="/<%= productVariant.product.tshirt_print%> " alt="">
+                      <div class="product-description">
+                        <h5><%= productVariant.product.name %> </h5>
+                        <p>A partir de R$ <%= productVariant.product.price.toLocaleString("pt-BR", {minimumFractionDigits:2}) %> </p>
+                      </div>
+                    </div>
+                  </a>
+                <% }else { %>
+                  <a href="/produto/<%=productVariant.id %>/feminino">
+                    <div class="product-card">
+                      <img class="tshirt-image" src="/<%= productVariant.image %> " alt="">
+                      <img class="tshirt-print" src="/<%= productVariant.product.tshirt_print%> " alt="">
+                      <div class="product-description">
+                        <h5><%= productVariant.product.name %> </h5>
+                        <p>A partir de R$ <%= productVariant.product.price%> </p>
+                      </div>
+                    </div>
+                  </a>
+                <% } %>
+                
+  
+  
+              <% }); %> 
+            <%} %>
     
-            <% productsVariant.forEach(productVariant =>{ %>
-
-              <% if(productVariant.model == "masculina"){ %>
-                <a href="/produto/<%=productVariant.id %>/masculino">
-                  <div class="product-card">
-                    <img class="tshirt-image" src="/<%= productVariant.image %> " alt="">
-                    <img class="tshirt-print" src="/<%= productVariant.product.tshirt_print%> " alt="">
-                    <div class="product-description">
-                      <h5><%= productVariant.product.name %> </h5>
-                      <p>A partir de R$ <%= productVariant.product.price.toLocaleString("pt-BR", {minimumFractionDigits:2}) %> </p>
-                    </div>
-                  </div>
-                </a>
-              <% }else { %>
-                <a href="/produto/<%=productVariant.id %>/feminino">
-                  <div class="product-card">
-                    <img class="tshirt-image" src="/<%= productVariant.image %> " alt="">
-                    <img class="tshirt-print" src="/<%= productVariant.product.tshirt_print%> " alt="">
-                    <div class="product-description">
-                      <h5><%= productVariant.product.name %> </h5>
-                      <p>A partir de R$ <%= productVariant.product.price%> </p>
-                    </div>
-                  </div>
-                </a>
-              <% } %>
-              
-
-
-            <% }); %> 
+            
             
     
           </div>

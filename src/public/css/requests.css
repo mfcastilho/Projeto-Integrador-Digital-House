@@ -18,8 +18,9 @@ body{
 
 .form-section {
     width: 70%;
-    margin-left: 3rem ;
+    margin-left: 3rem ;   
 }
+
 
 
 .request-form{
@@ -28,7 +29,10 @@ body{
   border: 1px solid black;
   border-radius: .3rem;
   width: 90%;
-  margin: 2rem 0;
+  margin: 1rem 0;
+}
+.bottom-space{
+  margin-bottom: 2rem;
 }
 
 .hugging-form {
@@ -109,15 +113,12 @@ body{
 
 } 
 
-
-
-
 form div label {
   font-size: 2rem;
 }
 
 form div input {
-  background-color: #D9D9D9;
+  background-color: #f1efef;
   border: none;
   height: 3rem;
   transition: background-color 450ms;

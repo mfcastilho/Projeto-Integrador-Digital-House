@@ -1,14 +1,14 @@
 const { validationResult } = require("express-validator");
 const { v4:makeId } = require("uuid")
 const { ProductVariant, Product, Category } = require("../models");
-// const confirmDeleteProduct = require("./../public/js/confirmDeleteProduct")
 
+var homeUrl = "";
 
 const AdminController = {
     showHomeAdmin: async (req, res)=>{
 
         const url = req.originalUrl;
-
+        homeUrl = url;
         const productsVariant = await ProductVariant.findAll({
             include:[{
                 model: Product,
@@ -199,12 +199,24 @@ const AdminController = {
 
     deleteProduct: async (req, res)=>{
         const {id} = req.params;
-        const {idProduct, resp} = req.body
         console.log("ID do produto: "+id);
 
+        
         await ProductVariant.destroy({
             where:{id:id}
         });
+
+        const productsVariant = await ProductVariant.findAll({
+            include:[{
+                model: Product,
+                as: "product",
+                require: false
+            }],
+
+            raw: false
+        });
+
+        return res.render("admin/home-admin.ejs", {productsVariant, url:homeUrl});
     }
 
 }

@@ -1,4 +1,4 @@
-const {User, Address, Order, OrderDetail, ProductVariant, Product, Category} = require("../models");
+const {Order, OrderDetail, ProductVariant} = require("../models");
 const { validationResult } = require("express-validator");
 const {v4:makeId} = require("uuid");
 
@@ -19,9 +19,10 @@ completedPurchase: async (req, res)=>{
         const { total} = req.body;
         const { userLogged } = req.session;
         const openFormCard = true;
+        
 
         if(validation.errors.length > 0){
-            res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
+            return res.render("checkout-page.ejs", {errors:validation.mapped(), old:req.body, total, user:userLogged, openFormCard});
         }
 
         const newOrder = {
@@ -64,7 +65,7 @@ completedPurchase: async (req, res)=>{
 
         // res.json(userLogged.shoppingcart)
 
-        res.redirect(`/usuario/area-cliente/${userLogged.id}/dados-pessoais`);
+        return res.redirect(`/usuario/area-cliente/${userLogged.id}/dados-pessoais`);
     },
 
 }

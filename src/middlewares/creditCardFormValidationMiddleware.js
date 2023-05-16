@@ -8,7 +8,7 @@ creditCardFormValidationMiddleware = [
 
     check("card_expiring_date")
         .trim().bail()
-        .notEmpty().withMessage("o cammpo não pode ficar vazio").bail(),
+        .notEmpty().withMessage("o campo não pode ficar vazio").bail(),
 
     check("card_holder_name")
         .trim().bail()

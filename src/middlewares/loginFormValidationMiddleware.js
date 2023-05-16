@@ -7,7 +7,7 @@ const loginFormValidationMiddleware = [
   check("email")
       .trim().bail()
       .notEmpty().withMessage("campo obrigatório").bail()
-      .isEmail().withMessage("insira um formato de email válido")
+      .isEmail().withMessage("insira um formato de email válido").bail()
       .custom(async (email, {req})=>{
         const user = await User.findOne({where:{email}});
         if(!user){
@@ -18,11 +18,12 @@ const loginFormValidationMiddleware = [
   check("password") 
       .trim().bail()
       .notEmpty().withMessage("campo obrigatório").bail()
-      .isLength({min:6}).withMessage("a senha deve contar no mínimo 6 caracteres")
+      .isLength({min:6}).withMessage("a senha deve contar no mínimo 6 caracteres").bail()
       .custom(async (password, {req})=>{
         const email = req.body.email;
         const user = await User.findOne({where:{email}});
         const checkPassword = bcrypt.compareSync(password, user.password);
+        console.log(checkPassword)
         if(!checkPassword){
             throw new Error("senha incorreta");
         }
