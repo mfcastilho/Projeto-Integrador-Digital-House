@@ -12,8 +12,7 @@ const CheckoutController = {
         
         return res.render("checkout-page.ejs", {total, user:userLogged, openFormCard});
     },
-
-    completedPurchase: async (req, res)=>{
+completedPurchase: async (req, res)=>{
 
         const validation = validationResult(req);
 
