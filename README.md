@@ -4,7 +4,7 @@
 ## Projeto Urbano T-Shirts - E-commerce de camisetas
 
 
-![logo-projeto](https://github.com/mfcastilho/Projeto-Integrador-Digital-House/blob/master/src/public/midias/logo-urbano-tshirt-redonds.png)
+![logo-projeto](https://github.com/mfcastilho/API-do-Flamengo/blob/main/flamengo%20api.png)
 
 
 
