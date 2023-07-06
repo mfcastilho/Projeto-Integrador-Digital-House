@@ -14,7 +14,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
         references:{
-          model:"Products_variant",
+          model:"products_variant",
           key: "id"
         },
         onUpdate: 'CASCADE',
@@ -24,7 +24,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
         references:{
-          model: "Orders",
+          model: "orders",
           key: "id"
         },
         onUpdate: 'CASCADE',
